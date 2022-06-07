@@ -4,6 +4,16 @@
 
 # Integrantes:
 
+## Camila Rodriguez: 
+
+## Micaela Loureiro:
+
+## Nadia Ortiz:
+
+## Solange Ocampo: 
+
+
+## ***¡Bienvenidos a Wonder Nails!***
 
 
 ## ***¡Paginas Referentes!***
