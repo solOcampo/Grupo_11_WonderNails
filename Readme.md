@@ -4,13 +4,13 @@
 
 # Integrantes:
 
-## Camila Rodriguez: 21 años - Técnica electrisista con orientación en electrónica industrial, estudio Fullstack Desarrollo Web en Digital House y Fundación Formar.
+## Camila Rodriguez: 21 años - Técnica electricista con orientación en electrónica industrial, estudio Desarrollo Web Fullstack en Digital House y Fundación Formar.
 
-## Micaela Loureiro: 27 años - Ex estudiante de diseño de interiores y mobiliario, actualmente emprendo en Saron y estudio Desarrollo Fullstack Web en Digital House y Fundación Formar.
+## Micaela Loureiro: 27 años - Ex estudiante de diseño de interiores y mobiliario, actualmente emprendo en Saron y estudio Desarrollo Web Fullstack en Digital House y Fundación Formar.
 
 ## Nadia Ortiz: 37 años - Estudio Desarrollo Web Fullstack en Digital House y Fundación Formar
 
-## Solange Ocampo: 24 años - Apasionada al diseño gráfico y la fotografía, actualmente estudio Fullstack Desarrollo Web en Digital House y Fundación Formar.
+## Solange Ocampo: 24 años - Apasionada al diseño gráfico y la fotografía, actualmente estudio Desarrollo Web Fullstack en Digital House y Fundación Formar.
 
 
 ## ***¡Bienvenidos a Wonder Nails!***
