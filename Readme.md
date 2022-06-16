@@ -14,7 +14,7 @@
 
 
 ## ***¡Bienvenidos a Wonder Nails!***
-https://raw.githubusercontent.com/solOcampo/Grupo_11_WonderNails/master/Extras/WonderNails-Logotipo.jpeg
+![alt text](https://raw.githubusercontent.com/solOcampo/Grupo_11_WonderNails/master/Extras/WonderNails-Logotipo.jpeg)
 
 El cliente solicitó un e-Comerse para su empresa Wonder Nail dedicada a la distribución de insumos para uñas y maquillaje. Productos desde apliques para uñas, esmaltes de todo tipo e insumos para artistas de uñas desde tornos a instrumentales; también abarcando la venta de maquillaje. La empresa no solo vende artículos, también cuenta con un spa de belleza donde brindan servicios completos para belleza en general, desde uñas esculpidas, a depilación definitiva o un lifting facial. Se solicito que el e-Commerce también cuente con la posibilidad de poder sacar turnos para el spa. 
 Además, la empresa cuenta con cursos online pagos para convertir en profesionales a personas que quieran comenzar a emprender en el área del Nail Art, lifting de pestañas, etc.
