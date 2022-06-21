@@ -27,7 +27,8 @@ Persona que deseen capacitarse así sea para aplicarlo para un uso personal o pa
 
 ## Nos enorgullece presentarles este proyecto y el desarrollo del mismo.
 
-
+● Link con la lista de los productos que ofrecemos 
+https://docs.google.com/spreadsheets/d/1J5er_jNcr29a2wbixtV49PQRhYZN0su34kdG5vrp8rI/edit?usp=sharing
 
 ## ***¡Paginas Referentes!***
 1.  ● Por los productos o servicios que ofrecen: 
