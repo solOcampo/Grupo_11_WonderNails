@@ -2,21 +2,21 @@
 
 # grupo_11_WonderNails 
 
+## Nos enorgullece presentarles este proyecto y el desarrollo del mismo.
+
 ## ***¡Bienvenidos a Wonder Nails!*** 
 ![alt text](https://raw.githubusercontent.com/solOcampo/Grupo_11_WonderNails/master/Extras/WonderNails-Logotipo.jpeg)
 
 El cliente solicitó un e-Comerse para su empresa Wonder Nail dedicada a la distribución de insumos para uñas y maquillaje. Productos desde apliques para uñas, esmaltes de todo tipo e insumos para artistas de uñas desde tornos a instrumentales; también abarcando la venta de maquillaje. La empresa cuenta con spas en varias localidades, por lo cual también se facilita whatsapp, dirección y horarios de cada uno.
 
-## El público al que apunta el e-Commerce es en parte:
-Aquella persona que desee comprar artículos para uñas o maquillaje para un uso personal
-Aquel profesional de la belleza que precise insumos para su emprendimiento
-Persona que quisieran un turno para el salón de belleza.
-Persona que deseen capacitarse así sea para aplicarlo para un uso personal o para ejercer como profesionales de la belleza.
-
-## Nos enorgullece presentarles este proyecto y el desarrollo del mismo.
-
 ● Link con la lista de los productos que ofrecemos 
 https://docs.google.com/spreadsheets/d/1J5er_jNcr29a2wbixtV49PQRhYZN0su34kdG5vrp8rI/edit?usp=sharing
+
+## El público al que apunta el e-Commerce:
+Aquella persona que desee comprar artículos para uñas o maquillaje para un uso personal.
+Aquel profesional de la belleza que precise insumos para su emprendimiento
+Persona que quisieran un turno para el salón de belleza.
+
 
 ## ***¡Paginas Referentes!***
 1.  ● Por los productos o servicios que ofrecen: 
