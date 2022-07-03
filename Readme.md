@@ -19,18 +19,18 @@ Persona que quisieran un turno para el salón de belleza.
 
 
 ## ***¡Paginas Referentes!***
-1.  ● Por los productos o servicios que ofrecen: 
+1.  Por los productos o servicios que ofrecen: 
 - [De Uñas](https://www.xn--deuas-qta.com.ar/ "De Uñas")
 
-2.  ● Por los clientes a los que apuntan:
+2.  Por los clientes a los que apuntan:
 - [Perfect Liss](https://perfectlissacademiaonline.com.ar/ "Perfect Liss")
 
-3.  ● Por las estetica que presentan:
+3.  Por las estetica que presentan:
 - [Go Nails](https://gonails.com.ar/ "Go Nails")
 - [Nails & Co](https://nailsandco.com.ar/# "Nails & Co")
 - [Ocean Nail Supply](https://www.oceannailsupply.com/ "Ocean Nail Supply")
 
-4.  ● Por las funcionalidades implementadas: 
+4.  Por las funcionalidades implementadas: 
 - [Go Nails](https://gonails.com.ar/ "Go Nails")
 - [Jimena Nails](https://jimenanails.com/ "Jimena Nails")
 
