@@ -46,3 +46,6 @@ Persona que quisieran un turno para el salón de belleza.
 
 
 # Comisión 17 - Curso de Programación Full Stack - Fundación Formar
+
+## Link del tablero de trello
+![Trello](https://trello.com/b/PuRDFyv6/proyectointegradorgrupo11c17)
