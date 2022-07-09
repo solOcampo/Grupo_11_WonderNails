@@ -1,22 +1,14 @@
 {
-  "name": "wondernails",
+  "name": "site",
   "version": "1.0.0",
-  "description": "![alt text](https://raw.githubusercontent.com/solOcampo/Grupo_11_WonderNails/master/Extras/WonderNails-Logotipo.jpeg)",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/solOcampo/Grupo_11_WonderNails.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/solOcampo/Grupo_11_WonderNails/issues"
-  },
-  "homepage": "https://github.com/solOcampo/Grupo_11_WonderNails#readme",
   "dependencies": {
     "express": "^4.18.1"
   }
