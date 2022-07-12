@@ -21,8 +21,8 @@
     margin-bottom: 30px;
     color: var(--colorRosa);
     border-radius: 100%;
-    border: 1px solid var( --colorGrisclaro);
-  
+    box-shadow: 0px 4px 0px 0px #e4e4e4;
+    border: none;
 }
 .home header .button2{
     margin: 20px 40px ;
@@ -44,7 +44,7 @@
 }
 
 /* Tablet */
-@media (min-width:460px) {
+@media (min-width:461px) {
     .home header .logo {
         width: 100px;
         margin: -37px;
