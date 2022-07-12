@@ -15,5 +15,5 @@ app.get('/login',(req,res)=> res.sendFile(path.join(__dirname,'views','login.htm
 app.get('/register',(req,res)=> res.sendFile(path.join(__dirname,'views','register.html')))
 
 
-app.listen(port,() => console.log(`El servidor fue levantado con exito en el puerto ${port}`))
+app.listen(port,() => console.log(`El servidor fue levantado con exito en el puerto http://localhost:${port}`))
 

@@ -3,7 +3,13 @@
 
 :root{
     /* Colores */
-    --colorPrincipal:#eee;
+    --colorRosa:#EBC7C7;
+    --colorRosaclaro:#FFEFEF;
+    --colorNegro:#323232;
+    --colorGrisoscuro:#707070;
+    --colorGrisclaro:#E4E4E4;
+    --colorGrisclaro2:#DDD7D9;
+    
 
     /* Fuentes */
 }

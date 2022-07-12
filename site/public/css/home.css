@@ -1,3 +1,75 @@
-.home main section{
+
+.home header .icons{
+    display: flex ;
+    background-color:var(--colorRosa);
+    justify-content: center;
     
 }
+.home header nav ul a{
+    display: flex;
+    width: 25px;
+    font-size: 20px;
+    margin: 10px 0;
+    color:white;
+}
+.home header button{
+    margin: 20px;
+    width:40px ;
+    height: 40px;
+    font-size: 20px;
+    background-color:white;
+    margin-bottom: 30px;
+    color: var(--colorRosa);
+    border-radius: 100%;
+    border: 1px solid var( --colorGrisclaro);
+  
+}
+.home header .button2{
+    margin: 20px 40px ;
+    align-items: flex-start;
+    float: right;
+    justify-content: space-between;
+    
+}
+.home header .logo {
+   
+    display: flex;
+    justify-content: center;
+    align-items: self-end;
+    height: 57px;
+   
+}
+.home header .searchBar{
+    display: none;
+}
+
+/* Tablet */
+@media (min-width:460px) {
+    .home header .logo {
+        width: 100px;
+        margin: -37px;
+        height: 187px;
+        justify-content: left;
+       display:inline-flex ;
+    }
+    .home header{
+        padding-bottom: 20px;
+    }
+    .home header button{
+        display: none;
+    }
+    .home header .searchBar{
+       float: unset;
+        display: flex;   
+    justify-content: center; 
+}
+}
+
+/* Desktop */
+@media (min-width:769px) {
+    .home header .searchBar{
+        display: none;
+    }
+}
+
+   
