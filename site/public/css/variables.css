@@ -1,9 +1,20 @@
 /* Fuente a utilizar */
-@import url();
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+@font-face {
+    font-family: 'fuenteWonderNails';
+    src: url(../fonts/Mustache\ Script.ttf);
+}
 :root{
     /* Colores */
     --colorPrincipal:#eee;
+    --grisOscuro: #323232;
+    --grisMedio: #707070;
+    --gris: #DDD7D9;
+    --grisClaro: #e4e4e4;
+    --rosaOscuro: #ebc7c7;
+    --rosaClaro: #ffefef;
 
     /* Fuentes */
+     --fuenteSubtitulos: 'Montserrat', sans-serif;
+     --fuenteTitulos: 'fuenteWonderNails';
 }
