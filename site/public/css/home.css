@@ -68,6 +68,8 @@ img{
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 90%;
+    position: relative;
 }
 .tienda .titulo h5{
     padding-top: 20px;
@@ -77,6 +79,7 @@ img{
     font-weight: 400;
     color: var(--grisMedio);
     text-transform: uppercase;
+    position: absolute;
 }
 .tienda .titulo h1{
     font-family: var(--fuenteTitulos);
@@ -90,13 +93,13 @@ img{
     font-weight: 500;
     color: var(--grisOscuro);
     text-align: center;
-    position: relative;
-    bottom: 20px;
+    position: absolute;
+    top: 133px;
 }
 .tienda .titulo div{
     width: 70%;
     position: relative;
-    bottom: 15px;
+    bottom: 56px;
 }
 .tienda article .secciones{
     display: flex;
@@ -136,17 +139,24 @@ img{
 .tienda .carruselTienda{
     background-color: white;
     width: 100%;
-    height: 400px;
+    height: 260px;
     position: relative;
+    overflow: hidden;
 }
 .tienda .carruselTienda .seccion{
     left: 0;
     top: 0;
     opacity: 0;
     width: 100%;
-    height: inherit;
+    height: 260px;
     transition: opacity .5s;
-    /* position: absolute; */
+    position: absolute;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.tienda .carruselTienda .seccion::-webkit-scrollbar{
+    display: none;
 }
 .tienda .carruselTienda .seccion:first-child{
     opacity: 1;
@@ -155,24 +165,26 @@ img{
     opacity: 1;
 }
 /* NUEVO */
-#nuevo{
+#nuevo, #oferta{
     position: absolute;
     background-color: white;
     display: flex;
     justify-content: space-evenly;
 }
 .carruselTienda .seccion .caja{
-    width: 30%;
-    height: 250px;
-    border-radius: 10px;;
+    flex: 0 0 auto;
+    width: 110px;
+    height: 200px;
+    border-radius: 14px;;
     margin-top: 20px;
     background-color: white;
     box-shadow: 0px 5px 10px var(--gris);
-    z-index: 10;
+    /* z-index: 10; */
 }
 .carruselTienda .seccion .caja .caja-etiquetas{
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
 .carruselTienda .seccion .caja .etiqueta{
@@ -186,6 +198,20 @@ img{
     position: relative;
     bottom: 10px;
     left: 0px;
+    margin-right: 2px;
+}
+.carruselTienda .seccion .caja .oferta{
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--rosaOscuro);
+    padding: 3px 5px;
+    border-radius: 3px;
+    position: relative;
+    bottom: 10px;
+    left: 0px;
+
 }
 .carruselTienda .seccion .caja .etiquetaC{
     font-size: 10px;
@@ -193,21 +219,29 @@ img{
     background-color: var(--rosaOscuro);
     padding: 2px 3px;
     border-radius: 3px;
-    position:relative;
+    position:absolute;
     bottom: 10px;
     right: 0;
-    justify-content: flex-end;
     cursor: pointer;
     opacity: 1;
 }
-.carruselTienda .seccion .caja h4, .precio{
+.carruselTienda .seccion .caja h4{
     font-size: 10px;
     text-align: center;
     display: block;
     font-weight: 700;
 }
-.carruselTienda .seccion .caja .precio{
+.carruselTienda .seccion .caja .precio, .precioViejo{
     color: var(--grisMedio);
+    text-align: center;
+    font-weight: 700;
+    font-size: 10px;
+    margin: 0 auto;
+}
+.carruselTienda .seccion .caja .precioViejo{
+    color: var(--grisClaro);
+    font-weight: 300;
+    text-decoration: line-through;
 }
 .carruselTienda .seccion .caja input{
     height: 15px;
@@ -215,9 +249,10 @@ img{
     font-size: 10px;
     padding: 0;
     margin: -1px;
-    display: inline;
-    text-align: center;
-
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color: var(--grisClaro);
 }
 .carruselTienda .seccion .caja .input{
     display: flex;
@@ -225,10 +260,13 @@ img{
     margin: 5px 0;
 }
 .carruselTienda .seccion .caja input:active{
-    background-color: var(--rosaClaro);
+    background-color: var(--rosaOscuro);
 }
 .carruselTienda .seccion .caja .medio{
-    width: 50px;
+    width: 20px;
+    background-color: white;
+    border: 1px solid var(--grisClaro);
+    text-align: center;
 }
 .carruselTienda .seccion .caja .foto-prod{
     height: 80px;
@@ -236,19 +274,42 @@ img{
     margin: 0 auto;
     padding-bottom: 87px;
 }
-/* FAVORITOS */
-#favoritos{
-    background-color: white; 
-    position: absolute;
-    top: 0;
-    right: 0;
+.carruselTienda .seccion .caja .comprar{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: var(--grisClaro);
+    padding: 8px;
+    box-shadow: 0px 1px  2px var(--grisMedio);
 }
-/* OFERTA */
-#oferta{
-    background-color: white; 
-    position: relative;
-    top: 0;
-    right: 0;
+.carruselTienda .cajaBotonesT{
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    margin: 0 auto;
+}
+.carruselTienda .botonesT{
+    display: flex;
+    justify-content: center;
+}
+.carruselTienda .botonT{
+    display: flex;
+    border: 2px solid var(--grisMedio);
+    border-radius: 100%;
+    padding: 3px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 1s;
+    width: 3px;
+}
+.carruselTienda .botonT:hover{
+    background-color: var(--rosaOscuro);
 }
 /* LAPTOP - A CORREGIR */
 @media (min-width:769px){
@@ -257,9 +318,16 @@ img{
     }
     .carruselTienda .seccion .caja .etiquetaC:hover{
         opacity: 1;
-        transition: 2s;
+        transition: .5s;
     }
     #nuevo{
-        background-color: var(--rosaClaro);
+        background-color: var(--grisClaro);
+    }
+    .carruselTienda .seccion .caja .comprar{
+        background-color: var(--grisMedio);
+    }
+    .carruselTienda .seccion .caja .comprar:hover{
+        background-color: var(--rosaOscuro);
+        transition: 0.5s;
     }
 }

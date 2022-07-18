@@ -32,63 +32,6 @@
                 <li><a href=""><i class="fas fa-angle-right"></i></a></li>
             </ul>
         </section>
-        <!-- <section class="carrusel">
-            <div id="flecha1">
-                <ul class="slider">
-                    <li id="slide1"><img src="/img/Home/carrusel1.jpg" alt=""></li>
-                </ul>
-                <ul  class="flechas">
-                    <li><a href="#flecha5"><i class="fas fa-angle-left"></i></a></li>
-                    <li><a href="#flecha2"><i  class="fas fa-angle-right"></i></a></li>
-                </ul>
-            </div>
-            <div id="flecha2">
-                <ul class="slider">
-                    <li id="slide2"><img src="/img/Home/carrusel2.jpg" alt=""></li>
-                </ul>
-                <ul class="flechas">
-                    <li><a href="#flecha1"><i class="fas fa-angle-left"></i></a></li>
-                    <li><a href="#flecha3"><i class="fas fa-angle-right"></i></a></li>
-                </ul>
-            </div>
-            <div id="flecha3">
-                <ul class="slider">
-                    <li id="slide3"><img src="/img/Home/carrusel3.jpg" alt=""></li>
-                </ul>
-                <ul class="flechas">
-                    <li><a href="#flecha2"><i class="fas fa-angle-left"></i></a></li>
-                    <li><a href="#flecha4"><i class="fas fa-angle-right"></i></a></li>
-                </ul>
-            </div>
-            <div id="flecha4">
-                <ul class="slider">
-                    <li id="slide4">
-                        <img src="/img/Home/carrusel4.jpg" alt="">
-                    </li>
-                </ul>
-                <ul class="flechas">
-                    <li><a href="#flecha3"><i class="fas fa-angle-left"></i></a></li>
-                    <li><a href="#flecha5"><i class="fas fa-angle-right"></i></a></li>
-                </ul>
-            </div>
-            <div id="flecha5">
-                <ul class="slider">
-                    <li id="slide5"><img src="/img/Home/carrusel5.jpg" alt=""></li>
-                </ul>
-                <ul class="flechas">
-                    <li><a href="#flecha4"><i class="fas fa-angle-left"></i></a></li>
-                    <li><a href="#flecha1"><i class="fas fa-angle-right"></i></a></li>
-                </ul>
-            </div>
-                <ul class="botones">
-                    <li><a href="#slide1"><label for="" class="boton"></label></a></label></li>
-                    <li><a href="#slide2"><label for="" class="boton"></label></a></label></li>
-                    <li><a href="#slide3"><label for="" class="boton"></label></a></label></li>
-                    <li><a href="#slide4"><label for="" class="boton"></label></a></label></li>
-                    <li><a href="#slide5"><label for="" class="boton"></label></a></label></li>
-                </ul> -->
-        </section>
-    
         <section class="tienda">
          <!-- INICIO -->
             <article class="titulo">
@@ -109,6 +52,7 @@
             </article>
          <!-- CARRUSEL DE SECCIONES -->
             <article class="carruselTienda">
+                  <!-- novedades -->
                     <div id="nuevo" class="seccion">
                         <div class="caja">
                             <div class="caja-etiquetas">
@@ -125,7 +69,7 @@
                                 <input class="medio" type="number" value="1" min="1" step="1">
                                 <input type="button" value="+">
                             </div>
-                            <button>Comprar</button>
+                            <button class="comprar">Comprar</button>
                         </div>
                         <div class="caja">
                             <div class="caja-etiquetas">
@@ -142,7 +86,7 @@
                                 <input class="medio" type="number" value="1" min="1" step="1">
                                 <input type="button" value="+">
                             </div>
-                            <button>Comprar</button>
+                            <button class="comprar">Comprar</button>
                         </div>
                         <div class="caja">
                             <div class="caja-etiquetas">
@@ -159,89 +103,127 @@
                                 <input class="medio" type="number" value="1" min="1" step="1">
                                 <input type="button" value="+">
                             </div>
-                            <button>Comprar</button>
+                            <button class="comprar">Comprar</button>
                         </div>
                     </div>
-                    
-                    <div id="favoritos" class="seccion">
-                        <div>
-                            <span class="etiqueta"><i class="far fa-heart"></i></span>
-                            <img src="" alt="">
-                            <h4>hola</h4>
-                            <span class="precio">$5000</span>
-                            <div>
+                    <!-- favoritos -->
+                    <div id="nuevo" class="seccion">
+                        <div class="caja">
+                            <div class="caja-etiquetas">
+                                <span class="etiqueta">Nuevo</span>
+                            <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                            </div>
+                            <div class="foto-prod">
+                                <img src="/img/Home/producto-nuevo-1.jpg" alt="">
+                            </div>
+                            <h4>Bloque de brillo</h4>
+                            <span class="precio">$200</span>
+                            <div class="input">
                                 <input type="button" value="-">
-                                <input type="number" value="1" min="1" step="1">
+                                <input class="medio" type="number" value="1" min="1" step="1">
                                 <input type="button" value="+">
                             </div>
-                            <button>Comprar</button>
+                            <button class="comprar">Comprar</button>
                         </div>
-                        <div>
-                            <span class="etiqueta"><i class="far fa-heart"></i></span>
-                            <img src="" alt="">
-                            <h4>hola</h4>
-                            <span class="precio">$5000</span>
-                            <div>
+                        <div class="caja">
+                            <div class="caja-etiquetas">
+                                <span class="etiqueta">Nuevo</span>
+                            <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                            </div>
+                            <div class="foto-prod">
+                                <img src="/img/Home/producto-nuevo-2.jpg" alt="">
+                            </div>
+                            <h4>Laminas de oro</h4>
+                            <span class="precio">$600</span>
+                            <div class="input">
                                 <input type="button" value="-">
-                                <input type="number" value="1" min="1" step="1">
+                                <input class="medio" type="number" value="1" min="1" step="1">
                                 <input type="button" value="+">
                             </div>
-                            <button>Comprar</button>
+                            <button class="comprar">Comprar</button>
                         </div>
-                        <div>
-                            <span class="etiqueta"><i class="far fa-heart"></i></span>
-                            <img src="" alt="">
-                            <h4>hola</h4>
-                            <span class="precio">$5000</span>
-                            <div>
+                        <div class="caja">
+                            <div class="caja-etiquetas">
+                                <span class="etiqueta">Nuevo</span>
+                            <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                            </div>
+                            <div class="foto-prod">
+                                <img src="/img/Home/producto-nuevo-3.jpg" alt="">
+                            </div>
+                            <h4>Cabina secador</h4>
+                            <span class="precio">$600</span>
+                            <div class="input">
                                 <input type="button" value="-">
-                                <input type="number" value="1" min="1" step="1">
+                                <input class="medio" type="number" value="1" min="1" step="1">
                                 <input type="button" value="+">
                             </div>
-                            <button>Comprar</button>
+                            <button class="comprar">Comprar</button>
                         </div>
                     </div>
-                    
+                    <!-- ofertas -->
                     <div id="oferta" class="seccion">
-                        <div>
-                            <span class="etiqueta">-25%</span>
-                            <span class="etiqueta"><i class="far fa-heart"></i></span>
-                            <img src="" alt="">
-                            <h4>chau</h4>
-                            <span class="precio">$85000</span>
-                            <div>
+                        <div class="caja">
+                            <div class="caja-etiquetas">
+                                <span class="etiqueta">Nuevo</span>
+                                <span class="oferta" class="etiqueta">-25%</span>
+                            <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                            </div>
+                            <div class="foto-prod">
+                                <img src="/img/Home/producto-nuevo-1.jpg" alt="">
+                            </div>
+                            <h4>Torno Drill 288 <br> Professional</h4>
+                            <span class="precioViejo">$200</span>
+                            <span class="precio">$200</span>
+                            <div class="input">
                                 <input type="button" value="-">
-                                <input type="number" value="1" min="1" step="1">
+                                <input class="medio" type="number" value="1" min="1" step="1">
                                 <input type="button" value="+">
                             </div>
-                            <button>Comprar</button>
+                            <button class="comprar">Comprar</button>
                         </div>
-                        <div>
-                            <span class="etiqueta">-25%</span>
-                            <span class="etiqueta"><i class="far fa-heart"></i></span>
-                            <img src="" alt="">
-                            <h4>chau</h4>
-                            <span class="precio">$85000</span>
-                            <div>
+                        <div class="caja">
+                            <div class="caja-etiquetas">
+                                <span class="oferta" class="etiqueta">-25%</span>
+                                <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                            </div>
+                            <div class="foto-prod">
+                                <img src="/img/Home/producto-nuevo-2.jpg" alt="">
+                            </div>
+                            <h4>Laminas de oro</h4>
+                            <span class="precio">$600</span>
+                            <div class="input">
                                 <input type="button" value="-">
-                                <input type="number" value="1" min="1" step="1">
+                                <input class="medio" type="number" value="1" min="1" step="1">
                                 <input type="button" value="+">
                             </div>
-                            <button>Comprar</button>
+                            <button class="comprar">Comprar</button>
                         </div>
-                        <div>
-                            <span class="etiqueta">-25%</span>
-                            <span class="etiqueta"><i class="far fa-heart"></i></span>
-                            <img src="" alt="">
-                            <h4>chau</h4>
-                            <span class="precio">$85000</span>
-                            <div>
+                        <div class="caja">
+                            <div class="caja-etiquetas">
+                                <span class="oferta" class="etiqueta">-25%</span>
+                             <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                            </div>
+                            <div class="foto-prod">
+                                <img src="/img/Home/producto-nuevo-3.jpg" alt="">
+                            </div>
+                            <h4>Cabina secador</h4>
+                            <span class="precio">$600</span>
+                            <div class="input">
                                 <input type="button" value="-">
-                                <input type="number" value="1" min="1" step="1">
+                                <input class="medio" type="number" value="1" min="1" step="1">
                                 <input type="button" value="+">
                             </div>
-                            <button>Comprar</button>
+                            <button class="comprar">Comprar</button>
                         </div>
+                    </div>
+                    <div class="cajaBotonesT">
+                        <ul class="botonesT">
+                            <li><a href=""><label for="" class="botonT"></label></a></label></li>
+                            <li><a href=""><label for="" class="botonT"></label></a></label></li>
+                            <li><a href=""><label for="" class="botonT"></label></a></label></li>
+                            <li><a href=""><label for="" class="botonT"></label></a></label></li>
+                            <li><a href=""><label for="" class="botonT"></label></a></label></li>
+                        </ul>
                     </div>
             </article>
         </section>
