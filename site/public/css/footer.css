@@ -41,6 +41,9 @@ footer {
     border-radius: 15px;
 }
 .container__email .subs{
+    width: 20px;
+    font-family: var(--fuenteSubtitulos);
+    font-weight: bold;
     width: 5rem;
     display: flex;
     color: white;
@@ -128,9 +131,7 @@ footer {
 
     .container_ilustration{
     text-transform: uppercase;
-    padding-top: 2px;
-    margin-block: 20px;
-    margin: 10px;
+    margin: 0px 60px;
     display: flex;
     position: relative;
     top: 10rem;
@@ -142,12 +143,14 @@ footer {
  
   
 .container_ilustration img{
-    width: 100px;
+    width: 80px;
     flex-wrap: wrap;
 }
 
 
 .__ilustration,.__ilustration2,.__ilustration3{
+    margin: 10px;
+    font-size: 12px;
     font-family: var(--fuenteSubtitulos);
     text-align: center;
     

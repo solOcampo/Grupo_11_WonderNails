@@ -1,0 +1,195 @@
+
+main{
+    position: relative;
+    left: 40px;
+    top: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+  }
+  
+  .wrapper h1{
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: var(--fuenteSubtitulos);
+    color:var(--grisMedio);
+  }
+  .wrapper{
+    text-align: center;
+  }
+ 
+  .wrapper form{
+    margin: 20px 0;
+  }
+  form .field{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  form .field .input-area{
+    height: 50px;
+    width: 100%;
+    position: relative;
+  }
+  form input{
+    background: white;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 45px;
+    font-size: 18px;
+    box-shadow: 0px 2px 0px 0px #e4e4e4;
+    border-radius: 35px;
+    border-bottom-width: 2px;
+    transition: all 0.2s ease;
+    border: none;
+  }
+  
+
+  .field .input-area i{
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  .input-area .icon{
+    left: 15px;
+    color: var(--grisMedio);
+    transition: color 0.2s ease;
+  }
+ 
+  form input:focus ~ .icon,
+  form .field.valid .icon{
+    color: var(--rosaOscuro);
+  }
+  form .field.shake input:focus ~ .icon,
+  form .field.error input:focus ~ .icon{
+    color: var(--grisMedio);
+  }
+  form input::placeholder{
+    color: var(--grisMedio);
+    font-size: 17px;}
+
+    .recordarme_bottom{
+        display: flex;
+        color: black;
+        font-weight: bold;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-around;
+        font-family: var(--fuenteSubtitulos);
+    }
+    .recordarme_bottom label{
+        color: var(--grisMedio);
+        font-family: var(--fuenteSubtitulos);
+        bottom: 3px;
+        right: 9px;
+        font-size: 10px;
+        position: relative;
+    }
+    .recordarme_bottom small{
+        color: var(--grisMedio);
+        font-family: var(--fuenteSubtitulos);
+        bottom: 3px;
+        right: 9px;
+        font-size: 10px;
+        position: relative;
+    }
+    
+    
+    .login .Access {
+        top: 5px;
+        right: 115px;
+        position: relative;
+    }
+    .login .Access2 {
+        position: relative;
+        left: 20px;
+        bottom: 15px;
+        float: right;
+    }
+    .login .access_text{
+        left: 58px;
+        font-size: 12px;
+        color: var(--grisMedio);
+        font-family: var(--fuenteSubtitulos);
+        font-weight: bold;
+        position: relative;
+        bottom: 11px;
+    } 
+    .wrapper button{
+        font-weight: bold;
+        left: 62px;
+        position: relative;
+        border-radius: 15px;
+        border: none;
+        width: 5rem;
+        font-family: var(--fuenteSubtitulos);
+        color: white;
+        padding: 7px;
+        background-color: var(--rosaOscuro);
+        margin: 5px;
+        text-align: center;
+        top: 50px;
+    }
+    .social_icons{
+        position: relative;
+        left: 41px;
+        color: black;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .button_go,.button_fa,.button_app{
+        
+        right: 50px;
+        position: relative;
+        bottom: 38px;
+        /* top: -34px; */
+        color: var(--rosaOscuro);
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        background-color: white;
+        border-radius: 100%;
+        box-shadow: 0px 4px 0px 0px #e4e4e4;
+       
+    }
+    .button_go .icon{
+        top: 12px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    .button_fa .icon{
+        top: 12px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    .button_app .icon{
+        top: 12px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    
+    }
+     /* Tablet */
+@media (min-width: 461px){
+    main {
+        bottom: -100px;
+        position: absolute;
+         top: 200px; 
+        right: 45px;
+         text-align: center; 
+         display: flex;
+    }
+}
+    
+    
+    
+    
+    
+    
