@@ -9,7 +9,7 @@ header .icons{
     text-align: center;
     color: white;
 }
-header .button,.button2{
+header .button{
     position: relative;
     bottom: 110px;
     margin: 15px;
@@ -25,6 +25,17 @@ header .button,.button2{
 }
 
 header .button2{
+    position: relative;
+    bottom: 180px;
+    margin: 15px;
+    color: var(--rosaOscuro);
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0px 4px 0px 0px #e4e4e4;
+    border: none;
     float: right;
 }
 header .logo {
@@ -45,11 +56,15 @@ header .logo {
         position: absolute;
         left: -47px;
    }
-   header .button,.button2{
+   header .button{
     position: relative;
     margin: 10px;
     top: 150px;
     
+   }
+   header .button2{
+    top: 85px;
+    position: relative;
    }
     .buscar{
     box-shadow: 0px 4px 0px 0px #e4e4e4;
