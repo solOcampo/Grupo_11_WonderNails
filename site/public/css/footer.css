@@ -4,10 +4,42 @@ footer {
   background-image: url(../images/Rectangle\ 1213.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: 15rem;
+  background-position-y: 25rem;
 
     
  }
+.container_ilustration{
+    display: none;
+}
+
+ .container__email {
+    margin: auto;
+    margin-top: 175px;
+    padding: 10px;
+}
+.container__email input{
+    width: 15rem;
+    border: none;
+    box-shadow: 4px 0px 3px 0px #e4e4e4;
+    background: #fff;
+    padding: 7px;
+    height: 30px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+.container__email .subs{
+    width: 5rem;
+    display: flex;
+    color: white;
+    padding: 7px;
+    background-color: var(--rosaOscuro);
+    margin: 5px;
+}
+.container__email label{
+    display: flex;
+    margin-bottom: 5px;
+    
+}
 
 
 .container__footer {
@@ -80,5 +112,34 @@ footer {
 
     /* Tablet */
 @media (min-width: 461px){
+
+    .container_ilustration{
+    padding-top: 2px;
+    margin-block: 20px;
+    margin: 10px;
+    display: flex;
+    position: relative;
+    top: 10rem;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+    
+ 
+  
+.container_ilustration img{
+    width: 100px;
+    flex-wrap: wrap;
+}
+
+
+.__ilustration,.__ilustration2,.__ilustration3{
+    text-align: center;
+    
+ 
+}
+
+
    
 }
+@media (min-width: 769px){}
