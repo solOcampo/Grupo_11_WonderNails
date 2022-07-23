@@ -1,3 +1,329 @@
-main .image img{
+body{
+    font-family: var(--fuenteSubtitulos);
+    
+}
+/* carrusel */
+
+main section.carrusel img {
+    width: 100%;
+    height: 100%;
+}
+
+main section article.conteCarrusel {
+    height: 400px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+main section ul.itemCarrusel {
+    height: 100%;
     position: relative;
+}
+
+main section .tarjetaCarrusel {
+    height: 100%;
+}
+
+main section .flechasCarrusel {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    transition: 1.5s;
+}
+
+li a label.punto {
+    border: 2px solid var(--grisMedio);
+    border-radius: 100%;
+    padding: 3px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 1.5s;
+    display: flex;
+    width: 3px;
+}
+
+li a label.punto:hover {
+    background-color: var(--rosaOscuro);
+}
+
+ul.puntos {
+    display: flex;
+    position: absolute;
+    top: 380px;
+    width: 100%;
+    justify-content: center;
+}
+
+
+/* detalle de producto */
+
+main section h1 {
+    text-align: center;
+    color: var(--grisOscuro);
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+main section article.price p.precio {
+    color: var(--grisMedio);
+    font-size: 14px;
+    padding: 10px;
+    text-decoration: line-through;
+}
+
+main section article.price span.precio-final {
+    color: var(--grisOscuro);
+    padding: 10px;
+    font-weight: bold;
+}
+
+main section article.price small.descuento {
+    color: #ff276d;
+}
+
+main section article.conten-carrito {
+    display: flex;
+    padding: 10px;
+}
+
+main section article.conten-carrito .sumar-carrito {
+    display: flex;
+}
+
+main section article.conten-carrito .sumar-carrito input {
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--grisClaro);
+    background-color: white;
+    width: 20px;
+}
+
+main section article.conten-carrito .sumar-carrito input:active {
+    background-color: var(--rosaOscuro);
+}
+
+.sumar-carrito .medio {
+    width: 20px;
+    background-color: white;
+    border: 1px solid var(--grisClaro);
+    text-align: center;
+}
+
+.comprar-boton {
+    background-color: var(--rosaOscuro);
+    color: white;
+    border: none;
+    border-radius: 35px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 25px;
+}
+
+main section.detalle-producto div.lista-deseos {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+main section.detalle-producto div.lista-deseos span {
+    font-weight: bolder;
+    color: var(--grisMedio);
+}
+
+.lista-deseos i {
+    margin: 0 10px;
+    font-weight: normal;
+}
+
+main section article.share {
+    display: flex;
+    padding: 10px;
+    color: var(--grisMedio);
+}
+
+main section article.share a i {
+    margin: 0 5px;
+    color: var(--grisMedio);
+}
+
+main section.descripcion {
+    border: 1px solid #d2d0d0a0;
+}
+
+main section.descripcion h3 {
+    color: #f57b7b;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+main section.descripcion p {
+    color: var(--grisMedio);
+    padding: 10px;
+}
+
+
+/* promociones */
+main section.promociones h3 {
+    color: #f57b7b;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+main section.promociones {
+    padding: 10px;
+    text-align: center;
+    color: var(--grisMedio);
+}
+
+.retiro i,
+.cambios i,
+.cuotas i {
+    align-items: center;
+    padding: 10px;
+    border: 1px solid var(--rosaOscuro);
+    color: var(--rosaOscuro);
+    border-radius: 50%;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+/* productos relacionados */
+
+h2 {
+    padding: 10px;
+    color: var(--grisOscuro);
+    font-size: 20px;
+    font-weight: bold;
+    border-top: 1px solid #d2d0d0a0;
+    margin-bottom: 20px;
+}
+
+main section.productos-relacionados img {
+    width: 200px;
+    height: 200px;
+}
+
+main section.productos-relacionados {
+    text-align: center;
+}
+
+main section.productos-relacionados article {
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #d2d0d0a0;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px var(--gris);
+    width: 60%;
+    margin-bottom: 25px;
+}
+
+main section.productos-relacionados article:hover {
+    position: relative;
+    transform: scale(1.2);
+    transition: all 0.5s;
+    z-index: 10;
+}
+
+main section.productos-relacionados .caja-etiquetas {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+main section.productos-relacionados span.etiqueta {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--rosaOscuro);
+    padding: 3px 5px;
+    border-radius: 3px;
+    position: relative;
+    bottom: 10px;
+    left: 0px;
+    margin-right: 3px;
+}
+
+main section.productos-relacionados a.etiquetaC {
+    font-size: 13px;
+    color: white;
+    background-color: var(--rosaOscuro);
+    padding: 2px 4px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    margin: 1px;
+}
+
+
+/* tablet */
+@media (min-width:461px) {
+    main section.carrusel img {
+        width: 100%;
+        height: 100%;
+    }
+
+    main section.descripcion h3 {
+        text-align: center;
+    }
+
+    main section.descripcion p {
+        text-align: center;
+    }
+}
+
+/* descktop */
+@media (min-width:769px) {
+    main section.carrusel img {
+        width: 45%;
+        height: 100%;
+    }
+
+    main section .flechasCarrusel {
+        width: 45%;
+    }
+
+    ul.puntos {
+        width: 45%;
+    }
+
+    main section.detalle-producto {
+        text-align: center;
+        position: absolute;
+        right: 60px;
+        top: 30px;
+        width: 50%;
+    } 
+
+    main section.detalle-producto article.conten-carrito {
+        justify-content: center;
+    }
+
+    main section article.share {
+        justify-content: center;
+    } 
+
+    main section.promociones {
+       border-top: 1px solid #d2d0d0a0 ;
+    }
+
+    main section.productos-relacionados {
+        display: flex;
+        text-align: center;
+    }
+
+    main section.productos-relacionados article {
+        margin: 20px;
+    }
+
 }
