@@ -18,3 +18,12 @@
      --fuenteSubtitulos: 'Montserrat', sans-serif;
      --fuenteTitulos: 'fuenteWonderNails';
 }
+:root{
+    /* Colores */
+    --colorRosa:#EBC7C7;
+    --colorRosaclaro:#FFEFEF;
+    --colorNegro:#323232;
+    --colorGrisoscuro:#707070;
+    --colorGrisclaro:#E4E4E4;
+    --colorGrisclaro2:#DDD7D9;
+}
