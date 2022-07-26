@@ -4,9 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css"> 
+     <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/114da55d37.js" crossorigin="anonymous"></script>
+    <title>Login</title>
 </head>
-<body class="login">
+<body  class="login">
+    <header>
+        <nav>
+            <ul class="icons">
+               <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+               <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></i></a>
+               <a href="whatssap"><i class="fab fa-whatsapp"></i></a>
+            </ul>
+        </nav>
+        
+        <div class="logo">
+            <a href="/">
+              <img src="/images/WonderNails-Logo.png" alt="logo de su pagina"width="250px" >
+            </a>
+        </div>
+        
+        <div>
+           <button class="button"><i class="fas fa-bars"></i></button>
+           <div>
+             <button class="button2"><i class="fas fa-shopping-bag"></i></button>
+           </div>
+         </div>  
+         
+
+       <div class="buscar">
+            <input type="text" class="buscar_texto" 
+            placeholder="Buscar">
+            <a href="" class="boton">
+            <i class="fas fa-search"></i>
+     </div>   
+
+      
+    </header>
+    <main>
+        <div class="wrapper">
+
+          <h1>Acceder</h1>
+            <form action="" method="post">
+                <div class="field email">
+                    <div class="input-area">
+                       <input type="text" name="name" id="name" placeholder="Nombre de usuario o email" required>
+                       <i class="icon fas fa-envelope"></i>
+                    </div>
+                </div>
+                <div class="field password">
+                    <div class="input-area">
+                      <input type="password" name="name" id="name" placeholder="Contraseña" required>
+                      <i class="icon fas fa-lock"></i>
+                   </div>
+                </div>
+                <div class="recordarme_bottom">
+                    <input type="checkbox" name="recordarme" id="recordarme">
+                    <label for="recordarme">Recordarme</label>
+                    <small>¿Olvidaste tu contraseña?</small>
+                </div>
+                <div class="Access">
+                    <img src="/images/Rectangle 29.svg">
+               </div>
+               <div>
+                   <div class="Access2">
+                   <img src="/images/Rectangle 30.svg" alt="">
+               </div>
+               <div class="access_text">
+                    <small>O accede con</small>
+             </div>
+              
+          </div>   
+                <div class="social_icons">
+                    <div class="button_go">
+                        <div class="icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                    </div>
+           
+                    <div class="button_fa">
+                        <div class="icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                    </div>
+           
+                    <div class="button_app">
+                        <div class="icon">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                     </div>
+                   </div>
+                <button>Acceder</button>
+            </form>
+        </div>
+
+    </main>
     
 </body>
 </html>

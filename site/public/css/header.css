@@ -1,0 +1,121 @@
+header{
+    height: 40px;
+    padding: 0px 0;
+    background-color: var(--rosaOscuro);
+}
+header .icons{
+    font-size: 25px;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+}
+header .button{
+    position: relative;
+    bottom: 110px;
+    margin: 15px;
+    color: var(--rosaOscuro);
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0px 4px 0px 0px #e4e4e4;
+    border: none;
+   
+}
+
+header .button2{
+    position: relative;
+    bottom: 180px;
+    margin: 15px;
+    color: var(--rosaOscuro);
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0px 4px 0px 0px #e4e4e4;
+    border: none;
+    float: right;
+}
+header .logo {
+  
+    display: flex;
+    justify-content: center;
+    padding: -18px;
+    margin: -50px auto;
+}
+
+.buscar{
+   display: none;
+     
+ }
+ /* Tablet */
+ @media (min-width:461px) {
+    header .logo {
+        position: absolute;
+        left: -47px;
+   }
+   header .button{
+    position: relative;
+    margin: 10px;
+    top: 150px;
+    
+   }
+   header .button2{
+    top: 85px;
+    position: relative;
+   }
+    .buscar{
+    box-shadow: 0px 4px 0px 0px #e4e4e4;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 57%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    padding: 9px;
+    height: 39px;
+    border-radius: 40px;
+   }
+    .buscar_texto{
+    left: 15px;
+    position: relative;
+    border: none; 
+    outline: none; 
+     color: var(--grisMedio); 
+     font-size: 13px;
+     float: left; 
+     line-height: 32px;
+     background: none; 
+
+    }
+    .boton{
+    display: flex;
+    justify-content: end;
+    width: 140px;
+    color: #ffffff;
+    font-size: 18px;
+    }
+
+    header .buscar i{
+    right: -8px;
+    position: relative;
+    padding: 11px;
+    border-radius: 17px;
+    background-color:var(--rosaOscuro);
+    border: none;
+
+    }
+}
+/* Desktop */
+@media (max-width:1024px) {
+    .buscar{
+        bottom: 60%;
+
+    }
+    
+
+       
+}
