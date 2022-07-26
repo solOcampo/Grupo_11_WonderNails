@@ -37,7 +37,7 @@ form .field .input-area{
   width: 100%;
   position: relative;
 }
-form input{
+.login form input{
     
     height: 100%;
     outline: none;
@@ -190,6 +190,9 @@ form input::placeholder{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.container_ilustration{
+  display: none;
 }
     
 } 
