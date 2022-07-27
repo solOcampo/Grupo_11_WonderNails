@@ -100,6 +100,7 @@ header .logo {
     }
 
     header .buscar i{
+    color: white;
     right: -8px;
     position: relative;
     padding: 11px;

@@ -1,0 +1,160 @@
+.register main{
+  width: 70%;
+    max-width: 1024px;
+    position: relative;
+    top: 10rem;
+    left: 3rem; 
+}
+  .Form_wrapper h1{
+    text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: var(--fuenteSubtitulos);
+  color:var(--grisMedio);
+}
+.Form_wrapper{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.Form_wrapper form{
+    margin: 20px 0;
+}
+form .text{
+    width: 100%;
+    margin-bottom: 20px;
+  
+}
+form .text .email_input{
+    height: 50px;
+    width: 100%;
+    position: relative;
+  
+}
+.register form input{
+    height: 100%;
+    outline: none;
+    padding: 0 30px;
+    font-size: 18px;
+    box-shadow: 0px 2px 0px 0px #e4e4e4;
+    border-radius: 35px;
+    border-bottom-width: 2px;
+    transition: all 0.2s ease;
+    border: none;
+}
+.text .email_input i{
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.date p{
+    color: var(--grisMedio);
+    font-family: var(--fuenteSubtitulos);
+    bottom: 3px;
+    right: 9px;
+    font-size: 10px;
+    position: relative;
+    font-weight: bold;
+}
+.register .Access {
+    top: 5px;
+    right: 115px;
+    position: relative;
+}
+.register .Access2 {
+    position: relative;
+    left: 20px;
+    bottom: 15px;
+    float: right;
+}
+.register .access_text{
+    bottom:10px;
+    left: 65px;
+    font-size: 11px;
+    color: var(--grisMedio);
+    font-family: var(--fuenteSubtitulos);
+    font-weight: bold;
+    position: relative;
+    
+} 
+.Form_wrapper button{
+    font-weight: bold;
+    left: 0px;
+    position: relative;
+    border-radius: 15px;
+    border: none;
+    width: 6rem;
+    font-family: var(--fuenteSubtitulos);
+    color: white;
+    padding: 7px;
+    background-color: var(--rosaOscuro);
+    margin: 5px;
+    text-align: center;
+    top: 50px;
+  }
+  .register .social_icons{
+    position: relative;
+    left: 7rem;
+    display: flex;
+    justify-content: space-evenly;
+    top: 4rem;
+  }
+  .register   .button_go,.button_fa,.button_app{
+      
+    right: 50px;
+    position: relative;
+    bottom: 38px;
+    /* top: -34px; */
+    color: var(--rosaOscuro);
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0px 4px 0px 0px #e4e4e4;
+   
+}
+.register .button_go .icon{
+    top: 12px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.register .button_fa .icon{
+    top: 12px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.register.button_app .icon{
+    top: 12px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+  /* Tablet */
+  @media (min-width:461px) {
+ 
+    .register main {
+        position: absolute;
+        left: 4rem;
+        top: 15rem;
+    }
+   
+        
+    } 
+      /* Desktop*/
+      @media (min-width:768px) {
+        .register main {
+            position: absolute;
+            left: 7rem;
+            top: 15rem;
+    
+      }
+      }

@@ -38,7 +38,7 @@ form .field .input-area{
   width: 100%;
   position: relative;
 }
-form input{
+.login form input{
     
     height: 100%;
     outline: none;
@@ -182,21 +182,24 @@ form input::placeholder{
   
   }
    /* Tablet */
-@media (min-width:461px) {
+/* @media (min-width:461px) {
  
-/* .login main {
+.login main {
   position: absolute;
   left: 5rem;
   top: 25rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-} */
-    
-} 
+}
+.container_ilustration{
+  display: none;
+}
+}  */ 
+
   /* Desktop*/
   @media (min-width:768px) {
-   /*  .login main {
+    .login main {
       position: absolute;
       left: 10rem;
       top: 26rem;
@@ -204,5 +207,5 @@ form input::placeholder{
       flex-wrap: wrap;
       justify-content: center;
 
-  } */
+  }
   }
