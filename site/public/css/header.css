@@ -1,4 +1,8 @@
 header{
+    position: relative;
+    height: 200px;
+}
+header nav{
     height: 40px;
     padding: 0px 0;
     background-color: var(--rosaOscuro);
@@ -44,14 +48,18 @@ header .logo {
     justify-content: center;
     padding: -18px;
     margin: -50px auto;
+    width: 250px;
 }
 
-.buscar{
+header .buscar{
    display: none;
      
  }
  /* Tablet */
  @media (min-width:461px) {
+    header{
+        height: 250px;
+    }
     header .logo {
         position: absolute;
         left: -47px;
@@ -66,20 +74,20 @@ header .logo {
     top: 85px;
     position: relative;
    }
-    .buscar{
+    header .buscar{
     box-shadow: 0px 4px 0px 0px #e4e4e4;
     display: flex;
     align-items: center;
     position: absolute;
     left: 50%;
-    bottom: 57%;
+    bottom: -5%;
     transform: translate(-50%,-50%);
     background: #fff;
     padding: 9px;
     height: 39px;
     border-radius: 40px;
    }
-    .buscar_texto{
+    header .buscar_texto{
     left: 15px;
     position: relative;
     border: none; 
@@ -91,7 +99,7 @@ header .logo {
      background: none; 
 
     }
-    .boton{
+    header .botonLupa{
     display: flex;
     justify-content: end;
     width: 140px;
@@ -100,7 +108,6 @@ header .logo {
     }
 
     header .buscar i{
-    color: white;
     right: -8px;
     position: relative;
     padding: 11px;
@@ -112,11 +119,13 @@ header .logo {
 }
 /* Desktop */
 @media (max-width:1024px) {
-    .buscar{
-        bottom: 60%;
+    header .buscar{
+        bottom: -9%;
 
-    }
-    
-
-       
+    }      
 }
+/* @media (min-width:1000px){
+    header{
+        height: 350px;
+    }
+} */
