@@ -3,7 +3,7 @@
   width: 100%;
   height: 500px;
   max-width: 1024px;
-  margin-top: 0;
+  margin: 0 auto;
 
 }
 
@@ -27,6 +27,9 @@
 
 .wrapper form{
   margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 form .field{
   width: 100%;
@@ -53,11 +56,13 @@ form .field .input-area{
 
 
 .field .input-area i{
-  position: absolute;
-  top: 50%;
-  font-size: 18px;
-  pointer-events: none;
-  transform: translateY(-50%);
+  width: 20px;
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    pointer-events: none;
+    top: 17px;
+    left: 25px;
 }
 .input-area .icon{
   left: 15px;
@@ -78,19 +83,21 @@ form input::placeholder{
   font-size: 17px;}
 
   .recordarme_bottom{
-      display: flex;
-      color:var(--grisMedio);
-      font-weight: bold;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-around;
-      font-family: var(--fuenteSubtitulos);
+    width: 100%;
+    display: flex;
+    color: var(--grisMedio);
+    font-weight: bold;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+    font-family: var(--fuenteSubtitulos);
+    align-content: center;
   }
   .recordarme_bottom label{
       color: var(--grisMedio);
       font-family: var(--fuenteSubtitulos);
       bottom: 3px;
-      right: 9px;
+      right: 17px;
       font-size: 10px;
       position: relative;
   }
@@ -102,32 +109,30 @@ form input::placeholder{
       font-size: 10px;
       position: relative;
   }
-  
-  
+  .login .boxAccess{
+    width: 100%;
+    display: flex;
+    margin: 20px 0;
+  } 
   .login .Access {
-      top: 5px;
-      right: 115px;
       position: relative;
+      right: 12px;
   }
   .login .Access2 {
       position: relative;
-      left: 20px;
-      bottom: 15px;
-      float: right;
+      left: 12px;
+
   }
   .login .access_text{
-      left: 58px;
       font-size: 12px;
       color: var(--grisMedio);
       font-family: var(--fuenteSubtitulos);
       font-weight: bold;
       position: relative;
-      bottom: 11px;
+      top: 3px;
   } 
   .wrapper button{
     font-weight: bold;
-    left: 0px;
-    position: relative;
     border-radius: 15px;
     border: none;
     width: 6rem;
@@ -137,22 +142,16 @@ form input::placeholder{
     background-color: var(--rosaOscuro);
     margin: 5px;
     text-align: center;
-    top: 50px;
+    margin-top: 20px;
   }
   .social_icons{
-    position: relative;
-    left: 7rem;
     display: flex;
     justify-content: space-evenly;
-    top: 4rem;
+    width: 50%;
   }
   
   .button_go,.button_fa,.button_app{
-      
-      right: 50px;
       position: relative;
-      bottom: 38px;
-      /* top: -34px; */
       color: var(--rosaOscuro);
       width: 40px;
       height: 40px;
@@ -160,52 +159,28 @@ form input::placeholder{
       background-color: white;
       border-radius: 100%;
       box-shadow: 0px 4px 0px 0px #e4e4e4;
-     
-  }
-  .button_go .icon{
-      top: 12px;
-      position: relative;
       display: flex;
       justify-content: center;
+      align-items: center;
   }
-  .button_fa .icon{
-      top: 12px;
-      position: relative;
-      display: flex;
-      justify-content: center;
-  }
-  .button_app .icon{
-      top: 12px;
-      position: relative;
-      display: flex;
-      justify-content: center;
-  
-  }
+
    /* Tablet */
-/* @media (min-width:461px) {
- 
-.login main {
-  position: absolute;
-  left: 5rem;
-  top: 25rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.container_ilustration{
-  display: none;
-}
-}  */ 
+@media (min-width:461px) {
+  .login .wrapper{
+    position: initial;
+    margin-top: 20px  ;
+  }
+}  
 
   /* Desktop*/
   @media (min-width:768px) {
     .login main {
-      position: absolute;
-      left: 10rem;
-      top: 26rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-
-  }
+      margin: 0 auto;
+    }
+    .login main .wrapper {
+      bottom: 0;
+    }
   }

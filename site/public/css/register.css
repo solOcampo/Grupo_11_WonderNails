@@ -104,7 +104,7 @@ form .text .email_input{
     justify-content: space-evenly;
     top: 4rem;
   }
-  .register   .button_go,.button_fa,.button_app{
+  .register   .button_go,.register .button_fa,.register .button_app{
       
     right: 50px;
     position: relative;
