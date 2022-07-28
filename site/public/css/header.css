@@ -1,6 +1,11 @@
 header{
     position: relative;
-    height: 200px;
+    height: 100px;
+}
+.logo img{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
 }
 header nav{
     height: 40px;
@@ -14,6 +19,11 @@ header .icons{
 }
 header .icons i{
     color: white;
+}
+header .botones-header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
 }
 header .button{
     position: relative;
@@ -30,7 +40,7 @@ header .button{
 }
 header .button2{
     position: relative;
-    bottom: 180px;
+    bottom: 108px;
     margin: 15px;
     color: var(--rosaOscuro);
     width: 40px;
@@ -40,7 +50,7 @@ header .button2{
     border-radius: 100%;
     box-shadow: 0px 4px 0px 0px #e4e4e4;
     border: none;
-    float: right;
+    /* float: right; */
 }
 header .logo {
     display: flex;
@@ -49,6 +59,7 @@ header .logo {
     margin: -50px auto;
     width: 250px;
 }
+
 header .buscar{
     display: none;
 }
@@ -56,23 +67,28 @@ header .buscar{
 /* Tablet */
 @media (min-width:461px) {
     header{
-        height: 250px;
+        height: 100px;
         margin-bottom: 50px;
     }
     header .logo {
         position: absolute;
         left: -47px;
    }
+   header .logo img{
+    margin-left: -80px;
+   }
    header .button{
     position: relative;
     margin: 10px;
     top: 150px;
-    
    }
    header .button2{
-    top: 85px;
+    top: 147px;
     position: relative;
    }
+   header .botones-header{
+    margin-top: -100px;
+}
     header .buscar{
     box-shadow: 0px 4px 0px 0px #e4e4e4;
     display: flex;

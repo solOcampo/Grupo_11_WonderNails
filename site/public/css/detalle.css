@@ -53,7 +53,7 @@ li a label.punto:hover {
 ul.puntos {
     display: flex;
     position: absolute;
-    top: 570px;
+    top: 470px;
     width: 100%;
     justify-content: center;
 }
@@ -123,35 +123,33 @@ main section article.conten-carrito .sumar-carrito input:active {
     font-weight: bold;
     margin: 0 25px;
 }
-
-main section.detalle-producto div.lista-deseos {
-    padding-top: 10px;
-    padding-bottom: 10px;
+.comprar-boton:hover{
+    background-color: var(--grisOscuro);
+    color: var(--rosaOscuro);
 }
 
-main section.detalle-producto div.lista-deseos span {
-    font-weight: bolder;
-    color: var(--grisMedio);
-}
-
-.lista-deseos i {
+.lista-deseos i, .share i {
     margin: 0 10px;
-    font-weight: normal;
-}
-
-main section article.share {
-    display: flex;
+    color: white;
+    font-size: 18px;
+    background-color: var(--rosaOscuro);
     padding: 10px;
-    color: var(--grisMedio);
+    border-radius: 100%;
+    margin-bottom: 20px;
 }
-
-main section article.share a i {
-    margin: 0 5px;
-    color: var(--grisMedio);
+.lista-deseos i:hover, .share i:hover{
+    background-color: var(--grisOscuro);
+    color: var(--rosaOscuro);
+}
+.fav-share{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    margin-top: -48px;
 }
 
 main section.descripcion {
-    border: 1px solid #d2d0d0a0;
+    margin-bottom: 10px;
 }
 
 main section.descripcion h3 {
@@ -179,6 +177,7 @@ main section.promociones {
     padding: 10px;
     text-align: center;
     color: var(--grisMedio);
+    border-top: 1px solid #d2d0d0a0;
 }
 
 .retiro i,
@@ -271,10 +270,16 @@ main section.productos-relacionados a.etiquetaC {
         width: 100%;
         height: 100%;
     }
+    ul.puntos{
+        margin-top: 50px;
+    }
 
     main section.descripcion h3 {
         text-align: center;
     }
+    main section.promociones {
+        display: none;
+     }
 
     main section.descripcion p {
         text-align: center;
@@ -294,14 +299,14 @@ main section.productos-relacionados a.etiquetaC {
 
     ul.puntos {
         width: 45%;
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     main section.detalle-producto {
         text-align: center;
         position: absolute;
         right: 60px;
-        top: 285px;
+        top: 140px;
         width: 50%;
     } 
 
@@ -314,12 +319,14 @@ main section.productos-relacionados a.etiquetaC {
     } 
 
     main section.promociones {
-       border-top: 1px solid #d2d0d0a0 ;
+       display: none;
     }
-
     main section.productos-relacionados {
         display: flex;
         text-align: center;
+    }
+    h2{
+        margin-top: 50px;
     }
 
     main section.productos-relacionados article {
