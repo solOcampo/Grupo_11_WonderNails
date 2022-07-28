@@ -1,10 +1,6 @@
 header{
-    position: relative;
-    height: 200px;
-}
-header nav{
     height: 40px;
-    padding: 0px 0;
+    padding: 0;
     background-color: var(--rosaOscuro);
 }
 header .icons{
@@ -43,26 +39,24 @@ header .button2{
     float: right;
 }
 header .logo {
-  
     display: flex;
     justify-content: center;
-    padding: -18px;
-    margin: -50px auto;
-    width: 250px;
+   
+}
+header .logo img{
+width: 200px;
+
 }
 
-header .buscar{
+.buscar{
    display: none;
      
  }
  /* Tablet */
  @media (min-width:461px) {
-    header{
-        height: 250px;
-    }
     header .logo {
         position: absolute;
-        left: -47px;
+    
    }
    header .button{
     position: relative;
@@ -74,32 +68,32 @@ header .buscar{
     top: 85px;
     position: relative;
    }
-    header .buscar{
+    .buscar{
     box-shadow: 0px 4px 0px 0px #e4e4e4;
     display: flex;
     align-items: center;
     position: absolute;
     left: 50%;
-    bottom: -5%;
+    bottom: 57%;
     transform: translate(-50%,-50%);
     background: #fff;
     padding: 9px;
     height: 39px;
     border-radius: 40px;
    }
-    header .buscar_texto{
+    .buscar_texto{
     left: 15px;
     position: relative;
     border: none; 
     outline: none; 
-     color: var(--grisMedio); 
-     font-size: 13px;
-     float: left; 
-     line-height: 32px;
-     background: none; 
+    color: var(--grisMedio); 
+    font-size: 13px;
+    float: left; 
+    line-height: 32px;
+    background: none; 
 
     }
-    header .botonLupa{
+    .boton{
     display: flex;
     justify-content: end;
     width: 140px;
@@ -108,6 +102,7 @@ header .buscar{
     }
 
     header .buscar i{
+    color: white;
     right: -8px;
     position: relative;
     padding: 11px;
@@ -119,13 +114,11 @@ header .buscar{
 }
 /* Desktop */
 @media (max-width:1024px) {
-    header .buscar{
-        bottom: -9%;
+    .buscar{
+        bottom: 60%;
 
-    }      
-}
-/* @media (min-width:1000px){
-    header{
-        height: 350px;
     }
-} */
+    
+
+       
+}

@@ -1,10 +1,9 @@
 
 .login main{
   width: 100%;
-  height: 500px;
-  max-width: 1024px;
   margin: 0 auto;
-
+  display: flex;
+ justify-content: center;
 }
 
 .wrapper h1{
@@ -13,23 +12,16 @@
   font-family: var(--fuenteSubtitulos);
   color:var(--grisMedio);
 }
-.wrapper {
-  position: relative;
-  text-align: center;
-  bottom: 7rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: inherit;
+.wrapper{
+
+    margin: 0 auto;
+    /* text-align: center; */
+    /* bottom: 7rem; */
+    text-align: center;
 }
 
 .wrapper form{
   margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 form .field{
   width: 100%;
@@ -42,7 +34,7 @@ form .field .input-area{
   position: relative;
 }
 .login form input{
-    
+    font-family: var(--fuenteSubtitulos);
     height: 100%;
     outline: none;
     padding: 0 45px;
@@ -56,13 +48,11 @@ form .field .input-area{
 
 
 .field .input-area i{
-  width: 20px;
-    position: absolute;
-    top: 50%;
-    font-size: 18px;
-    pointer-events: none;
-    top: 17px;
-    left: 25px;
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  pointer-events: none;
+  transform: translateY(-50%);
 }
 .input-area .icon{
   left: 15px;
@@ -83,21 +73,19 @@ form input::placeholder{
   font-size: 17px;}
 
   .recordarme_bottom{
-    width: 100%;
-    display: flex;
-    color: var(--grisMedio);
-    font-weight: bold;
-    flex-wrap: nowrap;
-    align-items: baseline;
-    justify-content: space-evenly;
-    font-family: var(--fuenteSubtitulos);
-    align-content: center;
+      display: flex;
+      color:var(--grisMedio);
+      font-weight: bold;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-around;
+      font-family: var(--fuenteSubtitulos);
   }
   .recordarme_bottom label{
       color: var(--grisMedio);
       font-family: var(--fuenteSubtitulos);
       bottom: 3px;
-      right: 17px;
+      right: 9px;
       font-size: 10px;
       position: relative;
   }
@@ -109,30 +97,32 @@ form input::placeholder{
       font-size: 10px;
       position: relative;
   }
-  .login .boxAccess{
-    width: 100%;
-    display: flex;
-    margin: 20px 0;
-  } 
+  
+  
   .login .Access {
+      top: 5px;
+      right: 115px;
       position: relative;
-      right: 12px;
   }
   .login .Access2 {
       position: relative;
-      left: 12px;
-
+      left: 20px;
+      bottom: 15px;
+      float: right;
   }
   .login .access_text{
+      left: 58px;
       font-size: 12px;
       color: var(--grisMedio);
       font-family: var(--fuenteSubtitulos);
       font-weight: bold;
       position: relative;
-      top: 3px;
+      bottom: 11px;
   } 
   .wrapper button{
     font-weight: bold;
+    left: 0px;
+    position: relative;
     border-radius: 15px;
     border: none;
     width: 6rem;
@@ -142,45 +132,75 @@ form input::placeholder{
     background-color: var(--rosaOscuro);
     margin: 5px;
     text-align: center;
-    margin-top: 20px;
-  }
-  .social_icons{
-    display: flex;
-    justify-content: space-evenly;
-    width: 50%;
+    top: 50px;
   }
   
-  .button_go,.button_fa,.button_app{
-      position: relative;
-      color: var(--rosaOscuro);
-      width: 40px;
-      height: 40px;
-      font-size: 20px;
-      background-color: white;
-      border-radius: 100%;
-      box-shadow: 0px 4px 0px 0px #e4e4e4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  .social_icons{
+    position: relative;
+    left: 7rem;
+    display: flex;
+    justify-content: space-evenly;
+    top: 4rem;
   }
+  .login .icon a :hover{
+   color:var(--grisMedio);
+   
+  }
+ 
+  .login .icon a{
+    color: var(--rosaOscuro);
 
+  }
+  
+  .button_go ,.button_fa ,.button_app {
+    right: 50px;
+    position: relative;
+    bottom: 38px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0px 4px 0px 0px #e4e4e4;
+     
+  }
+  
+  .button_go .icon{
+  top: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  }
+ .button_fa .icon{
+  top: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+ .button_app .icon{
+   top: 12px;
+   position: relative;
+   display: flex;
+   justify-content: center;
+  
+ }
    /* Tablet */
 @media (min-width:461px) {
-  .login .wrapper{
-    position: initial;
-    margin-top: 20px  ;
+.wrapper{
+  padding: 100px;
   }
-}  
-
+ 
+.container_ilustration{
+  display: none;
+}
+    
+} 
   /* Desktop*/
-  @media (min-width:768px) {
-    .login main {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 0 auto;
-    }
-    .login main .wrapper {
-      bottom: 0;
-    }
+@media (min-width:768px) {
+.login main{
+  padding: 40px;
+}
+   
+
+
   }

@@ -1,160 +1,162 @@
 .register main{
-  width: 70%;
-    max-width: 1024px;
-    position: relative;
-    top: 10rem;
-    left: 3rem; 
-}
-  .Form_wrapper h1{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+   
+  }
+  
+  .form_wrapper h1{
     text-align: center;
-  font-weight: bold;
-  text-transform: capitalize;
-  font-family: var(--fuenteSubtitulos);
-  color:var(--grisMedio);
-}
-.Form_wrapper{
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: var(--fuenteSubtitulos);
+    color:var(--grisMedio);
+  }
+  .form_wrapper{
+    /* margin: 0 auto; */
+    padding: 0;
     display: flex;
     text-align: center;
     flex-direction: column;
     flex-wrap: wrap;
-}
-
-.Form_wrapper form{
-    margin: 20px 0;
-}
-form .text{
-    width: 100%;
-    margin-bottom: 20px;
+  }
   
-}
-form .text .email_input{
+  .form_wrapper form{
+    text-align: center;
+  }
+  form .text{
+    /* width: 100%; */
+    margin-bottom: 20px;
+    
+  }
+  form .text .email_input{
     height: 50px;
     width: 100%;
     position: relative;
-  
-}
-.register form input{
+    
+  }
+  .register form input{
+    font-weight:600;
+    font-family: var(--fuenteSubtitulos);
     height: 100%;
     outline: none;
-    padding: 0 30px;
+    padding: 0 20px;
     font-size: 18px;
     box-shadow: 0px 2px 0px 0px #e4e4e4;
     border-radius: 35px;
-    border-bottom-width: 2px;
-    transition: all 0.2s ease;
+    /* transition: all 0.2s ease; */
     border: none;
-}
-.text .email_input i{
-    position: absolute;
-    top: 50%;
-    font-size: 18px;
-    pointer-events: none;
-    transform: translateY(-50%);
-}
-
-.date p{
+  }
+  .register form .data{
+  display: flex;
+  }
+  .register .date{
+    font-size: 5px;
+  }
+  .date label{
     color: var(--grisMedio);
     font-family: var(--fuenteSubtitulos);
     bottom: 3px;
-    right: 9px;
     font-size: 10px;
     position: relative;
     font-weight: bold;
-}
-.register .Access {
-    top: 5px;
-    right: 115px;
-    position: relative;
-}
-.register .Access2 {
-    position: relative;
-    left: 20px;
-    bottom: 15px;
-    float: right;
-}
-.register .access_text{
-    bottom:10px;
-    left: 65px;
-    font-size: 11px;
-    color: var(--grisMedio);
-    font-family: var(--fuenteSubtitulos);
-    font-weight: bold;
-    position: relative;
-    
-} 
-.Form_wrapper button{
-    font-weight: bold;
-    left: 0px;
-    position: relative;
-    border-radius: 15px;
-    border: none;
-    width: 6rem;
-    font-family: var(--fuenteSubtitulos);
-    color: white;
-    padding: 7px;
-    background-color: var(--rosaOscuro);
-    margin: 5px;
-    text-align: center;
-    top: 50px;
   }
-  .register .social_icons{
-    position: relative;
-    left: 7rem;
-    display: flex;
-    justify-content: space-evenly;
-    top: 4rem;
+  .register .Access {
+      top: 5px;
+      right: 115px;
+      position: relative;
   }
-  .register   .button_go,.register .button_fa,.register .button_app{
+  
+  
+  .register .Access2 {
+    position: relative;
+    left: 118px;
+    bottom: 27px;
+  }
+  .register .access_text{
+      bottom:10px;
+      font-size: 11px;
+      color: var(--grisMedio);
+      font-family: var(--fuenteSubtitulos);
+      font-weight: bold;
+      position: relative;
       
-    right: 50px;
-    position: relative;
-    bottom: 38px;
-    /* top: -34px; */
-    color: var(--rosaOscuro);
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    background-color: white;
-    border-radius: 100%;
-    box-shadow: 0px 4px 0px 0px #e4e4e4;
-   
-}
-.register .button_go .icon{
-    top: 12px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-.register .button_fa .icon{
-    top: 12px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-.register.button_app .icon{
-    top: 12px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-
-}
-  /* Tablet */
-  @media (min-width:461px) {
- 
-    .register main {
-        position: absolute;
-        left: 4rem;
-        top: 15rem;
+  } 
+   .register form button{
+      font-weight: bold;
+      position: relative;
+      border-radius: 15px;
+      border: none;
+      width: 7rem;
+      font-family: var(--fuenteSubtitulos);
+      color: white;
+      padding: 7px;
+      background-color: var(--rosaOscuro);
+      top: 50px;
     }
+    .icons-social{
+      position: relative;
+      left: 3rem;
+      display: flex;
+      justify-content: center;
+      top: 4rem;
+    }
+    .register .icon a :hover{
+      color:var(--grisMedio);
+      
+     }
+    .register .icon a{
+      color: var(--rosaOscuro);
+  
+    }
+    .register .icons-social .button_google,.button_facebook,.button_App{
+      margin: 5px;
+      right: 50px;
+      position: relative;
+      bottom: 38px;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      background-color: white;
+      border-radius: 100%;
+      box-shadow: 0px 4px 0px 0px #e4e4e4;
+     
+  }
+  .register .button_google .icon{
+      top: 12px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+  }
+  .register .button_facebook .icon{
+      top: 12px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+  }
+  .register .button_App .icon{
+      top: 12px;
+      position: relative;
+      display: flex;
+      justify-content: center; } 
+  
+  
+    /* Tablet */
+  @media (min-width:461px) {
    
-        
-    } 
-      /* Desktop*/
-      @media (min-width:768px) {
-        .register main {
-            position: absolute;
-            left: 7rem;
-            top: 15rem;
-    
-      }
-      }
+    .register main {
+     position: relative;
+    top: 10rem;
+  }
+     
+          
+      }  
+        /* Desktop*/
+  /* @media (min-width:768px) {
+      .register main {
+          
+       
+    }
+  } */
+      
