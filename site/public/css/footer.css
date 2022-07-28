@@ -25,7 +25,7 @@ footer {
     margin-bottom: 10px;
 }
 .container__data i{
-    left: 50px;
+ 
     bottom: 24px;
     display: flex;
     position: relative;
@@ -37,6 +37,7 @@ footer {
     padding: 10px;
 }
 .container__email input{
+    font-family: var(--fuenteSubtitulos);
     outline:  none;
     width: 15rem;
     border: none;

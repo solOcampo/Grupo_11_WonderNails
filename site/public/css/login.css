@@ -1,9 +1,10 @@
 
 .login main{
   width: 100%;
+  height: 500px;
+  max-width: 1024px;
   margin: 0 auto;
-  display: flex;
- justify-content: center;
+ 
 }
 
 .wrapper h1{
@@ -13,15 +14,23 @@
   color:var(--grisMedio);
 }
 .wrapper{
-
-    margin: 0 auto;
-    /* text-align: center; */
-    /* bottom: 7rem; */
-    text-align: center;
+  position: relative;
+  text-align: center;
+  bottom: 7rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: inherit;
 }
+  
 
 .wrapper form{
   margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 form .field{
   width: 100%;
@@ -37,7 +46,7 @@ form .field .input-area{
     font-family: var(--fuenteSubtitulos);
     height: 100%;
     outline: none;
-    padding: 0 45px;
+    padding: 0 60px;
     font-size: 18px;
     box-shadow: 0px 2px 0px 0px #e4e4e4;
     border-radius: 35px;
@@ -48,11 +57,13 @@ form .field .input-area{
 
 
 .field .input-area i{
-  position: absolute;
-  top: 50%;
-  font-size: 18px;
-  pointer-events: none;
-  transform: translateY(-50%);
+  width: 20px;
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    pointer-events: none;
+    top: 17px;
+    left: 25px;
 }
 .input-area .icon{
   left: 15px;
@@ -60,32 +71,27 @@ form .field .input-area{
   transition: color 0.2s ease;
 }
 
-form input:focus ~ .icon,
-form .field.valid .icon{
-  color: var(--rosaOscuro);
-}
-form .field.shake input:focus ~ .icon,
-form .field.error input:focus ~ .icon{
-  color: var(--grisMedio);
-}
+
 form input::placeholder{
   color: var(--grisMedio);
   font-size: 17px;}
 
   .recordarme_bottom{
-      display: flex;
-      color:var(--grisMedio);
-      font-weight: bold;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-around;
-      font-family: var(--fuenteSubtitulos);
+    width: 100%;
+    display: flex;
+    color: var(--grisMedio);
+    font-weight: bold;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+    font-family: var(--fuenteSubtitulos);
+    align-content: center;
   }
   .recordarme_bottom label{
       color: var(--grisMedio);
       font-family: var(--fuenteSubtitulos);
       bottom: 3px;
-      right: 9px;
+      right: 30px;
       font-size: 10px;
       position: relative;
   }
@@ -98,31 +104,33 @@ form input::placeholder{
       position: relative;
   }
   
-  
+  .login .boxAccess{
+    width: 100%;
+    display: flex;
+    margin: 20px 0;
+  } 
   .login .Access {
-      top: 5px;
-      right: 115px;
       position: relative;
+      right: 17px;
   }
   .login .Access2 {
-      position: relative;
-      left: 20px;
-      bottom: 15px;
-      float: right;
+    position: relative;
+    left: 12px;
+  }
+  .login .Access .img ,.Access2 .img{
+    width: 10vh;
   }
   .login .access_text{
-      left: 58px;
-      font-size: 12px;
-      color: var(--grisMedio);
-      font-family: var(--fuenteSubtitulos);
-      font-weight: bold;
+    font-size: 12px;
+    color: var(--grisMedio);
+    font-family: var(--fuenteSubtitulos);
+    font-weight: bold;
+    position: relative;
       position: relative;
-      bottom: 11px;
+      top: 3px;
   } 
   .wrapper button{
     font-weight: bold;
-    left: 0px;
-    position: relative;
     border-radius: 15px;
     border: none;
     width: 6rem;
@@ -132,15 +140,14 @@ form input::placeholder{
     background-color: var(--rosaOscuro);
     margin: 5px;
     text-align: center;
-    top: 50px;
+   margin-top: 20px;
   }
   
   .social_icons{
-    position: relative;
-    left: 7rem;
+   
     display: flex;
     justify-content: space-evenly;
-    top: 4rem;
+    width: 50%;
   }
   .login .icon a :hover{
    color:var(--grisMedio);
@@ -153,54 +160,31 @@ form input::placeholder{
   }
   
   .button_go ,.button_fa ,.button_app {
-    right: 50px;
     position: relative;
-    bottom: 38px;
+    color: var(--rosaOscuro);
     width: 40px;
     height: 40px;
     font-size: 20px;
     background-color: white;
     border-radius: 100%;
     box-shadow: 0px 4px 0px 0px #e4e4e4;
-     
+    display: flex;
+  
+    align-items: center;
+    justify-content: center;
   }
   
-  .button_go .icon{
-  top: 12px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  }
- .button_fa .icon{
-  top: 12px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
- .button_app .icon{
-   top: 12px;
-   position: relative;
-   display: flex;
-   justify-content: center;
-  
- }
    /* Tablet */
-@media (min-width:461px) {
-.wrapper{
-  padding: 100px;
-  }
- 
-.container_ilustration{
-  display: none;
-}
-    
-} 
-  /* Desktop*/
+   @media (min-width:461px) {
+    .login .wrapper{
+      padding-top: 10rem;
+      position: initial;
+      
+    }
+  }   
+
+  /* Desktop */
 @media (min-width:768px) {
-.login main{
-  padding: 40px;
+
+  
 }
-   
-
-
-  }

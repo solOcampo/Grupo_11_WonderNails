@@ -1,29 +1,36 @@
 .register main{
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
+    max-width: 1024px;
+    margin: 0 auto;
+   
    
   }
   
   .form_wrapper h1{
-    text-align: center;
     font-weight: bold;
-    text-transform: capitalize;
-    font-family: var(--fuenteSubtitulos);
-    color:var(--grisMedio);
+  text-transform: capitalize;
+  font-family: var(--fuenteSubtitulos);
+  color:var(--grisMedio);
   }
+
   .form_wrapper{
-    /* margin: 0 auto; */
-    padding: 0;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+    position: relative;
+  text-align: center;
+  bottom: 7rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: inherit;
   }
   
   .form_wrapper form{
-    text-align: center;
+    margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   }
   form .text{
     /* width: 100%; */
@@ -58,10 +65,15 @@
     color: var(--grisMedio);
     font-family: var(--fuenteSubtitulos);
     bottom: 3px;
-    font-size: 10px;
+    font-size: 11px;
     position: relative;
     font-weight: bold;
   }
+  .register .boxAccess{
+    width: 100%;
+    display: flex;
+    margin: 20px 0;
+  } 
   .register .Access {
       top: 5px;
       right: 115px;
@@ -143,20 +155,19 @@
   
   
     /* Tablet */
-  @media (min-width:461px) {
+ 
+@media (min-width:461px) {
+  .register .form_wrapper{
+    padding-top: 10rem;
+    position: initial;
    
-    .register main {
-     position: relative;
-    top: 10rem;
+      
   }
      
           
-      }  
-        /* Desktop*/
-  /* @media (min-width:768px) {
-      .register main {
-          
-       
-    }
-  } */
+}  
+  /* Desktop*/
+@media (min-width:768px) {
+ 
+}
       
