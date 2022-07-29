@@ -3,12 +3,14 @@ header{
     padding: 0;
     background-color: var(--rosaOscuro);
 }
+/* Contacto */
 header .icons{
     font-size: 25px;
     padding-top: 10px;
     text-align: center;
     color: white;
 }
+/* Boton menu */
 header .button{
     position: relative;
     bottom: 110px;
@@ -23,7 +25,7 @@ header .button{
     border: none;
    
 }
-
+/* Boton compras */
 header .button2{
     position: relative;
     bottom: 180px;
@@ -44,7 +46,6 @@ header .logo {
    
 }
 header .logo img{
-    /* width: 70px; */
     animation: aumentar 1s  ease-in infinite alternate ;
 
 }
@@ -57,10 +58,10 @@ header .logo img{
     }
 }
 header .logo img{
-width: 150px;
+    width: 150px;
 
 }
-
+ /* Barra de busqueda */
 .buscar{
    display: none;
      
@@ -68,7 +69,7 @@ width: 150px;
  /* Tablet */
  @media (min-width:461px) {
     header .logo {
-        position: absolute;
+    position: absolute;
     
    }
    header .button{
@@ -128,9 +129,9 @@ width: 150px;
 /* Desktop */
 @media (max-width:1024px) {
     .buscar{
-        bottom: 60%;
+    bottom: 60%;
 
-    }
+ }
     
 
        

@@ -1,21 +1,22 @@
+ /* Formulario registro */
 .register main{
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1024px;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1024px;
+  margin: 0 auto;
    
    
-  }
+}
   
-  .form_wrapper h1{
-    font-weight: bold;
+.form_wrapper h1{
+  font-weight: bold;
   text-transform: capitalize;
   font-family: var(--fuenteSubtitulos);
   color:var(--grisMedio);
-  }
+}
 
-  .form_wrapper{
-    position: relative;
+.form_wrapper{
+  position: relative;
   text-align: center;
   bottom: 7rem;
   text-align: center;
@@ -24,134 +25,133 @@
   justify-content: center;
   flex-direction: column;
   width: inherit;
-  }
+}
   
-  .form_wrapper form{
-    margin: 20px 0;
+.form_wrapper form{
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  }
-  form .text{
-    /* width: 100%; */
-    margin-bottom: 20px;
+}
+form .text{
+  margin-bottom: 20px;
     
-  }
-  form .text .email_input{
-    height: 50px;
-    width: 100%;
-    position: relative;
+}
+form .text .email_input{
+  height: 50px;
+  width: 100%;
+  position: relative;
     
-  }
-  .register form input{
-    font-weight:600;
-    font-family: var(--fuenteSubtitulos);
-    height: 100%;
-    outline: none;
-    padding: 0 20px;
-    font-size: 18px;
-    box-shadow: 0px 2px 0px 0px #e4e4e4;
-    border-radius: 35px;
-    /* transition: all 0.2s ease; */
-    border: none;
-  }
-  .register form .data{
+}
+.register form input{
+  font-weight:600;
+  font-family: var(--fuenteSubtitulos);
+  height: 100%;
+  outline: none;
+  padding: 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 2px 0px 0px #e4e4e4;
+  border-radius: 35px;
+  border: none;
+}
+.register form .data{
   display: flex;
-  }
-  .register .date{
-    font-size: 5px;
-  }
-  .date label{
-    color: var(--grisMedio);
-    font-family: var(--fuenteSubtitulos);
-    bottom: 3px;
-    font-size: 11px;
-    position: relative;
-    font-weight: bold;
-  }
-  .register .boxAccess{
-    width: 100%;
-    display: flex;
-    margin: 20px 0;
-  } 
-  .register .Access {
-      top: 5px;
-      right: 115px;
-      position: relative;
-  }
+}
+.register .date{
+  font-size: 5px;
+}
+.date label{
+  color: var(--grisMedio);
+  font-family: var(--fuenteSubtitulos);
+  bottom: 3px;
+  font-size: 11px;
+  position: relative;
+  font-weight: bold;
+}
+.register .boxAccess{
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+} 
+.register .Access {
+  top: 5px;
+  right: 115px;
+  position: relative;
+}
   
-  
-  .register .Access2 {
-    position: relative;
-    left: 118px;
-    bottom: 27px;
-  }
-  .register .access_text{
-      bottom:10px;
-      font-size: 11px;
-      color: var(--grisMedio);
-      font-family: var(--fuenteSubtitulos);
-      font-weight: bold;
-      position: relative;
+.register .Access2 {
+  position: relative;
+  left: 118px;
+  bottom: 27px;
+}
+.register .access_text{
+  bottom:10px;
+  font-size: 11px;
+  color: var(--grisMedio);
+  font-family: var(--fuenteSubtitulos);
+  font-weight: bold;
+  position: relative;
       
-  } 
-   .register form button{
-      font-weight: bold;
-      position: relative;
-      border-radius: 15px;
-      border: none;
-      width: 7rem;
-      font-family: var(--fuenteSubtitulos);
-      color: white;
-      padding: 7px;
-      background-color: var(--rosaOscuro);
-      top: 50px;
-    }
-    .icons-social{
-      position: relative;
-      left: 3rem;
-      display: flex;
-      justify-content: center;
-      top: 4rem;
-    }
-    .register .icon a :hover{
-      color:var(--grisMedio);
+} 
+.register form button{
+  font-weight: bold;
+  position: relative;
+  border-radius: 15px;
+  border: none;
+  width: 7rem;
+  font-family: var(--fuenteSubtitulos);
+  color: white;
+  padding: 7px;
+  background-color: var(--rosaOscuro);
+  top: 50px;
+}
+    /* Redes sociales */
+.icons-social{
+  position: relative;
+  left: 3rem;
+  display: flex;
+  justify-content: center;
+  top: 4rem;
+}
+.register .icon a :hover{
+  color:var(--grisMedio);
       
-     }
-    .register .icon a{
-      color: var(--rosaOscuro);
+}
+.register .icon a{
+  color: var(--rosaOscuro);
   
-    }
-    .register .icons-social .button_google,.button_facebook,.button_App{
-      margin: 5px;
-      right: 50px;
-      position: relative;
-      bottom: 38px;
-      width: 40px;
-      height: 40px;
-      font-size: 20px;
-      background-color: white;
-      border-radius: 100%;
-      box-shadow: 0px 4px 0px 0px #e4e4e4;
+}
+.register .icons-social .button_google,.button_facebook,.button_App{
+  margin: 5px;
+  right: 50px;
+  position: relative;
+  bottom: 38px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 0px 4px 0px 0px #e4e4e4;
      
-  }
-  .register .button_google .icon{
-      top: 12px;
-      position: relative;
-      display: flex;
-      justify-content: center;
-  }
-  .register .button_facebook .icon{
-      top: 12px;
-      position: relative;
-      display: flex;
-      justify-content: center;
-  }
-  .register .button_App .icon{
-      top: 12px;
-      position: relative;
-      display: flex;
-      justify-content: center; } 
+}
+.register .button_google .icon{
+  top: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.register .button_facebook .icon{
+  top: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.register .button_App .icon{
+  top: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+} 
   
   
     /* Tablet */
@@ -163,9 +163,8 @@
    
       
   }
-     
+}    
           
-}  
   /* Desktop*/
 @media (min-width:768px) {
  
