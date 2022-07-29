@@ -1,30 +1,16 @@
 header{
-    position: relative;
-    height: 100px;
-}
-.logo img{
-    width: 100px;
-    height: 100px;
-    margin-top: 30px;
-}
-header nav{
     height: 40px;
-    padding: 0px 0;
+    padding: 0;
     background-color: var(--rosaOscuro);
 }
+/* Contacto */
 header .icons{
     font-size: 25px;
     padding-top: 10px;
     text-align: center;
-}
-header .icons i{
     color: white;
 }
-header .botones-header{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 70px;
-}
+/* Boton menu */
 header .button{
     position: relative;
     bottom: 110px;
@@ -36,11 +22,13 @@ header .button{
     background-color: white;
     border-radius: 100%;
     box-shadow: 0px 4px 0px 0px #e4e4e4;
-    border: none; 
+    border: none;
+   
 }
+/* Boton compras */
 header .button2{
     position: relative;
-    bottom: 108px;
+    bottom: 180px;
     margin: 15px;
     color: var(--rosaOscuro);
     width: 40px;
@@ -50,71 +38,76 @@ header .button2{
     border-radius: 100%;
     box-shadow: 0px 4px 0px 0px #e4e4e4;
     border: none;
-    /* float: right; */
+    float: right;
 }
 header .logo {
     display: flex;
     justify-content: center;
-    padding: -18px;
-    margin: -50px auto;
-    width: 250px;
+   
 }
+header .logo img{
+    animation: aumentar 1s  ease-in infinite alternate ;
 
-header .buscar{
-    display: none;
 }
-
-/* Tablet */
-@media (min-width:461px) {
-    header{
-        height: 100px;
-        margin-bottom: 50px;
+@keyframes aumentar{
+    0%{
+        transform: scale(1);
     }
+    100%{
+        transform: scale(1.5);
+    }
+}
+header .logo img{
+    width: 150px;
+
+}
+ /* Barra de busqueda */
+.buscar{
+   display: none;
+     
+ }
+ /* Tablet */
+ @media (min-width:461px) {
     header .logo {
-        position: absolute;
-        left: -47px;
-   }
-   header .logo img{
-    margin-left: -80px;
+    position: absolute;
+    
    }
    header .button{
     position: relative;
     margin: 10px;
     top: 150px;
+    
    }
    header .button2{
-    top: 147px;
+    top: 85px;
     position: relative;
    }
-   header .botones-header{
-    margin-top: -100px;
-}
-    header .buscar{
+    .buscar{
     box-shadow: 0px 4px 0px 0px #e4e4e4;
     display: flex;
     align-items: center;
     position: absolute;
     left: 50%;
-    bottom: -5%;
+    bottom: 57%;
     transform: translate(-50%,-50%);
     background: #fff;
     padding: 9px;
     height: 39px;
     border-radius: 40px;
    }
-    header .buscar_texto{
+    .buscar_texto{
     left: 15px;
     position: relative;
     border: none; 
     outline: none; 
-     color: var(--grisMedio); 
-     font-size: 13px;
-     float: left; 
-     line-height: 32px;
-     background: none; 
+    color: var(--grisMedio); 
+    font-size: 13px;
+    float: left; 
+    line-height: 32px;
+    background: none; 
 
     }
-    header .botonLupa{
+    .boton{
     display: flex;
     justify-content: end;
     width: 140px;
@@ -123,6 +116,7 @@ header .buscar{
     }
 
     header .buscar i{
+    color: white;
     right: -8px;
     position: relative;
     padding: 11px;
@@ -132,10 +126,13 @@ header .buscar{
 
     }
 }
-
 /* Desktop */
 @media (max-width:1024px) {
-    header .buscar{
-        bottom: -9%;
-    }      
+    .buscar{
+    bottom: 60%;
+
+ }
+    
+
+       
 }

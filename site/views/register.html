@@ -1,12 +1,194 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css"> 
+     <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/114da55d37.js" crossorigin="anonymous"></script>
+    <title>Register</title>
 </head>
-<body>
-    
+<body  class="register">
+ <header>
+    <nav>
+      <!-- Contacto -->
+      <ul class="icons">
+        <a href="https://www.instagram.com/wonder.nails.co/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+        <a href="https://whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+      </ul>
+    </nav>
+        
+    <div class="logo">
+      <a href="/">
+        <img src="/images/WonderNails-Logotipo.png" alt="logo de su pagina" >
+       </a>
+    </div>
+    <!-- Botones menù y bolso de compras -->
+    <div>
+      <button class="button"><i class="fas fa-bars"></i></button>
+       <div>
+        <button class="button2"><i class="fas fa-shopping-bag"></i></button>
+        </div>
+    </div>  
+         
+
+    <div class="buscar">
+         <input type="text" class="buscar_texto"placeholder="Buscar">
+          <a href="" class="boton"></a>
+          <i class="fas fa-search"></i>
+    </div>  
+  </header>
+
+   
+  <main>
+     <!-- Formulario de registro -->
+    <div class="form_wrapper">
+       <form action="" method="post">
+            <h1>Registrate</h1>
+            <div class="text name">
+                <div class="email_input">
+                    <input type="text" name="name" id="name" placeholder="Nombre " required>
+                </div>
+            </div>
+            <div class="text surname">
+                 <div class="email_input">
+                    <input type="text" name="name" id="name" placeholder="Apellido" required>
+                </div>
+             </div>
+             <div class="text email">
+                <div class="email_input">
+                    <input type="text" name="name" id="name" placeholder="Email" required>
+                </div>
+             </div>
+             <div class="text password">
+                <div class="email_input">
+                    <input type="password" name="name" id="name" placeholder="Contraseña" required>
+                </div>
+             </div>
+      
+
+              <!-- Privacidad -->
+             <div class="date">
+                <label>Tus datos personales se utilizarán para procesar 
+                    tu pedido, mejorar tu experiencia en esta web, 
+                    gestionar el acceso a tu cuenta y otros propósitos descritos 
+                    en nuestra política de privacidad.</label>
+             </div>
+
+             <div class="Accessbox">
+              <div class="Access">
+                <img src="/images/Rectangle 29.svg">
+              </div> 
+              <div class="access_text">
+                <small>O accede con</small>
+              </div>  
+              <div>
+                <div class="Access2">
+                  <img src="/images/Rectangle 30.svg" alt="">
+                </div> 
+              </div>
+           </div>  
+            <!-- Redes sociales -->
+            <div class="icons-social">
+                <div class="button_google">
+                    <div class="icon">
+                        <a href="https://accounts.google.com"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+           
+                <div class="button_facebook">
+                    <div class="icon">
+                     <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+           
+                <div class="button_App">
+                    <div class="icon">
+                     <a href="https://appleid.apple.com/sign-in"> <i class="fab fa-apple"></i></a>
+                    </div>
+               </div>
+            </div>
+        
+           <button type="submit">Registrate</button>
+        </form>
+    </div>
+  
+  </main>
+  <footer>
+    <div class="goTop">
+      <a href="#">
+        <i class="fas fa-angle-up"></i>
+      </a>
+    </div>
+      <!-- Servicios -->
+    <div class="container_ilustration">
+      <div class="__ilustration">
+        <img src="/images/Group (1).svg" alt="imagen representativa de envio">
+        <h3>Envio</h3>
+        <p>Desde y hasta cualquier lugar del país. Asegurado por el valor declarado.</p>
+      </div>
+      <div class="__ilustration2">
+        <img src="/images/bubble-gum-delivery-man-runs-fast-with-ordered-goods.svg" alt="imagen representativa de de ofertas">
+        <h3>Precios accesibles</h3>
+        <p>Nos encanta dar a los clientes los mejores precios del mercado.</p>
+      </div>
+      <div class="__ilustration3">
+        <img src="/images/Get your order (2).svg" alt="imagen representativa de compras">
+        <h3>Productos de alta calidad</h3>
+        <p>Tenemos una gran cantidad de suministro de uñas de alta calidad. </p>
+      </div>
+    </div>  
+      
+      
+     <!-- Desplegable horarios de atencion al publico -->
+    <div class="container__data">
+	    <section id="menu1">
+        <h3>Horarios</h3>
+        <a href="#menu1"></a>
+        <h6 href="#menu1"></h6>	
+        <h6 href="#menu1"></h6>	
+        <h6 href="#menu1"></h6>	
+        <h6 href="#menu1"></h6>	
+        <h6 href="#menu1"></h6>	
+        <h6 href="#menu1"></h6>	
+        <h6 href="#menu1"></h6>	
+	    </section>
+     <!-- Desplegable politicas y privacidad -->
+	    <section id="menu2">
+        <h3>Informacion Legal</h3><i class="fas fa-angle-down"></i>
+	    	<a href="#menu2"></a>
+        <h6 href="#menu1"></h6>	
+	    </section>
+  	</div>
+
+     <!-- Email de subscripcion -->
+    <div class="container__email">
+      <input type="email" name="email" id="email" placeholder="Tu email">
+      <input class="subs" type="submit" value="Suscribite">
+    </div>
+     
+
+    <div class="container__footer">
+      <div class="box__footer">
+        <img src="/images/Small Card.svg"  alt="Img medios de pago">
+        <a href="#"></a>
+      </div>
+
+    </div>
+    <!-- Copyright -->
+    <div class="box__copyright">
+      <hr>
+      <p><b>wonder nails  </b>copyright © 2022 </p>
+    </div>
+
+  </footer>
+   
+  
 </body>
 </html>
+
+    
