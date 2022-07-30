@@ -1,0 +1,179 @@
+.carrito{
+    max-width: 1200px;
+    box-shadow: 2px 2px 10px var(--grisClaro);
+    margin: 0 auto;
+    width: 100%;
+}
+.carrito .carritoMain{
+    margin-top: 155px;
+    width: 100%;
+}
+.carrito .carritoMain .carritoDeCompras h1, .carrito .carritoMain .carritoDeCompras h2{
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: var(--rosaOscuro);
+    width: 90%;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+.carrito .productoCarrito{
+    width: 90%;
+    margin: 10px auto;
+}
+.carrito .productoCarrito .cajaProductoCarrito{
+    display: flex;
+    padding: 15px 0;
+    width: 100%;
+ }
+.carrito .productoCarrito a{
+    width: 30%;
+    align-self: center;
+}
+.carrito .productoCarrito a img{
+    width: 100%;
+}
+.carrito .productoCarrito .textosC{
+    width: 70%;
+    padding-left: 15px;
+}
+.carrito .productoCarrito .textosC h5{
+    color: var(--grisMedio);
+}
+.carrito .productoCarrito .textosC input{
+    width: 25px;
+    font-size: 10px;
+    padding: 0;
+    margin: -1px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    background: none;
+}
+.carrito .productoCarrito .textosC .inputC{
+    display: flex;
+    justify-content: center;
+    background-color: var(--rosaClaro);
+    padding: 5px;
+    border-radius: 5px;
+
+}
+.carrito .productoCarrito .textosC .inputC .buttonC:active{
+    background-color: var(--rosaClaro);
+}
+.carrito .productoCarrito .textosC .titProducto{
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.carrito .productoCarrito .textosC div{
+    height: 20px;
+    margin-bottom: 8px;
+    display: flex;
+    text-transform: uppercase;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.carrito .productoCarrito .textosC div:last-child{
+    margin-bottom: 0;
+}
+.carrito .productoCarrito .textosC div .oferta{
+    color: var(--grisMedio);
+    text-decoration: line-through;
+    font-size: 13px;
+    margin-left: 57px;
+}
+.carrito .divSub{
+    padding: 15px;
+    border-bottom: 1px solid var(--gris);
+    background-color: rgba(255, 255, 255, 0.788);
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+.carrito .divSub .subtotal{
+    font-size: 18px;
+    color: var(--rosaOscuro);
+}
+.carrito .divSub .precioSubtotal{
+    color: var(--grisMedio);
+    font-weight: 600;
+}
+.carrito .productoCarrito .tacho a{
+    display: flex;
+    justify-content: flex-end;
+    /* color: rgb(216, 89, 89); */
+    color: var(--rosaOscuro);
+    width: 100%;
+    margin: 10px auto;
+}
+.carrito .productoCarrito .tacho .eliminar{
+    display: block;
+    margin-left: 10px;
+}
+.carrito .carritoMain .carritoDeCompras h2{
+    width: 80%;
+    margin: 30px auto;
+}
+.carrito .carritoMain .resumen{
+    width: 98%;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: white;
+}
+.carrito .carritoMain .resumen h3{
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+.carrito .carritoMain .resumen .cupón{
+    margin: 0 auto;
+    width: 90%;
+}
+.carrito .carritoMain .resumen .cupón .vistaCupon1{
+    width: 350px;
+    height: 70px;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid var(--rosaClaro);
+    border-radius: 20px;
+}
+.carrito .carritoMain .resumen .cupón .vistaCupon2{
+    width: 350px;
+    height: 70px;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid var(--rosaClaro);
+    border-radius: 20px;
+}
+.carrito .carritoMain .resumen .cupón .vistaCupon1 a{
+    color: var(--rosaOscuro);
+}
+/* .carrito .carritoMain .resumen .cupón .vistaCupon2 .buscar_codigo{
+
+} */
+.carrito .carritoMain a{
+    color: black;
+}
+@media (min-width: 461px){
+    .carrito .carritoMain{
+        margin-top: 300px;
+    }
+    .carrito .carritoMain .carritoDeCompras h1{
+        margin-bottom: 40px;
+    }
+    .carrito .productoCarrito{
+        position: relative;
+    }
+    .carrito .productoCarrito .tacho a{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 20px;
+    }
+    .carrito .productoCarrito .tacho a .eliminar{
+        display: none;
+    }
+}
