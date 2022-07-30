@@ -80,6 +80,7 @@ footer {
 }
 
 .box__copyright{
+    border-top: 0.1px solid var(--grisOscuro);
     max-width: 1200px;
     margin: auto;
     text-align: center;
