@@ -133,7 +133,7 @@
     width: 90%;
 }
 .carrito .carritoMain .resumen .cupón .vistaCupon1{
-    width: 350px;
+    /* width: 350px; */
     height: 70px;
     text-align: center;
     padding: 15px;
@@ -142,7 +142,6 @@
 }
 .carrito .carritoMain .resumen .cupón .vistaCupon2{
     width: 350px;
-    height: 70px;
     text-align: center;
     padding: 15px;
     border: 1px solid var(--rosaClaro);
@@ -157,6 +156,117 @@
 .carrito .carritoMain a{
     color: black;
 }
+
+.carrito article .vistaEnvios i{
+    font-size: 25px;
+    color: var(--rosaOscuro);
+}
+.carrito .vistaEnvios{
+    display: table;
+    max-width: 70%;
+    margin: 0 auto;
+}
+.carrito .envios input {
+    margin-left: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    display: flex;
+    border: 1px solid;
+    border-radius: 5px;
+
+}
+.carrito .vistaEnvios a {
+    display: flex;
+    margin-left: 20px;   
+}
+.carrito .envios button{
+    left: 9rem;
+    bottom: 6rem;
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--rosaOscuro);
+}
+
+.carrito .totalCompra {
+    max-width: 70%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px #ddd7d957;
+    background-color: var(--rosaClaro);
+}
+.carrito .total {
+    border-bottom: 0.1px solid var(--grisOscuro);
+    width: fit-content;
+    display: flex;
+    border-bottom: 0.1px solid var(--grisOscuro);
+    margin: 10px;
+}
+
+.carrito .items{
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+}
+.carrito .items .sub h4{
+    padding-top: 10px;
+    position: absolute;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.carrito .items .sub span{
+    border-bottom: 0.1px solid var(--grisOscuro);
+    display: flex;
+    place-content: flex-end;
+    margin: 10px;
+}
+.carrito .nosotros ul img{
+    width: 20%;
+
+}
+.carrito .nosotros ul li{
+    margin: 10px;
+    font-size: 12px;
+    padding-inline: 10p;
+    margin-left: 20px;
+}
+.carrito .nosotros ul a{
+    
+    font-family: var(--fuenteSubtitulos);
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+}
+.carrito .nosotros ul li i{
+    font-size: 10px;
+    margin-inline: 5px;
+}
+.carrito .total_compra{
+    display: flex;
+}
+
+.carrito article  button{
+    max-width: 50%;
+    display: flex;
+    margin: 30px auto;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    padding: 15px;
+    background-color: var(--rosaOscuro);
+    justify-content: center;
+}
+.carrito article a {
+    display: flex;
+    justify-content: center;
+}
+.carrito article i {
+    color: var(--rosaOscuro);
+    padding-inline: 5px;
+    font-size: 15px;
+}
+
 @media (min-width: 461px){
     .carrito .carritoMain{
         margin-top: 300px;
