@@ -2,21 +2,20 @@
 .login main{
   width: 100%;
   height: 500px;
-  max-width: 1024px;
   margin: 0 auto;
  
 }
 /* Formulario */
-.wrapper h1{
+.login .wrapper h1{
   font-weight: bold;
   text-transform: capitalize;
   font-family: var(--fuenteSubtitulos);
   color:var(--grisMedio);
 }
-.wrapper{
-  position: relative;
-  text-align: center;
-  bottom: 7rem;
+.login .wrapper{
+  top: 15rem;
+  position: absolute;
+  /* bottom: 5rem; */
   text-align: center;
   display: flex;
   align-items: center;
@@ -26,18 +25,18 @@
 }
   
 
-.wrapper form{
+.login .wrapper form{
   margin: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-form .field{
+.login form .field{
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-form .field .input-area{
+.login form .field .input-area{
   height: 50px;
   width: 100%;
   position: relative;
@@ -54,9 +53,15 @@ form .field .input-area{
   transition: all 0.2s ease;
   border: none;
 }
+.login form .error{
+  font-size: 10px;
+  display: flex;
+  margin-top: 5px;
+  padding-left: 10px;
+  color: var(--grisMedio);
+}
 
-
-.field .input-area i{
+.login .field .input-area i{
   width: 20px;
   position: absolute;
   top: 50%;
@@ -65,19 +70,19 @@ form .field .input-area{
   top: 17px;
   left: 25px;
 }
-.input-area .icon{
+.login .input-area .icon{
   left: 15px;
   color: var(--grisMedio);
   transition: color 0.2s ease;
 }
 
 
-form input::placeholder{
+.login form input::placeholder{
   color: var(--grisMedio);
   font-size: 17px;
 }
 
-.recordarme_bottom{
+.login .recordarme_bottom{
   width: 100%;
   display: flex;
   color: var(--grisMedio);
@@ -88,7 +93,7 @@ form input::placeholder{
   font-family: var(--fuenteSubtitulos);
   align-content: center;
   }
-.recordarme_bottom label{
+.login .recordarme_bottom label{
   color: var(--grisMedio);
   font-family: var(--fuenteSubtitulos);
   bottom: 3px;
@@ -96,7 +101,7 @@ form input::placeholder{
   font-size: 10px;
   position: relative;
   }
-  .recordarme_bottom small{
+  .login .recordarme_bottom small{
     color: var(--grisMedio);
     font-family: var(--fuenteSubtitulos);
     bottom: 3px;
@@ -130,7 +135,7 @@ form input::placeholder{
   position: relative;
   top: 3px;
   } 
-.wrapper button{
+.login .wrapper button{
   font-weight: bold;
   border-radius: 15px;
   border: none;
@@ -145,7 +150,7 @@ form input::placeholder{
   }
 
   /* Redes sociales */
-.social_icons{
+.login .social_icons{
   display: flex;
   justify-content: space-evenly;
   width: 50%;
@@ -160,7 +165,7 @@ form input::placeholder{
 
 }
   
-.button_go ,.button_fa ,.button_app {
+.login .button_go ,.button_fa ,.button_app {
   position: relative;
   color: var(--rosaOscuro);
   width: 40px;
@@ -176,23 +181,10 @@ form input::placeholder{
   
    /* Tablet */
   @media (min-width:461px) {
-    .login .wrapper{
-    padding-top: 10rem;
-    position: initial;
-      
-    }
+   
   }   
 
-  /* Desktop */
-  
-@media (min-width:1024px) {
-  .login .buscar{
-    display: none;
-  }
-  
-  }
+ 
+ 
 
-/* @media (min-width:768px) {
 
-  
-} */

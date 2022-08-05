@@ -30,7 +30,9 @@
     border: 8px solid #FFFFFF;
     box-shadow: 0 0 12px 2px rgb(0 0 0 / 20%);
 }
-
+.portada-perfil{
+    margin-top: 20px;
+}
 
 .perfil-usuario .datos-perfil {
     position: absolute;
