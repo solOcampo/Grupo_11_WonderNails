@@ -1,45 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/styles.css">
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/114da55d37.js" crossorigin="anonymous"></script>
-  <title>Login</title>
-</head>
+  <%- include ('./partials/head', {title: 'Login'}) %> 
 
 <body class="login">
-  <header>
-    <div class="top">
-        <nav>
-            <ul class="icons">
-                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
-                <a href="whatssap"><i class="fab fa-whatsapp"></i></a>
-           </ul>
-      </nav>
-        <div class="logo">
-            <a href="/">
-              <img src="/img/WonderNails-Logotipo.png" alt="logo de su pagina" >
-           </a>
-       </div>
-    </div>
-    <div class="buscar">
-        <input type="text" class="buscar_texto" placeholder="Buscar">
-    
-         <button><i class="fas fa-search"></i></button>       
-  </div>   
-  <div class="bars">
-     <button class="button"><i class="fas fa-bars"></i></button>
-   </div> 
-   <div class="shopping">
-    <button class="button2"><i class="fas fa-shopping-bag"></i></button>
-   </div>
-</header>
+  <%- include ('./partials/header') %> 
   <main>
     <!-- Formulario de login -->
     <div class="wrapper">
