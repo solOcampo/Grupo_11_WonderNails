@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "marca": "Meliné",
+        "titulo": "Base Coat",
+        "precio": 1582,
+        "descripcion": "Base Coat Gel ON OFF x 14ml,Es  un revolucionario sistema que revolucionó la técnica de esmaltado . Los esmaltes ON OFF tienen una duración de hasta 3 semanas, convirtiéndolo en el producto más rentable para las manicuras. La Base Coat Gel ON OFF x 14ml. es el producto utilizado para comenzar el tratamiento.",
+        "stock": 13,
+        "imagenes": [
+            "producto-nuevo1.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "marca": "Pinnacle",
+        "titulo": "Kit Acrílico Para Construcción de Uñas",
+        "precio": 5990,
+        "descripcion": "El Kit Incluye: - 1 Líquido Acrílico Monómero Advanced Formula x 60ml - 1 Líquido Primer x 10 ml - 2 Polvo Acrílico / Polímero x25gr - 10 Moldes Dorados Para Uñas 1 Adhere 1 Lima",
+        "stock": 3,
+        "imagenes": [
+            "producto-nuevo1.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "marca": "Lightbox",
+        "titulo": "Gel de Construcción Para Uñas Gelificadas x20gr",
+        "precio":2750,
+        "descripcion": "Base Coat Gel ON OFF x 14ml,Es  un revolucionario sistema que revolucionó la técnica de esmaltado . Los esmaltes ON OFF tienen una duración de hasta 3 semanas, convirtiéndolo en el producto más rentable para las manicuras. La Base Coat Gel ON OFF x 14ml. es el producto utilizado para comenzar el tratamiento.",
+        "stock": 5,
+        "imagenes": [
+            "producto-nuevo1.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "marca": "Revlon Cosmetics",
+        "titulo": "Aceite Para Cutículas Essential Cuticle Oil Revlon",
+        "precio": 1000,
+        "descripcion": "Aceite para cutículas, posee Vitamina E y ayuda a mantener las uñas sanas. Se absorbe rápidamente para nutrir e hidratar.",
+        "stock": 22,
+        "imagenes": [
+            "producto-nuevo1.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "marca": "Pro Basic",
+        "titulo": "Set Manicuría/ Pedicuría 12 Piezas Probasic",
+        "precio": 4780,
+        "descripcion": "Exclusivo kit estuche completo con 12 piezas para realizar Manicuría y Pedicuría Profesional - 1 Cureta Cucharita N°0 - 1 Cureta Cucharita N° 1 - 1 Gubia N° 0 - 1 Gubia N°1 - 1 Palo de Golf n°1 - 1 Palo De Golf n° 2 - 1 Lima de arrastre - 1 Cureta de Brook - 1 Pinza Curva Algodonera - 1 Pinza Recta Algodonera/Decoración - 1 Repujador /Cortador de cutícula doble - 1 Cureta Cucharita Plana",
+        "stock": 14,
+        "imagenes": [
+            "producto-nuevo1.jpg"
+        ]
+    }
+]

@@ -96,6 +96,9 @@ header .shopping button {
     border: none;
 }
 
+header .shopping button a{
+    color: var(--rosaOscuro);
+}
 
 /* Tablet */
 @media (min-width:461px) {
