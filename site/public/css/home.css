@@ -1,10 +1,4 @@
-/* .home{
-    width: 100%;
-} */
-/* MAIN */
-/* CARRUSEL IMAGENES */
 .home{
-    max-width: 1200px;
     box-shadow: 2px 2px 10px var(--grisClaro);
     margin: 0 auto;
     width: 100%;
@@ -152,7 +146,7 @@
 .mainHome .tienda .carruselTienda{
     background-color: transparent;
     width: 100%;
-    height: 260px;
+    height: 320px;
     position: relative;
     overflow: hidden;
 }
@@ -161,7 +155,7 @@
     top: 0;
     opacity: 0;
     width: 100%;
-    height: 260px;
+    height: 320px;
     transition: opacity .5s;
     position: absolute;
     display: flex;
@@ -187,9 +181,9 @@
 }
 .mainHome .carruselTienda .seccion .caja{
     flex: 0 0 auto;
-    width: 110px;
-    height: 205px;
-    border-radius: 14px;;
+    width: 150px;
+    height: 250px;
+    border-radius: 18px;
     margin-top: 20px;
     background-color: white;
     box-shadow: 0px 5px 10px var(--gris);
@@ -203,7 +197,7 @@
 }
 
 .mainHome .carruselTienda .seccion .caja .etiqueta{
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     color: white;
@@ -216,7 +210,7 @@
     margin-right: 2px;
 }
 .mainHome .carruselTienda .seccion .caja .oferta{
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     color: white;
@@ -229,7 +223,7 @@
 
 }
 .mainHome .carruselTienda .seccion .caja .etiquetaC{
-    font-size: 10px;
+    font-size: 14px;
     color: white;
     background-color: var(--rosaOscuro);
     padding: 2px 3px;
@@ -248,22 +242,25 @@
     justify-content: center;
     font-weight: 700;
     position: relative;
-    top: -8px;
-    width: 100%;
+    bottom: 90px;
+    width: 98%;
     height: 30px;
     margin: auto;
+}
+.mainHome .carruselTienda .seccion .caja a{
+    color: black;
 }
 .mainHome .carruselTienda .seccion .caja .precio, .precioOferta, .esmaltes .esmalte .precioE{
     color: var(--grisMedio);
     text-align: center;
     font-weight: 700;
-    font-size: 10px;
+    font-size: 13px;
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 1px;
     position: absolute;
-    bottom: 65px;
+    bottom: 72px;
     margin: auto;
 }
 .mainHome .carruselTienda .seccion .caja .precioViejo{
@@ -290,7 +287,7 @@
     position: absolute;
     left: 20px;
     right: 20px;
-    bottom: 48px;
+    bottom: 56px;
     margin: auto;
 }
 .mainHome .carruselTienda .seccion .caja input:active, .esmaltes .esmalte input:active{
@@ -303,15 +300,15 @@
     text-align: center;
 }
 .mainHome .carruselTienda .seccion .caja .foto-prod{
-    height: 80px;
-    width: 80px;
+    height: 13  0px;
+    width: 110px;
     margin: 0 auto;
     padding-bottom: 87px;
 }
 .mainHome .carruselTienda .seccion .caja .comprar, .esmaltes .esmalte .comprar{
     position: absolute;
-    left: 20px;
-    right: 20px;
+    left: 27px;
+    right: 27px;
     bottom: 14px;
     margin: auto;
     display: block;
@@ -319,15 +316,17 @@
     border: none;
     border-radius: 20px;
     color: white;
-    font-size: 10px;
+    text-shadow: 1px 1px 2px rgb(37, 37, 37);
+    font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
-    background-color: var(--grisClaro);
-    padding: 8px;
-    box-shadow: 0px 1px  2px var(--grisMedio);
+    background-color: var(--grisMedio);
+    padding: 10px;
+    box-shadow: 0px 1px  2px var(--gris);
 }
 .mainHome .carruselTienda .seccion .caja .comprar:active{
-    background-color: var(--grisMedio);
+    background-color: var(--rosaOscuro);
+    text-shadow: 1px 1px 2px var(--grisMedio);
 }
 .mainHome .carruselTienda .cajaBotonesT{
     display: block;
@@ -362,7 +361,7 @@
 }
 .mainHome .esmaltes .fondo img{
     position: absolute;
-    height: 400px;
+    height: 471px;
     width: 100%;
 }
 
@@ -389,43 +388,49 @@
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    position: absolute;
+    position: relative;
     bottom: 0;
-    top: 110px;
+    top: 72px;
     height: 280px;
     overflow: hidden;
 }
 .mainHome .esmaltes .esmalte{
-    width: 110px;
-    height: 205px;
-    border-radius: 14px;;
+    width: 150px;
+    height: 250px;
+    border-radius: 18px;
     margin-top: 20px;
     background-color: white;
     box-shadow: 0px 5px 10px var(--gris);
     position: relative;
 }
 .mainHome .esmaltes .esmalte .imgEsmalte{
-    height: 80px;
-    width: 80px;
+    height: 110px;
+    width: 110px;
     margin: 0 auto;
     padding-bottom: 87px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .mainHome .esmaltes .esmalte h4{
-    margin-top: 10px;
+    position: absolute;
+    bottom: 90px;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: center;
+    width: 100%;
+}
+.mainHome .esmaltes .esmalte a{
+    color: black;
 }
 .mainHome .esmaltes .esmalte .precioE{
     color: var(--rosaOscuro);
     margin-bottom: 5px;
 }
 .mainHome .esmaltes .esmalte .comprar{
-    bottom: 20px;
+    bottom: 14px;
+    background-color: var(--rosaOscuro);
 }
 .mainHome .esmaltes .esmalte .comprar:hover{
     background-color: var(--grisMedio);
-}
-.mainHome .esmaltes .esmalte .input{
-    bottom: 54px;
 }
 /* SERVICIOS */
 .mainHome .servicios{
