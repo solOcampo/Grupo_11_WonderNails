@@ -212,7 +212,7 @@
 
 .carrito .items{
     display: flex;
-    width: fit-content;
+    width: 100%;
     flex-direction: column;
 }
 .carrito .items .sub h4{
@@ -319,5 +319,9 @@ hr{
 @media screen and (max-width:480px) {
     .carrito .productoCarrito a img{
         width: 30%;
+    }
+
+    .carrito .totalCompra {
+        max-width: 98%;
     }
 }
