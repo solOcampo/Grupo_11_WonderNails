@@ -93,7 +93,7 @@
 }
 
 
-.perfil h2 {
+.perfil main h2 {
     font-family: var(--fuenteTitulos);
     text-align: center;
     padding: 10px;

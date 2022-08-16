@@ -14,14 +14,13 @@
 }
 .login .wrapper{
   top: 15rem;
-  position: absolute;
+  position: relative;
   /* bottom: 5rem; */
   text-align: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  width: inherit;
+  width: 100%;
+  align-items: center;
 }
   
 
