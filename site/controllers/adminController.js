@@ -11,7 +11,6 @@ module.exports = {
         return res.render('admin/crearProducto')
     },
     edit:(req,res) => {
-        return res.render('admin/editarProducto')
         id = +req.params.id
         let producto = productos.find((elemento) => {
             return elemento.id == id
@@ -21,4 +20,8 @@ module.exports = {
             producto
         })
     },
+    store:(req,res) => {
+        let producto = req.body
+        res.send(producto)
+    }
 }
