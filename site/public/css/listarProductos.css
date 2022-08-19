@@ -1,0 +1,17 @@
+.listar header{
+    height: 220px;
+}
+.listar .ul{
+    width: 100%;
+    display: flex;
+}
+.listar .ul .li{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.listar .ul .li a:hover{
+    color: var(--rosaOscuro);
+}
+.listar a{
+    color: var(--grisMedio)
+}

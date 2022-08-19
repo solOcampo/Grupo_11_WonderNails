@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include('../partials/head',{title:"Crear Producto"}) %>
-<body class="crear-editar">
+<body class="crear-editar listar">
     <main>
+        <ul class="ul">
+            <li class="crumb li"><a href="/">Home</a></li>
+            <li class="divider li"> > </li>
+            <li class="crumb-active li" aria-current="page"><a href="/admin/listar">Administrador</a></li>
+            <li class="divider li"> > </li>
+            <li class="crumb-active li" aria-current="page"><a href="/admin/listar">Listar Productos</a></li>
+            <li class="divider li"> > </li>
+            <li class="crumb-active li" aria-current="page">Crear Producto</li>
+        </ul>
         <h1>Creando un producto nuevo</h1>
         <form action="/admin/create" method="post">
             <section>

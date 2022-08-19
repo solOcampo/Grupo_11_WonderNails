@@ -1,0 +1,17 @@
+.esmaltesPag{
+    margin-top: 220px;
+}
+.esmaltesPag .breadcrumbs ul{
+    width: 100%;
+    display: flex;
+}
+.esmaltesPag .breadcrumbs ul li{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.esmaltesPag .breadcrumbs ul li a:hover{
+    color: var(--rosaOscuro);
+}
+.esmaltesPag a{
+    color: var(--grisMedio)
+}
