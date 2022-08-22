@@ -6,11 +6,22 @@
 }   
 ul li{
     list-style: none;
+     margin-top: 5px;
+     color: var(--grisMedio);
+    
+
 }
 a{
     text-decoration: none;
     color: white;
 }
 body {
+    max-width: 1440px;
+    margin: 0 auto;
+  
     background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#FFEFEF)) fixed;
   }
+ 
+
+
+ 

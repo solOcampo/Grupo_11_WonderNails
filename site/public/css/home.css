@@ -1,13 +1,10 @@
-/* .home{
-    width: 100%;
-} */
-/* MAIN */
-/* CARRUSEL IMAGENES */
 .home{
-    max-width: 1200px;
     box-shadow: 2px 2px 10px var(--grisClaro);
     margin: 0 auto;
     width: 100%;
+}
+.mainHome{
+    margin-top: 155px;
 }
 .mainHome .carrusel{
     position: relative;
@@ -149,7 +146,7 @@
 .mainHome .tienda .carruselTienda{
     background-color: transparent;
     width: 100%;
-    height: 260px;
+    height: 320px;
     position: relative;
     overflow: hidden;
 }
@@ -158,7 +155,7 @@
     top: 0;
     opacity: 0;
     width: 100%;
-    height: 260px;
+    height: 320px;
     transition: opacity .5s;
     position: absolute;
     display: flex;
@@ -184,9 +181,9 @@
 }
 .mainHome .carruselTienda .seccion .caja{
     flex: 0 0 auto;
-    width: 110px;
-    height: 205px;
-    border-radius: 14px;;
+    width: 150px;
+    height: 250px;
+    border-radius: 18px;
     margin-top: 20px;
     background-color: white;
     box-shadow: 0px 5px 10px var(--gris);
@@ -200,7 +197,7 @@
 }
 
 .mainHome .carruselTienda .seccion .caja .etiqueta{
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     color: white;
@@ -213,7 +210,7 @@
     margin-right: 2px;
 }
 .mainHome .carruselTienda .seccion .caja .oferta{
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     color: white;
@@ -226,7 +223,7 @@
 
 }
 .mainHome .carruselTienda .seccion .caja .etiquetaC{
-    font-size: 10px;
+    font-size: 14px;
     color: white;
     background-color: var(--rosaOscuro);
     padding: 2px 3px;
@@ -245,22 +242,25 @@
     justify-content: center;
     font-weight: 700;
     position: relative;
-    top: -8px;
-    width: 100%;
+    bottom: 90px;
+    width: 98%;
     height: 30px;
     margin: auto;
+}
+.mainHome .carruselTienda .seccion .caja a{
+    color: black;
 }
 .mainHome .carruselTienda .seccion .caja .precio, .precioOferta, .esmaltes .esmalte .precioE{
     color: var(--grisMedio);
     text-align: center;
     font-weight: 700;
-    font-size: 10px;
+    font-size: 13px;
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 1px;
     position: absolute;
-    bottom: 65px;
+    bottom: 72px;
     margin: auto;
 }
 .mainHome .carruselTienda .seccion .caja .precioViejo{
@@ -287,7 +287,7 @@
     position: absolute;
     left: 20px;
     right: 20px;
-    bottom: 48px;
+    bottom: 56px;
     margin: auto;
 }
 .mainHome .carruselTienda .seccion .caja input:active, .esmaltes .esmalte input:active{
@@ -300,15 +300,15 @@
     text-align: center;
 }
 .mainHome .carruselTienda .seccion .caja .foto-prod{
-    height: 80px;
-    width: 80px;
+    height: 13  0px;
+    width: 110px;
     margin: 0 auto;
     padding-bottom: 87px;
 }
 .mainHome .carruselTienda .seccion .caja .comprar, .esmaltes .esmalte .comprar{
     position: absolute;
-    left: 20px;
-    right: 20px;
+    left: 27px;
+    right: 27px;
     bottom: 14px;
     margin: auto;
     display: block;
@@ -316,15 +316,17 @@
     border: none;
     border-radius: 20px;
     color: white;
-    font-size: 10px;
+    text-shadow: 1px 1px 2px rgb(37, 37, 37);
+    font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
-    background-color: var(--grisClaro);
-    padding: 8px;
-    box-shadow: 0px 1px  2px var(--grisMedio);
+    background-color: var(--grisMedio);
+    padding: 10px;
+    box-shadow: 0px 1px  2px var(--gris);
 }
 .mainHome .carruselTienda .seccion .caja .comprar:active{
-    background-color: var(--grisMedio);
+    background-color: var(--rosaOscuro);
+    text-shadow: 1px 1px 2px var(--grisMedio);
 }
 .mainHome .carruselTienda .cajaBotonesT{
     display: block;
@@ -359,7 +361,7 @@
 }
 .mainHome .esmaltes .fondo img{
     position: absolute;
-    height: 400px;
+    height: 471px;
     width: 100%;
 }
 
@@ -386,48 +388,54 @@
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    position: absolute;
+    position: relative;
     bottom: 0;
-    top: 110px;
+    top: 72px;
     height: 280px;
     overflow: hidden;
 }
 .mainHome .esmaltes .esmalte{
-    width: 110px;
-    height: 205px;
-    border-radius: 14px;;
+    width: 150px;
+    height: 250px;
+    border-radius: 18px;
     margin-top: 20px;
     background-color: white;
     box-shadow: 0px 5px 10px var(--gris);
     position: relative;
 }
 .mainHome .esmaltes .esmalte .imgEsmalte{
-    height: 80px;
-    width: 80px;
+    height: 110px;
+    width: 110px;
     margin: 0 auto;
     padding-bottom: 87px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .mainHome .esmaltes .esmalte h4{
-    margin-top: 10px;
+    position: absolute;
+    bottom: 90px;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: center;
+    width: 100%;
+}
+.mainHome .esmaltes .esmalte a{
+    color: black;
 }
 .mainHome .esmaltes .esmalte .precioE{
     color: var(--rosaOscuro);
     margin-bottom: 5px;
 }
 .mainHome .esmaltes .esmalte .comprar{
-    bottom: 20px;
+    bottom: 14px;
+    background-color: var(--rosaOscuro);
 }
 .mainHome .esmaltes .esmalte .comprar:hover{
     background-color: var(--grisMedio);
 }
-.mainHome .esmaltes .esmalte .input{
-    bottom: 54px;
-}
 /* SERVICIOS */
 .mainHome .servicios{
     overflow: hidden;
-    margin-top: 40px;
+    margin-top: 20px;
     display: block;
     background: none;
     position: relative;
@@ -435,8 +443,9 @@
 }
 .mainHome .servicios .imgServicios{
     margin: 0 auto;
-    width: 70%;
-    height: 200px;
+    width: 350px;
+    height: 350px;
+    border: solid 10px var(--rosaOscuro);
 }
 .mainHome .servicios .imgServicios img{
     max-width: 100%;
@@ -444,22 +453,22 @@
     object-fit: cover;
 }
 .mainHome .servicios .textoS{
-    width: 60%;
-    height: 130px;
+    width: 80%;
+    height: 200px;
     background-color: white;
     margin: 0 auto;
     position: relative;
-    bottom: 36px;
+    bottom: 80px;
 }
-.mainHome .servicios .textoS h4{
-    font-size: 12px;
+.mainHome .servicios .textoS .tituloServicios{
+    font-size: 14px;
     text-transform: uppercase;
     text-align: center;
     padding: 10px 0;
 }
 .mainHome .servicios .textoS p{
     color: var(--grisMedio);
-    font-size: 10px;
+    font-size: 12px;
     width: 90%;
     margin: 0 auto;
     text-align: center;
@@ -480,6 +489,9 @@
     opacity: 0.5;
 }
 .mainHome .servicios .textoS .botonWpp h4{
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
     background-color: var(--rosaOscuro);
     color: white;
     padding: 5px;
@@ -497,50 +509,6 @@
     background: transparent;
     height: 297px;
     width: 100%;
-}
-.mainHome .cursos .imgCursos{
-    background: transparent;
-    position: relative;
-    top: -49px;
-    right: 17px;
-    width: 362px;
-    height: 471px;
-    display: block;
-    margin: 0 auto;
-
-}
-.mainHome .cursos .textoCursos{
-    position: absolute;
-    top: 48px;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-.mainHome .cursos .textoCursos h5{
-    text-transform: uppercase;
-    color: var(--grisMedio);
-    font-size: 18px;
-    font-weight: 300;
-    position: relative;
-    top: 22px;
-    padding-left: 15px;
-}
-.mainHome .cursos .textoCursos h2{
-    font-family: var(--fuenteTitulos);
-    font-size: 100px;
-    text-transform: capitalize;
-    padding-bottom: 5px;
-}
-.mainHome .cursos .textoCursos h3{
-    display: inline;
-    text-transform: uppercase;
-    color: white;
-    background-color: var(--rosaOscuro);
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px var(--grisMedio);
-    margin: 15px;
 }
 /* UBICACIÓN */
 .mainHome .ubicacion{
@@ -762,10 +730,48 @@
     transition: opacity .3s ease;
 } */ /* AUN NO TERMINADO */
 
+
+
+/* Servicios */
+.mainHome  .grid-container {
+    position: relative;
+    top: 10rem;
+    display: grid;
+}
+
+.mainHome .grid-container--fill {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.grid-container--fit {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.grid-element .icon{
+    color:var(--rosaOscuro);
+    text-align: center;
+    font-size: 20px;
+}
+.mainHome .grid-element .text{
+    /* height: 20px; */
+    /* min-width: 5px; */
+    padding: initial;
+    font-size: 7px;
+    text-align: center;
+}
+
+.mainHome .grid-element {
+  background-color: var(--grisClaro);
+  padding: 20px;
+  color: rgb(130, 113, 113);
+
+}
+
+
+
 /* TABLET */
 @media (min-width: 461px){
     .mainHome{
-        margin-top: 20px;
+        margin-top: 300px;
     }
     .mainHome .tienda .titulo .vectorRosa{
         position: relative;
@@ -786,14 +792,6 @@
     .mainHome .servicios .vector {
         position: relative;
         top: -32px;
-    }
-    .mainHome .cursos .imgCursos {
-        top: -92px;
-        width: 402px;
-        height: 522px;
-    }
-    .mainHome .cursos .textoCursos{
-        top: 14px;
     }
     .mainHome .ubicacion .cajaEtiquetas{
         grid-template-columns: 220px 220px;
@@ -819,14 +817,6 @@
     }
 }
 @media (min-width: 600px){
-    .mainHome .cursos .imgCursos{
-        top: -105px;
-        width: 407px;
-        height: 529px;
-    }
-    .mainHome .cursos .textoCursos{
-        top: 18px;
-    }
     .mainHome .ubicacion .cajaEtiquetas{
         grid-template-columns: 45% 45%;
         grid-template-rows: 200px 200px;
@@ -864,6 +854,44 @@
     .mainHome .carruselTienda .seccion .caja .comprar:active{
         background-color: var(--gris);
     }
+    .mainHome .esmaltes{
+        height: 550px;
+    }
+    .mainHome .esmaltes .fondo img{
+        height: 550px;
+    }
+    .mainHome .esmaltes .cajaEsmaltes {
+        height: 350px;
+    }
+    .mainHome .esmaltes .esmalte{
+        width: 300px;
+        height: 300px;
+        border: solid 5px var(--gris);
+        bottom: 20px;
+    }
+    .mainHome .esmaltes .esmalte .imgEsmalte {
+        margin-top: 15px;
+        width: 150px;
+        height: 150px;
+    }
+    .mainHome .esmaltes .esmalte h4{
+        font-size: 20px;
+        bottom: 100px;
+    }
+    .esmaltes .esmalte .precioE{
+        font-size: 20px;
+    }
+    .esmaltes .esmalte .input{
+        display: none;
+    }
+    .mainHome .esmaltes .botonEsmalte{
+        height: 60px;
+        width: 200px;
+        font-size: 30px;
+    }
+    .mainHome .esmaltes .esmalte .comprar{
+        font-size: 30px;
+    }
     .mainHome .esmaltes .botonEsmalte:before {
         content: "ESMALTES";
     }
@@ -874,21 +902,69 @@
         content: "VER MÁS";
         transition: color 0.1s linear 0.1s;
     }
+    .mainHome .tienda .titulo {
+        height: 300px;
+    }
     .mainHome .tienda .titulo h5{
-        font-size: 14px;
+        font-size: 25px;
+        letter-spacing: 5px;
         margin-top: 4px;
     }
     .mainHome .tienda .titulo h1{
-        font-size: 110px;
-        top: -35px;
+        font-size: 200px;
+        top: -89px;
     }
     .mainHome .tienda .titulo h3{
-        top: 135px;
+        display: none;
     }
     .mainHome .tienda .titulo .vectorRosa{
-        bottom: 127px;
+        bottom: 265px;
         width: 35%;
     }
+    .mainHome .tienda .carruselTienda{
+        height: 500px;
+    }
+    .mainHome .tienda .carruselTienda .seccion {
+        height: 480px;
+    }
+    .mainHome .carruselTienda .seccion .caja {
+        width: 240px;
+        height: 420px;
+        margin-top: 30px;
+        border-radius: 40px;
+    }
+    .mainHome .carruselTienda .seccion .caja h4{
+        font-size: 18px;
+    }
+    .mainHome .carruselTienda .seccion .caja .precio, .precioOferta{
+        font-size: 25px;
+        bottom: 120px;
+    }
+    .mainHome .carruselTienda .seccion .caja input {
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+    }
+    .mainHome .carruselTienda .seccion .caja .input {
+        bottom: 83px;
+    }
+    .mainHome .carruselTienda .seccion .caja .medio {
+        width: 30px;
+    }
+    .mainHome .carruselTienda .seccion .caja .comprar{
+        font-size: 20px;
+        left: 45px;
+        right: 45px;
+        bottom: 22px;
+    }
+    .mainHome .carruselTienda .seccion .caja .etiqueta, .mainHome .carruselTienda .seccion .caja .oferta {
+        font-size: 20px;
+        bottom: 15px;
+    }
+    .mainHome .carruselTienda .seccion .caja .foto-prod{
+        width: 186px;
+    }
+   
     .mainHome .tienda article .secciones a h4 {
         font-size: 23px;
     }
@@ -908,20 +984,23 @@
         border-radius: 30px;
     } */
     .mainHome .servicios{
-        margin-top: 130px;
+        margin-top: 0px;
+        margin: 0 auto;
     }
     .mainHome .servicios .cajaServicios{
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .mainHome .servicios .cajaServicios .imgServicios{
-        width: 400px;
-        height: 300px;
-        margin: 0 0 ;
+    .mainHome .servicios .cajaServicios .imgServicios {
+        width: 500px;
+        height: 500px;
+        margin: 0 0;
+        border: solid 20px var(--rosaOscuro);
+        box-shadow: 4px 4px 15px var(--grisMedio);
     }
     .mainHome .servicios .textoS{
-        height: 200px;
+        height: 400px;
         width: 400px;
         bottom: 0;
         display: flex;
@@ -929,30 +1008,36 @@
         justify-content: center;
         margin: 0 0 ;
         right: 50px;
+        box-shadow: 4px 4px 15px var(--grisMedio);
+    }
+    .mainHome .servicios .textoS .tituloServicios{
+        font-size: 30px;
+        position: relative;
+        bottom: 13px;
+    }
+    .mainHome .servicios .textoS p {
+        font-size: 20px;
+        position: relative;
+        bottom: 5px;
+    }
+    .mainHome .servicios .textoS .botonWpp {
+        position: relative;
+        top: 16px;
+    }
+    .mainHome .servicios .textoS .botonWpp button{
+        height: 50px;
+        width: 50px;
+    }
+    .mainHome .servicios .textoS .botonWpp h4 {
+        font-size: 20px;
+        height: 32px;
+        width: 200px;
     }
     .mainHome .servicios .vector{
         top: 30px;
     }
-    .mainHome .cursos .imgCursos{
-        opacity: 0;
-    }
     .mainHome .cursos{
         height: 400px;
-    }
-    .mainHome .cursos .textoCursos{
-        margin: 50px auto;
-        height: 250px;
-        width: 250px;
-        background-color: var(--grisClaro);
-        box-shadow: 5px 5px 20px var(--grisMedio);
-        border-radius: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .mainHome .cursos .textoCursos h5{
-        color: var(--grisOscuro);
     }
     .mainHome .ubicacion .cajaEtiquetas{
         grid-template-columns: 23% 23% 23% 23%;
@@ -979,5 +1064,10 @@
         grid-template-columns: 14.5% 14.5% 14.5% 14.5% 14.5% 14.5% 14.5%;
         position: inherit;
         left: -10px;
+    }
+    .grid-element .text{
+       
+        font-size: 10px;
+     
     }
 }

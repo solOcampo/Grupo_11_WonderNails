@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include ('./partials/head', {title: 'Registrate'}) %> 
+
+<body class="register">
+
+  <%- include ('./partials/header') %> 
+
+
+  <main class="register">
+    <!-- Formulario de registro -->
+    <div class="form_wrapper">
+      <form action="" method="post">
+        <h1>Registrate</h1>
+        <div class="text name">
+          <div class="email_input">
+            <div class="icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <input type="text" name="name" id="name" placeholder="Nombre " required>
+            <small class="error">Debe ingresar su nombre</small>
+          </div>
+        </div>
+        <div class="text surname">
+          <div class="email_input">
+            <div class="icon">
+              <i class="fas fa-user-plus"></i>
+            </div>
+            <input type="text" name="name" id="name" placeholder="Apellido" required>
+            <small class="error">Debe ingresar su apellido</small>
+          </div>
+        </div>
+        <div class="text email">
+          <div class="email_input">
+            <div class="icon">
+              <i class="icon fas fa-envelope"></i>
+            </div>
+            <input type="text" name="name" id="name" placeholder="Email" required>
+            <small class="error">Debe ingresar su email</small>
+          </div>
+        </div>
+        <div class="text password">
+          <div class="email_input">
+            <div class="icon">
+              <i class="icon fas fa-lock"></i>
+            </div>
+            <input type="password" name="name" id="name" placeholder="Contraseña" required>
+            <small class="error">Debe ingresar su contraseña</small>
+          </div>
+        </div>
+
+
+        <!-- Privacidad -->
+        <div class="date">
+          <label>Tus datos personales se utilizarán para procesar
+            tu pedido, mejorar tu experiencia en esta web,
+            gestionar el acceso a tu cuenta y otros propósitos descritos
+            en nuestra política de privacidad.</label>
+        </div>
+
+        <div class="Accessbox">
+          <div class="Access">
+            <img src="/images/Rectangle 29.svg">
+          </div>
+          <div class="access_text">
+            <small>O accede con</small>
+          </div>
+          <div>
+            <div class="Access2">
+              <img src="/images/Rectangle 30.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <!-- Redes sociales -->
+        <div class="icons-social">
+          <div class="button_google">
+            <div class="icon">
+              <a href="https://accounts.google.com"><i class="fab fa-google"></i></a>
+            </div>
+          </div>
+
+          <div class="button_facebook">
+            <div class="icon">
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+
+          <div class="button_App">
+            <div class="icon">
+              <a href="https://appleid.apple.com/sign-in"> <i class="fab fa-apple"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit">Registrate</button>
+      </form>
+    </div>
+
+    <section class="img_instagram">
+      <div class="IGfotos">
+        <a class="img1" href="https://www.instagram.com/p/CgVTAhQA6S4/"><img
+            src="images/c646209b4c08e3ff0ed8178ca7bb5c79.jpg" alt=""></a>
+        <a class="img2" href="https://www.instagram.com/p/CgVTV7jgGlT/"><img
+            src="/images/d3bd758c885dfd1f67a3a9eaf03faca3.jpg" alt=""></a>
+        <a class="img3" href="https://www.instagram.com/p/CgVaSUcNibN/"><img
+            src="/images/f6d85cc990cbf236fc58768bd05d04d4.jpg" alt=""></a>
+        <a class="img4" href="https://www.instagram.com/p/CgVaa1sNhKA/"><img
+            src="/images/96a187667c1694e63308cc7b175c295b.jpg" alt=""></a>
+      </div>
+    </section>
+
+  </main>
+  
+  <%- include ('./partials/footer') %> 
+
+
+</body>
+
+</html>

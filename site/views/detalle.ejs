@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include ('./partials/head', {title: 'Wonder Nails'}) %> 
+
+<body class="detail">
+    <%- include ('./partials/header') %> 
+    <main>
+        <!-- carrusel -->
+        <section class="carrusel">
+            <!-- <article class="conteCarrusel"> -->
+                <ul class="itemCarrusel" id="itemCarrusel-1">
+                    <div class="tarjetaCarrusel">
+                        <img src="/img/carrusel1.png" alt="">
+                    </div>
+                    <li class="flechasCarrusel">
+                        <a href="#itemCarrusel-3"><i class="fas fa-angle-left"></i></a>
+                        <a href="#itemCarrusel-2"><i class="fas fa-angle-right"></i></a>
+                    </li>
+                </ul>
+                <ul class="itemCarrusel" id="itemCarrusel-2">
+                    <div class="tarjetaCarrusel">
+                        <img src="/img/carrusel2.webp" alt="">
+                    </div>
+                    <li class="flechasCarrusel">
+                        <a href="#itemCarrusel-1"><i class="fas fa-angle-left"></i></a>
+                        <a href="#itemCarrusel-3"><i class="fas fa-angle-right"></i></a>
+                    </li>
+                </ul>
+                <ul class="itemCarrusel" id="itemCarrusel-3">
+                    <div class="tarjetaCarrusel">
+                        <img src="/img/carrusel3.webp" alt="">
+                    </div>
+                    <li class="flechasCarrusel">
+                        <a href="#itemCarrusel-2"><i class="fas fa-angle-left"></i></a>
+                        <a href="#itemCarrusel-1"><i class="fas fa-angle-right"></i></a>
+                    </li>
+                </ul>
+            <!-- </article> -->
+        </section>
+
+        <ul class="puntos">
+            <li><a href="#itemCarrusel-1"><label for="" class="punto"></label></a></li>
+            <li><a href="#itemCarrusel-2"><label for="" class="punto"></label></a></li>
+            <li><a href="#itemCarrusel-3"><label for="" class="punto"></label></a></li>
+        </ul>
+
+
+        <!-- detalle de producto -->
+        <section class="detalle-producto">
+            <h1> Torno Drill 288 Professional </h1>
+            <article class="price">
+                <p class="precio">$14.990</p>
+                <span class="precio-final">$10.493</span>
+                <small class="descuento">20% OFF</small>
+            </article>
+            <article class="conten-carrito">
+                <div class="sumar-carrito">
+                    <input type="button" value="-">
+                    <input class="medio" type="number" value="1" min="1" step="1">
+                    <input type="button" value="+">
+                </div>
+                <a href="#"><button class="comprar-boton">Comprar</button></a>
+            </article>
+            <article class="fav-share">
+            <div class="lista-deseos">
+                <a href="#"><i class="far fa-heart"></i></a>
+            </div>
+            <div class="share">
+                <a href="#"><i class="fas fa-share-alt"></i></a>
+            </div>
+        </article>
+        </section>
+
+        <section class="descripcion">
+            <h3>Descripcion</h3>
+            <p>Torno electrico de mesa para uso profesional. Ideal para el retirado de manicuras de gel UV y acrilico, y
+                manicura rusa combinada. </p>
+            <p>Profesionalizá tu gabinete con este torno para manos y pies Drill 288 Professional.</p>
+            <p> - 30 mil RPM
+                - Doble dirección de rotación
+                - Control manual y con pedal
+                - Kit de 6 Cabezales diamantados
+                - Unidad manual fácil de manejar y trasladar.
+                - Bajo ruido y alta duración
+                - 30 Watts</p>
+        </section>
+
+        <!-- promociones -->
+        <section class="promociones">
+            <h3>¡Aprovecha las promociones!</h3>
+            <article>
+                <div class="retiro">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <h4>Retiro en tienda o envío a domicilio</h4>
+                <p>Retirá en tienda sin cargo o elegí envío a domicilio gratis a partir de $5000 </p>
+            </article>
+            <article>
+                </div>
+                <div class="cuotas">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <h4>Cuotas sin interés</h4>
+                <p>Pagá con Visa, Amex y Master en 3 y 6 cuotas sin interés</p>
+            </article>
+            <article>
+                <div class="cambios">
+                    <i class="fas fa-undo"></i>
+                </div>
+                <h4>Cambios y devoluciones</h4>
+                <p>Realizá cambios sin cargo por tiempo limitado</p>
+            </article>
+        </section>
+
+
+        <!-- productos relacionados -->
+        <h2>Productos Relacionados</h2>
+        <section class="productos-relacionados">
+            <article>
+                <div class="caja-etiquetas">
+                    <span class="etiqueta">Nuevo</span>
+                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                </div>
+                <div>
+                    <img src="/img/c5119__03798_zoom 1.png" alt="">
+                </div>
+                <h4>Cabina UV LED Professional</h4>
+                <p class="precio-1">$10.000</p>
+                <button class="comprar-boton">Comprar</button>
+            </article>
+            <article>
+                <div class="caja-etiquetas">
+                    <span class="etiqueta">Nuevo</span>
+                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                </div>
+                <div>
+                    <img src="/img/Mask group (1).png" alt="">
+                </div>
+                <h4> Set de 12 Esmaltes Semipermanentes</h4>
+                <p class="precio-1">$7.000</p>
+                <button class="comprar-boton">Comprar</button>
+            </article>
+            <article>
+                <div class="caja-etiquetas">
+                    <span class="etiqueta">Nuevo</span>
+                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                </div>
+                <div class="productos-img-2">
+                    <img src="/img/producto-nuevo1.jpg" alt="">
+                </div>
+                <h4>Cabina secador</h4>
+                <p class="precio-1">$600</p>
+                <button class="comprar-boton">Comprar</button>
+            </article>
+            <article>
+                <div class="caja-etiquetas">
+                    <span class="etiqueta">Nuevo</span>
+                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                </div>
+                <div>
+                    <img src="/img/producto-nuevo-2.jpg" alt="">
+                </div>
+                <h4>Bloque de brillo</h4>
+                <p class="precio-1">$200</p>
+                <button class="comprar-boton">Comprar</button>
+            </article>
+        </section>
+    </main>
+    <%- include ('./partials/footer') %> 
+</body>
+
+</html>
