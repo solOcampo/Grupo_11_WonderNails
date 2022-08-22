@@ -55,25 +55,28 @@
                     <article class="carruselTienda">
                         <!-- novedades -->
                         <div id="nuevo" class="seccion">
-                            <div class="caja">
-                                <div class="caja-etiquetas">
-                                    <span class="etiqueta">Nuevo</span>
-                                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                                </div>
-                                <a href="/productos/detalle">
-                                    <div class="foto-prod">
-                                        <img src="/img/Home/producto-nuevo-1.jpg" alt="">
+                            <% productos.forEach(producto => { %>
+                                <div class="caja">
+                                    <div class="caja-etiquetas">
+                                        <span class="etiqueta">Nuevo</span>
+                                        <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
                                     </div>
-                                    <h4>Bloque de brillo</h4>
-                                    <span class="precio">$200</span>
-                                </a>
-                                <div class="input">
-                                    <input type="button" value="-">
-                                    <input class="medio" type="number" value="1" min="1" step="1">
-                                    <input type="button" value="+">
+                                    <a href="/productos/detalle/<%- producto.id %> ">
+                                        <div class="foto-prod">
+                                            <img src="/img/products/<%- producto.imagen = producto.imagen ? producto.imagen : producto.imagen[1] %> " alt="Fotografía ilustrativa del producto">
+                                        </div>
+                                        <h4><%- producto.nombre %> </h4>
+                                        <span class="precio">$<%- producto.precio %> </span>
+                                    </a>
+                                    <div class="input">
+                                        <input type="button" value="-">
+                                        <input class="medio" type="number" value="1" min="1" step="1">
+                                        <input type="button" value="+">
+                                    </div>
+                                    <a href="/productos/carrito/<%- producto.id %> "><button class="comprar">Comprar</button></a>
                                 </div>
-                                <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
-                            </div>
+                            <% }) %>
+                            
                             <div class="caja">
                                 <div class="caja-etiquetas">
                                     <span class="etiqueta">Nuevo</span>
