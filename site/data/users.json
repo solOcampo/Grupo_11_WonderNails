@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "nombre": "Gerick",
+        "apellido": "Anonymous",
+        "email": "gmewett0@topsy.com",
+        "contraseña": "Comision17",
+        "telefono": "4957024858",
+        "ciudad": "Samut Songkhram",
+        "genero": "Non-binary",
+        "codigoPostal": "75110",
+        "imagen":".jpg",
+        "rol": "Administrador"
+    },
+    {
+        "id": 2,
+        "nombre": "Jeanette",
+        "apellido": "Barrera",
+        "email": "jeanette.barrera0710@gmail.com",
+        "contraseña": "Comision17",
+        "telefono": "2472821758",
+        "ciudad": "San Francisco",
+        "genero": "Female",
+        "codigoPostal": "10802",
+        "imagen":".jpg",
+        "rol": "Usuario"
+    },
+    {
+        "id": 3,
+        "nombre": "Micaela",
+        "apellido": "Loureiro",
+        "email": "micaela.loureiro94@gmail.com",
+        "contraseña": "Comision17",
+        "telefono": "1953558664",
+        "ciudad": "Nechanice",
+        "genero": "Female",
+        "codigoPostal": "503 15",
+        "imagen":".jpg",
+        "rol": "Usuario"
+    },
+    {
+        "id": 4,
+        "nombre": "Nadia",
+        "apellido": "Ortiz",
+        "email": "porqueamo3@gmail.com",
+        "contraseña": "Comision17",
+        "telefono": "7097389930",
+        "ciudad": "Longtan",
+        "genero": "Male",
+        "codigoPostal": "777 15",
+        "imagen":".jpg",
+        "rol": "Usuario"
+    },
+    {
+        "id": 5,
+        "nombre": "Cristian",
+        "apellido": "Elias",
+        "email": "cristiannicolas32@hotmail.com",
+        "contraseña": "Comision17",
+        "telefono": "4939925564",
+        "ciudad": "Santa Bárbara",
+        "genero": "Male",
+        "codigoPostal": "853 12",
+        "imagen":".jpg",
+        "rol":"Usuario"
+    },
+    {
+        "id": 6,
+        "nombre": "Solange",
+        "apellido": "Ocampo",
+        "email": "soolangeeliizabeth@gmail.com",
+        "contraseña": "Comision17",
+        "telefono": "1364269522",
+        "ciudad": "Wuyang",
+        "genero": "Female",
+        "codigoPostal": "022 00",
+        "imagen":".jpg",
+        "rol": "Usuario"
+    }
+]
