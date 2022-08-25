@@ -4,9 +4,7 @@ const path = require('path')
 let productos = require('../data/productos.json')
 const save = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
-/* let esmaltes = require('../data/esmaltes.json')
-const saveEsmalte = (dato) => fs.writeFileSync(path.join(__dirname, '../data/esmaltes.json')
-,JSON.stringify(dato,null,4),'utf-8') */
+
 
 module.exports = {
     list: (req,res) => {
@@ -34,16 +32,6 @@ module.exports = {
         productos.push(nuevoProd)
         save(productos)
 		 return res.redirect('/admin/listar')
-        
- 
-        /* if(nuevoProd.categoria === "Esmaltes"){
-            esmaltes.push(nuevoProd)
-            saveEsmalte(esmaltes)
-            
-        }else{
-            productos.push(nuevoProd)
-            save(productos)
-        } */
 	},
     edit:(req,res) => {
         id = +req.params.id
