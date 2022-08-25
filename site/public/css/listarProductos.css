@@ -6,12 +6,19 @@
     display: flex;
 }
 .listar .ul .li{
-    font-size: 20px;
-    margin-left: 20px;
+    font-size: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 .listar .ul .li a:hover{
     color: var(--rosaOscuro);
 }
 .listar a{
     color: var(--grisMedio)
+}
+@media (min-width: 461px){
+    .listar .ul .li{
+        font-size: 15px;
+        margin-left: 15px;
+    }
 }

@@ -1,6 +1,7 @@
 @import url('./normalize.css');
 @import url('./variables.css');
 @import url('./general.css');
+@import url('./glider.css');
 @import url('./header.css');
 @import url('./footer.css');
 @import url('./home.css');
@@ -10,4 +11,6 @@
 @import url('./register.css');
 @import url('./perfil.css');
 @import url('./esmaltes.css');
+@import url('./productos.css');
 @import url('./listarProductos.css');
+@import url('./crearProductos.css');
