@@ -22,6 +22,7 @@ module.exports = {
 			marca : req.body.marca,
 			categoria : req.body.categoria,
 			estado : req.body.estado,
+            color: req.body.color,
 			precio : req.body.precio,
 			descuento : req.body.descuento,
 			stock : req.body.stock,
