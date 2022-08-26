@@ -42,28 +42,33 @@
         ]
     },
     {
-        "id": 4,
-        "categoria": "Esmaltado Semipermanente",
-        "precio": null,
-        "descuento": null,
-        "stock": null,
+        "idn": 4,
+        "nombre": " Cabina LED Profesional 54 Watts Nail Master Cabin ",
+        "marca": " Meline ",
+        "categoria": " Esmaltado Semipermanente ",
+        "estado": " Oferta ",
+        "precio": 19990,
+        "descuento": 27,
+        "descripcion": " UNA CABINA CON EFECTO ANTI AGE. 54 Watts de Potencia (24 Lámparas LED). Timer secuencial en 10; 30 y 60 segundos. Gran Poder Lumínico. Secado Parejo, Rápido y Uniforme ",
+        "stock": 12,
         "imagen": [
-            "Cabina-LED-Profesional-54-Watts-Nail-Master-Cabin.jpg"
+            " Cabina-LED-Profesional-54-Watts-Nail-Master-Cabin.jpg "
         ]
     },
     {
         "id": 5,
-        "nombre": "Cabina UV 36W WPRO",
+        "nombre": "Cabina UV 36W WPRO ",
         "marca": "WPRO",
         "categoria": "Esmaltado Semipermanente",
         "estado": "Favoritos",
-        "precio": 5990,
-        "descuento": "",
+        "precio": 6000,
+        "descuento": 0,
         "descripcion": "Cabina Profesional Para Uñas Con luz UV - 4 Tubos UV Tubos de Fácil Recambio - Timer Secuencial - Interruptor de encendido rápido de fácil manejo - Acabado perfecto para uñas de manos y pies - 36 Watts de Potencia",
         "stock": 17,
         "imagen": [
             "Cabina-UV-36W-WPRO.jpg"
-        ]
+        ],
+        "color": ""
     },
     {
         "id": 6,
