@@ -77,13 +77,23 @@
                         <small>Obligatorio</small>
                     </div>
                     <div class="mb-3">
-                        <label for="imagen" class="form-label">Imágenes del producto</label>
-                        <input class="form-control" type="file" name="imagen" id="imagen" multiple>
+                        <!-- <label for="imagen" class="form-label">Imágenes del producto</label>
+                        <input class="form-control" type="file" name="imagen" id="imagen" multiple > -->
+                        <label class="custom-file-upload">
+                            <input type="file" name="imagen" id="imagen" multiple/>
+                            Subir imágenes
+                          </label>
                         <small>Obligatorio</small>
+                        
                     </div>
-    
-                    <div class="button">
-                        <button class="btn btn-outline-success" type="submit">Crear Producto</button>
+                    
+                    <div class="box-buttons">
+                        <div class="button borrar">
+                            <button type="reset">Borrar</button>
+                        </div>
+                        <div class="button crear">
+                            <button class="btn btn-outline-success" type="submit">Crear</button>
+                        </div>
                     </div>
     
                 </section>
