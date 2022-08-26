@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include ('./partials/head', {title: 'Wonder Nails' }) %>
-
+<link rel="stylesheet" type="text/css" href="glider.css">
     <body class="home">
 
         <%- include ('./partials/header') %>
             <main class="mainHome">
                 <!-- CARRUSEL -->
                 <section class="carrusel">
-                    <ul class="slider">
-                        <li id="slide1"><img src="/images/f6d85cc990cbf236fc58768bd05d04d4.jpg" alt="banner"></li>
-                        <li id="slide2"><img src="/img/Home/carrusel2.jpg" alt="banner"></li>
-                        <li id="slide3"><img src="/img/Home/carrusel3.jpg" alt="banner"></li>
-                        <li id="slide4"><img src="/img/Home/carrusel4.jpg" alt="banner"></li>
-                        <li id="slide5"><img src="/img/Home/carrusel5.jpg" alt="banner"></li>
-                    </ul>
-                    <ul class="botones">
-                        <li><a href="#slide1"><label for="" class="botonCarrusel"></label></a></label></li>
-                        <li><a href="#slide2"><label for="" class="botonCarrusel"></label></a></label></li>
-                        <li><a href="#slide3"><label for="" class="botonCarrusel"></label></a></label></li>
-                        <li><a href="#slide4"><label for="" class="botonCarrusel"></label></a></label></li>
-                        <li><a href="#slide5"><label for="" class="botonCarrusel"></label></a></label></li>
-                    </ul>
-                    <!-- <ul class="flechas">
-                <li><a href=""><i class="fas fa-angle-left"></i></a></li>
-                <li><a href=""><i class="fas fa-angle-right"></i></a></li>
-            </ul> -->
+                    <div class="glider-contain numero1">
+                        <div class="glider">
+                            <div><img src="/images/f6d85cc990cbf236fc58768bd05d04d4.jpg" alt="banner"></div>
+                            <div><img src="/img/Home/carrusel2.jpg" alt="banner"></div>
+                            <div><img src="/img/Home/carrusel3.jpg" alt="banner"></div>
+                            <div><img src="/img/Home/carrusel4.jpg" alt="banner"></div>
+                            <div><img src="/img/Home/carrusel5.jpg" alt="banner"></div>
+                            
+                            
+                        </div>
+                        <button aria-label="Previous" class="glider-prev">«</button>
+                        <button aria-label="Next" class="glider-next">»</button>
+                        <div role="tablist" class="dots"></div>
+                      </div>
                 </section>
                 <section class="tienda">
                     <!-- INICIO -->
@@ -52,192 +48,91 @@
                         </ul>
                     </article>
                     <!-- CARRUSEL DE SECCIONES -->
+                    
                     <article class="carruselTienda">
                         <!-- novedades -->
                         <div id="nuevo" class="seccion">
-                            <div class="caja">
-                                <div class="caja-etiquetas">
-                                    <span class="etiqueta">Nuevo</span>
-                                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                            <div class="glider-contain numero1">
+                                <div class="gliderProductos">
+                                    <% productosNuevos.forEach(producto => { %>
+                                        <div class="caja">
+                                            <div class="caja-etiquetas">
+                                                <span class="etiqueta">Nuevo</span>
+                                                <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <a href="/productos/detalle/<%- producto.id %> ">
+                                                <div class="foto-prod">
+                                                    <img src="/img/products/<%- producto.imagen[0] %> " alt="Fotografía ilustrativa del producto">
+                                                </div>
+                                                <h4><%- producto.nombre %> </h4>
+                                                <span class="precio">$<%- producto.precio %> </span>
+                                            </a>
+                                            <div class="input">
+                                                <input type="button" value="-">
+                                                <input class="medio" type="number" value="1" min="1" step="1">
+                                                <input type="button" value="+">
+                                            </div>
+                                            <a href="/productos/carrito/<%- producto.id %> "><button class="comprar">Comprar</button></a>
+                                        </div>
+                                    <% }) %>
                                 </div>
-                                <a href="/productos/detalle">
-                                    <div class="foto-prod">
-                                        <img src="/img/Home/producto-nuevo-1.jpg" alt="">
-                                    </div>
-                                    <h4>Bloque de brillo</h4>
-                                    <span class="precio">$200</span>
-                                </a>
-                                <div class="input">
-                                    <input type="button" value="-">
-                                    <input class="medio" type="number" value="1" min="1" step="1">
-                                    <input type="button" value="+">
-                                </div>
-                                <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
+                                <button aria-label="Previous" class="glider-prev">«</button>
+                                <button aria-label="Next" class="glider-next">»</button>
+                                <div role="tablist" class="dots"></div>
                             </div>
-                            <div class="caja">
-                                <div class="caja-etiquetas">
-                                    <span class="etiqueta">Nuevo</span>
-                                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                                </div>
-                                <a href="/productos/detalle">
-                                    <div class="foto-prod">
-                                        <img src="/img/Home/producto-nuevo-2.jpg" alt="">
-                                    </div>
-                                    <h4>Laminas de oro</h4>
-                                    <span class="precio">$600</span>
-                                </a>
-                                <div class="input">
-                                    <input type="button" value="-">
-                                    <input class="medio" type="number" value="1" min="1" step="1">
-                                    <input type="button" value="+">
-                                </div>
-                                <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
-                            </div>
-                            <!-- <div class="caja">
-                            <div class="caja-etiquetas">
-                                <span class="etiqueta">Nuevo</span>
-                            <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                            </div>
-                            <div class="foto-prod">
-                                <img src="/img/Home/producto-nuevo-3.jpg" alt="">
-                            </div>
-                            <h4>Cabina secador</h4>
-                            <span class="precio">$600</span>
-                            <div class="input">
-                                <input type="button" value="-">
-                                <input class="medio" type="number" value="1" min="1" step="1">
-                                <input type="button" value="+">
-                            </div>
-                            <button class="comprar">Comprar</button>
-                        </div> -->
                         </div>
                         <!-- favoritos -->
                         <div id="favoritos" class="seccion">
-                            <div class="caja">
-                                <div class="caja-etiquetas">
-                                    <span class="etiqueta">Nuevo</span>
-                                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                                </div>
-                                <a href="/productos/detalle">
-                                    <div class="foto-prod">
-                                        <img src="/img/Home/producto-favorito-1.jpg" alt="">
+                            <% productosFavs.forEach(producto => { %>
+                                <div class="caja">
+                                    <div class="caja-etiquetas">
+                                        <span class="etiqueta">Nuevo</span>
+                                        <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
                                     </div>
-                                    <h4>12 Esmaltes Semipermanentes x15ml Anush</h4>
-                                    <span class="precio">$11190</span>
-                                </a>
-                                <div class="input">
-                                    <input type="button" value="-">
-                                    <input class="medio" type="number" value="1" min="1" step="1">
-                                    <input type="button" value="+">
-                                </div>
-                                <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
-                            </div>
-                            <div class="caja">
-                                <div class="caja-etiquetas">
-                                    <span class="etiqueta">Nuevo</span>
-                                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                                </div>
-                                <a href="/productos/detalle">
-                                    <div class="foto-prod">
-                                        <img src="/img/Home/producto-favorito-2.jpg" alt="">
+                                    <a href="/productos/detalle/<%- producto.id %> ">
+                                        <div class="foto-prod">
+                                            <img src="/img/products/<%- producto.imagen[0] %> " alt="Fotografía ilustrativa del producto">
+                                        </div>
+                                        <h4><%- producto.name %> </h4>
+                                        <span class="precio">$<%- producto.precio %> </span>
+                                    </a>
+                                    <div class="input">
+                                        <input type="button" value="-">
+                                        <input class="medio" type="number" value="1" min="1" step="1">
+                                        <input type="button" value="+">
                                     </div>
-                                    <h4>Gel Mono-Phase UV Thuya x 15ml.</h4>
-                                    <span class="precio">$4390</span>
-                                </a>
-                                <div class="input">
-                                    <input type="button" value="-">
-                                    <input class="medio" type="number" value="1" min="1" step="1">
-                                    <input type="button" value="+">
+                                    <a href="/productos/carrito/<%- producto.id %> "><button class="comprar">Comprar</button></a>
                                 </div>
-                                <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
-                            </div>
-                            <!-- <div class="caja">
-                            <div class="caja-etiquetas">
-                                <span class="etiqueta">Nuevo</span>
-                            <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                            </div>
-                            <div class="foto-prod">
-                                <img src="/img/Home/producto-favorito-3.jpg" alt="">
-                            </div>
-                            <h4>Torno Profesional Fast Drill Meline</h4>
-                            <span class="precio">$9990</span>
-                            <div class="input">
-                                <input type="button" value="-">
-                                <input class="medio" type="number" value="1" min="1" step="1">
-                                <input type="button" value="+">
-                            </div>
-                            <button class="comprar">Comprar</button>
-                            </div> -->
+                            <% }) %>
                         </div>
                         <!-- ofertas -->
                         <div id="oferta" class="seccion">
-                            <div class="caja">
-                                <div class="caja-etiquetas">
-                                    <span class="oferta" class="etiqueta">-20%</span>
-                                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                                </div>
-                                <a href="/productos/detalle">
-                                    <div class="foto-prod">
-                                        <img src="/img/Home/producto-oferta-1.jpg" alt="">
+                            <% productosOferta.forEach(producto => { %>
+                                <div class="caja">
+                                    <div class="caja-etiquetas">
+                                        <span class="oferta" class="etiqueta">-<%- producto.descuento %> %</span>
+                                        <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
                                     </div>
-                                    <h4>Torno Drill 288 <br> Professional</h4>
-                                    <span class="precioOferta">
-                                        <span class="precioViejo">$14990</span>
-                                        <span>$11992</span>
-                                    </span>
-                                </a>
-                                <div class="input">
-                                    <input type="button" value="-">
-                                    <input class="medio" type="number" value="1" min="1" step="1">
-                                    <input type="button" value="+">
-                                </div>
-                                <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
-                            </div>
-                            <div class="caja">
-                                <div class="caja-etiquetas">
-                                    <span class="oferta" class="etiqueta">-10%</span>
-                                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                                </div>
-                                <a href="/productos/detalle">
-                                    <div class="foto-prod">
-                                        <img src="/img/Home/producto-oferta-2.jpg" alt="">
+                                    <a href="/productos/detalle/<%- producto.id %> ">
+                                        <div class="foto-prod">
+                                            <img src="/img/products/<%- producto.imagen[0] %> " alt="">
+                                        </div>
+                                        <h4><%- producto.nombre %> </h4>
+                                        <span class="precioOferta">
+                                            <span class="precioViejo">$<%- producto.precio %>  </span>
+                                            <span>$<%- producto.precio - producto.precio * producto.descuento / 100 %> </span>
+                                        </span>
+                                    </a>
+                                    <div class="input">
+                                        <input type="button" value="-">
+                                        <input class="medio" type="number" value="1" min="1" step="1">
+                                        <input type="button" value="+">
                                     </div>
-                                    <h4>12 Esmaltes Semipermanentes</h4>
-                                    <span class="precioOferta">
-                                        <span class="precioViejo">$7990</span>
-                                        <span>$7191</span>
-                                    </span>
-                                </a>
-                                <div class="input">
-                                    <input type="button" value="-">
-                                    <input class="medio" type="number" value="1" min="1" step="1">
-                                    <input type="button" value="+">
+                                    <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
                                 </div>
-                                <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
-                            </div>
-                            <!-- <div class="caja">
-                            <div class="caja-etiquetas">
-                                <span class="etiqueta">Nuevo</span>
-                                <span class="oferta" class="etiqueta">-5%</span>
-                             <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                            </div>
-                            <div class="foto-prod">
-                                <img src="/img/Home/producto-oferta-3.jpg" alt="">
-                            </div>
-                            <h4>3 esmaltes + cabina mini UV</h4>
-                            <span class="precioOferta">
-                                <span class="precioViejo">$8190</span>
-                            <span >$7780</span>
-                            </span>
-                            <div class="input">
-                                <input type="button" value="-">
-                                <input class="medio" type="number" value="1" min="1" step="1">
-                                <input type="button" value="+">
-                            </div>
-                            <button class="comprar">Comprar</button>
-                            </div> -->
+                            <% }) %>
                         </div>
-                        <div class="cajaBotonesT">
+                        <!-- <div class="cajaBotonesT">
                             <ul class="botonesT">
                                 <li><a href=""><label for="" class="botonT"></label></a></label></li>
                                 <li><a href=""><label for="" class="botonT"></label></a></label></li>
@@ -245,7 +140,7 @@
                                 <li><a href=""><label for="" class="botonT"></label></a></label></li>
                                 <li><a href=""><label for="" class="botonT"></label></a></label></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </article>
                 </section>
                 <section class="esmaltes">

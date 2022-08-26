@@ -2,7 +2,7 @@
 <html lang="es">
 <%- include('../partials/head',{title:"Crear Producto"}) %>
 <body class="crear-editar listar">
-    <main>
+    <main class="crear">
         <ul class="ul">
             <li class="crumb li"><a href="/">Home</a></li>
             <li class="divider li"> > </li>
@@ -13,59 +13,92 @@
             <li class="crumb-active li" aria-current="page">Crear Producto</li>
         </ul>
         <h1>Creando un producto nuevo</h1>
-        <form action="/admin/create" method="post">
-            <section>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="marca" placeholder="Marca">
-                    <label for="marca">Marca</label>
-                    <small>Obligatorio</small>
-                </div>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="Titulo" placeholder="Titulo">
-                    <label for="Titulo">Titulo</label>
-                    <small>Obligatorio</small>
-                </div>
-                <div class="form-floating">
-                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                      <option selected hidden>Selecciona una opcion</option>
-                      <option value="Smartphones">Smartphones</option>
-                      <option value="Tablets">Tablets</option>
-                      <option value="Notebooks">Notebooks</option>
-                    </select>
-                    <label for="floatingSelect">Categoria</label>
-                    <small>Obligatorio</small>
-                  </div>
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="Precio" placeholder="Precio">
-                    <label for="Precio">Precio</label>
-                    <small>Obligatorio</small>
-                </div>
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="Descuento" value="0" placeholder="Descuento">
-                    <label for="Descuento">Descuento</label>
-                </div>
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="Stock" placeholder="Stock">
-                    <label for="Stock" value="1">Stock</label>
-                </div>
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Por favor inserte la descripcion del producto"
-                        id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Descripcion</label>
-                    <small>Obligatorio</small>
-                </div>
-                <div class="mb-3">
-                    <label for="formFileMultiple" class="form-label">Subir imagenes del producto</label>
-                    <input class="form-control" type="file" id="formFileMultiple" multiple>
-                    <small>Obligatorio</small>
-                </div>
-
-                <div class="button">
-                    <button class="btn btn-outline-success" type="submit">Crear Producto</button>
-                </div>
-
-            </section>
-        </form>
+        <div class="divForm">
+            <form action="/admin/crear" method="post">
+                <section>
+                    <div class="form-floating">
+                        <label for="nombre">Nombre del producto</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+                        <small>Obligatorio</small>
+                    </div>
+                    <div class="form-floating">
+                        <label for="marca">Marca</label>
+                        <input type="text" class="form-control" name="marca" id="marca" placeholder="Marca">
+                        <small>Obligatorio</small>
+                    </div>
+                    <div class="form-floating">
+                        <label for="categoria">Categoría</label>
+                        <select class="form-select" name="categoria" id="categoria"  aria-label="Floating label select example">
+                          <option selected hidden>Selecciona una opcion</option>
+                          <option value="Esmaltado">Esmaltado</option>
+                          <option value="Esmaltado Semipermanente">Esmaltado Semipermanente</option>
+                          <option value="Construcción de uñas">Construcción de uñas</option>
+                          <option value="Decoración">Decoración</option>
+                          <option value="Esmaltes">Esmaltes</option>
+                          <option value="Herramientas">Herramientas</option>
+                          <option value="Accesorios">Accesorios</option>
+                          <option value="Aparatos">Aparatos</option>
+                          <option value="Cuidado de Manos y Pies">Cuidado de Manos y Pies</option>
+                          <option value="Maquillaje">Maquillaje</option>
+                        </select>
+                        <small>Obligatorio</small>
+                      </div>
+                      <div class="form-floating">
+                        <label for="estado">Estado</label>
+                        <select class="form-select" name="estado" id="estado" aria-label="Floating label select example">
+                          <option selected hidden>Selecciona una opcion</option>
+                          <option value="Nuevo">Nuevo</option>
+                          <option value="Favoritos">Favoritos</option>
+                          <option value="Oferta">Oferta</option>
+                        </select>
+                        <small>Obligatorio</small>
+                    </div>
+                    <div class="form-floating">
+                        <label for="color">Color</label>
+                        <input type="text" class="form-control" name="color" id="color" placeholder="Color">
+                        <small>Obligatorio</small>
+                    </div>
+                    <div class="form-floating">
+                        <label for="precio">Precio</label>
+                        <input type="number" class="form-control" name="precio" id="precio" placeholder="Precio">
+                    </div>
+                    <div class="form-floating">
+                        <label for="descuento">Descuento</label>
+                        <input type="number" class="form-control" name="descuento" id="descuento" value="0" placeholder="Descuento">
+                    </div>
+                    <div class="form-floating">
+                        <label for="stock" value="1">Stock</label>
+                        <input type="number" class="form-control" name="stock" id="stock" placeholder="Stock">
+                    </div>
+                    <div class="form-floating">
+                        <label for="descripcion">Descripción</label>
+                        <textarea class="form-control" name="descripcion" placeholder="Por favor inserte la descripción del producto"
+                            id="descripcion"></textarea>
+                        <small>Obligatorio</small>
+                    </div>
+                    <div class="mb-3">
+                        <!-- <label for="imagen" class="form-label">Imágenes del producto</label>
+                        <input class="form-control" type="file" name="imagen" id="imagen" multiple > -->
+                        <label class="custom-file-upload">
+                            <input type="file" name="imagen" id="imagen" multiple/>
+                            Subir imágenes
+                          </label>
+                        <small>Obligatorio</small>
+                        
+                    </div>
+                    
+                    <div class="box-buttons">
+                        <div class="button borrar">
+                            <button type="reset">Borrar</button>
+                        </div>
+                        <div class="button crear">
+                            <button class="btn btn-outline-success" type="submit">Crear</button>
+                        </div>
+                    </div>
+    
+                </section>
+            </form>
+        </div>
     </main>
 </body>
 </html>
