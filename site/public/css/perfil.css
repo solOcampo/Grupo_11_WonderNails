@@ -123,11 +123,10 @@
     cursor: pointer;
 }
 .perfil-usuario .menu-perfil ul {
-
     list-style: none;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 2.5rem;
+    padding-top: 3.5rem;
     width: 70%;
     background-color: #fff;
     border-radius: 12px;
