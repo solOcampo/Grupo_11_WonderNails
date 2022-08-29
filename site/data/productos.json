@@ -130,14 +130,14 @@
         "descripcion": "12 Esmalte Semipermanente x15ml Anush + Cabina Power Full LED + CCFL- UV Teknikpro + Removedor x500ml Anush + 2 Limas Recta/Banana Thuya",
         "stock": 18,
         "imagen": [
-            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-1",
-            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-2",
-            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-3",
-            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-4",
-            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-5",
-            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-6",
-            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-7",
-            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-8"
+            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-1.jpg",
+            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-2.jpg",
+            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-3.jpg",
+            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-4.jpg",
+            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-5.jpg",
+            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-6.jpg",
+            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-7.jpg",
+            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-8.jpg"
         ]
     },
     {
@@ -154,12 +154,12 @@
         "descripcion": " 3 Esmaltes Semipermanente x15ml Anush + Mini Cabina LED Portátil 5W Compact Nail Lamp",
         "stock": 16,
         "imagen": [
-            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-1",
-            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-2",
-            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-3",
-            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-4",
-            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-5",
-            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-6"
+            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-1.jpg",
+            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-2.jpg",
+            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-3.jpg",
+            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-4.jpg",
+            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-5.jpg",
+            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-6.jpg"
         ]
     },
     {
@@ -217,17 +217,6 @@
         "imagen": [
             "Removedor-de-Esmalte-Semipermanente-x120ml.jpg"
         ]
-    },
-    {
-        "id": 15,
-        "nombre": "Quorum Health Corporation",
-        "marca": "Welch-Mertz",
-        "categoria": "Decoración",
-        "estado": "",
-        "precio": "$1.22",
-        "descripcion": "amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis",
-        "stock": 24,
-        "imagen": 25
     },
     {
         "id": 16,
@@ -617,7 +606,7 @@
     },
     {
         "id": 42,
-        "name": "Caracas",
+        "nombre": "Caracas",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Goldenrod",
@@ -631,7 +620,7 @@
     },
     {
         "id": 43,
-        "name": "Cartagena",
+        "nombre": "Cartagena",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Turquoise",
@@ -645,7 +634,7 @@
     },
     {
         "id": 44,
-        "name": "Hongsihu",
+        "nombre": "Hongsihu",
         "marca": "Pink Mask",
         "categoria": "Esmaltes",
         "color": "Puce",
@@ -659,7 +648,7 @@
     },
     {
         "id": 45,
-        "name": "Gel Color",
+        "nombre": "Gel Color",
         "marca": "Pink Mask",
         "categoria": "Esmaltes Semipermanentes",
         "color": "Sunday Morning",
@@ -668,14 +657,14 @@
         "descripcion": "Esmalte semipermanente en gel pensado para curar en cabina UV de 48W o más. Desarrollado especialmente para uso profesional, formulado para mantener tus uñas fuertes y sanas.",
         "stock": 5,
         "imagen": [
-            "Pink-Mask-Sunday Morning-1.wepb",
-            "Pink-Mask-Sunday Morning-2.wepb",
-            "Pink-Mask-Sunday Morning-3.wepb"
+            "Pink-Mask-Sunday Morning-1.webp",
+            "Pink-Mask-Sunday Morning-2.webp",
+            "Pink-Mask-Sunday Morning-3.webp"
         ]
     },
     {
         "id": 46,
-        "name": "Chamomix",
+        "nombre": "Chamomix",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Via lactea",
@@ -689,7 +678,7 @@
     },
     {
         "id": 47,
-        "name": "Chicago",
+        "nombre": "Chicago",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Violeta",
@@ -698,12 +687,12 @@
         "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
         "stock": 20,
         "imagen": [
-            "chicago.wepb"
+            "chicago.webp"
         ]
     },
     {
         "id": 48,
-        "name": "Gel Color",
+        "nombre": "Gel Color",
         "marca": "Pink Mask",
         "categoria": "Esmaltes",
         "color": "Popsicle",
@@ -712,14 +701,14 @@
         "descripcion": "Esmalte semipermanente en gel pensado para curar en cabina UV de 48W o más. Desarrollado especialmente para uso profesional, formulado para mantener tus uñas fuertes y sanas.",
         "stock": 46,
         "imagen": [
-            "Pink-Masl-Popsicle-1.wepb",
-            "Pink-Masl-Popsicle-2.wepb",
-            "Pink-Masl-Popsicle-3.wepb"
+            "Pink-Masl-Popsicle-1.webp",
+            "Pink-Masl-Popsicle-2.webp",
+            "Pink-Masl-Popsicle-3.webp"
         ]
     },
     {
         "id": 49,
-        "name": "Ciudad del Cabo",
+        "nombre": "Ciudad del Cabo",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Negro",
@@ -728,12 +717,12 @@
         "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
         "stock": 97,
         "imagen": [
-            "ciudad-del-cabo.wepb"
+            "ciudad-del-cabo.webp"
         ]
     },
     {
         "id": 50,
-        "name": "Curazao",
+        "nombre": "Curazao",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Celeste",
@@ -742,12 +731,12 @@
         "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
         "stock": 49,
         "imagen": [
-            "curazao.wepb"
+            "curazao.webp"
         ]
     },
     {
         "id": 51,
-        "name": "Gel Color",
+        "nombre": "Gel Color",
         "marca": "Pink Mask",
         "categoria": "Esmaltes",
         "color": "Moby Dick",
@@ -756,14 +745,14 @@
         "descripcion": "Esmalte semipermanente en gel pensado para curar en cabina UV de 48W o más. Desarrollado especialmente para uso profesional, formulado para mantener tus uñas fuertes y sanas.",
         "stock": 70,
         "imagen": [
-            "Pink-Mask-MobyDick-1.wepb",
-            "Pink-Mask-MobyDick-2.wepb",
-            "Pink-Mask-MobyDick-3.wepb"
+            "Pink-Mask-MobyDick-1.webp",
+            "Pink-Mask-MobyDick-2.webp",
+            "Pink-Mask-MobyDick-3.webp"
         ]
     },
     {
         "id": 52,
-        "name": "Edimburgo",
+        "nombre": "Edimburgo",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Gris",
@@ -772,12 +761,12 @@
         "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
         "stock": 35,
         "imagen": [
-            "edimburgo.wepb"
+            "edimburgo.webp"
         ]
     },
     {
         "id": 53,
-        "name": "El Cairo",
+        "nombre": "El Cairo",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Nude",
@@ -786,12 +775,12 @@
         "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
         "stock": 41,
         "imagen": [
-            "el-cairo.wepb"
+            "el-cairo.webp"
         ]
     },
     {
         "id": 54,
-        "name": "Estabul",
+        "nombre": "Estabul",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Nude",
@@ -800,12 +789,12 @@
         "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
         "stock": 78,
         "imagen": [
-            "estambul.wepb"
+            "estambul.webp"
         ]
     },
     {
         "id": 55,
-        "name": "Ibiza",
+        "nombre": "Ibiza",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Rojo",
@@ -814,12 +803,12 @@
         "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
         "stock": 44,
         "imagen": [
-            "ibiza.wepb"
+            "ibiza.webp"
         ]
     },
     {
         "id": 56,
-        "name": "Jerusalem",
+        "nombre": "Jerusalem",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Shine",
@@ -828,12 +817,12 @@
         "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
         "stock": 68,
         "imagen": [
-            "jerusalem.wepb"
+            "jerusalem.webp"
         ]
     },
     {
         "id": 57,
-        "name": "Gel Color - POPSTAR",
+        "nombre": "Gel Color - POPSTAR",
         "marca": "Pink Mask",
         "categoria": "Esmaltes",
         "color": "Miley",
@@ -842,14 +831,14 @@
         "descripcion": "Los tonos con glitter, a diferencia de los colores plenos, suelen tener una consistencia de mayor densidad.",
         "stock": 32,
         "imagen": [
-            "Pink-Mask-Miley-1.wepb",
-            "Pink-Mask-Miley-2.wepb",
-            "Pink-Mask-Miley-3.wepb"
+            "Pink-Mask-Miley-1.webp",
+            "Pink-Mask-Miley-2.webp",
+            "Pink-Mask-Miley-3.webp"
         ]
     },
     {
         "id": 58,
-        "name": "Gel Color",
+        "nombre": "Gel Color",
         "marca": "Pink Mask",
         "categoria": "Esmaltes",
         "color": "Cinnamon",
@@ -858,15 +847,15 @@
         "descripcion": "Esmalte semipermanente en gel pensado para curar en cabina UV de 48W o más. Desarrollado especialmente para uso profesional, formulado para mantener tus uñas fuertes y sanas.",
         "stock": 88,
         "imagen": [
-            "Pink-Mask-Cinnamon-1.wepb",
-            "Pink-Mask-Cinnamon-2.wepb",
-            "Pink-Mask-Cinnamon-3.wepb",
-            "Pink-Mask-Cinnamon-4.wepb"
+            "Pink-Mask-Cinnamon-1.webp",
+            "Pink-Mask-Cinnamon-2.webp",
+            "Pink-Mask-Cinnamon-3.webp",
+            "Pink-Mask-Cinnamon-4.webp"
         ]
     },
     {
         "id": 59,
-        "name": "JLO",
+        "nombre": "JLO",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Khaki",
@@ -880,7 +869,7 @@
     },
     {
         "id": 60,
-        "name": "Kim",
+        "nombre": "Kim",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Maroon",
@@ -894,7 +883,7 @@
     },
     {
         "id": 61,
-        "name": "Gel Color - Neon",
+        "nombre": "Gel Color - Neon",
         "marca": "Pink Mask",
         "categoria": "Esmaltes",
         "color": "Nicki",
@@ -910,7 +899,7 @@
     },
     {
         "id": 62,
-        "name": "Kittie",
+        "nombre": "Kittie",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Fucsia",
@@ -924,7 +913,7 @@
     },
     {
         "id": 63,
-        "name": "Luanda",
+        "nombre": "Luanda",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Turquoise",
@@ -938,7 +927,7 @@
     },
     {
         "id": 64,
-        "name": "Manila",
+        "nombre": "Manila",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Puce",
@@ -952,7 +941,7 @@
     },
     {
         "id": 65,
-        "name": "Marrakesh",
+        "nombre": "Marrakesh",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Nude",
@@ -966,7 +955,7 @@
     },
     {
         "id": 66,
-        "name": "Montevideo",
+        "nombre": "Montevideo",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Blue",
@@ -980,7 +969,7 @@
     },
     {
         "id": 67,
-        "name": "Oslo",
+        "nombre": "Oslo",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Crimson",
@@ -994,7 +983,7 @@
     },
     {
         "id": 68,
-        "name": "Roma",
+        "nombre": "Roma",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Goldenrod",
@@ -1008,7 +997,7 @@
     },
     {
         "id": 69,
-        "name": "Singapur",
+        "nombre": "Singapur",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "Khaki",
@@ -1022,7 +1011,7 @@
     },
     {
         "id": 70,
-        "name": "Gel Color - Birtday Party!",
+        "nombre": "Gel Color - Birtday Party!",
         "marca": "Pink Mask",
         "categoria": "Esmaltes",
         "color": "Piñata",
@@ -1038,7 +1027,7 @@
     },
     {
         "id": 71,
-        "name": "Tokio",
+        "nombre": "Tokio",
         "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "color": "White",

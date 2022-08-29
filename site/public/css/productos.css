@@ -1,6 +1,23 @@
 .productos main{
     margin-top: 220px;
+    padding-top: 10px;
     background-color: var(--rosaClaro);
+}
+.productos .ul{
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+.productos .ul .li{
+    font-size: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.productos .ul .li a:hover{
+    color: var(--rosaOscuro);
+}
+.productos a{
+    color: var(--grisMedio)
 }
 .productos section{
     display: flex;
@@ -8,9 +25,34 @@
     justify-content: space-evenly;
 }
 .productos h1{
-    margin-top: 20px;
+    margin: 40px 0;
     font-size: 30px;
     text-align: center;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--grisMedio);
+    color: white;
+    border-top: solid 5px var(--rosaOscuro);
+    border-bottom: solid 5px var(--rosaOscuro);
+}
+.productos .botones-secciones ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.productos .botones-secciones ul li{
+    background-color: white;
+    border: solid 3px var(--rosaOscuro);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 7px;
+    transition: all 0.5s;
+}
+.productos .botones-secciones ul li:hover{
+    position: relative;
+    transform: scale(1.2);
+    z-index: 10;
 }
 .productos section h2{
     line-height: 0;
@@ -22,7 +64,7 @@
     width: 80%;
     height: 20px;
     padding: 20px;
-    margin-bottom: 10px;
+    margin: 20px auto;
 }
 .productos section .caja{
     width: 80%;
@@ -50,16 +92,35 @@
     font-size: 20px;
     color: var(--grisOscuro);
 }
+.productos section .caja .preciOferta{
+    color:var(--grisOscuro)
+}
+.lista-esmaltes .link-esmaltes{
+    width: 100%;
+    margin: 0 auto;
+}
 @media (min-width: 461px){
+    .productos .botones-secciones ul{
+        width: 90%;
+    }
+    .productos .botones-secciones ul li{
+        font-size: 18px;
+    }
     .productos section .caja{
-        width: 45%;
+        width: 30%;
         height: 400px;
-        border: solid 2px black;
-        margin-top: 50px;
     }
     .productos section{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+    }
+}
+@media (min-width: 769px){
+    .productos .botones-secciones ul{
+        width: 90%;
+    }
+    .productos .botones-secciones ul li{
+        font-size: 25px;
     }
 }

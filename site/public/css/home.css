@@ -352,6 +352,23 @@
 .mainHome .carruselTienda .botonT:hover{
     background-color: var(--rosaOscuro);
 }
+.mainHome .tienda .link-productos{
+    background-color: var(--rosaOscuro);
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px 5px; 
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px var(--grisOscuro);
+    transition: all 0.5s;
+    width: 50%;
+}
+.mainHome .tienda .link-productos:hover{
+    background-color: var(--grisMedio);
+}
+.mainHome .tienda .link-productos:active{
+    box-shadow: none;
+}
 /* SECCION ESMALTES */
 .mainHome .esmaltes{
     position: relative;
@@ -404,7 +421,7 @@
     position: relative;
 }
 .mainHome .esmaltes .esmalte .imgEsmalte{
-    height: 110px;
+    height: 220px;
     width: 110px;
     margin: 0 auto;
     padding-bottom: 87px;
@@ -780,6 +797,9 @@
     .mainHome .tienda .titulo{
         height: 240px;
     }
+    .mainHome .tienda .link-productos{
+        width: 30%;
+    }
     .mainHome .esmaltes .botonEsmalte{
         top: 50px;
     }
@@ -854,18 +874,23 @@
     .mainHome .carruselTienda .seccion .caja .comprar:active{
         background-color: var(--gris);
     }
+    .mainHome .tienda .link-productos{
+        width: 25%;
+        font-size: 40px;
+        padding: 15px;
+    }
     .mainHome .esmaltes{
-        height: 550px;
+        height: 600px;
     }
     .mainHome .esmaltes .fondo img{
-        height: 550px;
+        height: 600px;
     }
     .mainHome .esmaltes .cajaEsmaltes {
         height: 350px;
     }
     .mainHome .esmaltes .esmalte{
         width: 300px;
-        height: 300px;
+        height: 400px;
         border: solid 5px var(--gris);
         bottom: 20px;
     }

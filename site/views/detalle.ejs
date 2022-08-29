@@ -6,84 +6,76 @@
 <body class="detail">
     <%- include ('./partials/header') %> 
     <main>
-        <!-- carrusel -->
-        <section class="carrusel">
-            <!-- <article class="conteCarrusel"> -->
-                <ul class="itemCarrusel" id="itemCarrusel-1">
-                    <div class="tarjetaCarrusel">
-                        <img src="/img/carrusel1.png" alt="">
-                    </div>
-                    <li class="flechasCarrusel">
-                        <a href="#itemCarrusel-3"><i class="fas fa-angle-left"></i></a>
-                        <a href="#itemCarrusel-2"><i class="fas fa-angle-right"></i></a>
-                    </li>
-                </ul>
-                <ul class="itemCarrusel" id="itemCarrusel-2">
-                    <div class="tarjetaCarrusel">
-                        <img src="/img/carrusel2.webp" alt="">
-                    </div>
-                    <li class="flechasCarrusel">
-                        <a href="#itemCarrusel-1"><i class="fas fa-angle-left"></i></a>
-                        <a href="#itemCarrusel-3"><i class="fas fa-angle-right"></i></a>
-                    </li>
-                </ul>
-                <ul class="itemCarrusel" id="itemCarrusel-3">
-                    <div class="tarjetaCarrusel">
-                        <img src="/img/carrusel3.webp" alt="">
-                    </div>
-                    <li class="flechasCarrusel">
-                        <a href="#itemCarrusel-2"><i class="fas fa-angle-left"></i></a>
-                        <a href="#itemCarrusel-1"><i class="fas fa-angle-right"></i></a>
-                    </li>
-                </ul>
-            <!-- </article> -->
-        </section>
-
-        <ul class="puntos">
-            <li><a href="#itemCarrusel-1"><label for="" class="punto"></label></a></li>
-            <li><a href="#itemCarrusel-2"><label for="" class="punto"></label></a></li>
-            <li><a href="#itemCarrusel-3"><label for="" class="punto"></label></a></li>
+        
+        <ul class="ul">
+            <li class="crumb li"><a href="/">Home</a></li>
+            <li class="divider li"> > </li>
+            <li class="crumb-active li" aria-current="page"><a href="/productos">Productos</a></li>
+            <li class="divider li"> > </li>
+            <li class="crumb-active li" aria-current="page"><a href="/productos/<%- producto.categoria %>"><%- producto.categoria %></a>  </li>
+            <li class="divider li"> > </li>
+            <li class="crumb-active li" aria-current="page"><%- producto.marca %>  </li>
         </ul>
-
-
-        <!-- detalle de producto -->
-        <section class="detalle-producto">
-            <h1> Torno Drill 288 Professional </h1>
-            <article class="price">
-                <p class="precio">$14.990</p>
-                <span class="precio-final">$10.493</span>
-                <small class="descuento">20% OFF</small>
-            </article>
-            <article class="conten-carrito">
-                <div class="sumar-carrito">
-                    <input type="button" value="-">
-                    <input class="medio" type="number" value="1" min="1" step="1">
-                    <input type="button" value="+">
-                </div>
-                <a href="#"><button class="comprar-boton">Comprar</button></a>
-            </article>
-            <article class="fav-share">
-            <div class="lista-deseos">
-                <a href="#"><i class="far fa-heart"></i></a>
-            </div>
-            <div class="share">
-                <a href="#"><i class="fas fa-share-alt"></i></a>
-            </div>
-        </article>
+        <section class="h1-1" class="detalle-producto">
+            <h1><%- producto.nombre%></h1>
         </section>
+        <!-- carrusel -->
+        <div class="container-detail">
+            <section class="imagenes">
+                <!-- <article class="conteCarrusel"> -->
+                    <div class="itemCarrusel">
+                        <% if (producto.descuento > 0) { %>
+                            <small class="descuento"><%-'%' +  producto.descuento + ' OFF'%></small>
+                        <% } %>
+                        
+                        <img id="imgMain" src="/img/Products/<%= producto.imagen[0] %>" alt="Imagen principal">
+                    </div>
+                    <% if (producto.imagen.length > 1) { %>
+                        <div class="img-secundarias">
+                            <% imagenes.forEach(img => { %>
+                                <img src="/img/Products/<%= img %>" alt="Imagen secundaria" onclick="document.getElementById('imgMain').setAttribute('/img/Products/<%= img %>')">
+                            <% }) %>
+                        </div>
+                    <% } %>
+            </section>
+                    
+                <!-- </article> -->
+    
+    
+            <!-- detalle de producto -->
+            <section class="detalle-producto">
+                <h1 class="h1-2"><%- producto.nombre%></h1>
+                <div class="span-color">
+                    <span class="span-titulo"><%- producto.color === undefined ? "" : "COLOR:" %> </span>
+                    <span ><%- producto.color === undefined ? "" : producto.color %> </span>
+                </div>
+                <article class="price">
+                    <p class="precio"><%- producto.descuento > 0 ? '$' + producto.precio : null %>  </p>
+                    <span class="precio-final">$<%- producto.descuento > 0 ? Math.trunc(producto.precio - producto.precio * producto.descuento / 100) : producto.precio  %>  </span>
+                    <small class="descuento1"><%- producto.descuento > 0 ? '%' +  producto.descuento + ' OFF' : null %></small>
+                </article>
+                <article class="conten-carrito">
+                    <div class="sumar-carrito">
+                        <input type="button" value="-">
+                        <input class="medio" type="number" value="1" min="1" step="1">
+                        <input type="button" value="+">
+                    </div>
+                    <a href="#"><button class="comprar-boton">Comprar</button></a>
+                </article>
+                <article class="fav-share">
+                <div class="lista-deseos">
+                    <a href="#"><i class="far fa-heart"></i></a>
+                </div>
+                <div class="share">
+                    <a href="#"><i class="fas fa-share-alt"></i></a>
+                </div>
+            </article>
+            </section>
+        </div>
 
         <section class="descripcion">
             <h3>Descripcion</h3>
-            <p>Torno electrico de mesa para uso profesional. Ideal para el retirado de manicuras de gel UV y acrilico, y
-                manicura rusa combinada. </p>
-            <p>Profesionalizá tu gabinete con este torno para manos y pies Drill 288 Professional.</p>
-            <p> - 30 mil RPM
-                - Doble dirección de rotación
-                - Control manual y con pedal
-                - Kit de 6 Cabezales diamantados
-                - Unidad manual fácil de manejar y trasladar.
-                - Bajo ruido y alta duración
-                - 30 Watts</p>
+            <p><%- producto.descripcion %> </p>
         </section>
 
         <!-- promociones -->
@@ -117,54 +109,29 @@
         <!-- productos relacionados -->
         <h2>Productos Relacionados</h2>
         <section class="productos-relacionados">
-            <article>
-                <div class="caja-etiquetas">
-                    <span class="etiqueta">Nuevo</span>
-                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                </div>
-                <div>
-                    <img src="/img/c5119__03798_zoom 1.png" alt="">
-                </div>
-                <h4>Cabina UV LED Professional</h4>
-                <p class="precio-1">$10.000</p>
-                <button class="comprar-boton">Comprar</button>
-            </article>
-            <article>
-                <div class="caja-etiquetas">
-                    <span class="etiqueta">Nuevo</span>
-                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                </div>
-                <div>
-                    <img src="/img/Mask group (1).png" alt="">
-                </div>
-                <h4> Set de 12 Esmaltes Semipermanentes</h4>
-                <p class="precio-1">$7.000</p>
-                <button class="comprar-boton">Comprar</button>
-            </article>
-            <article>
-                <div class="caja-etiquetas">
-                    <span class="etiqueta">Nuevo</span>
-                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                </div>
-                <div class="productos-img-2">
-                    <img src="/img/producto-nuevo1.jpg" alt="">
-                </div>
-                <h4>Cabina secador</h4>
-                <p class="precio-1">$600</p>
-                <button class="comprar-boton">Comprar</button>
-            </article>
-            <article>
-                <div class="caja-etiquetas">
-                    <span class="etiqueta">Nuevo</span>
-                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                </div>
-                <div>
-                    <img src="/img/producto-nuevo-2.jpg" alt="">
-                </div>
-                <h4>Bloque de brillo</h4>
-                <p class="precio-1">$200</p>
-                <button class="comprar-boton">Comprar</button>
-            </article>
+            <% for( let i = 0; i < 4; i++ ) { %>
+                <article>
+                    <% if (category[i]) { %>
+                        <a href="/productos/<%- category[i].estado %> ">
+                            <div class="caja-etiquetas">
+                                <span class="etiqueta"><%- category[i].estado %>  </span>
+                            </div>
+                        </a>
+                    <% } %>
+                    <div class="caja-etiquetas">
+                        <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                    </div>
+                    <a href="/productos/detalle/<%= category[i].id %>">
+                        <div>
+                            <img src="/img/Products/<%= category[i].imagen[0] %>" alt="Imagen ilustrativa del producto">
+                        </div>
+                        <h4><%= category[i].nombre %></h4>
+                        <p class="precio-1">$<%- category[i].descuento > 0 ? Math.trunc(category[i].precio - category[i].precio * category[i].descuento / 100) : category[i]    .precio  %></p>
+                    </a>
+                    <button class="comprar-boton">Comprar</button>
+                </article>
+            <% } %>
+            
         </section>
     </main>
     <%- include ('./partials/footer') %> 
