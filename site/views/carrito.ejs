@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include ('./partials/head', {title: 'Wonder Nails'}) %> 
+
+<body class="carrito">
+    <%- include ('./partials/header') %> 
+
+    <main class="carritoMain">
+        <section class="carritoDeCompras">
+            <h1>Carrito de Compras</h1>
+            <div class="productosCarrito">
+                <div class="productoCarrito">
+                    <div class="cajaProductoCarrito">
+                        <a href=""><img src="/img/Home/producto-oferta-1.jpg" alt=""></a>
+                        <div class="textosC">
+                            <p class="titProducto">Torno DRILL 288 Professional</p>
+                            <div>
+                                <h5>Precio</h5>
+                                <p class="oferta">$14990</p>
+                                <p>$11992</p>
+                            </div>
+                            <div>
+                                <h5>Cantidad</h5>
+                                <div class="inputC">
+                                    <input type="buttonC" value="-">
+                                    <input class="medioC" type="number" value="1" min="1" step="1">
+                                    <input type="buttonC" value="+">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="divSub">
+                        <h5 class="subtotal">Subtotal</h5>
+                        <p class="precioSubtotal">$11992</p>
+                    </div> -->
+                    <div class="tacho">
+                        <a href="">
+                            <span class="iconoTacho"><i class="far fa-trash-alt"></i></span>
+                            <span class="eliminar">Eliminar</span></a>
+                    </div>
+                </div>
+                <div class="productoCarrito">
+                    <div class="cajaProductoCarrito">
+                        <a href=""><img src="/img/Home/producto-oferta-1.jpg" alt=""></a>
+                        <div class="textosC">
+                            <p class="titProducto">Cabina UV LED Professional</p>
+                            <div>
+                                <h5>Precio</h5>
+                                <p class="oferta">$14990</p>
+                                <p>$11992</p>
+                            </div>
+                            <div>
+                                <h5>Cantidad</h5>
+                                <div class="inputC">
+                                    <input type="buttonC" value="-">
+                                    <input class="medioC" type="number" value="1" min="1" step="1">
+                                    <input type="buttonC" value="+">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="divSub">
+                        <h5 class="subtotal">Subtotal</h5>
+                        <p class="precioSubtotal">$11992</p>
+                    </div> -->
+                    <div class="tacho">
+                        <a href="">
+                            <span class="iconoTacho"><i class="far fa-trash-alt"></i></span>
+                            <span class="eliminar">Eliminar</span></a>
+                    </div>
+                </div>
+                <div class="productoCarrito">
+                    <div class="cajaProductoCarrito">
+                        <a href=""><img src="/img/Home/producto-oferta-1.jpg" alt=""></a>
+                        <div class="textosC">
+                            <p class="titProducto">12 Esmaltes Semipermanentes</p>
+                            <div>
+                                <h5>Precio</h5>
+                                <p class="oferta">$14990</p>
+                                <p>$11992</p>
+                            </div>
+                            <div>
+                                <h5>Cantidad</h5>
+                                <div class="inputC">
+                                    <input type="buttonC" value="-">
+                                    <input class="medioC" type="number" value="1" min="1" step="1">
+                                    <input type="buttonC" value="+">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="divSub">
+                        <h5 class="subtotal">Subtotal</h5>
+                        <p class="precioSubtotal">$11992</p>
+                    </div> -->
+                    <div class="tacho">
+                        <a href="">
+                            <span class="iconoTacho"><i class="far fa-trash-alt"></i></span>
+                            <span class="eliminar">Eliminar</span></a>
+                    </div>
+                </div>
+                
+            </div>
+            <h2>Actualizar Carrito</h2>
+        </section>
+        <section class="resumen">
+            <h3 class="TituloResumen">Resumen de compra</h3>
+            <article class="cupón">
+                <div class="vistaCupon1" id="primero" style="visibility:visible; display:block;" onclick="visualiza_segundo()">
+                    <p>Si tenés un código de descuento podés aplicarlo haciendo <a href="#segundo">click acá</a></p>
+                </div>
+                <div class="vistaCupon2" id="segundo" style="visibility:hidden; display:none;" onclick="visualiza_primero()">
+                    <input type="text" class="buscar_codigo" placeholder="Código">
+                    <button>Ok</button>
+                    <button>Cancelar</button>
+                </div>
+            </article>
+            <article class="envios">
+                <div class="vistaEnvios">
+                    <h3><i class="fas fa-truck"></i> Calcular tiempos y costos de envíos</h3>
+                    <div>
+                        <!-- <div>
+                            <h5>Recibir</h5>
+                            <h6>(en domicilio)</h6>
+                        </div>
+                        <label for="">
+                            <input type="radio" value="">
+                        </label>
+                        <label for="">
+                            <input type="radio" name="" id="">
+                        </label>
+                        <div>
+                            <h5>Retirar</h5>
+                            <h6>(por un punto)</h6>
+                        </div> -->
+                        <input type="text" class="buscar-CP" placeholder="Código Postal">
+                        <a href="https://www.correoargentino.com.ar/formularios/cpa">No conozco mi Código Postal</a>
+                        <button>Calcular</button>
+                    </div>
+                </div>
+            </article>
+            <article class="totalCompra">
+                <h3 class="total">Total del carrito</h3>
+                <hr></hr>
+                <div class="items">
+                    <div class="sub">
+                        <h4>Subtotal Torno DRILL 288 Professional:</h4>
+                        <span>$37970</span>
+                    </div>
+                    <div class="sub">
+                        <h4>Subtotal Cavina UV LED Professional:</h4>
+                        <span>$37970</span>
+                    </div><div class="sub">
+                        <h4>Subtotal 12 Esmaltes Semipermanentes:</h4>
+                        <span>$37970</span>
+                    </div><div class="sub">
+                        <h4>Subtotal (sin envío):</h4>
+                        <span>$37970</span>
+                        <hr></hr>
+                    </div>
+                    <div class="nosotros">
+                        <ul>
+                          <a href=""><img src="/img/WonderNails-Logotipo-removebg-preview.png" alt="">Donde estamos</a>
+                          <!-- <li>Donde estamos</li> -->
+                          <li><i class="far fa-heart"></i>Alto avellaneda shopping Buenos Aires</li>
+                          <li><i class="far fa-heart"></i>Alto Palermo Shopping Buenos Aires</li>
+                          <li><i class="far fa-heart"></i>El Mercado Neuquèn</li>
+                          <li><i class="far fa-heart"></i>Alto Comahuè shopping Neuquèn</li>
+                        </ul>
+                    </div>
+                    <hr></hr>
+                    <div class="sub">
+                        <h4>Descuentos:</h4>
+                        <span>$</span>
+                    </div>
+                    <div class="sub">
+                        <h4>Envío:</h4>
+                        <span>$599</span>
+                    </div>
+                    <div>
+                        <h3>Total</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <button>Iniciar compra</button>
+                <a href="javascript:history.back()"><i class="fas fa-angle-left"></i>Seguir comprando</a>
+            </article>
+        </section>
+    </main>
+    <%- include ('./partials/footer') %> 
+
+</body>
+</html>

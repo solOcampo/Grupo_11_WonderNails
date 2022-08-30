@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include ('./partials/head', {title: 'Wonder Nails' }) %>
+<link rel="stylesheet" type="text/css" href="glider.css">
+    <body class="home">
+
+        <%- include ('./partials/header') %>
+            <main class="mainHome">
+                <!-- CARRUSEL -->
+                <section class="carrusel">
+                    <div class="glider-contain numero1">
+                        <div class="glider">
+                            <div><img src="/images/f6d85cc990cbf236fc58768bd05d04d4.jpg" alt="banner"></div>
+                            <div><img src="/img/Home/carrusel2.jpg" alt="banner"></div>
+                            <div><img src="/img/Home/carrusel3.jpg" alt="banner"></div>
+                            <div><img src="/img/Home/carrusel4.jpg" alt="banner"></div>
+                            <div><img src="/img/Home/carrusel5.jpg" alt="banner"></div>
+                            
+                            
+                        </div>
+                        <button aria-label="Previous" class="glider-prev">«</button>
+                        <button aria-label="Next" class="glider-next">»</button>
+                        <div role="tablist" class="dots"></div>
+                      </div>
+                </section>
+                <section class="tienda">
+                    <!-- INICIO -->
+                    <article class="titulo">
+                        <h5>Las uñas que querés a un click de distancia</h5>
+                        <h1>Bienvenidos</h1>
+                        <h3>a nuetra tienda</h3>
+                        <div class="vectorRosa">
+                            <img src="/img/Home/Vector 2.png" alt="vector">
+                        </div>
+                    </article>
+                    <!-- SECCIONES -->
+                    <article>
+                        <ul class="secciones">
+                            <li><a href="#nuevo">
+                                    <h4>Novedades</h4>
+                                </a></li>
+                            <li><a href="#favoritos">
+                                    <h4>Favoritos</h4>
+                                </a></li>
+                            <li><a href="#oferta">
+                                    <h4>Ofertas</h4>
+                                </a></li>
+                        </ul>
+                    </article>
+                    <!-- CARRUSEL DE SECCIONES -->
+                    
+                    <article class="carruselTienda">
+                        <!-- novedades -->
+                        <div id="nuevo" class="seccion">
+                            <div class="glider-contain numero1">
+                                <div class="gliderProductos">
+                                    <% productosNuevos.forEach(producto => { %>
+                                        <div class="caja">
+                                            <div class="caja-etiquetas">
+                                                <span class="etiqueta">Nuevo</span>
+                                                <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                                            </div>
+                                            <a href="/productos/detalle/<%- producto.id %> ">
+                                                <div class="foto-prod">
+                                                    <img src="/img/products/<%- producto.imagen[0] %> " alt="Fotografía ilustrativa del producto">
+                                                </div>
+                                                <h4><%- producto.nombre %> </h4>
+                                                <span class="precio">$<%- producto.precio %> </span>
+                                            </a>
+                                            <div class="input">
+                                                <input type="button" value="-">
+                                                <input class="medio" type="number" value="1" min="1" step="1">
+                                                <input type="button" value="+">
+                                            </div>
+                                            <a href="/productos/carrito/<%- producto.id %> "><button class="comprar">Comprar</button></a>
+                                        </div>
+                                    <% }) %>
+                                </div>
+                                <button aria-label="Previous" class="glider-prev">«</button>
+                                <button aria-label="Next" class="glider-next">»</button>
+                                <div role="tablist" class="dots"></div>
+                            </div>
+                        </div>
+                        <!-- favoritos -->
+                        <div id="favoritos" class="seccion">
+                            <% productosFavs.forEach(producto => { %>
+                                <div class="caja">
+                                    <div class="caja-etiquetas">
+                                        <span class="etiqueta">Nuevo</span>
+                                        <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                                    </div>
+                                    <a href="/productos/detalle/<%- producto.id %> ">
+                                        <div class="foto-prod">
+                                            <img src="/img/products/<%- producto.imagen[0] %> " alt="Fotografía ilustrativa del producto">
+                                        </div>
+                                        <h4><%- producto.name %> </h4>
+                                        <span class="precio">$<%- producto.precio %> </span>
+                                    </a>
+                                    <div class="input">
+                                        <input type="button" value="-">
+                                        <input class="medio" type="number" value="1" min="1" step="1">
+                                        <input type="button" value="+">
+                                    </div>
+                                    <a href="/productos/carrito/<%- producto.id %> "><button class="comprar">Comprar</button></a>
+                                </div>
+                            <% }) %>
+                        </div>
+                        <!-- ofertas -->
+                        <div id="oferta" class="seccion">
+                            <% productosOferta.forEach(producto => { %>
+                                <div class="caja">
+                                    <div class="caja-etiquetas">
+                                        <span class="oferta" class="etiqueta">-<%- producto.descuento %> %</span>
+                                        <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                                    </div>
+                                    <a href="/productos/detalle/<%- producto.id %> ">
+                                        <div class="foto-prod">
+                                            <img src="/img/products/<%- producto.imagen[0] %> " alt="">
+                                        </div>
+                                        <h4><%- producto.nombre %> </h4>
+                                        <span class="precioOferta">
+                                            <span class="precioViejo">$<%- producto.precio %>  </span>
+                                            <span>$<%- producto.precio - producto.precio * producto.descuento / 100 %> </span>
+                                        </span>
+                                    </a>
+                                    <div class="input">
+                                        <input type="button" value="-">
+                                        <input class="medio" type="number" value="1" min="1" step="1">
+                                        <input type="button" value="+">
+                                    </div>
+                                    <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
+                                </div>
+                            <% }) %>
+                        </div>
+                        <!-- <div class="cajaBotonesT">
+                            <ul class="botonesT">
+                                <li><a href=""><label for="" class="botonT"></label></a></label></li>
+                                <li><a href=""><label for="" class="botonT"></label></a></label></li>
+                                <li><a href=""><label for="" class="botonT"></label></a></label></li>
+                                <li><a href=""><label for="" class="botonT"></label></a></label></li>
+                                <li><a href=""><label for="" class="botonT"></label></a></label></li>
+                            </ul>
+                        </div> -->
+                    </article>
+                </section>
+                <section class="esmaltes">
+                    <div class="fondo">
+                        <img src="/img/Home/fondoEsmaltes.png" alt="">
+                    </div>
+                    <a href="/productos/esmaltes"><button class="botonEsmalte"></button></a>
+
+
+                    <div class="cajaEsmaltes">
+                        <article class="esmalte">
+                            <a href="/productos/detalle">
+                                <div class="imgEsmalte"><img src="/img/Home/Esmaltes/esmalte1.webp"
+                                    alt="Imagen de un esmalte"></div>
+                                <h4>Nueva York</h4>
+                                <span class="precioE">$600</span>
+                            </a>
+                            <div class="input">
+                                <input type="button" value="-">
+                                <input class="medio" type="number" value="1" min="1" step="1">
+                                <input type="button" value="+">
+                            </div>
+                            <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
+                        </article>
+                        <article class="esmalte">
+                            <a href="/productos/detalle">
+                                <div class="imgEsmalte"><img src="/img/Home/Esmaltes/esmalte2.webp"
+                                    alt="Imagen de un esmalte"></div>
+                            <h4>Estambul</h4>
+                            <span class="precioE">$600</span>
+                            </a>
+                            <div class="input">
+                                <input type="button" value="-">
+                                <input class="medio" type="number" value="1" min="1" step="1">
+                                <input type="button" value="+">
+                            </div>
+                            <a href="/productos/detalle"><button class="comprar">Comprar</button></a>
+                        </article>
+                        <!-- <article class="esmalte">
+                        <div class="imgEsmalte"><img src="/img/Home/esmalte.jpg" alt="Imagen de un esmalte"></div>
+                        <h4>Nombre del esmalte</h4>
+                        <span class="precioE">$600</span>
+                        <div class="input">
+                            <input type="button" value="-">
+                            <input class="medio" type="number" value="1" min="1" step="1">
+                            <input type="button" value="+">
+
+                        </div>
+                    </article>
+                    </article> -->
+                    </div>
+                </section>
+                <section class="servicios">
+                    <div class="cajaServicios">
+                        <div class="imgServicios">
+                            <img src="/img/img-salon.jpg" alt="Imagenes de nuestro local">
+                        </div>
+                        <div class="textoS">
+                            <h4 class="tituloServicios">Nuestros servicios</h4>
+                            <p>Te invitamos a conocer más de nuestros servicios. Contamos con cuatro salones de belleza repartidos al rededor del país. Nos especializamos en belleza y cuidado en general. Contamos con la última tecnología en nuestros tratamientos y máquinas.</p>
+                            <div class="botonWpp">
+                                <button><img src="/img/Home/Icon.svg" alt="whatsapp"></button>
+                                <h4>Saca tu turno</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="vector" src="/img/Home/Vector 1.png" alt="">
+                </section>
+                <section class="servicios">
+                    <div class="cajaServicios">
+                        <div class="imgServicios">
+                            <img src="/img/img-salon.jpg" alt="Imagenes de nuestro local">
+                        </div>
+                        <div class="textoS">
+                            <h4 class="tituloServicios">Nuestros cursos</h4>
+                            <p>Estamos desarrollando una academia de cursos para que puedas emprender de esto que tanto te gusta! Sabemos que vas a estar ansiosa de saber más información. Te pedimos que nos dejes tu mail para poder recibir el newletter.</p>
+                            <form action="" method="post">
+                                <label for="">Subscribite al newletter</label>
+                                <input type="email" name="email" >
+                            </form>
+                        </div>
+                    </div>
+                    <img class="vector" src="/img/Home/Vector 1.png" alt="">
+                </section>
+                <section class="ubicacion">
+                    <div class="fondo">
+                        <img src="/img/Home/fondoEsmaltes.png" alt="">
+                    </div>
+                    <h3 class="dondeEstamos">Donde estamos</h3>
+                    <div class="cajaEtiquetas">
+                        <!-- flip cards - aún no logrado -->
+                        <article class="Etiqub" class="etiquetaUbicacion1">
+                            <div class="etiqueta1">
+                                <img class="img" src="/img/Home/ubicación.alto.avellaneda.jpg" alt="">
+                                <div class="textoUbicacion">
+                                    <h3>Alto avellaneda Shopping</h3>
+                                    <h3 class="Etiqubh3">Visitanos</h3>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="Etiqub" class="etiquetaUbicacion2">
+                            <div class="etiqueta1">
+                                <img class="img" src="/img/Home/ubicacion.alto.palermo.jpg" alt="">
+                                <div class="textoUbicacion">
+                                    <h3>Alto <br> palermo shopping</h3>
+                                    <h3 class="Etiqubh3">Visitanos</h3>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="Etiqub" class="etiquetaUbicacion3">
+                            <div class="etiqueta1">
+                                <img class="img" src="/img/Home/ubicacion.el.mercado.jpg" alt="">
+                                <div class="textoUbicacion">
+                                    <h3>El mercado</h3>
+                                    <h3 class="Etiqubh3">Visitanos</h3>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="Etiqub" class="etiquetaUbicacion4">
+                            <div class="etiqueta1">
+                                <img class="img" src="/img/Home/ubicacion.alto.comahue.jpg" alt="">
+                                <div class="textoUbicacion">
+                                    <h3>Alto comahue Shopping</h3>
+                                    <h3 class="Etiqubh3">Visitanos</h3>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="opiniones">
+                    <div class="headerOpiniones">
+                        <div class="logoOp">
+                            <img src="/img/Home/logo.png" alt="">
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="textoOp">
+                            <h5>Tu opinión cuenta</h5>
+                            <h2>9/10</h2>
+                        </div>
+                    </div>
+                    <ul class="flechasOp">
+                        <li class="izquierda"><a href=""><i class="fas fa-angle-left"></i></a></li>
+                        <li class="derecha"><a href=""><i class="fas fa-angle-right"></i></a></li>
+                    </ul>
+                    <div class="opinion">
+                        <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>Buenos precios, buenos productos.
+                            Excelente atención.
+                            Qué más podría pedir?
+                            Sin duda voy a seguir comprando"
+                        </p>
+                        <div class="ultimo">
+                            <h5>Erika R.</h5>
+                            <div><img src="/img/Home/calendar-heart-02.png" alt="">
+                                <span>07/07/2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="instagram">
+                    <div class="fotosIG">
+                        <a class="img1" href="https://www.instagram.com/p/CgVTAhQA6S4/"><img
+                                src="/img/Home/img-instagram-1.jpg" alt=""></a>
+                        <a class="img2" href="https://www.instagram.com/p/CgVTIUyAy4O/"><img
+                                src="/img/Home/img-instagram-2.jpg" alt=""></a>
+                        <a class="img3" href="https://www.instagram.com/p/CgVTV7jgGlT/"><img
+                                src="/img/Home/img-instagram-3.jpg" alt=""></a>
+                        <a class="img4" href="https://www.instagram.com/p/CgVaSUcNibN/"><img
+                                src="/img/Home/img-instagram-4.jpg" alt=""></a>
+                        <a class="img5" href="https://www.instagram.com/p/CgVaU_6NQ4o/"><img
+                                src="/img/Home/img-instagram-5.jpg" alt=""></a>
+                        <a class="img6" href="https://www.instagram.com/p/CgVaYEpNJX5/"><img
+                                src="/img/Home/img-instagram-6.jpg" alt=""></a>
+                        <a class="img7" href="https://www.instagram.com/p/CgVaa1sNhKA/"><img
+                                src="/img/Home/img-instagram-7.jpg" alt=""></a>
+                    </div>
+                </section>
+               
+                <div class="grid-container grid-container--fit">
+                    <div class="grid-element">
+                        <div class="icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Envio</h3>
+                            <p>Desde y hasta cualquier lugar del país.
+                                Asegurado por el valor declarado.</p>
+                        </div>
+
+                    </div>
+                    <div class="grid-element">
+                        <div class="icon">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Precios accesibles</h3>
+                            <p>Nos encanta dar a los clientes los mejores precios del mercado</p>
+                        </div>
+                    </div>
+                    <div class="grid-element">
+                        <div class="icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Productos de alta calidad</h3>
+                            <p>Tenemos una gran cantidad de suministro de uñas de alta calidad.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <%- include ('./partials/footer') %>
+    </body>
+
+</html>

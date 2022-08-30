@@ -1,0 +1,233 @@
+ /* Formulario registro */
+ .register main {
+   width: 100%;
+   margin: 0 auto;
+   max-width: 1024px;
+
+ }
+
+ .register .form_wrapper h1 {
+   font-weight: bold;
+   text-transform: capitalize;
+   font-family: var(--fuenteSubtitulos);
+   color: var(--grisMedio);
+ }
+
+ .register .form_wrapper {
+   margin-top: 10rem;
+   text-align: center;
+   display: flex;
+
+ }
+
+ .register .form_wrapper form {
+   margin: 20px 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .register form .text {
+   color: var(--grisMedio);
+   margin-bottom: 30px;
+
+ }
+
+ .register form .text .email_input {
+   height: 50px;
+   width: 100%;
+   position: relative;
+
+ }
+
+ .register form input {
+   font-family: var(--fuenteSubtitulos);
+   height: 100%;
+   outline: none;
+   padding: 0 60px;
+   font-size: 18px;
+   box-shadow: 0px 2px 0px 0px #e4e4e4;
+   border-radius: 35px;
+   border-bottom-width: 2px;
+   transition: all 0.2s ease;
+   border: none;
+ }
+
+ .register form .error {
+   font-size: 10px;
+   display: flex;
+   margin-top: 5px;
+   padding-left: 10px;
+ }
+
+ .register form .email_input i {
+   width: 20px;
+   position: absolute;
+   top: 50%;
+   font-size: 18px;
+   pointer-events: none;
+   top: 17px;
+   left: 25px;
+ }
+
+ .register form .email_input .icon {
+
+   left: 15px;
+   color: var(--grisMedio);
+   transition: color 0.2s ease;
+ }
+
+ .register form .data {
+   display: flex;
+ }
+
+ .register .date {
+   font-size: 5px;
+ }
+
+ .register .date label {
+   color: var(--grisMedio);
+   font-family: var(--fuenteSubtitulos);
+   bottom: 3px;
+   font-size: 11px;
+   position: relative;
+   font-weight: bold;
+ }
+
+ .register .boxAccess {
+   width: 100%;
+   display: flex;
+   margin: 20px 0;
+ }
+
+ .register .Access {
+   top: 5px;
+   right: 115px;
+   position: relative;
+ }
+
+ .register .Access2 {
+   position: relative;
+   left: 118px;
+   bottom: 27px;
+ }
+
+ .register .access_text {
+   bottom: 10px;
+   font-size: 11px;
+   color: var(--grisMedio);
+   font-family: var(--fuenteSubtitulos);
+   font-weight: bold;
+   position: relative;
+
+ }
+
+ .register form button {
+   font-weight: bold;
+   position: relative;
+   border-radius: 15px;
+   border: none;
+   width: 7rem;
+   font-family: var(--fuenteSubtitulos);
+   color: white;
+   padding: 7px;
+   background-color: var(--rosaOscuro);
+   top: 50px;
+ }
+
+ /* Redes sociales */
+ .register .icons-social {
+   position: relative;
+   left: 3rem;
+   display: flex;
+   justify-content: center;
+   top: 4rem;
+ }
+
+ .register .icon a :hover {
+   color: var(--grisMedio);
+
+ }
+
+ .register .icon a {
+   color: var(--rosaOscuro);
+
+ }
+
+ .register .icons-social .button_google,
+ .button_facebook,
+ .button_App {
+   margin: 5px;
+   right: 50px;
+   position: relative;
+   bottom: 38px;
+   width: 40px;
+   height: 40px;
+   font-size: 20px;
+   background-color: white;
+   border-radius: 100%;
+   box-shadow: 0px 4px 0px 0px #e4e4e4;
+
+ }
+
+ .register .button_google .icon {
+   top: 12px;
+   position: relative;
+   display: flex;
+   justify-content: center;
+ }
+
+ .register .button_facebook .icon {
+   top: 12px;
+   position: relative;
+   display: flex;
+   justify-content: center;
+ }
+
+ .register .button_App .icon {
+   top: 12px;
+   position: relative;
+   display: flex;
+   justify-content: center;
+ }
+
+ .register .img_instagram .IGfotos {
+   margin-top: 50px;
+   display: inline-flex;
+
+ }
+
+ .register .img_instagram .IGfotos img {
+   width: 100%;
+   height: 80%;
+ }
+
+ /* .register h2 {
+   font-family: var(--fuenteTitulos);
+   text-align: center;
+   padding: 10px;
+   color: var(--grisMedio);
+   font-size: 50px;
+   font-weight: bold;
+   margin-bottom: 20px;
+ } */
+
+ .register section img {
+   width: 150px;
+   height: 150px;
+ }
+
+ /* Tablet */
+
+ @media (min-width:461px) {
+   /* .register .form_wrapper{
+    padding-top: 10rem;
+    position: initial;
+   
+  } */
+
+
+ }
+
+ /* Desktop*/
+ @media (min-width:1024px) {}
