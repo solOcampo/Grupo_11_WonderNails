@@ -1,4 +1,4 @@
-#Retro Sprint 1#
+#Retro Sprint 2#
 
 ## Seguir haciendo 
 - Comunicación del equipo
