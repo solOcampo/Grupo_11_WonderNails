@@ -16,6 +16,7 @@ router.put('/editar/:id', update)
 
 /* Eliminando un producto */
 router.delete('/destroy/:id', destroy);
+// router.delete('/destroy/:id', destroy);
 // router.delete('/restore/:id', restore);
 // router.delete('/crash/:id', crash);
 

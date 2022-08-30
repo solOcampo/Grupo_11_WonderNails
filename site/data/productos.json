@@ -1036,5 +1036,19 @@
             "Pink-Mask-Piñata-2.jpg",
             "Pink-Mask-Piñata-3.webp"
         ]
+    },
+    {
+        "id": 71,
+        "name": "Tokio",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "color": "White",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 33,
+        "imagen": [
+            "tokio.webp"
+        ]
     }
 ]
