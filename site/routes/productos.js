@@ -12,6 +12,7 @@ router.get('/ofertas', estado)
 /* Esmaltes */
 router.get('/esmaltes', esmaltes)
 /* Carrito de compras */
+router.get('/carrito/', carrito)
 router.get('/carrito/:id', carrito)
 /* Detalle de productos */
 router.get('/detalle/:id', detalle)

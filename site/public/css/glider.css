@@ -30,11 +30,14 @@
   display: flex;
   z-index: 1;
 }
-.glider-track{
+.gliderProductos .glider-track{
+  height: 460px;
+}
+.gliderEsmaltes .glider-track{
   height: 350px;
 }
 .draggable{
-  height: 400px;
+  height: 500px;
 }
 .carrusel .draggable{
   height: 300px;
@@ -109,6 +112,8 @@
 }
 .glider-slide {
   min-width: 240px;
+}
+.gliderEsmaltes .glider-slide, .gliderProductos .glider-slide {
   margin-right: 10px;
 }
 .glider-hide {
@@ -146,7 +151,7 @@
     height: 350px;
   }
   .gliderProductos .glider-track{
-    height: 460;
+    height: 300px;
   }
   .gliderEsmaltes .draggable{
     height: 400px;

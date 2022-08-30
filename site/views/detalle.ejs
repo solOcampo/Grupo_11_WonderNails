@@ -60,7 +60,7 @@
                         <input class="medio" type="number" value="1" min="1" step="1">
                         <input type="button" value="+">
                     </div>
-                    <a href="#"><button class="comprar-boton">Comprar</button></a>
+                    <a href="/productos/carrito/<%- producto.id %> "><button class="comprar-boton">Comprar</button></a>
                 </article>
                 <article class="fav-share">
                 <div class="lista-deseos">
@@ -128,7 +128,7 @@
                         <h4><%= category[i].nombre %></h4>
                         <p class="precio-1">$<%- category[i].descuento > 0 ? Math.trunc(category[i].precio - category[i].precio * category[i].descuento / 100) : category[i]    .precio  %></p>
                     </a>
-                    <button class="comprar-boton">Comprar</button>
+                    <button class="comprar-boton"><a href="/productos/carrito/<%= category[i].id %> ">Comprar</a></button>
                 </article>
             <% } %>
             
