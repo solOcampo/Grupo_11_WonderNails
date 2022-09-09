@@ -1,4 +1,4 @@
-
+const createError = require('http-errors');
 const express=require('express')
 const app=express()
 const port=3210
@@ -27,6 +27,9 @@ app.use('/usuarios', usuariosRouter);
 app.use('/productos', productosRouter);
 app.use('/admin',adminRouter); 
 
-
+app.use(function(req, res, next) {
+    next(createError(404));
+  });
+  
 app.listen(port,() => console.log(`El servidor fue levantado con exito en el puerto http://localhost:${port}`))
 

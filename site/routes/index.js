@@ -1,8 +1,11 @@
+let {home,search} = require('../controllers/indexController')
 const express = require('express')
 const router = express.Router()
 
-let {home} = require('../controllers/indexController')
+
 
 router.get('/', home)
+router.get('/buscar', search);
+
 
 module.exports = router
