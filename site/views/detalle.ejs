@@ -112,9 +112,9 @@
             <% for( let i = 0; i < 4; i++ ) { %>
                 <article>
                     <% if (category[i]) { %>
-                        <a href="/productos/<%- category[i].estado %> ">
+                        <a href="/productos/<%= category[i].estado %> ">
                             <div class="caja-etiquetas">
-                                <span class="etiqueta"><%- category[i].estado %>  </span>
+                                <span class="etiqueta"><%= category[i].estado %>  </span>
                             </div>
                         </a>
                     <% } %>
@@ -126,7 +126,7 @@
                             <img src="/img/Products/<%= category[i].imagen[0] %>" alt="Imagen ilustrativa del producto">
                         </div>
                         <h4><%= category[i].nombre %></h4>
-                        <p class="precio-1">$<%- category[i].descuento > 0 ? Math.trunc(category[i].precio - category[i].precio * category[i].descuento / 100) : category[i]    .precio  %></p>
+                        <p class="precio-1">$<%= category[i].descuento > 0 ? Math.trunc(category[i].precio - category[i].precio * category[i].descuento / 100) : category[i]    .precio  %></p>
                     </a>
                     <button class="comprar-boton"><a href="/productos/carrito/<%= category[i].id %> ">Comprar</a></button>
                 </article>
