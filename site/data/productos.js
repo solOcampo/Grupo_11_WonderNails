@@ -10,6 +10,7 @@ let nuevoProducto = {
     nombre:"Esmalte Semipermanente",
     marca: "Meline",
     categoria: "Esmaltado Semipermanente",
+    color:"#ff0000",
     estado:"Nuevo",
     precio: 900,
     descuento: 10,
@@ -20,8 +21,8 @@ let nuevoProducto = {
     ]
 }
 
-/* productos.push(nuevoProducto);
-console.log(productos); */
+//  productos.push(nuevoProducto);
+// console.log(productos); 
 
 /* Pasamos el Objeto literal a un string */
 /* let string = JSON.stringify(productos,null,4) */

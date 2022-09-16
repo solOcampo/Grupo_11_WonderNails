@@ -5,39 +5,37 @@ body{
 .detail main{
     margin-top: 145px;
 }
-.detail main section.carrusel img {
-    width: 100%;
-    height: 100%;
-}
-
-.detail main section.carrusel {
-    height: 400px;
-    padding: 10px;
-    overflow: hidden;
-    transition: all 0.5s;
-}
-
-.detail main section ul.itemCarrusel {
-    height: 100%;
-    position: relative;
-}
-
-.detail main section .tarjetaCarrusel {
-    height: 100%;
-}
-
-.detail main section .flechasCarrusel {
-    position: absolute;
-    top: 0;
-    height: 100%;
+.detail .ul{
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    transition: 1.5s;
+    margin-bottom: 20px;
 }
-
+.detail .ul .li{
+    font-size: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.detail .ul .li a:hover{
+    color: var(--rosaOscuro);
+}
+.detail a{
+    color: var(--grisMedio)
+}
+.detail .imagenes{
+    width: 90%;
+    margin-left: 30px;
+    margin: 0 auto;
+}
+.detail .imagenes .itemCarrusel{
+    width: 100%;
+    
+}
+.detail .imagenes .itemCarrusel img, .detail .imagenes .itemCarrusel .img-secundarias{
+    width: 100%;
+}
+.detail .imagenes .img-secundarias img{
+    width: 24%;
+}
 .detail main li a label.punto {
     border: 2px solid var(--grisMedio);
     border-radius: 100%;
@@ -63,17 +61,38 @@ body{
 
 
 /* detalle de producto */
-
+.detail .h1-2{
+    display: none;
+}
 .detail main section h1 {
     text-align: center;
     color: var(--grisOscuro);
     margin-top: 15px;
-    font-size: 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+    background-color: var(--grisMedio);
+    color: white;
+    border-top: solid 5px var(--rosaOscuro);
+    border-bottom: solid 5px var(--rosaOscuro);
 }
-
+.detail main .detalle-producto{
+    position: relative;
+    padding-bottom: 30px;
+}
+.detail main .span-color{
+    margin: 20px 0 0 20px;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+}
+.detail main .span-titulo{
+    font-weight: 600;
+    margin-right: 10px;
+    color: var(--grisMedio);
+}
 .detail main section article.price p.precio {
     color: var(--grisMedio);
-    font-size: 14px;
+    font-size: 20px;
     padding: 10px;
     text-decoration: line-through;
 }
@@ -82,12 +101,26 @@ body{
     color: var(--grisOscuro);
     padding: 10px;
     font-weight: bold;
+    font-size: 25px;
 }
-
-.detail main section article.price small.descuento {
+.detail main .imagenes .itemCarrusel{
+    position: relative;
+}
+.detail main .imagenes .itemCarrusel small.descuento {
+    color: rgb(255, 255, 255);
+    background-color: #ff276d;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+}
+.detail main section article.price small.descuento1{
     color: #ff276d;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
 }
-
 .detail main section article.conten-carrito {
     display: flex;
     padding: 10px;
@@ -205,12 +238,11 @@ body{
     color: var(--grisOscuro);
     font-size: 20px;
     font-weight: bold;
-    border-top: 1px solid #d2d0d0a0;
     margin-bottom: 20px;
 }
 
 .detail main section.productos-relacionados img {
-    width: 100%;
+    width: 90%;
     /* width: 200px;
     height: 200px; */
 }
@@ -227,7 +259,9 @@ body{
     border-radius: 20px;
     box-shadow: 0px 0px 10px var(--gris);
     width: 60%;
+    height: 340px;
     margin-bottom: 25px;
+    position: relative;
 }
 
 .detail main section.productos-relacionados article:hover {
@@ -251,8 +285,8 @@ body{
     background-color: var(--rosaOscuro);
     padding: 3px 5px;
     border-radius: 3px;
-    position: relative;
-    bottom: 10px;
+    position: absolute;
+    bottom: -3pxpx;
     left: 0px;
     margin-right: 3px;
 }
@@ -264,20 +298,42 @@ body{
     padding: 2px 4px;
     border-radius: 3px;
     position: absolute;
-    bottom: 10px;
     right: 0;
     margin: 1px;
 }
-
-
+.detail footer{
+    padding: 0 0 100px 0;
+}
+.detail main section.productos-relacionados .comprar-boton {
+    background-color: var(--rosaOscuro);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 12px;
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 23px;
+}
+.detail footer .container__footer{
+    margin-top: 0;
+}
 /* tablet */
 @media (min-width:461px) {
     .detail main{
         margin-top: 240px;
     }
-    .detail main section.carrusel img {
-        width: 100%;
-        height: 100%;
+    .detail .ul .li{
+        font-size: 15px;
+        margin-left: 15px;
+    }
+    
+    .detail .imagenes{
+        width: 50%;
+        margin: 0 auto;
     }
     .detail main ul.puntos{
         margin-top: 90px;
@@ -298,30 +354,49 @@ body{
 /* descktop */
 @media (min-width:769px) {
     .detail main{
-        margin-top: 280px;
+        margin-top: 210px;
     }
-    .detail main section.carrusel img {
+    .detail .imagenes{
         width: 45%;
-        height: 100%;
+        margin: 0 5px 0 30px;
     }
-
-    .detail main section .flechasCarrusel {
-        width: 45%;
+    .detail .h1-1{
+        display: none;
     }
-
+    .detail .h1-2{
+        display: block;
+        background-color: var(--rosaClaro);
+        color: white;
+        text-shadow: 3px 3px 3px var(--grisMedio);
+        font-size: 45px;
+        height: auto;
+        padding: 15px;
+        line-height: 1;
+    }
     .detail main ul.puntos {
         width: 45%;
         margin-top: 130px;
     }
-
+    .detail main .imagenes .itemCarrusel small.descuento{
+        font-size: 30px;
+        padding: 20px;
+        left: 0px;
+        right:auto;
+    }
+    .detail main section article.price p.precio{
+        font-size: 30px;
+    }
     .detail main section.detalle-producto {
         text-align: center;
-        position: absolute;
+        width: 70%;
+       /*  position: absolute;
         right: 60px;
         top: 25rem;
-        width: 50%;
+        width: 50%; */
     } 
-
+    .detail main .container-detail{
+        display: flex;
+    }
     .detail main section.detalle-producto article.conten-carrito {
         justify-content: center;
     }
@@ -349,4 +424,15 @@ body{
         flex-wrap: wrap;
         justify-content: center;
         margin-top: 20px;}
+}
+@media (min-width:1194px) {
+/*     .detail main .descripcion{
+        bottom: 190px;
+        width: 50%;
+        position: relative;
+        left: 45%;
+    } */
+    .detail main section.productos-relacionados article {
+        height: 400px;
+    }
 }

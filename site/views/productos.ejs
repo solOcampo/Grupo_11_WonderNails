@@ -4,10 +4,24 @@
 <body class="productos">
     <%- include ('./partials/header') %> 
     <main>
+        <ul class="ul">
+            <li class="crumb li"><a href="/">Home</a></li>
+            <li class="divider li"> > </li>
+            <li class="crumb-active li" aria-current="page"><a href="/productos">Productos</a></li>
+        </ul>
         <form action=""></form>
         <h1>Todos nuestros productos</h1>
+        <section class="botones-secciones">
+            <ul>
+                <a href="#Nuevos"><li>Nuevos</li></a>
+                <a href="#Favoritos"><li>Favoritos</li></a>
+                <a href="#Ofertas"><li>Ofertas</li></a>
+                <a href="#Esmaltes"><li>Esmaltes</li></a>
+                <a href="#Otros"><li>Otros</li></a>
+            </ul>
+        </section>
         <section>
-            <h2>Nuevos</h2>
+            <h2 id="Nuevos">Nuevos</h2>
             <% productosNuevos.forEach(producto => { %>
                 <div class="caja">
                     <!-- <div class="caja-etiquetas">
@@ -31,7 +45,7 @@
             <% }) %>
         </section>
         <section>
-            <h2>Favoritos</h2>
+            <h2 id="Favoritos">Favoritos</h2>
             <% productosFavs.forEach(producto => { %>
                 <div class="caja">
                     <!-- <div class="caja-etiquetas">
@@ -55,7 +69,7 @@
             <% }) %>
         </section>
         <section>
-            <h2>Ofertas</h2>
+            <h2 id="Ofertas">Ofertas</h2>
             <% productosOferta.forEach(producto => { %>
                 <div class="caja">
                     <!-- <div class="caja-etiquetas">
@@ -67,8 +81,62 @@
                             <img src="/img/products/<%- producto.imagen[0] %> " alt="">
                         </div>
                         <h4><%- producto.nombre %> </h4>
-                        <span class="precioOferta">
-                            <span class="precioViejo">$<%- producto.precio %>  </span>
+                        <span class="">
+                            <span class="">$<%- producto.precio %>  </span>
+                            <span>$<%- producto.precio - producto.precio * producto.descuento / 100 %> </span>
+                        </span>
+                    </a>
+                    <div class="input">
+                        <input type="button" value="-">
+                        <input class="medio" type="number" value="1" min="1" step="1">
+                        <input type="button" value="+">
+                    </div>
+                    <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
+                </div>
+            <% }) %>
+        </section>
+        <section class="lista-esmaltes">
+            <a class="link-esmaltes" href="/productos/<%- esmaltes[0].categoria %> "><h2 id="Esmaltes">Todos nuestros esmaltes</h2></a>
+            <% esmaltes.forEach(producto => { %>
+                <div class="caja">
+                    <!-- <div class="caja-etiquetas">
+                        <span class="oferta" class="etiqueta">-<%- producto.descuento %> %</span>
+                        <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                    </div> -->
+                    <a href="/productos/detalle/<%- producto.id %> ">
+                        <div class="foto-prod">
+                            <img src="/img/Products/<%- producto.imagen[0] %> " alt="">
+                        </div>
+                        <h4><%- producto.nombre %> </h4>
+                        <span class="">
+                            <span class="">$<%- producto.precio %>  </span>
+                            <span>$<%- producto.precio - producto.precio * producto.descuento / 100 %> </span>
+                        </span>
+                    </a>
+                    <div class="input">
+                        <input type="button" value="-">
+                        <input class="medio" type="number" value="1" min="1" step="1">
+                        <input type="button" value="+">
+                    </div>
+                    <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
+                </div>
+            <% }) %>
+        </section>
+        <section>
+            <h2 id="Otros">Otros</h2>
+            <% otros.forEach(producto => { %>
+                <div class="caja">
+                    <!-- <div class="caja-etiquetas">
+                        <span class="oferta" class="etiqueta">-<%- producto.descuento %> %</span>
+                        <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                    </div> -->
+                    <a href="/productos/detalle/<%- producto.id %> ">
+                        <div class="foto-prod">
+                            <img src="/img/products/<%- producto.imagen[0] %> " alt="">
+                        </div>
+                        <h4><%- producto.nombre %> </h4>
+                        <span class="">
+                            <span class="">$<%- producto.precio %>  </span>
                             <span>$<%- producto.precio - producto.precio * producto.descuento / 100 %> </span>
                         </span>
                     </a>

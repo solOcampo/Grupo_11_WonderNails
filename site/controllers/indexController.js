@@ -6,6 +6,7 @@ module.exports = {
         let productosNuevos = [];
         let productosFavs = [];
         let productosOferta = [];
+        let esmaltes = [];
         productos.forEach(producto => {
             if (producto.estado === "Nuevo") {
                 return productosNuevos.push(producto);
@@ -13,13 +14,16 @@ module.exports = {
                 return productosFavs.push(producto)
             } else if (producto.estado === "Oferta") {
                 return productosOferta.push(producto)
+            }else if(producto.categoria === "Esmaltes"){
+                return esmaltes.push(producto)
             }
         });
         return res.render('home', {
             productos,
             productosNuevos,
             productosFavs,
-            productosOferta
+            productosOferta,
+            esmaltes
         })
     },
 

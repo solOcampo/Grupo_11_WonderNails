@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include ('./partials/head', {title: categoria}) %> 
+<body>
+    <%- include ('./partials/header') %> 
+    <main>
+        <ul class="ul">
+            <li class="crumb li"><a href="/">Home</a></li>
+            <li class="divider li"> > </li>
+            <li class="crumb-active li" aria-current="page"><a href="/productos">Productos</a></li>
+            <li class="divider li"> > </li>
+            <li class="crumb-active li" aria-current="page"><a href=""><%- categoria %></a>  </li>
+        </ul>
+        <h1><%- categoria %>  </h1>
+        <section>
+            <% productosC.forEach(producto => { %>
+                <div class="caja">
+                    <!-- <div class="caja-etiquetas">
+                        <span class="oferta" class="etiqueta">-<%- producto.descuento %> %</span>
+                        <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                    </div> -->
+                    <a href="/productos/detalle/<%- producto.id %> ">
+                        <div class="foto-prod">
+                            <img src="/img/products/<%- producto.imagen[0] %> " alt="">
+                        </div>
+                        <h4><%- producto.nombre %> </h4>
+                        <span class="precioOferta">
+                            <span class="precioViejo">$<%- producto.precio %>  </span>
+                            <span>$<%- producto.precio - producto.precio * producto.descuento / 100 %> </span>
+                        </span>
+                    </a>
+                    <div class="input">
+                        <input type="button" value="-">
+                        <input class="medio" type="number" value="1" min="1" step="1">
+                        <input type="button" value="+">
+                    </div>
+                    <a href="/productos/carrito/<%- producto.id %> "><button class="comprar">Comprar</button></a>
+                </div>
+            <% }) %>
+        </section>
+    </main>
+    <%- include ('./partials/footer') %> 
+</body>
+</html>

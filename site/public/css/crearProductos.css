@@ -111,6 +111,9 @@
     background-color: var(--gris);
     color: var(--grisMedio);
 }
+.crear .form-floating p{
+    color:var(--rojoError)
+}
 @media (min-width: 461px){
     .crear h1{
         font-size: 25px;

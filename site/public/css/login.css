@@ -57,7 +57,7 @@
   display: flex;
   margin-top: 5px;
   padding-left: 10px;
-  color: var(--grisMedio);
+  color:var(--rojoError)
 }
 
 .login .field .input-area i{

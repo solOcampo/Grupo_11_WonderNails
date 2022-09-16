@@ -1,6 +1,13 @@
 .carrusel .glider-contain .glider div{
   width: 100vh;
-  height: 400px;
+  height: 300px;
+}
+/* .seccion .glider-contain .glider div{
+  width: 100vh;
+  height: 420px;
+} */
+.seccion .glider-contain{
+  width: 90%;
 }
 .glider-contain {
   width: 100%;
@@ -23,6 +30,18 @@
   display: flex;
   z-index: 1;
 }
+.gliderProductos .glider-track{
+  height: 460px;
+}
+.gliderEsmaltes .glider-track{
+  height: 350px;
+}
+.draggable{
+  height: 500px;
+}
+.carrusel .draggable{
+  height: 300px;
+}
 .gliderProductos.draggable {
   user-select: none;
   cursor: -webkit-grab;
@@ -31,6 +50,7 @@
 .gliderProductos .draggable .glider-slide img {
   user-select: none;
   pointer-events: none;
+  object-fit: cover;
 }
 .gliderProductos .drag {
   cursor: -webkit-grabbing;
@@ -40,7 +60,6 @@
   user-select: none;
   justify-content: center;
   align-content: center;
-  width: 100%;
 }
 .glider-slide img {
   max-width: 100%;
@@ -60,7 +79,7 @@
   text-decoration: none;
   left: 10px;
   border: 0;
-  top: 50%;
+  top: 40%;
   cursor: pointer;
   color: var(--rosaOscuro);
   opacity: 1;
@@ -78,6 +97,13 @@
   right: 10px;
   left: auto;
 }
+.seccion .glider-prev{
+  left: 0px;
+}
+.seccion .glider-next {
+  right: 0px;
+  left: auto;
+}
 .glider-next.disabled,
 .glider-prev.disabled {
   opacity: .25;
@@ -85,7 +111,10 @@
   cursor: default;
 }
 .glider-slide {
-  min-width: 150px;
+  min-width: 240px;
+}
+.gliderEsmaltes .glider-slide, .gliderProductos .glider-slide {
+  margin-right: 10px;
 }
 .glider-hide {
   opacity: 0;
@@ -118,6 +147,24 @@
   background: #a89cc8;
 }
 @media(max-width: 769px){
+  .gliderEsmaltes .glider-track{
+    height: 350px;
+  }
+  .gliderProductos .glider-track{
+    height: 300px;
+  }
+  .gliderEsmaltes .draggable{
+    height: 400px;
+  }
+  .gliderProductos .draggable{
+    height: 500px;
+  }
+  .seccion .glider-prev{
+    left: -40px;
+  }
+  .seccion .glider-next {
+    right: -40px;
+  }
   .gliderProductos::-webkit-scrollbar {
     opacity: 1;
     -webkit-appearance: none;

@@ -13,15 +13,19 @@
         <div class="field email">
           <div class="input-area">
             <i class="icon fas fa-envelope"></i>
-            <input type="text" name="name" id="name" placeholder="Nombre de usuario o email" required>
-            <small class="error">Debe ingresar su usuario o email</small>
+            <input type="text" name="email" id="email" placeholder="Nombre de usuario o email">
+            <% if (locals.errors && errors.email) { %>
+              <small class="error"><%= errors.email.msg %></small>
+          <% } %>
           </div>
         </div>
         <div class="field password">
           <div class="input-area">
             <i class="icon fas fa-lock"></i>
-            <input type="password" name="name" id="name" placeholder="Contraseña" required>
-            <small class="error">Debe ingresar su contraseña</small>
+            <input type="password" name="password" id="password" placeholder="Contraseña" >
+            <% if (locals.errors && errors.password) { %>
+              <small class="error"><%= errors.password.msg %></small>
+          <% } %>
           </div>
         </div>
         <div class="recordarme_bottom">

@@ -4,22 +4,22 @@
   <%- include ('./partials/head', {title: 'Registrate'}) %> 
 
 <body class="register">
-
   <%- include ('./partials/header') %> 
-
 
   <main class="register">
     <!-- Formulario de registro -->
     <div class="form_wrapper">
-      <form action="" method="post">
+      <form action="" method="post" enctype="multipart/form-data">
         <h1>Registrate</h1>
         <div class="text name">
           <div class="email_input">
             <div class="icon">
               <i class="fas fa-user"></i>
             </div>
-            <input type="text" name="name" id="name" placeholder="Nombre " required>
-            <small class="error">Debe ingresar su nombre</small>
+            <input type="text" name="name" id="name" placeholder="Nombre " required  value="<%= locals.old && old.name ? old.name : null%>">
+            <% if (locals.errors && errors.name) { %>
+                <small><%= errors.name.msg %></small>
+            <% } %>
           </div>
         </div>
         <div class="text surname">
@@ -27,8 +27,10 @@
             <div class="icon">
               <i class="fas fa-user-plus"></i>
             </div>
-            <input type="text" name="name" id="name" placeholder="Apellido" required>
-            <small class="error">Debe ingresar su apellido</small>
+            <input type="text" name="surname" id="surname" placeholder="Apellido" required value="<%= locals.old && old.surname ? old.surname : null%>">
+            <% if (locals.errors && errors.surname) { %>
+                <small><%= errors.surname.msg %></small>
+            <% } %>
           </div>
         </div>
         <div class="text email">
@@ -36,8 +38,10 @@
             <div class="icon">
               <i class="icon fas fa-envelope"></i>
             </div>
-            <input type="text" name="name" id="name" placeholder="Email" required>
-            <small class="error">Debe ingresar su email</small>
+            <input type="email" name="email" id="email" placeholder="Email" required value="<%= locals.old && old.email ? old.email : null%>">
+            <% if (locals.errors && errors.email) { %>
+                <small><%= errors.email.msg %></small>
+            <% } %>
           </div>
         </div>
         <div class="text password">
@@ -45,15 +49,29 @@
             <div class="icon">
               <i class="icon fas fa-lock"></i>
             </div>
-            <input type="password" name="name" id="name" placeholder="Contraseña" required>
-            <small class="error">Debe ingresar su contraseña</small>
+            <input type="password" name="password" id="password" placeholder="Contraseña" >
+            <% if (locals.errors && errors.password) { %>
+                <small><%= errors.password.msg %></small>
+            <% } %>
+          </div>
+        </div>
+        <div class="text password">
+          <div class="email_input">
+            <div class="icon">
+              <i class="icon fas fa-lock"></i>
+            </div>
+            <input type="password" name="password2" id="password2" placeholder="Confirma tu contraseña">
+            <% if (locals.errors && errors.password2) { %>
+                <small><%= errors.password2.msg %></small>
+            <% } %>
           </div>
         </div>
 
 
         <!-- Privacidad -->
         <div class="date">
-          <label>Tus datos personales se utilizarán para procesar
+          <input type="checkbox" class="checkbox" name="terminos" id="terminos">
+          <label for="terminos">Tus datos personales se utilizarán para procesar
             tu pedido, mejorar tu experiencia en esta web,
             gestionar el acceso a tu cuenta y otros propósitos descritos
             en nuestra política de privacidad.</label>
