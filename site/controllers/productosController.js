@@ -1,7 +1,7 @@
 let productos = require('../data/productos.json')
 
 module.exports = {
-    detalle: (req,res) => {
+    detail: (req,res) => {
         let id = +req.params.id
         let producto = productos.find((producto) => producto.id === id)
         let imagenes = producto.imagen
@@ -13,10 +13,10 @@ module.exports = {
             category
         })
     },
-    carrito: (req,res) => {
+    cart: (req,res) => {
         return res.render('carrito')
     },
-    esmaltes: (req,res) => {
+    nailPolish: (req,res) => {
         let esmaltes = []
         productos.forEach(producto =>{
             if(producto.categoria === "Esmaltes")
@@ -26,7 +26,7 @@ module.exports = {
             esmaltes
         })
     },
-    listado: (req, res) => {
+    list: (req, res) => {
             let productosNuevos = [];
             let productosFavs = [];
             let productosOferta = [];
@@ -55,7 +55,7 @@ module.exports = {
             })
         
     },
-    estado:(req, res) => {
+    state:(req, res) => {
         let estado = req.params.estado
         let productosE = productos.filter((product) => product.estado === estado)
         if(estado === productosE[0].estado){
@@ -66,7 +66,7 @@ module.exports = {
         }
         
     },
-    categoria:(req, res) => {
+    category:(req, res) => {
         let categoria = req.params.categoria
         /* let productosC = productos.filter((product) => product.categoria.toLowerCase() === categoria) */
         /* return res.render('categoria',{
