@@ -121,10 +121,23 @@
    position: relative;
 
  }
-
+ .register form .terminos{
+  margin-top: 15px;
+  font-size: 16px;
+ }
+ .register form .terminos label{
+  margin-left: 5px;
+ }
+ .register form .terminos label a{
+  font-weight: 600;
+  color: var(--grisMedio);
+  /* color: black; */
+ }
+ .register form .terminos label a:hover{
+  text-decoration: underline;
+ }
  .register form button {
    font-weight: bold;
-   position: relative;
    border-radius: 15px;
    border: none;
    width: 7rem;
@@ -132,7 +145,7 @@
    color: white;
    padding: 7px;
    background-color: var(--rosaOscuro);
-   top: 50px;
+   margin-bottom: 30px;
  }
 
  /* Redes sociales */

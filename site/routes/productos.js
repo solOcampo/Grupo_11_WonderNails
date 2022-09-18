@@ -1,20 +1,20 @@
 const express = require('express')
 const router = express.Router()
 
-let {carrito,detalle, esmaltes, listado, estado, categoria} = require('../controllers/productosController')
+let {cart,detail, nailPolish, list, state, category} = require('../controllers/productosController')
 
 /* Todos los productos */
-router.get('/', listado)
+router.get('/', list)
 /* Productos por estado */
-router.get('/nuevos', estado)
-router.get('/favoritos', estado)
-router.get('/ofertas', estado)
+router.get('/nuevos', state)
+router.get('/favoritos', state)
+router.get('/ofertas', state)
 /* Esmaltes */
-router.get('/esmaltes', esmaltes)
+router.get('/esmaltes', nailPolish)
 /* Carrito de compras */
-router.get('/carrito/', carrito)
-router.get('/carrito/:id', carrito)
+router.get('/carrito/', cart)
+router.get('/carrito/:id', cart)
 /* Detalle de productos */
-router.get('/detalle/:id', detalle)
+router.get('/detalle/:id', detail)
 
 module.exports = router

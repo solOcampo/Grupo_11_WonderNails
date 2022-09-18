@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <%- include ('./partials/head', {title: 'Registrate'}) %> 
+  <%- include ('../partials/head', {title: 'Registrate'}) %> 
 
 <body class="register">
-  <%- include ('./partials/header') %> 
+
+  <%- include ('../partials/header') %> 
 
   <main class="register">
     <!-- Formulario de registro -->
     <div class="form_wrapper">
-      <form action="" method="post" enctype="multipart/form-data">
+      <form action="/usuarios/perfil" method="post">
         <h1>Registrate</h1>
         <div class="text name">
           <div class="email_input">
             <div class="icon">
               <i class="fas fa-user"></i>
             </div>
-            <input type="text" name="name" id="name" placeholder="Nombre " required  value="<%= locals.old && old.name ? old.name : null%>">
+            <input type="text" name="name" id="name" placeholder="<%= locals.old && old.name ? old.name : "Nombre" %>">
             <% if (locals.errors && errors.name) { %>
-                <small><%= errors.name.msg %></small>
+              <small class="error"><%= errors.name.msg %> </small>
+             
             <% } %>
           </div>
         </div>
@@ -27,9 +29,9 @@
             <div class="icon">
               <i class="fas fa-user-plus"></i>
             </div>
-            <input type="text" name="surname" id="surname" placeholder="Apellido" required value="<%= locals.old && old.surname ? old.surname : null%>">
-            <% if (locals.errors && errors.surname) { %>
-                <small><%= errors.surname.msg %></small>
+            <input type="text" name="lastname" id="lastname" placeholder="<%= locals.old && old.lastname ? old.lastname : "Apellido" %>">
+            <% if (locals.errors && errors.lastname) { %>
+              <small class="error"><%= errors.lastname.msg %> </small>
             <% } %>
           </div>
         </div>
@@ -38,9 +40,9 @@
             <div class="icon">
               <i class="icon fas fa-envelope"></i>
             </div>
-            <input type="email" name="email" id="email" placeholder="Email" required value="<%= locals.old && old.email ? old.email : null%>">
+            <input type="text" name="email" id="email" placeholder="<%= locals.old && old.email ? old.email : "E-mail" %>">
             <% if (locals.errors && errors.email) { %>
-                <small><%= errors.email.msg %></small>
+              <small class="error"><%= errors.email.msg %> </small>
             <% } %>
           </div>
         </div>
@@ -49,9 +51,9 @@
             <div class="icon">
               <i class="icon fas fa-lock"></i>
             </div>
-            <input type="password" name="password" id="password" placeholder="Contraseña" >
+            <input type="password" name="password" id="password" placeholder="Contraseña">
             <% if (locals.errors && errors.password) { %>
-                <small><%= errors.password.msg %></small>
+              <small class="error"><%= errors.password.msg %> </small>
             <% } %>
           </div>
         </div>
@@ -60,13 +62,22 @@
             <div class="icon">
               <i class="icon fas fa-lock"></i>
             </div>
-            <input type="password" name="password2" id="password2" placeholder="Confirma tu contraseña">
+            <input type="password" name="password2" id="password2" placeholder="Reingrese su contraseña">
             <% if (locals.errors && errors.password2) { %>
-                <small><%= errors.password2.msg %></small>
+              <small class="error"><%= errors.password2.msg %> </small>
             <% } %>
           </div>
         </div>
-
+        <div class="text password">
+          <div class="terminos">
+            <input type="checkbox" name="terminos" id="terminos">
+            <label for="termino">Acepto los <a href="">términos y condiciones</a> del sitio</label>
+            <% if (locals.errors && errors.terminos) { %>
+              <small class="error"><%= errors.terminos.msg %> </small>
+            <% } %>
+          </div>
+        </div>
+        <button type="submit">Registrate</button>
 
         <!-- Privacidad -->
         <div class="date">
@@ -111,7 +122,7 @@
           </div>
         </div>
 
-        <button type="submit">Registrate</button>
+       
       </form>
     </div>
 
@@ -130,7 +141,7 @@
 
   </main>
   
-  <%- include ('./partials/footer') %> 
+  <%- include ('../partials/footer') %> 
 
 
 </body>

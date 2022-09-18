@@ -1,14 +1,12 @@
 const express = require('express')
 const router = express.Router()
-
 const registerValidator = require('../validations/registerValidation')
 const loginValidator = require('../validations/loginValidation')
-const upload = require('../middlewares/multerUsuarios')
-let {login,register,perfil,processRegister,processLogin} = require('../controllers/usuariosController')
+let {login,register, check, perfil,processLogin} = require('../controllers/usuariosController')
 
 
 router.get('/register', register)
-router.post('/register',upload.single('image'),registerValidator,processRegister)
+router.post('/perfil', registerValidator,check)
 
 router.get('/login', login)
 router.post('/login',loginValidator,processLogin)

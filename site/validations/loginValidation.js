@@ -1,6 +1,6 @@
 const {check,body} = require('express-validator')
 const usuarios = require('../data/users.json')
-
+const bcryptjs = require('bcryptjs')
 
 module.exports = [
     /* Email */
@@ -13,17 +13,17 @@ module.exports = [
     .notEmpty().withMessage('Debe ingresar su contraseña').bail()
     .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres'),
 
-    // body('email')
-    // .custom((value,{req}) =>{
+    body('email')
+    .custom((value,{req}) =>{
         
-    //     let usuario = usuarios.find(user => user.email === value && bcryptjs.compareSync(req.body.password, user.password))
+        let usuario = usuarios.find(user => user.email === value && bcryptjs.compareSync(req.body.password, user.password))
 
-    //     if (usuario) {
-    //         return true
-    //     }else{
-    //         return false
-    //     }
-    // })
-    // .withMessage('El email o la contraseña no coincide')
-    /* .withMessage('El usuario no se encuentra registrado o las credenciales son invalidas') */
+        if (usuario) {
+            return true
+        }else{
+            return false
+        }
+    })
+    .withMessage('El email o la contraseña no coincide')
+    // .withMessage('El usuario no se encuentra registrado o las credenciales son invalidas') 
 ]

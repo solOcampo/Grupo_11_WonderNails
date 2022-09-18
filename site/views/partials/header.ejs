@@ -23,7 +23,12 @@
         <button class="button"><i class="fas fa-bars"></i></button>
     </div>
     <div class="shopping">
-        <button><a href="/admin/listar"><i class="fas fa-user-cog"></i></a></button>
+        <% if (locals.userLogin) { %>
+         <li><a href="/"></a>Bienvenid@ <%= locals.userLogin.nombre %> </li>
+         <% } else { %>
+            <button><a href="/admin/listar"><i class="fas fa-user-cog"></i></a></button>
+        <% } %>
+     
         <button class="button2"><a href="productos/carrito"><i class="fas fa-shopping-bag"></i></a></button>
     </div>
 </header>

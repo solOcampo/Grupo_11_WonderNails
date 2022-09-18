@@ -51,12 +51,12 @@ module.exports = {
                 fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'products', imagen))
             }
         })
-        // return res.send(req.body)
+        return res.send(req.body)
         //  return res.send(errors.mapped())
-         return res.render('admin/crearProducto', {
-           errors: errors.mapped(),
-            old: req.body
-        })
+        //  return res.render('admin/crearProducto', {
+        //    errors: errors.mapped(),
+        //     old: req.body
+        // })
     }
 },
     edit:(req,res) => {
