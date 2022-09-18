@@ -9,7 +9,7 @@
         "ciudad": "Samut Songkhram",
         "genero": "Non-binary",
         "codigoPostal": "75110",
-        "imagen":".jpg",
+        "imagen": ".jpg",
         "rol": "Administrador"
     },
     {
@@ -22,7 +22,7 @@
         "ciudad": "San Francisco",
         "genero": "Female",
         "codigoPostal": "10802",
-        "imagen":".jpg",
+        "imagen": ".jpg",
         "rol": "Usuario"
     },
     {
@@ -35,7 +35,7 @@
         "ciudad": "Nechanice",
         "genero": "Female",
         "codigoPostal": "503 15",
-        "imagen":".jpg",
+        "imagen": ".jpg",
         "rol": "Usuario"
     },
     {
@@ -48,7 +48,7 @@
         "ciudad": "Longtan",
         "genero": "Male",
         "codigoPostal": "777 15",
-        "imagen":".jpg",
+        "imagen": ".jpg",
         "rol": "Usuario"
     },
     {
@@ -61,8 +61,8 @@
         "ciudad": "Santa Bárbara",
         "genero": "Male",
         "codigoPostal": "853 12",
-        "imagen":".jpg",
-        "rol":"Usuario"
+        "imagen": ".jpg",
+        "rol": "Usuario"
     },
     {
         "id": 6,
@@ -74,7 +74,31 @@
         "ciudad": "Wuyang",
         "genero": "Female",
         "codigoPostal": "022 00",
-        "imagen":".jpg",
+        "imagen": ".jpg",
         "rol": "Usuario"
+    },
+    {
+        "id": 7,
+        "name": "Veronica",
+        "lastname": "Jimenez",
+        "email": "vero_jimenez@hotmail.com",
+        "password": "verojimenez",
+        "rol": "usuario"
+    },
+    {
+        "id": 8,
+        "name": "Lucas",
+        "lastname": "Vazquez",
+        "email": "lucasvaz@gmail.com",
+        "password": "lucasvazquez",
+        "rol": "usuario"
+    },
+    {
+        "id": 9,
+        "name": "Naiara",
+        "lastname": "Fuentes",
+        "email": "nai.fuentes@hotmail.com",
+        "password": "$2a$10$hbfrT..9qJgV1ie6Jn74qOXM.R4Zj4xZ0aHJulTJBJ5Tj0mDmSmmq",
+        "rol": "usuario"
     }
 ]
