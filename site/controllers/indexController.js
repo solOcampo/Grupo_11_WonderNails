@@ -31,16 +31,16 @@ module.exports = {
         let elemento = req.query.search
 
         let resultados = productos.filter(producto => {
-            return producto.marca.toLowerCase() === elemento.toLowerCase() || (producto.titulo.toLowerCase().includes(elemento.toLowerCase())) /* || (producto.descripcion.toLowerCase().includes(elemento.toLowerCase())) */
+            return producto.marca === elemento.toLowerCase() || (producto.nombre.toLowerCase().includes(elemento.toLowerCase())) /* || (producto.descripcion.toLowerCase().includes(elemento.toLowerCase())) */
         })
-        /* Codigo de nico */
-        /* let resultados = productos.filter(producto => {
-            return (producto.titulo.toLowerCase().indexOf(elemento.toLowerCase()) != -1)
-        }) */
-
-        return res.render('busqueda',
+        
+        //  let resultados = productos.filter(producto => {
+        //     return (producto.nombre.toLowerCase().indexOf(elemento.toLowerCase()) != -1)
+        // }) 
+        //  return res.send(resultados)
+        return res.render('buscar',
             {
-                busqueda: elemento,
+                buscar: elemento,
                 resultados
             });
     }
