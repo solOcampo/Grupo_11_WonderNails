@@ -37,7 +37,7 @@ module.exports = {
 			descuento : req.body.descuento,
 			stock : req.body.stock,
 			descripcion : req.body.descripcion,
-            imagen : req.body.imagen
+            imagen : req.file.imagen
 		}
 
         productos.push(nuevoProd)
