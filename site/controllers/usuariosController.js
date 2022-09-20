@@ -91,11 +91,11 @@ module.exports = {
             }
             return res.redirect('/')
         } else {
-            return res.send(errors.mapped())
-            // return res.render('users/login', {
-            //     errors: errors.mapped(),
-            //     old: req.body
-            // })
+            // return res.send(errors.mapped())
+            return res.render('users/login', {
+                errors: errors.mapped(),
+                old: req.body
+            })
         }
     },
     perfil: (req,res) => {
