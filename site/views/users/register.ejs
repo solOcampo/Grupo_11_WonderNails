@@ -17,7 +17,7 @@
             <div class="icon">
               <i class="fas fa-user"></i>
             </div>
-            <input type="text" name="name" id="name" placeholder="<%= locals.old && old.name ? old.name : "Nombre" %>">
+            <input type="text" name="name" id="name" placeholder="Nombre" value="<%= locals.old && old.name ? old.name : null%>">
             <% if (locals.errors && errors.name) { %>
               <small class="error"><%= errors.name.msg %> </small>
              
@@ -29,7 +29,7 @@
             <div class="icon">
               <i class="fas fa-user-plus"></i>
             </div>
-            <input type="text" name="lastname" id="lastname" placeholder="<%= locals.old && old.lastname ? old.lastname : "Apellido" %>">
+            <input type="text" name="lastname" id="lastname" placeholder="Apellido" value="<%= locals.old && old.lastname ? old.lastname : null %>">
             <% if (locals.errors && errors.lastname) { %>
               <small class="error"><%= errors.lastname.msg %> </small>
             <% } %>
@@ -40,7 +40,7 @@
             <div class="icon">
               <i class="icon fas fa-envelope"></i>
             </div>
-            <input type="text" name="email" id="email" placeholder="<%= locals.old && old.email ? old.email : "E-mail" %>">
+            <input type="text" name="email" id="email" placeholder="E-mail" value="<%= locals.old && old.email ? old.email : null %>">
             <% if (locals.errors && errors.email) { %>
               <small class="error"><%= errors.email.msg %> </small>
             <% } %>

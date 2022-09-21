@@ -100,5 +100,13 @@
         "email": "nai.fuentes@hotmail.com",
         "password": "$2a$10$hbfrT..9qJgV1ie6Jn74qOXM.R4Zj4xZ0aHJulTJBJ5Tj0mDmSmmq",
         "rol": "usuario"
+    },
+    {
+        "id": 10,
+        "name": "Eugenia",
+        "lastname": "Ascensio",
+        "email": "euge_asc@hotmail.com",
+        "password": "$2a$10$vJo5M6iAFG5SQntWI9n0P.5LMDczdARIPNFYa5tQfLmxXzzmcVrMq",
+        "rol": "usuario"
     }
 ]
