@@ -13,7 +13,7 @@
             <div class="field email">
               <div class="input-area">
                 <i class="icon fas fa-envelope"></i>
-                <input class="input" type="email" name="email" id="email" placeholder="Nombre de usuario o email">
+                <input class="input" type="email" name="email" id="email" placeholder="<%= locals.old && old.email ? old.email :"Nombre de usuario o email" %>">
                 <% if (locals.errors && errors.email) { %>
                   <small class="error">
                     <%= errors.email.msg %>

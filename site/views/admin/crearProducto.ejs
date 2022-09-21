@@ -20,7 +20,8 @@
                         <div class="form-floating">
                             <label for="nombre">Nombre del producto</label>
                             <input type="text" class="form-control" name="nombre" id="nombre"
-                                value="<%= locals.old && old.nombre ? old.nombre : null%>" placeholder="Nombre">
+                                value="<%= locals.old && old.nombre ? old.nombre : null%>"
+                                placeholder="Nombre del producto">
                             <p class="span text-danger">
                                 <%= locals.errors && errors.nombre ? errors.nombre.msg : null %>
                             </p>
@@ -82,18 +83,18 @@
                         </div>
                         <div class="form-floating">
                             <label for="color">Color</label>
-                            <input type="color" class="form-control" name="color" id="color" list="color"value="<%= locals.old && old.color ? old.color : null%>">
+                            <input type="color" class="form-control" name="color" id="color" list="color">
                             <datalist id="colores">
 
                                 <option value="#00ffff">
-                              
+
                                 <option value="#ff00ff">
-                              
+
                                 <option value="#ffff00">
-                              
+
                                 <option value="#ffaa00">
-                              
-                              </datalist>
+
+                            </datalist>
                             <p class="form-floating">
                                 <%= locals.errors && errors.color ? errors.color.msg : null %>
                             </p>
@@ -118,7 +119,7 @@
                         <div class="form-floating">
                             <label for="stock">Stock</label>
                             <input type="number" class="form-control" name="stock" id="stock" min="1"
-                                value="<%= locals.old && old.stock ? old.stock : null%>" placeholder="Stock">
+                                placeholder="Stock">
                             <p class="form-floating">
                                 <%= locals.errors && errors.stock ? errors.stock.msg : null %>
                             </p>
@@ -133,8 +134,8 @@
                             </p>
                         </div>
                         <div class="mb-3">
-                            <!-- <label for="imagen" class="form-label">Imágenes del producto</label>
-                        <input class="form-control" type="file" name="imagen" id="imagen" multiple > -->
+                            <label for="imagen" class="form-label">Imágenes del producto</label>
+                            <input class="form-control" type="file" name="imagen" id="imagen" multiple>
                             <label class="custom-file-upload">
                                 <input type="file" name="imagen" id="imagen" multiple />
                                 Subir imágenes
