@@ -3,9 +3,6 @@
     margin: 0 auto;
     width: 100%;
 }
-.mainHome{
-    margin-top: 155px;
-}
 .mainHome .carrusel{
     position: relative;
     width: 100%;
@@ -787,9 +784,6 @@
 
 /* TABLET */
 @media (min-width: 461px){
-    .mainHome{
-        margin-top: 300px;
-    }
     .mainHome .tienda .titulo .vectorRosa{
         position: relative;
         bottom: 75px;

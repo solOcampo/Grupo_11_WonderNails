@@ -5,7 +5,9 @@ const port=3210
 const path=require('path')
 const methodOverride = require('method-override')
 const session = require('express-session')
-
+const cookieParser = require('cookie-parser')
+/* Implementamos locals dentro de nuestra aplicacion */
+const userLogin = require('./middlewares/userLoginCheck')
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -14,8 +16,7 @@ app.use(methodOverride('_method'))
 
 app.use(express.static(path.resolve(__dirname,'public')))
 
-/* Implementamos locals dentro de nuestra aplicacion */
-const userLogin = require('./middlewares/userLoginCheck')
+
 
 let indexRouter = require('./routes/index')
 let adminRouter = require('./routes/admin') 
@@ -39,8 +40,9 @@ app.use(session({
 
 app.use(userLogin)
 
-// app.use(cookieParser());
-// app.use(express.static(path.join(__dirname,'..', 'public')));
+/* cookies */
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname,'..', 'public')));
 
 app.use(function(req, res, next) {
     next(createError(404));

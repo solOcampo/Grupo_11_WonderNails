@@ -1,11 +1,26 @@
 <header>
     <div class="top">
-        <nav>
+        <nav class="navIcons">
             <ul class="icons">
                 <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
                 <a href="whatssap"><i class="fab fa-whatsapp"></i></a>
             </ul>
+        </nav>
+        <nav class="users">
+            
+            <% if (locals.userLogin) { %>
+                
+                <ul class="icons">
+                    <a href="">Hola <%= locals.userLogin.name %>! </a>
+                    <a href="/usuarios/perfil">Accede a tu perfil</a>
+                </ul> 
+                <% } else { %>
+                    <ul class="icons">
+                        <a href="/usuarios/register">Registro</a>
+                        <a href="/usuarios/login">Login</a>
+                    </ul> 
+            <% } %>
         </nav>
         <div class="logo">
             <a href="/">

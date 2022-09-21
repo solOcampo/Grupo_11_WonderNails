@@ -9,7 +9,7 @@ router.get('/register', register)
 router.post('/perfil', registerValidator,check)
 
 router.get('/login', login)
-router.post('/login',loginValidator,processLogin)
+router.post('/login'/* ,loginValidator */,processLogin)
 
 router.get('/perfil', perfil)
 

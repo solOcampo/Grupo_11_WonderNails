@@ -83,10 +83,9 @@ module.exports = {
         
             const {email} = req.body
             let usuario = users.find(user => user.email === email)
-
             req.session.userLogin = {
                 id : usuario.id,
-                nombre : usuario.nombre,
+                name : usuario.name,
                 rol : usuario.rol
             }
             return res.redirect('/')
