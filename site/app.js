@@ -42,11 +42,13 @@ app.use('/productos', productosRouter);
 app.use('/admin',adminRouter); 
 
 
-
-
 app.use(function(req, res, next) {
+  res.status(404).render('partials/error');
+});
+
+/* app.use(function(req, res, next) {
     next(createError(404));
-  });
+  }); */
   
 
 app.listen(port,() => console.log(`El servidor fue levantado con exito en el puerto http://localhost:${port}`))
