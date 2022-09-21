@@ -16,7 +16,16 @@ app.use(methodOverride('_method'))
 
 app.use(express.static(path.resolve(__dirname,'public')))
 
+/* Login e inicio de sesion */
+app.use(session({
+  secret: "Wonder Nails"
+}))
 
+app.use(userLogin)
+
+/* cookies */
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname,'..', 'public')));
 
 let indexRouter = require('./routes/index')
 let adminRouter = require('./routes/admin') 
@@ -33,16 +42,7 @@ app.use('/productos', productosRouter);
 app.use('/admin',adminRouter); 
 
 
-/* Login e inicio de sesion */
-app.use(session({
-  secret: "Wonder Nails"
-}))
 
-app.use(userLogin)
-
-/* cookies */
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname,'..', 'public')));
 
 app.use(function(req, res, next) {
     next(createError(404));
