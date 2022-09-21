@@ -2,7 +2,7 @@
 <html lang="en">
   <%- include('./partials/head', {title: 'Buscar'}) %>
 
-  <body class="Buscar">
+  <body class="buscar">
     <%- include('./partials/header') %>
     <main>
       <% if (resultados.length != 0) { %>
@@ -11,7 +11,7 @@
         <% resultados.forEach(producto => { %>
             <%- include('./partials/card',{
               id:producto.id,
-              imagen:producto.imagenes[0],
+              imagen:producto.imagen[0],
               nombre:producto.nombre,
               descuento:producto.descuento,
               precio:producto.precio 
@@ -25,11 +25,11 @@
       <section class="resultados">
         <div class="caja">
           <div class="foto-prod">
-            <img src="/images/productos/NotFound.png" alt="producto no encontrado" />
+            <img src="/img/products/NotFound.svg" alt="producto no encontrado" />
           </div>
-          <div class="card-text-box">
+          <!-- <div class="card-text-box">
             <h3 class="card-name">No se entraron productos</h3>
-          </div>
+          </div> -->
         </div>
       </section>
       <% } %>

@@ -1,22 +1,20 @@
-<div class="caja">
-    <div class="caja-etiquetas">
-        <span class="oferta" class="etiqueta">-<%- producto.descuento %> %</span>
-        <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+<div class="card">
+  <a href="/products/detail/<%= id %>">
+    <div class="card-img">
+      <div
+        class="card-img-background"
+        style="background-image: url('/img/products/<%=imagen%>')"
+      ></div>
     </div>
-    <a href="/productos/detalle/<%- producto.id %> ">
-        <div class="foto-prod">
-            <img src="/img/products/<%- producto.imagen[0] %> " alt="">
-        </div>
-        <h4><%- producto.nombre %> </h4>
-        <span class="precioOferta">
-            <span class="precioViejo">$<%- producto.precio %>  </span>
-            <span>$<%- producto.precio - producto.precio * producto.descuento / 100 %> </span>
-        </span>
-    </a>
-    <div class="input">
-        <input type="button" value="-">
-        <input class="medio" type="number" value="1" min="1" step="1">
-        <input type="button" value="+">
+  </a>
+    <div class="card-text-box">
+      <h3 class="card-name"><%= nombre.slice(0,30) %></h3>
+      <div class="card-value">
+        <p class="card-discount"><%= descuento %>%</p>
+        <p class="card-price">$<%= precio - (precio * descuento / 100)%></p>
+      </div>
     </div>
-    <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
+    <div class="card-button">
+        <a href="/productos/carrito/<%-id %> "><button class="comprar">Comprar</button></a>
+    </div>
 </div>

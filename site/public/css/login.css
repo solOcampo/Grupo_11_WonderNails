@@ -40,7 +40,7 @@
   width: 100%;
   position: relative;
 }
-.login form input{
+.login form .input{
   font-family: var(--fuenteSubtitulos);
   height: 100%;
   outline: none;

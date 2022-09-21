@@ -20,7 +20,6 @@
             <input type="text" name="name" id="name" placeholder="Nombre" value="<%= locals.old && old.name ? old.name : null%>">
             <% if (locals.errors && errors.name) { %>
               <small class="error"><%= errors.name.msg %> </small>
-             
             <% } %>
           </div>
         </div>
@@ -51,7 +50,7 @@
             <div class="icon">
               <i class="icon fas fa-lock"></i>
             </div>
-            <input type="password" name="password" id="password" placeholder="Contraseña">
+            <input class="input" type="password" name="password" id="password" placeholder="Contraseña">
             <% if (locals.errors && errors.password) { %>
               <small class="error"><%= errors.password.msg %> </small>
             <% } %>
@@ -62,7 +61,7 @@
             <div class="icon">
               <i class="icon fas fa-lock"></i>
             </div>
-            <input type="password" name="password2" id="password2" placeholder="Reingrese su contraseña">
+            <input class="input" type="password" name="password2" id="password2" placeholder="Reingrese su contraseña">
             <% if (locals.errors && errors.password2) { %>
               <small class="error"><%= errors.password2.msg %> </small>
             <% } %>
@@ -70,18 +69,18 @@
         </div>
         <div class="text password">
           <div class="terminos">
-            <input type="checkbox" name="terminos" id="terminos">
+            <input class="input" type="checkbox" name="terminos" id="terminos">
             <label for="termino">Acepto los <a href="">términos y condiciones</a> del sitio</label>
             <% if (locals.errors && errors.terminos) { %>
               <small class="error"><%= errors.terminos.msg %> </small>
             <% } %>
           </div>
         </div>
-        <button type="submit">Registrate</button>
+        <button class="button" type="submit">Registrate</button>
 
         <!-- Privacidad -->
         <div class="date">
-          <input type="checkbox" class="checkbox" name="terminos" id="terminos">
+          <!-- <input  class="input" type="checkbox" class="checkbox" name="terminos" id="terminos"> -->
           <label for="terminos">Tus datos personales se utilizarán para procesar
             tu pedido, mejorar tu experiencia en esta web,
             gestionar el acceso a tu cuenta y otros propósitos descritos
@@ -129,7 +128,7 @@
     <section class="img_instagram">
       <div class="IGfotos">
         <a class="img1" href="https://www.instagram.com/p/CgVTAhQA6S4/"><img
-            src="images/c646209b4c08e3ff0ed8178ca7bb5c79.jpg" alt=""></a>
+            src="/images/19fac1a3846ba9f935f0dfc06581c073.jpg" alt=""></a>
         <a class="img2" href="https://www.instagram.com/p/CgVTV7jgGlT/"><img
             src="/images/d3bd758c885dfd1f67a3a9eaf03faca3.jpg" alt=""></a>
         <a class="img3" href="https://www.instagram.com/p/CgVaSUcNibN/"><img
