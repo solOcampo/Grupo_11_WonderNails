@@ -11,18 +11,36 @@
                 <div  class =" portada-perfil " style =" background-image: url('/img/img-salon.jpg')">
                     <div class="sombra"> </div>
                     <div class="avatar-perfil">
-                        <a href="#" class="cambiar-foto">
-                            <i class="fas fa-camera"></i> 
-                            <span>Cambiar foto</span>
-                        </a>
+                        
+                        <form action="/usuarios/perfil" method="post" enctype="multipart/form-data">
+
+                            <div class="col col-5">
+                                <label class="selectImg"class="form-label" for="product-img">
+                                    <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/avatar-porDefecto.png" alt="">
+                                    <div class="cambiar-foto">
+                                        <i class="fas fa-camera"></i> 
+                                        <span>Cambiar foto</span>
+                                    </div>
+                                </label>
+                                <div class="form-admin__box inactivo">
+                                    <input class="d-none" id="product-img" type="file" name="imagen" placeholder="Imagen del Producto" accept="image/*" multiple>
+                                </div>
+                            </div>
+                            </form>
+                       
                     </div>
                     <div class="datos-perfil">
-                        <h6 class="titulo-usuario">Nombre de usuario</h6>
-                        <h4 class="email-usuario">Email</h4>
+                        <% if (locals.userLogin) { %>
+                            <h6 class="titulo-usuario"><%= locals.userLogin.name %> <%= locals.userLogin.lastname %></h6>
+                            <h4 class="email-usuario"><%= locals.userLogin.email %></h4>
+                        <% } %>
                     </div>
                    
                     <div class="opcciones-perfil">
-                        <button type="">Cambiar portada</button>
+                        <label for="imagenPortada" class="portada">
+                            Cambiar portada
+                                <input class="form-control" type="file" name="imagenPortada" id="imagenPortada" multiple>
+                        </label>
                         <button type=""><i class="fas fa-wrench"></i></button>
                     </div>
                 </div>
@@ -32,25 +50,16 @@
                         <li><a href="#" title=""><i class="far fa-heart"></i> Favoritos</a></li>
                         <li><a href="#" title=""><i class="fas fa-gift"></i> Mi pedido</a></li>
                         <li><a href="#" title=""><i class="fas fa-map-marker-alt"></i></i> Ubicacion</a></li>
-                        <li><a href="#" title=""><i class="fas fa-sign-out-alt"></i></i> Salir </a></li>
+                        <li><form action="/usuarios/logout?_method=DELETE" method="POST">
+                            <button type="submit"><i class="fas fa-sign-out-alt"></i> Salir</button>
+                        </form></li>
+                        
                     </ul>
                </div>
-
-               <section class="instagram">
-                <div class="fotosIG">
-                    <a class="img1" href="https://www.instagram.com/p/CgVTAhQA6S4/"><img src="/images/19fac1a3846ba9f935f0dfc06581c073.jpg" alt=""></a>
-                    <a class="img2" href="https://www.instagram.com/p/CgVTIUyAy4O/"><img src="/images/87f38ac3f67f7b148784589a47f11d6e.jpg" alt=""></a>
-                    <a class="img3" href="https://www.instagram.com/p/CgVTV7jgGlT/"><img src="/images/d3bd758c885dfd1f67a3a9eaf03faca3.jpg" alt=""></a>
-                    <a class="img4" href="https://www.instagram.com/p/CgVaSUcNibN/"><img src="/images/f6d85cc990cbf236fc58768bd05d04d4.jpg" alt=""></a>
-                    <a class="img5" href="https://www.instagram.com/p/CgVaU_6NQ4o/"><img src="/images/1375f5480a35761d807c86992d7e29f4.jpg" alt=""></a>
-                    <a class="img6" href="https://www.instagram.com/p/CgVaYEpNJX5/"><img src="/images/c646209b4c08e3ff0ed8178ca7bb5c79.jpg" alt=""></a>
-                    <a class="img7" href="https://www.instagram.com/p/CgVaa1sNhKA/"><img src="/images/96a187667c1694e63308cc7b175c295b.jpg" alt=""></a>
-                </div>
-            </section>
                 
             </div>
         </section>
-        <h2>Tambien te puede interesar</h2>
+        <h2>Te puede interesar</h2>
         <section class="productos">
             <article>
                 <div class="caja-etiquetas">
@@ -101,9 +110,20 @@
                 <button class="boton">Comprar</button>
             </article>
         </section>
+        <section class="instagram">
+            <div class="fotosIG">
+                <a class="img1" href="https://www.instagram.com/p/CgVTAhQA6S4/"><img src="/images/19fac1a3846ba9f935f0dfc06581c073.jpg" alt=""></a>
+                <a class="img2" href="https://www.instagram.com/p/CgVTIUyAy4O/"><img src="/images/87f38ac3f67f7b148784589a47f11d6e.jpg" alt=""></a>
+                <a class="img3" href="https://www.instagram.com/p/CgVTV7jgGlT/"><img src="/images/d3bd758c885dfd1f67a3a9eaf03faca3.jpg" alt=""></a>
+                <a class="img4" href="https://www.instagram.com/p/CgVaSUcNibN/"><img src="/images/f6d85cc990cbf236fc58768bd05d04d4.jpg" alt=""></a>
+                <a class="img5" href="https://www.instagram.com/p/CgVaU_6NQ4o/"><img src="/images/1375f5480a35761d807c86992d7e29f4.jpg" alt=""></a>
+                <a class="img6" href="https://www.instagram.com/p/CgVaYEpNJX5/"><img src="/images/c646209b4c08e3ff0ed8178ca7bb5c79.jpg" alt=""></a>
+                <a class="img7" href="https://www.instagram.com/p/CgVaa1sNhKA/"><img src="/images/96a187667c1694e63308cc7b175c295b.jpg" alt=""></a>
+            </div>
+        </section>
     </main>
 
     <%- include ('../partials/footer') %> 
-    
+    <script src="/javascript/imagenes.js"></script>
 </body>
 </html>

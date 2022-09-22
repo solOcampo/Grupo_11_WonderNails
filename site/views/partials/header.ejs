@@ -39,7 +39,6 @@
     </div>
     <div class="shopping">
         <% if (locals.userLogin) { %>
-         <li><a href="/"></a>Bienvenid@ <%= locals.userLogin.nombre %> </li>
          <% } else { %>
             <button><a href="/admin/listar"><i class="fas fa-user-cog"></i></a></button>
         <% } %>

@@ -86,6 +86,8 @@ module.exports = {
             req.session.userLogin = {
                 id : usuario.id,
                 name : usuario.name,
+                lastname : usuario.lastname,
+                email: usuario.email,
                 rol : usuario.rol
             }
             return res.redirect('/')
@@ -97,7 +99,17 @@ module.exports = {
             })
         }
     },
-    perfil: (req,res) => {
+    profil: (req,res) => {
         return res.render('users/perfil')
+    },
+    editProfil: (req, res) => {
+        return res.render('users/perfil')
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        /* if(req.cookies.Wonder){
+            res.cookie('Wonder','',{maxAge: -1})
+        } */
+        return res.redirect('/')
     }
 }

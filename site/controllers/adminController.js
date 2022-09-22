@@ -15,10 +15,6 @@ module.exports = {
     create:(req,res) => {
         return res.render('admin/crearProducto')
     },
-   create2:(req,res)=>{
-    return res.render('admin/crearProducto2')
-
-   },
     store: (req, res) => {
         let errors = validationResult(req)
    

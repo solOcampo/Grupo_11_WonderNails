@@ -42,9 +42,9 @@ app.use('/productos', productosRouter);
 app.use('/admin',adminRouter); 
 
 
-app.use(function(req, res, next) {
+/* app.use(function(req, res, next) {
   res.status(404).render('partials/error');
-});
+}); */
 
 /* app.use(function(req, res, next) {
     next(createError(404));
