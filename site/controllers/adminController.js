@@ -33,12 +33,12 @@ module.exports = {
 			descuento : req.body.descuento,
 			stock : req.body.stock,
 			descripcion : req.body.descripcion,
-            imagen : req.file.imagen
+            imagenes: (req.files.length === 4) ? img : ['default-image.png', 'default-image.png', 'default-image.png', 'default-image.png'],
 		}
 
         productos.push(nuevoProd)
         save(productos)
-       return res.redirect('/admin/listarProductos')
+       return res.redirect('/admin/listar')
     } else {
         let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'products', dato))
 

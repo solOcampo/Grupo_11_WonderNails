@@ -1038,5 +1038,22 @@
         "imagen": [
             "tokio.webp"
         ]
+    },
+    {
+        "id": 72,
+        "nombre": "algolimd",
+        "marca": "wonder",
+        "categoria": "Decoración",
+        "color": "#ff0000",
+        "precio": "111",
+        "descuento": "10",
+        "stock": "4",
+        "descripcion": "lo mejor en esmalte",
+        "imagenes": [
+            "default-image.png",
+            "default-image.png",
+            "default-image.png",
+            "default-image.png"
+        ]
     }
 ]
