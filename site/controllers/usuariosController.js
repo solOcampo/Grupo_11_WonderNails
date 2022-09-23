@@ -21,7 +21,8 @@ module.exports = {
                     lastname,
                     email,
                     password: bcrypt.hashSync(password, 10),
-                    rol: "usuario"
+                    rol: "usuario",
+                    imagen: req.file.size > 1 ? req.file.filename :"avatar-porDefecto.png"
                 
                 }
                 users.push(newUser)
@@ -90,7 +91,7 @@ module.exports = {
                 email: usuario.email,
                 rol : usuario.rol
             }
-            return res.redirect('/')
+            return res.redirect('/usuarios/perfil')
         } else {
             // return res.send(errors.mapped())
             return res.render('users/login', {
@@ -100,10 +101,24 @@ module.exports = {
         }
     },
     profil: (req,res) => {
-        return res.render('users/perfil')
+        let session = req.session.userLogin
+        let user = users.find(user => user.id === session.id)
+        /* return res.send(user) */
+        return res.render('users/perfil',{
+            user
+        })
     },
-    editProfil: (req, res) => {
-        return res.render('users/perfil')
+    changeProfilPic: (req, res) => {
+        let session = req.session.userLogin
+        let id = +session.id
+        
+        users.forEach(user => {
+            if (user.id === id) {
+                user.imagen = req.file.filename
+            }
+        })
+        saves(users);
+        return res.redirect('/usuarios/perfil');
     },
     logout: (req, res) => {
         req.session.destroy();
@@ -111,5 +126,8 @@ module.exports = {
             res.cookie('Wonder','',{maxAge: -1})
         } */
         return res.redirect('/')
+    },
+    editProfil: (req, res) => {
+        return res.render('users/editProfil')
     }
 }

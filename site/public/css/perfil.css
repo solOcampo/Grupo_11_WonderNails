@@ -47,6 +47,10 @@
     border: 8px solid #FFFFFF;
     box-shadow: 0 0 12px 2px rgba(0, 0, 0, .2);
 }
+/* .perfil section  img{
+    width: 100%;
+    height: 100%;
+} */
 .perfil .perfil-usuario .avatar-perfil form input{
     display: none;
 }
@@ -75,10 +79,13 @@
     transform: translateY(0);
     opacity: 1;
 }
-.perfil-usuario .avatar-perfil form img{
+
+.perfil-usuario .avatar-perfil img{
+    position: absolute;
     height: 230px;
-    min-width: 230px;
-    object-fit: cover;
+    width: 230px;
+    /* min-width: 230px; */
+    object-fit:cover;
     /* width: 230px; */
 }
 .perfil-usuario .datos-perfil {
@@ -122,7 +129,7 @@
 .perfil-usuario .opcciones-perfil .portada  input{
     display: none;
 }
-.perfil-usuario .opcciones-perfil .portada, .perfil-usuario .opcciones-perfil button {
+.perfil-usuario .opcciones-perfil .portada, .perfil-usuario .opcciones-perfil a {
     border: 0;
     padding: 8px 20px;
     border-radius: 8px;
@@ -204,10 +211,7 @@
     margin: 30px 0;
 }
 
-.perfil section  img{
-    width: 150px;
-    height: 150px;
-}
+
 
 .perfil section.productos {
     text-align: center;
@@ -276,6 +280,81 @@
 }
 .perfil .productos  .boton:hover {
     background-color: var(--gris);
+}
+/* POPUP */
+.perfil .overlay{
+    background-color: rgba( 0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+.perfil .overlay.active {
+    visibility: visible;
+}
+.perfil .overlay .popup{
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba( 0, 0, 0, .3);
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.perfil .overlay .popup .btn-cerrar-popup{
+    font-size: 16px;
+    color: var(--rosaOscuro);
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    transition: .3s ease all;
+}
+.perfil .overlay .popup .btn-cerrar-popup:hover{
+    color: black;
+}
+.perfil .overlay .popup h3{
+    font-size: 25px;
+    padding: 0 20px;
+}
+.perfil .overlay .popup form{
+    width: 100%;
+    margin: 0 auto;
+}
+.perfil .overlay .popup form .box-img{
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+    border: 8px solid var(--grisMedio);
+    box-shadow: 0px 0px 10px 0px rgba( 0, 0, 0, .3);
+}
+.perfil .overlay .popup form .box-img img{
+    height: 100%;
+}
+.perfil .overlay .popup form input{
+    display: none;
+}
+.perfil .overlay .popup form .btn-submit{
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 15px;
+    background-color: #5E7DE3;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 0px 3px 0px rgba( 0, 0, 0, .3);
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.perfil .overlay .popup form .btn-submit:hover{
+    background-color: rgba( 94, 125, 227, .8);
+    color: white;
 }
 @media (min-width: 461px){
 

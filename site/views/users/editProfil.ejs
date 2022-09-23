@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include ('../partials/head', {title: 'Perfil'}) %> 
+
+<body class="perfil">
+  <%- include ('../partials/header') %> 
+    <main>
+        <section class="perfil-usuario">
+            <div class="contenedor-perfil">
+                <div  class =" portada-perfil " style =" background-image: url('/img/img-salon.jpg')">
+                    <div class="sombra"> </div>
+                    <div class="avatar-perfil">
+                        
+                        <!-- <img src="/img/users/ " alt=""> -->
+                        <a id="btn-abrir-popup">
+                            <div class="cambiar-foto">
+                            <i class="fas fa-camera"></i> 
+                            <span>Cambiar foto</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="datos-perfil">
+                        <% if (locals.userLogin) { %>
+                            <h6 class="titulo-usuario"><%= locals.userLogin.name %> <%= locals.userLogin.lastname %></h6>
+                            <h4 class="email-usuario"><%= locals.userLogin.email %></h4>
+                        <% } %>
+                    </div>
+                   
+                    <div class="opcciones-perfil">
+                        <label for="imagenPortada" class="portada">
+                            Cambiar portada
+                                <input class="form-control" type="file" name="imagenPortada" id="imagenPortada" multiple>
+                        </label>
+                        <a href="/usuarios/perfil/editar"><i class="fas fa-wrench"></i></a>
+                    </div>
+                </div>
+                </div>
+                <div class="menu-perfil">
+                    <ul class="titulos">
+                        <li><a href="#" title=""><i class="far fa-heart"></i> Perfil</a></li>
+                        <li><a href="#" title=""><i class="far fa-heart"></i> Favoritos</a></li>
+                        <li><a href="#" title=""><i class="fas fa-gift"></i> Mi pedido</a></li>
+                        <li><a href="#" title=""><i class="fas fa-map-marker-alt"></i></i> Ubicacion</a></li>
+                        <li><form action="/usuarios/logout?_method=DELETE" method="POST">
+                            <button type="submit"><i class="fas fa-sign-out-alt"></i> Salir</button>
+                        </form></li>
+                        
+                    </ul>
+               </div>
+                
+            </div>
+        </section>
+
+        
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <h3>Cambiar foto de perfil</h3>
+                <form action="/usuarios/perfil?_method=PUT" method="post" enctype="multipart/form-data">
+                    <div class="col col-5">
+                        <label class="selectImg"class="form-label" for="product-img">
+                            <div class="box-img">
+                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/users/" alt="">
+                            </div>
+                        </label>
+                        <div class="form-admin__box inactivo">
+                            <input class="d-none" id="product-img" type="file" name="imagenPerfil" placeholder="Imagen del Producto" accept="image/*" multiple>
+                        </div>
+                    </div>
+                    <button class="btn-submit" type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="/javascript/imagenes.js"></script>
+    <script src="/javascript/popupFotoPerfil.js"></script>
+</body>
+</html>

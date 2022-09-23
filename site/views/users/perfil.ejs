@@ -12,22 +12,13 @@
                     <div class="sombra"> </div>
                     <div class="avatar-perfil">
                         
-                        <form action="/usuarios/perfil" method="post" enctype="multipart/form-data">
-
-                            <div class="col col-5">
-                                <label class="selectImg"class="form-label" for="product-img">
-                                    <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/avatar-porDefecto.png" alt="">
-                                    <div class="cambiar-foto">
-                                        <i class="fas fa-camera"></i> 
-                                        <span>Cambiar foto</span>
-                                    </div>
-                                </label>
-                                <div class="form-admin__box inactivo">
-                                    <input class="d-none" id="product-img" type="file" name="imagen" placeholder="Imagen del Producto" accept="image/*" multiple>
-                                </div>
+                        <img src="/img/users/<%= user.imagen %> " alt="">
+                        <a id="btn-abrir-popup">
+                            <div class="cambiar-foto">
+                            <i class="fas fa-camera"></i> 
+                            <span>Cambiar foto</span>
                             </div>
-                            </form>
-                       
+                        </a>
                     </div>
                     <div class="datos-perfil">
                         <% if (locals.userLogin) { %>
@@ -41,7 +32,7 @@
                             Cambiar portada
                                 <input class="form-control" type="file" name="imagenPortada" id="imagenPortada" multiple>
                         </label>
-                        <button type=""><i class="fas fa-wrench"></i></button>
+                        <a href="/usuarios/perfil/editar"><i class="fas fa-wrench"></i></a>
                     </div>
                 </div>
                 </div>
@@ -121,9 +112,29 @@
                 <a class="img7" href="https://www.instagram.com/p/CgVaa1sNhKA/"><img src="/images/96a187667c1694e63308cc7b175c295b.jpg" alt=""></a>
             </div>
         </section>
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <h3>Cambiar foto de perfil</h3>
+                <form action="/usuarios/perfil?_method=PUT" method="post" enctype="multipart/form-data">
+                    <div class="col col-5">
+                        <label class="selectImg"class="form-label" for="product-img">
+                            <div class="box-img">
+                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/users/<%= user.imagen %>" alt="">
+                            </div>
+                        </label>
+                        <div class="form-admin__box inactivo">
+                            <input class="d-none" id="product-img" type="file" name="imagenPerfil" placeholder="Imagen del Producto" accept="image/*" multiple>
+                        </div>
+                    </div>
+                    <button class="btn-submit" type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
     </main>
 
     <%- include ('../partials/footer') %> 
     <script src="/javascript/imagenes.js"></script>
+    <script src="/javascript/popupFotoPerfil.js"></script>
 </body>
 </html>

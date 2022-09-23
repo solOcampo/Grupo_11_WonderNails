@@ -1,18 +1,26 @@
 const express = require('express')
+let {login,register, check, profil,processLogin, editProfil, changeProfilPic,logout} = require('../controllers/usuariosController')
 const router = express.Router()
+
 const registerValidator = require('../validations/registerValidation')
 const loginValidator = require('../validations/loginValidation')
-let {login,register, check, profil,processLogin, editProfil, logout} = require('../controllers/usuariosController')
+const upload = require('../middlewares/multerUsuarios')
 
-
+/* registro */
 router.get('/register', register)
 router.post('/perfil', registerValidator,check)
 
+/* login */
 router.get('/login', login)
-router.post('/login'/* ,loginValidator */,processLogin)
+router.post('/login',loginValidator,processLogin)
 
+/* perfil */
 router.get('/perfil', profil)
-router.post('/perfil', editProfil)
+router.put('/perfil', upload.single('imagenPerfil'),changeProfilPic)
 router.delete('/logout', logout);
+
+/* editar perfil */
+router.get('/perfil/editar', editProfil)
+router.put('/perfil/editar', editProfil)
 
 module.exports = router

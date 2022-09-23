@@ -9,8 +9,8 @@
         "ciudad": "Samut Songkhram",
         "genero": "Non-binary",
         "codigoPostal": "75110",
-        "imagen": ".jpg",
-        "rol": "Administrador"
+        "rol": "Administrador",
+        "imagen": "avatar-porDefecto.png"
     },
     {
         "id": 2,
@@ -22,8 +22,8 @@
         "ciudad": "San Francisco",
         "genero": "Female",
         "codigoPostal": "10802",
-        "imagen": ".jpg",
-        "rol": "Usuario"
+        "rol": "Usuario",
+        "imagen": "avatar-porDefecto.png"
     },
     {
         "id": 3,
@@ -35,8 +35,8 @@
         "ciudad": "Nechanice",
         "genero": "Female",
         "codigoPostal": "503 15",
-        "imagen": ".jpg",
-        "rol": "Usuario"
+        "rol": "Usuario",
+        "imagen": "avatar-porDefecto.png"
     },
     {
         "id": 4,
@@ -48,8 +48,8 @@
         "ciudad": "Longtan",
         "genero": "Male",
         "codigoPostal": "777 15",
-        "imagen": ".jpg",
-        "rol": "Usuario"
+        "rol": "Usuario",
+        "imagen": "avatar-porDefecto.png"
     },
     {
         "id": 5,
@@ -61,8 +61,8 @@
         "ciudad": "Santa Bárbara",
         "genero": "Male",
         "codigoPostal": "853 12",
-        "imagen": ".jpg",
-        "rol": "Usuario"
+        "rol": "Usuario",
+        "imagen": "avatar-porDefecto.png"
     },
     {
         "id": 6,
@@ -74,8 +74,8 @@
         "ciudad": "Wuyang",
         "genero": "Female",
         "codigoPostal": "022 00",
-        "imagen": ".jpg",
-        "rol": "Usuario"
+        "rol": "Usuario",
+        "imagen": "avatar-porDefecto.png"
     },
     {
         "id": 7,
@@ -83,7 +83,8 @@
         "lastname": "Jimenez",
         "email": "vero_jimenez@hotmail.com",
         "password": "verojimenez",
-        "rol": "usuario"
+        "rol": "usuario",
+        "imagen": "avatar-porDefecto.png"
     },
     {
         "id": 8,
@@ -91,7 +92,8 @@
         "lastname": "Vazquez",
         "email": "lucasvaz@gmail.com",
         "password": "lucasvazquez",
-        "rol": "usuario"
+        "rol": "usuario",
+        "imagen": "avatar-porDefecto.png"
     },
     {
         "id": 9,
@@ -99,7 +101,8 @@
         "lastname": "Fuentes",
         "email": "nai.fuentes@hotmail.com",
         "password": "$2a$10$hbfrT..9qJgV1ie6Jn74qOXM.R4Zj4xZ0aHJulTJBJ5Tj0mDmSmmq",
-        "rol": "usuario"
+        "rol": "usuario",
+        "imagen": "avatar-porDefecto.png"
     },
     {
         "id": 10,
@@ -107,6 +110,16 @@
         "lastname": "Ascensio",
         "email": "euge_asc@hotmail.com",
         "password": "$2a$10$vJo5M6iAFG5SQntWI9n0P.5LMDczdARIPNFYa5tQfLmxXzzmcVrMq",
-        "rol": "usuario"
+        "rol": "usuario",
+        "imagen": "avatar-porDefecto.png"
+    },
+    {
+        "id": 11,
+        "name": "Mica Sol",
+        "lastname": "Loureiro",
+        "email": "mica_lou@hotmail.com",
+        "password": "$2a$10$LVNyJjMtSbZyRAMVzhj.PO1XS7dkKOepQs4yNKMKwiwiJy7zD4HLe",
+        "rol": "usuario",
+        "imagen": "avatar-1663902593534.jpg"
     }
 ]
