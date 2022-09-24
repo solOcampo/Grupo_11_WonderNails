@@ -23,7 +23,8 @@ module.exports = {
                     email,
                     password: bcrypt.hashSync(password, 10),
                     rol: "usuario",
-                    imagen: "avatar-porDefecto.png"
+                    imagen:"avatar-porDefecto.png"
+                    // imagen: req.file?.size > 1 ? req.file.filename :"avatar-porDefecto.png" 
                 
                 }
                 users.push(newUser)
@@ -65,7 +66,7 @@ module.exports = {
     },
     profil: (req,res) => {
         let session = req.session.userLogin
-        let user = users.find(user => user.id === session.id)
+        let user = users.find(user => user.id === session?.id)
         /* return res.send(user) */
         return res.render('users/perfil',{
             user,
