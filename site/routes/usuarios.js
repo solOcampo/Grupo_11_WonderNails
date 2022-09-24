@@ -2,8 +2,11 @@ const express = require('express')
 let {login,register, check, profil,processLogin, editProfil, changeProfilPic,logout} = require('../controllers/usuariosController')
 const router = express.Router()
 
+/* validaciones */
 const registerValidator = require('../validations/registerValidation')
 const loginValidator = require('../validations/loginValidation')
+
+/* multer */
 const upload = require('../middlewares/multerUsuarios')
 
 /* registro */

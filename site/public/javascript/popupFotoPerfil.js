@@ -9,3 +9,4 @@ btnAbrirPopup.addEventListener('click', function(){
 btnCerrarPopup.addEventListener('click', function(){
     overlay.classList.remove('active')
 })
+

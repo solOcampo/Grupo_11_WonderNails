@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <%- include ('../partials/head', {title: 'Perfil'}) %> 
+    
+    <%- include ('../partials/head', {title: 'Perfil'}) %> 
 
 <body class="perfil">
   <%- include ('../partials/header') %> 
@@ -52,54 +52,22 @@
         </section>
         <h2>Te puede interesar</h2>
         <section class="productos">
-            <article>
-                <div class="caja-etiquetas">
-                    <span class="etiqueta">Nuevo</span>
-                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                </div>
-                <div>
-                    <img src="/images/c5119__03798_zoom 1.png" alt="">
-                </div>
-                <h4>Cabina UV LED Professional</h4>
-                <p class="precio-1">$10.000</p>
-                <button class="boton">Comprar</button>
-            </article>
-            <article>
-                <div class="caja-etiquetas">
-                    <span class="etiqueta">Nuevo</span>
-                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                </div>
-                <div>
-                    <img src="/images/Mask group (1).png" alt="">
-                </div>
-                <h4> Set de 12 Esmaltes Semipermanentes</h4>
-                <p class="precio-1">$7.000</p>
-                <button class="boton">Comprar</button>
-            </article>
-            <article>
-                <div class="caja-etiquetas">
-                    <span class="etiqueta">Nuevo</span>
-                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                </div>
-                <div class="productos-img-2">
-                    <img src="/images/producto-nuevo1.jpg"  alt="">
-                </div>
-                <h4>Cabina secador</h4>
-                <p class="precio-1">$600</p>
-                <button class="boton">Comprar</button>
-            </article>
-            <article>
-                <div class="caja-etiquetas">
-                    <span class="etiqueta">Nuevo</span>
-                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                </div>
-                <div class="img">
-                    <img src="/images/always.png"  alt="">
-                </div>
-                <h4>Always Clean</h4>
-                <p class="precio-1">$200</p>
-                <button class="boton">Comprar</button>
-            </article>
+            <% for( let i = 7; i < 11; i++ ) { %>
+                    <article>
+                        <div class="caja-etiquetas">
+                            <span class="etiqueta"><%= products[i].estado %></span>
+                            <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                        </div>
+                        <a href="/productos/detalle/<%= products[i].id %> ">
+                            <div class="img">
+                                <img src="/img/Products/<%= products[i].imagen[0] %>" alt="">
+                            </div>
+                            <h4><%= products[i].nombre %> </h4>
+                            <p class="precio-1">$<%= products[i].precio %></p>
+                            <button class="boton">Comprar</button>
+                        </a>
+                    </article>
+            <% } %>
         </section>
         <section class="instagram">
             <div class="fotosIG">
@@ -131,9 +99,14 @@
                 </form>
             </div>
         </div>
+        <!-- <div class="content" id="content">
+            <span><%= locals.errors && errors.imagenPerfil ? errors.imagenPerfil.msg : null%>  </span>
+        </div> -->
+        <!-- intente implementar errors para imagenes, pero no lo logré. -->
     </main>
 
     <%- include ('../partials/footer') %> 
+    
     <script src="/javascript/imagenes.js"></script>
     <script src="/javascript/popupFotoPerfil.js"></script>
 </body>
