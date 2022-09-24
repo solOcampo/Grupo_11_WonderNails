@@ -22,7 +22,8 @@ module.exports = {
                     email,
                     password: bcrypt.hashSync(password, 10),
                     rol: "usuario",
-                    imagen: req.file.size > 1 ? req.file.filename :"avatar-porDefecto.png"
+                    imagen:"avatar-porDefecto.png"
+                    // imagen: req.file?.size > 1 ? req.file.filename :"avatar-porDefecto.png" 
                 
                 }
                 users.push(newUser)
@@ -102,7 +103,7 @@ module.exports = {
     },
     profil: (req,res) => {
         let session = req.session.userLogin
-        let user = users.find(user => user.id === session.id)
+        let user = users.find(user => user.id === session?.id)
         /* return res.send(user) */
         return res.render('users/perfil',{
             user
@@ -110,13 +111,13 @@ module.exports = {
     },
     changeProfilPic: (req, res) => {
         let session = req.session.userLogin
-        let id = +session.id
-        
-        users.forEach(user => {
-            if (user.id === id) {
-                user.imagen = req.file.filename
-            }
-        })
+        // let id = session.id
+        console.log(session?.id)
+        let user = users.find(user => user.id === session?.id)
+        console.log(user)
+
+        if(user) user.imagen = req.file.filename;
+         
         saves(users);
         return res.redirect('/usuarios/perfil');
     },
