@@ -292,7 +292,6 @@
     width: 100%;
 }
 .carrito .carritoMain{
-    margin-top: 155px;
     width: 100%;
 }
 .carrito .carritoMain .carritoDeCompras h1, .carrito .carritoMain .carritoDeCompras h2{
@@ -565,9 +564,6 @@
 }
 
 @media (min-width: 461px){
-    .carrito .carritoMain{
-        margin-top: 300px;
-    }
     .carrito .carritoMain .carritoDeCompras h1{
         margin-bottom: 40px;
     }

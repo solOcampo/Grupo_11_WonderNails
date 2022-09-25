@@ -17,12 +17,20 @@ module.exports = {
     },
     store: (req, res) => {
         let errors = validationResult(req)
-   
+
+        if (req.fileValidationError) {
+            let imagen = {
+                param: 'imagen',
+                msg: req.fileValidationError,
+            }
+            errors.errors.push(imagen)
+        }
+
         if (errors.isEmpty()) {
             let img = req.files.map(imagen => {
                 return imagen.filename
             })
-        console.log('first')
+
 		let nuevoProd = {
 			id: productos[productos.length - 1].id + 1,
   			nombre: req.body.nombre,
@@ -34,7 +42,7 @@ module.exports = {
 			descuento : req.body.descuento,
 			stock : req.body.stock,
 			descripcion : req.body.descripcion,
-            imagenes: img,
+            imagen : img,
             // imagenes: (req.files.length === 4) ? img : ['default-image.png', 'default-image.png', 'default-image.png', 'default-image.png'],
 		}
 
@@ -42,13 +50,17 @@ module.exports = {
         save(productos)
        return res.redirect('/admin/listar')
     } else {
-        console.log('second')
-        let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'products', dato))
-        req.files.forEach(imagen => {
-            if (ruta(imagen) && (imagen !== "default-image.png")) {
-                fs.unlinkSync(path.join(__dirname, '..', '..', 'public', 'img', 'products', imagen))
-            }
+        let id = productos[productos.length - 1].id + 1;
+        let img = req.files.map(imagen => {
+            return imagen.filename
         })
+        /* let ruta = fs.existsSync(path.join(__dirname, '..', 'public', 'img', 'Products', img))
+        
+        img.forEach(imagen => {
+            if (ruta(imagen) && (imagen !== "default-image.png")) {
+                fs.unlinkSync(path.join(__dirname, '..', 'public', 'img', 'Products', imagen))
+            }
+        }) */ /* No logré que funcione */
         // return res.send(req.body)
         //  return res.send(errors.mapped())
          return res.render('admin/crearProducto', {

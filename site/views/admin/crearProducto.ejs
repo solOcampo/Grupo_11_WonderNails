@@ -82,6 +82,29 @@
                             </p>
                         </div>
                         <div class="form-floating">
+                            <label for="categoria">Subategoría</label>
+                            <select class="form-select" name="estado" id="estado"
+                                aria-label="Floating label select example">
+                                <% if (locals.errors && old.estado){ %>
+                                    <option hidden value="">Selecciona una opcion</option>
+                                    <option <%=old.estado==="Nuevo" ? "selected" : null %>
+                                        value="Nuevo">Nuevo</option>
+                                    <option <%=old.estado==="Oferta" ? "selected" : null %>
+                                        value="Oferta">Oferta</option>
+                                    <option <%=old.estado==="Favoritos" ? "selected" : null %>
+                                        value="Favoritos">Favoritos</option>
+                                    <% } else { %>
+                                        <option selected hidden>Selecciona una opcion</option>
+                                        <option value="Nuevo">Nuevo</option>
+                                        <option value="Oferta">Oferta</option>
+                                        <option value="Favoritos">Favoritos</option>
+                                        <%}%>
+                            </select>
+                            <p class="form-floating">
+                                <%= locals.errors && errors.categoria ? errors.categoria.msg : null %>
+                            </p>
+                        </div>
+                        <div class="form-floating">
                             <label for="color">Color</label>
                             <input type="color" class="form-control" name="color" id="color" list="color">
                             <datalist id="colores">
@@ -135,7 +158,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="imagen" class="form-label">Imágenes del producto</label>
-                            <input class="form-control" type="file" name="imagen" id="imagen" multiple>
+                            <!-- <input class="form-control" type="file" name="imagen" id="imagen" multiple> -->
                             <label class="custom-file-upload">
                                 <input type="file" name="imagen" id="imagen" multiple />
                                 Subir imágenes

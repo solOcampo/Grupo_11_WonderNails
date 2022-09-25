@@ -39,8 +39,9 @@
     </div>
     <div class="shopping">
         <% if (locals.userLogin) { %>
-         <% } else { %>
-            <button><a href="/admin/listar"><i class="fas fa-user-cog"></i></a></button>
+            <% if (locals.userLogin.rol === "Administrador") { %>
+                <button><a href="/admin/listar"><i class="fas fa-user-cog"></i></a></button>
+            <% } %>
         <% } %>
      
         <button class="button2"><a href="productos/carrito"><i class="fas fa-shopping-bag"></i></a></button>

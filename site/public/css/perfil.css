@@ -417,6 +417,9 @@
     .perfil-usuario .titulo-usuario {
         font-size: 2.1rem;
     }
+    .perfil-usuario .admin {
+        text-transform: uppercase;
+    }
     .perfil-usuario .portada-perfil {
         height: 28rem;
     }

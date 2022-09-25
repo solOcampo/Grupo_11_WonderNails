@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const userCheckCart = require('../middlewares/userCheckCart')
 
 let {cart,detail, nailPolish, list, state, category} = require('../controllers/productosController')
 
@@ -12,8 +13,8 @@ router.get('/ofertas', state)
 /* Esmaltes */
 router.get('/esmaltes', nailPolish)
 /* Carrito de compras */
-router.get('/carrito/', cart)
-router.get('/carrito/:id', cart)
+router.get('/carrito/', userCheckCart,cart)
+router.get('/carrito/:id', userCheckCart, cart)
 /* Detalle de productos */
 router.get('/detalle/:id', detail)
 

@@ -46,7 +46,7 @@ module.exports = {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
         
-            const {email} = req.body
+            const {email, recordarme} = req.body
             let usuario = users.find(user => user.email === email)
             req.session.userLogin = {
                 id : usuario.id,
@@ -54,6 +54,11 @@ module.exports = {
                 lastname : usuario.lastname,
                 email: usuario.email,
                 rol : usuario.rol
+            }
+            if(recordarme){
+                res.cookie('rememberMe', req.session.userLogin,{
+                    maxAge: 1000 * 60 * 60 * 24 * 30
+                })
             }
             return res.redirect('/usuarios/perfil')
         } else {
@@ -111,9 +116,9 @@ module.exports = {
     },
     logout: (req, res) => {
         req.session.destroy();
-        /* if(req.cookies.Wonder){
-            res.cookie('Wonder','',{maxAge: -1})
-        } */
+        if(req.cookies.rememberMe){
+            res.cookie('rememberMe','',{maxAge: -1})
+        } 
         return res.redirect('/')
     },
     editProfil: (req, res) => {

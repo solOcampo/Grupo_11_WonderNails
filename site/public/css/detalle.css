@@ -2,9 +2,7 @@ body{
     font-family: var(--fuenteSubtitulos);  
 }
 /* carrusel */
-.detail main{
-    margin-top: 145px;
-}
+
 .detail .ul{
     width: 100%;
     display: flex;
@@ -323,9 +321,6 @@ body{
 }
 /* tablet */
 @media (min-width:461px) {
-    .detail main{
-        margin-top: 240px;
-    }
     .detail .ul .li{
         font-size: 15px;
         margin-left: 15px;
@@ -353,9 +348,7 @@ body{
 
 /* descktop */
 @media (min-width:769px) {
-    .detail main{
-        margin-top: 210px;
-    }
+
     .detail .imagenes{
         width: 45%;
         margin: 0 5px 0 30px;

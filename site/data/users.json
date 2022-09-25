@@ -121,5 +121,14 @@
         "password": "$2a$10$LVNyJjMtSbZyRAMVzhj.PO1XS7dkKOepQs4yNKMKwiwiJy7zD4HLe",
         "rol": "usuario",
         "imagen": "avatar-1664061403755.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Gustavo",
+        "lastname": "Rodriguez",
+        "email": "gus_rodriguez@gmail.com",
+        "password": "$2a$10$Mvn6Ayyay/pIosR/KTM/lOZwPugBFg/pmu1ZoyjZjRe7/6pwpOjkq",
+        "rol": "Administrador",
+        "imagen": "avatar-1664062917393.jpg"
     }
 ]

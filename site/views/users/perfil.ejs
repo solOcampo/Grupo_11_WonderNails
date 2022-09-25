@@ -22,6 +22,7 @@
                     </div>
                     <div class="datos-perfil">
                         <% if (locals.userLogin) { %>
+                            <h6 class="titulo-usuario admin"><%= locals.userLogin.rol === "Administrador" ? locals.userLogin.rol : null %></h6>
                             <h6 class="titulo-usuario"><%= locals.userLogin.name %> <%= locals.userLogin.lastname %></h6>
                             <h4 class="email-usuario"><%= locals.userLogin.email %></h4>
                         <% } %>

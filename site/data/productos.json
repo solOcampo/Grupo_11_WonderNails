@@ -1055,5 +1055,20 @@
             "default-image.png",
             "default-image.png"
         ]
+    },
+    {
+        "id": 73,
+        "nombre": "Lima",
+        "marca": "Thuya",
+        "categoria": "Esmaltado Semipermanente",
+        "estado": "Oferta",
+        "color": "#9900ff",
+        "precio": "465465",
+        "descuento": "45",
+        "stock": "54655445",
+        "descripcion": "456465465465465",
+        "imagen": [
+            "img-1664125675973.jpg"
+        ]
     }
 ]

@@ -1,0 +1,22 @@
+.inicieSesion h1{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 70px;
+}
+.inicieSesion .link a{
+    color: var(--grisMedio);
+    display: block;
+    font-weight: 600;
+    font-size: 25px;
+    transition: 0.3s ease all;
+    background-color: white;
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 40px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .3);
+  }
+  .inicieSesion .link a:hover{
+   color: var(--grisOscuro);
+  }

@@ -5,7 +5,7 @@ module.exports = [
   /* Nombre */
   check('nombre').trim()
     .notEmpty().withMessage('Este campo es obligatorio').bail()
-    .isLength({ min: 5 }).withMessage('Debe contener al menos 5 caracteres'),
+    .isLength({ min: 4 }).withMessage('Debe contener al menos 5 caracteres'),
 
   /* Marca */
   check('marca').trim()

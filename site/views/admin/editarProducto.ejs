@@ -15,7 +15,7 @@
             </ul>
             <h1>Editando un producto</h1>
             <div class="divForm">
-                <form action="/admin/editar/<%=producto.id%>?_method=PUT"  method="post">
+                <form action="/admin/editar/<%=producto.id%>?_method=PUT"  method="post" enctype="multipart/form-data">
                     <section>
                         <div class="form-floating">
                             <label for="nombre">Nombre del producto</label>
@@ -72,7 +72,7 @@
                             <!-- <label for="imagen" class="form-label">Imágenes del producto</label>
                             <input class="form-control" type="file" name="imagen" id="imagen" multiple > -->
                             <label class="custom-file-upload">
-                                <input type="file" name="imagen" id="imagen" multiple/>
+                                <input type="file" name="imagenes" id="imagenes" multiple/>
                                 Subir imágenes
                               </label>
                             <small>Obligatorio</small>
