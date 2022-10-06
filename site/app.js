@@ -1,3 +1,4 @@
+require('dotenv').config()
 const createError = require("http-errors");
 const express = require("express");
 const app = express();
@@ -6,6 +7,8 @@ const path = require("path");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+const testConnection = require('./utils/dbConnectionTest')
+testConnection()
 /* Implementamos locals dentro de nuestra aplicacion */
 const userLogin = require("./middlewares/userLoginCheck");
 const adminCheck = require("./middlewares/adminCheck");

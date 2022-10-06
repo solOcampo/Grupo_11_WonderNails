@@ -25,7 +25,8 @@ module.exports = [
 
   /* Precio */
   check('precio').trim()
-    .notEmpty().withMessage('Este campo es obligatorio').bail(),
+    .notEmpty().withMessage('Este campo es obligatorio').bail()
+    .isInt().withMessage('Solo se aceptan números'),
 
   /* Descuento */
   check('descuento').trim()
@@ -33,7 +34,8 @@ module.exports = [
 
   /* Stock */
   check('stock').trim()
-    .notEmpty().withMessage('Este campo es obligatorio'),
+    .notEmpty().withMessage('Este campo es obligatorio')
+    .isInt().withMessage('Solo se aceptan números'),
   
 
   /* Descripcion */
