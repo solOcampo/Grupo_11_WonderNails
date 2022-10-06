@@ -3,11 +3,11 @@
 ## Comenzar a hacer
 Daylis con mas frecuencia
 ## Hacer más
-Intentar repartir tareas los primeros dias de comienzo de sprint.
+Utilizar trello con mas frecuencia
 Entregar el sprint a tiempo
 ## Continuar haciendo
 Comunicacion 
-Entregar en fecha
+Repartir tareas los primeros dias de comienzo de sprint.
 ## Hacer menos
 
 ## Dejar de hacer
