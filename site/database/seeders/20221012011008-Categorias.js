@@ -1,25 +1,24 @@
 'use strict';
 
 /** @type {import('sequelize-cli').Migration} */
+let listado=["Aparatos","Esmaltado Semipermanente","Contrucción de Uñas","Esmaltado","Decoración","Herramientas","Accesorios", "Aparatos","Cuidado de Manos y Pies","Maquillaje","Esmaltes"]
+
+let categorias=listado.map(categoria=>{
+let elemento ={
+    nombre:categoria,
+    createdAt:new Date,
+    updatedAt:new Date
+  }
+  return elemento
+})
+
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+     await queryInterface.bulkInsert('Categorias', categorias, {});
+  
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+     await queryInterface.bulkDelete('Categorias', null, {});
   }
 };

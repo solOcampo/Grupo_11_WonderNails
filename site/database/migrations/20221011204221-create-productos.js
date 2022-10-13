@@ -19,7 +19,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       descripcion: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(1000)
       },
       descuento: {
         type: Sequelize.INTEGER
@@ -28,6 +28,9 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       marcasid: {
+        type: Sequelize.INTEGER
+      },
+      estadosid: {
         type: Sequelize.INTEGER
       },
       createdAt: {

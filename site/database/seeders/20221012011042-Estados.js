@@ -1,25 +1,23 @@
 'use strict';
-/* Hola sol jjaja esto es lo de Favoritos, Ofertas y Nuevos */
+
 /** @type {import('sequelize-cli').Migration} */
+let listado= ["Oferta", "Favoritos", "Nuevo" ]
+let estados=listado.map(estado=>{
+  let elemento ={
+      estado:estado,
+      createdAt:new Date,
+      updatedAt:new Date
+    }
+    return elemento
+  })
+
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+     await queryInterface.bulkInsert('Estados', estados, {});
+  
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+     await queryInterface.bulkDelete('Estados', null, {});
   }
 };
