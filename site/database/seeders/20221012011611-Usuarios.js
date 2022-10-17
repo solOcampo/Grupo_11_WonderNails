@@ -9,7 +9,7 @@ let usuarios = listado.map(usuario =>{
     email: usuario.email,
     contraseña: usuario.contraseña,
     telefono: usuario.telefono,
-    generoId: 1 /* usuario.genero === "M" ? 1 : "F" ? 2 : 3 */,
+    generoId: usuario.genero === 'M' ? 1 : usuario.genero === "F" ? 2 : 3,
     dni: usuario.dni,
     rolId: usuario.rol === 'Administrador' ? 1 : 2,
     imagen_perfil: usuario.imagenPerfil,

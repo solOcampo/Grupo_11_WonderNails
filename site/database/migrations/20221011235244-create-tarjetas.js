@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       numero_de_tarjeta: {
-        type: Sequelize.BIGINT
+        type: Sequelize.STRING
       },
       nombre_impreso: {
         type: Sequelize.STRING
