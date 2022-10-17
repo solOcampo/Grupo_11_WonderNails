@@ -19,9 +19,6 @@ module.exports = {
         type: Sequelize.STRING
       },
       codigo_de_seguridad: {
-        type: Sequelize.TINYINT
-      },
-      direccion_facturacion: {
         type: Sequelize.INTEGER
       },
       usuario_id: {

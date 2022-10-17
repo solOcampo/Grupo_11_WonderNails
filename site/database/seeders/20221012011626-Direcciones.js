@@ -1,25 +1,28 @@
 'use strict';
+let listado = require('../../data/users.json')
 
-/** @type {import('sequelize-cli').Migration} */
+let direcciones = listado.map(direccion => {
+  let elemento = {
+    calle:direccion.calle,
+    numero:direccion.numero,
+    barrio:direccion.barrio,
+    ciudad:direccion.ciudad,
+    provincia:direccion.provincia,
+    codigoPostal:direccion.codigoPostal,
+    createdAt: new Date,
+    updatedAt: new Date
+  }
+  return elemento
+})
+
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+ 
+     await queryInterface.bulkInsert('Direcciones', direcciones, {});
+   
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+  await queryInterface.bulkDelete('Direcciones', null, {});  
   }
 };

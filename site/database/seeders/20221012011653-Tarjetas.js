@@ -1,25 +1,28 @@
 'use strict';
 
-/** @type {import('sequelize-cli').Migration} */
+let listado = require('../../data/creditCards.json')
+
+let tarjetas = listado.map(tarjeta =>{
+  let elemento = {
+    numero_de_tarjeta: tarjeta.numero_de_tarjeta,
+    nombre_impreso: tarjeta.nombre_impreso,
+    fecha_vencimiento: tarjeta.fecha_vencimiento,
+    codigo_de_seguridad: tarjeta.codigo_de_seguridad,
+    usuario_id: tarjeta.usuario_id,
+    createdAt: new Date,
+    updatedAt: new Date
+  }
+  return elemento
+})
+
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+ 
+     await queryInterface.bulkInsert('Tarjetas', tarjetas, {});
+   
   },
 
   async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+  await queryInterface.bulkDelete('Tarjetas', null, {});  
   }
 };

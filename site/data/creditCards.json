@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "numero_de_tarjeta": 123645631236,
+        "nombre_impreso": "Gerick F. Anonymous",
+        "fecha_vencimiento": "04/25",
+        "codigo_de_seguridad": 256,
+        "domicilio": "domuyo 10",
+        "usuario_id": 1
+    },
+    {
+        "id": 2,
+        "numero_de_tarjeta": 568923584123,
+        "nombre_impreso": "Jeanette Barrera",
+        "fecha_vencimiento": "08/24",
+        "codigo_de_seguridad": 859,
+        "domicilio": "domuyo 10",
+        "usuario_id": 2
+    },
+    {
+        "id": 3,
+        "numero_de_tarjeta": 748523659615,
+        "nombre_impreso": "Micaela S. Loureiro",
+        "fecha_vencimiento": "12/23",
+        "codigo_de_seguridad": 963,
+        "domicilio": "domuyo 10",
+        "usuario_id": 3
+    },
+    {
+        "id": 4,
+        "numero_de_tarjeta": 855601128596,
+        "nombre_impreso": "Nadia Ortiz",
+        "fecha_vencimiento": "02/24",
+        "codigo_de_seguridad": 996,
+        "domicilio": "domuyo 10",
+        "usuario_id": 4
+    },
+    {
+        "id": 5,
+        "numero_de_tarjeta": 556301229677,
+        "nombre_impreso": "Cristian Elias",
+        "fecha_vencimiento": "07/26",
+        "codigo_de_seguridad": 112,
+        "domicilio": "domuyo 10",
+        "usuario_id": 5
+    },
+    {
+        "id": 6,
+        "numero_de_tarjeta": 225264248967,
+        "nombre_impreso": "Solange Ocampo",
+        "fecha_vencimiento": "05/25",
+        "codigo_de_seguridad": 201,
+        "domicilio": "domuyo 10",
+        "usuario_id": 6
+    }
+]
