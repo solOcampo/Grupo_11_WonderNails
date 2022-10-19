@@ -21,7 +21,7 @@ router.post('/login',loginValidator,processLogin)
 
 /* perfil */
 router.get('/perfil', userIsLogin, profil)
-router.put('/perfil', upload.single('imagenPerfil'),changeProfilPic)
+router.put('/perfil', upload.single('imagenPerfil'), upload.single('imagenPortada'),changeProfilPic)
 router.delete('/logout', logout);
 
 /* editar perfil */

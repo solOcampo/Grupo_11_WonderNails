@@ -99,6 +99,24 @@
                     <button class="btn-submit" type="submit">Guardar</button>
                 </form>
             </div>
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <h3>Cambiar foto de perfil</h3>
+                <form action="/usuarios/perfil?_method=PUT" method="post" enctype="multipart/form-data">
+                    <div class="col col-5">
+                        <label class="selectImg"class="form-label" for="product-img">
+                            <div class="box-img">
+                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/users/<%= user.imagen %>" alt="">
+                            </div>
+                        </label>
+                        <div class="form-admin__box inactivo">
+                            <input class="d-none" id="product-img" type="file" name="imagenPortada" placeholder="Imagen del Producto" accept="image/*" multiple>
+                        </div>
+                    </div>
+                    <button class="btn-submit" type="submit">Guardar</button>
+                </form>
+            </div>
         </div>
         <!-- <div class="content" id="content">
             <span><%= locals.errors && errors.imagenPerfil ? errors.imagenPerfil.msg : null%>  </span>

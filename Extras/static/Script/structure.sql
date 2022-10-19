@@ -80,31 +80,21 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `wonder_nails`.`Perfil_imagenes`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `wonder_nails`.`Perfil_imagenes` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `imagen` VARCHAR(100) NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `wonder_nails`.`Portada_imagenes`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `wonder_nails`.`Portada_imagenes` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `imagen` VARCHAR(100) NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `wonder_nails`.`Roles`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `wonder_nails`.`Roles` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `rol` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `wonder_nails`.`Generos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `wonder_nails`.`Generos` (
+  `id` INT NOT NULL,
+  `genero` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -118,77 +108,23 @@ CREATE TABLE IF NOT EXISTS `wonder_nails`.`Usuarios` (
   `apellido` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `contraseña` VARCHAR(100) NOT NULL,
-  `telefono` VARCHAR(45) NULL,
-  `genero` VARCHAR(45) NULL,
+  `telefono` BIGINT NULL,
+  `Genero_id` INT NOT NULL,
   `dni` BIGINT NULL,
   `Rol_id` INT NOT NULL,
-  `Imagen_perfil_id` INT NOT NULL,
-  `Imagen_portada_id` INT NOT NULL,
+  `imagenPerfil` VARCHAR(100) NULL,
+  `imagenPortada` VARCHAR(100) NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_Perfilimagenes_usuarios_idx` (`Imagen_perfil_id` ASC) VISIBLE,
-  INDEX `fk_PortadaImagenes_Usuarios_idx` (`Imagen_portada_id` ASC) VISIBLE,
   INDEX `fk_Roles_Usuarios_idx` (`Rol_id` ASC) VISIBLE,
-  CONSTRAINT `fk_Usuarios_Perfilimagenes`
-    FOREIGN KEY (`Imagen_perfil_id`)
-    REFERENCES `wonder_nails`.`Perfil_imagenes` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Usuarios_PortadaImagenes`
-    FOREIGN KEY (`Imagen_portada_id`)
-    REFERENCES `wonder_nails`.`Portada_imagenes` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+  INDEX `fk_Usuarios_Generos_idx` (`Genero_id` ASC) VISIBLE,
   CONSTRAINT `fk_Usuarios_Roles`
     FOREIGN KEY (`Rol_id`)
     REFERENCES `wonder_nails`.`Roles` (`id`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `wonder_nails`.`Direcciones`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `wonder_nails`.`Direcciones` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `direccion` VARCHAR(100) NOT NULL,
-  `barrio` VARCHAR(45) NULL,
-  `ciudad` VARCHAR(100) NOT NULL,
-  `provincia` VARCHAR(100) NOT NULL,
-  `codigoPostal` VARCHAR(45) NOT NULL,
-  `Usuario_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_usuarios_direcciones_idx` (`Usuario_id` ASC) VISIBLE,
-  CONSTRAINT `fk_Direcciones_Usuarios`
-    FOREIGN KEY (`Usuario_id`)
-    REFERENCES `wonder_nails`.`Usuarios` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `wonder_nails`.`Tarjetas`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `wonder_nails`.`Tarjetas` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `numero_de_tarjeta` BIGINT NOT NULL,
-  `nombre_impreso` VARCHAR(200) NOT NULL,
-  `fecha_vencimiento` VARCHAR(45) NOT NULL,
-  `codigo_de_seguridad` TINYINT NOT NULL,
-  `Direccion_facturacion_id` INT NOT NULL,
-  `Usuario_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_direcciones_tarjetas_idx` (`Direccion_facturacion_id` ASC) VISIBLE,
-  INDEX `fk_usuarios_tarjetas_idx` (`Usuario_id` ASC) VISIBLE,
-  CONSTRAINT `fk_Tarjetas_Direcciones`
-    FOREIGN KEY (`Direccion_facturacion_id`)
-    REFERENCES `wonder_nails`.`Direcciones` (`id`)
-    ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Tarjetas_Usuarios`
-    FOREIGN KEY (`Usuario_id`)
-    REFERENCES `wonder_nails`.`Usuarios` (`id`)
+  CONSTRAINT `fk_Usuarios_Generos`
+    FOREIGN KEY (`Genero_id`)
+    REFERENCES `wonder_nails`.`Generos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -200,14 +136,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `wonder_nails`.`Envios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `tipo_envio` VARCHAR(45) NOT NULL,
-  `Domicilio_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_Envios_Direccion_idx` (`Domicilio_id` ASC) VISIBLE,
-  CONSTRAINT `fk_Envios_Direcciones`
-    FOREIGN KEY (`Domicilio_id`)
-    REFERENCES `wonder_nails`.`Direcciones` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
@@ -220,12 +149,10 @@ CREATE TABLE IF NOT EXISTS `wonder_nails`.`Carritos` (
   `Total_items` INT NOT NULL,
   `Productos_id` INT NOT NULL,
   `Usuarios_id` INT NOT NULL,
-  `Tarjetas_id` INT NOT NULL,
   `Tipo_envio_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_Carritos_Productos1_idx` (`Productos_id` ASC) VISIBLE,
   INDEX `fk_Carritos_Usuarios1_idx` (`Usuarios_id` ASC) VISIBLE,
-  INDEX `fk_Tarjetas_Carritos_idx` (`Tarjetas_id` ASC) VISIBLE,
   INDEX `fk_Carritos_Envios_idx` (`Tipo_envio_id` ASC) VISIBLE,
   CONSTRAINT `fk_Carritos_Productos1`
     FOREIGN KEY (`Productos_id`)
@@ -235,11 +162,6 @@ CREATE TABLE IF NOT EXISTS `wonder_nails`.`Carritos` (
   CONSTRAINT `fk_Carritos_Usuarios1`
     FOREIGN KEY (`Usuarios_id`)
     REFERENCES `wonder_nails`.`Usuarios` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Carritos_Tarjetas`
-    FOREIGN KEY (`Tarjetas_id`)
-    REFERENCES `wonder_nails`.`Tarjetas` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Carritos_Envios`
@@ -286,6 +208,48 @@ CREATE TABLE IF NOT EXISTS `wonder_nails`.`Productos_imagenes` (
   CONSTRAINT `fk_imagenes_Productos`
     FOREIGN KEY (`Productos_id`)
     REFERENCES `wonder_nails`.`Productos` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `wonder_nails`.`Direcciones`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `wonder_nails`.`Direcciones` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `calle` VARCHAR(100) NOT NULL,
+  `numero` INT NOT NULL,
+  `barrio` VARCHAR(45) NULL,
+  `ciudad` VARCHAR(100) NOT NULL,
+  `provincia` VARCHAR(100) NOT NULL,
+  `codigoPostal` INT NOT NULL,
+  `Usuario_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_usuarios_direcciones_idx` (`Usuario_id` ASC) VISIBLE,
+  CONSTRAINT `fk_Direcciones_Usuarios`
+    FOREIGN KEY (`Usuario_id`)
+    REFERENCES `wonder_nails`.`Usuarios` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `wonder_nails`.`Tarjetas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `wonder_nails`.`Tarjetas` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `numero_de_tarjeta` BIGINT NOT NULL,
+  `nombre_impreso` VARCHAR(200) NOT NULL,
+  `fecha_vencimiento` VARCHAR(45) NOT NULL,
+  `codigo_de_seguridad` TINYINT NOT NULL,
+  `Usuario_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_usuarios_tarjetas_idx` (`Usuario_id` ASC) VISIBLE,
+  CONSTRAINT `fk_Tarjetas_Usuarios`
+    FOREIGN KEY (`Usuario_id`)
+    REFERENCES `wonder_nails`.`Usuarios` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
