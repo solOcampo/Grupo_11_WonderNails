@@ -10,19 +10,42 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       Total_compra: {
+        allowNull: false,
         type: Sequelize.BIGINT
       },
       Total_items: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       Productos_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model:{
+            tableName: 'Productos'
+          },
+          key: 'id'
+        }
       },
       Usuarios_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model:{
+            tableName: 'Usuarios'
+          },
+          key: 'id'
+        }
       },
       Tipo_envio_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model:{
+            tableName: 'Envios'
+          },
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

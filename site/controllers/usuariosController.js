@@ -4,6 +4,7 @@ const {validationResult} = require('express-validator')
 const bcrypt = require('bcryptjs')
 let products = require('../data/productos.json')
 let users = require('../data/users.json')
+let db = require('../database/models')
 const saves = (dato) => fs.writeFileSync(path.join(__dirname, '../data/users.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
 
