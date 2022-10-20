@@ -42,7 +42,7 @@
         ]
     },
     {
-        "idn": 4,
+        "id": 4,
         "nombre": " Cabina LED Profesional 54 Watts Nail Master Cabin ",
         "marca": " Meliné ",
         "categoria": " Esmaltado Semipermanente ",
@@ -133,11 +133,7 @@
             "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-1.jpg",
             "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-2.jpg",
             "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-3.jpg",
-            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-4.jpg",
-            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-5.jpg",
-            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-6.jpg",
-            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-7.jpg",
-            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-8.jpg"
+            "12-Esmalte-Semipermanentex15ml-Anush-Cabina LED-UV-Removedor-Limas-4.jpg"
         ]
     },
     {
@@ -157,9 +153,8 @@
             "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-1.jpg",
             "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-2.jpg",
             "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-3.jpg",
-            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-4.jpg",
-            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-5.jpg",
-            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-6.jpg"
+            "3-Esmaltesx15ml-Anush-Mini Cabina-LED-5W-Compact-4.jpg"
+            
         ]
     },
     {
@@ -316,8 +311,8 @@
             "Esmalte-Nail-Enamel-x9ml-Note-1.jpg",
             "Esmalte-Nail-Enamel-x9ml-Note-2.jpg",
             "Esmalte-Nail-Enamel-x9ml-Note-3.jpg",
-            "Esmalte-Nail-Enamel-x9ml-Note-4.jpg",
-            "Esmalte-Nail-Enamel-x9ml-Note-5.jpg"
+            "Esmalte-Nail-Enamel-x9ml-Note-4.jpg"
+            
         ]
     },
     {
@@ -510,10 +505,7 @@
             "Módulo-Ayudante-para-Manicuría-Torno-Drill-288-6-Esmaltes-Semipermanentes-Meliné-1.jpg",
             "Módulo-Ayudante-para-Manicuría-Torno-Drill-288-6-Esmaltes-Semipermanentes-Meliné-2.jpg",
             "Módulo-Ayudante-para-Manicuría-Torno-Drill-288-6-Esmaltes-Semipermanentes-Meliné-3.jpg",
-            "Módulo-Ayudante-para-Manicuría-Torno-Drill-288-6-Esmaltes-Semipermanentes-Meliné-4.jpg",
-            "Módulo-Ayudante-para-Manicuría-Torno-Drill-288-6-Esmaltes-Semipermanentes-Meliné-5.jpg",
-            "Módulo-Ayudante-para-Manicuría-Torno-Drill-288-6-Esmaltes-Semipermanentes-Meliné-6.jpg",
-            "Módulo-Ayudante-para-Manicuría-Torno-Drill-288-6-Esmaltes-Semipermanentes-Meliné-7.jpg"
+            "Módulo-Ayudante-para-Manicuría-Torno-Drill-288-6-Esmaltes-Semipermanentes-Meliné-4.jpg"
         ]
     },
     {
@@ -965,8 +957,8 @@
     {
         "id": 65,
         "nombre": "Marrakesh",
-        "marca":"Wonder Nails",
-        "categoria": "Esmaltes",  
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
         "estado": "Oferta",
         "color": "Nude",
         "precio": 800,
@@ -980,7 +972,7 @@
     {
         "id": 66,
         "nombre": "Montevideo",
-        "marca":"Wonder Nails",
+        "marca": "Wonder Nails",
         "categoria": "Esmaltes",
         "estado": "Oferta",
         "color": "Blue",
@@ -1040,7 +1032,7 @@
     {
         "id": 70,
         "nombre": "Gel Color - Birtday Party!",
-        "marca":"Pink Mask",
+        "marca": "Pink Mask",
         "categoria": "Esmaltes",
         "estado": "Oferta",
         "color": "Piñata",
@@ -1081,6 +1073,9 @@
         "stock": "54655445",
         "descripcion": "456465465465465",
         "imagen": [
+            "img-1664125675973.jpg",
+            "img-1664125675973.jpg",
+            "img-1664125675973.jpg",
             "img-1664125675973.jpg"
         ]
     }
