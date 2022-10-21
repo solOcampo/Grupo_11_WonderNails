@@ -1,5 +1,5 @@
 'use strict';
-/** @type {import('sequelize-cli').Migration} */
+
 let listado= require('../../data/productos.json')
 
 
@@ -13,21 +13,21 @@ listado.forEach(producto=>{
     let marca
     let estados
     listadoCategorias.forEach((categoriaLista,index) => {
-        if (categoriaLista==producto.categoria) {
+        if (categoriaLista===producto.categoria) {
             return categoria=index +1
         }else{
             return categoria=1}
        
     });
     marcas.forEach((elemento,index) => {
-        if (elemento == producto.marca) {
+        if (elemento === producto.marca) {
             return marca = index + 1
         }else{
             return marca=1}
        
     }),
     estado.forEach((estadoProducto,index) => {
-        if (estadoProducto == producto.estados) {
+        if (estadoProducto === producto.estados) {
             return estados = index + 1
         }else{
             return estados=1}

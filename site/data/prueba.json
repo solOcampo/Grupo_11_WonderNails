@@ -1,0 +1,61 @@
+{
+    "id": 1,
+    "nombre": "Base Coat Gel ON OFF Thuya x 14ml",
+    "stock": 18,
+    "precio": 2990,
+    "descripcion": "Base Coat Gel ON OFF x 14ml,Es  un revolucionario sistema que revolucionó la técnica de esmaltado . Los esmaltes ON OFF tienen una duración de hasta 3 semanas, convirtiéndolo en el producto más rentable para las manicuras. La Base Coat Gel ON OFF x 14ml. es el producto utilizado para comenzar el tratamiento.",
+    "descuento": 10,
+    "categoriasid": 1,
+    "marcasid": 1,
+    "estadosid": 1,
+    "createdAt": "2022-10-21T14:05:55.000Z",
+    "updatedAt": "2022-10-21T14:05:55.000Z",
+    "category": {
+      "id": 1,
+      "nombre": "Aparatos",
+      "createdAt": "2022-10-21T14:03:04.000Z",
+      "updatedAt": "2022-10-21T14:03:04.000Z"
+    },
+    "marca": {
+      "id": 1,
+      "nombre": "Thuya",
+      "createdAt": "2022-10-21T14:03:04.000Z",
+      "updatedAt": "2022-10-21T14:03:04.000Z"
+    },
+    "estado": {
+      "id": 1,
+      "estado": "Oferta",
+      "createdAt": "2022-10-21T14:03:04.000Z",
+      "updatedAt": "2022-10-21T14:03:04.000Z"
+    },
+    "imagenes": [
+      {
+        "id": 285,
+        "nombre": "Base-Coat-Gel-ON-OFF-Thuya.jpg",
+        "productosid": 1,
+        "createdAt": "2022-10-21T14:08:11.000Z",
+        "updatedAt": "2022-10-21T14:08:11.000Z"
+      },
+      {
+        "id": 286,
+        "nombre": null,
+        "productosid": 1,
+        "createdAt": "2022-10-21T14:08:11.000Z",
+        "updatedAt": "2022-10-21T14:08:11.000Z"
+      },
+      {
+        "id": 287,
+        "nombre": null,
+        "productosid": 1,
+        "createdAt": "2022-10-21T14:08:11.000Z",
+        "updatedAt": "2022-10-21T14:08:11.000Z"
+      },
+      {
+        "id": 288,
+        "nombre": null,
+        "productosid": 1,
+        "createdAt": "2022-10-21T14:08:11.000Z",
+        "updatedAt": "2022-10-21T14:08:11.000Z"
+      }
+    ]
+  }

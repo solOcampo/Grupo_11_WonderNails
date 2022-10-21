@@ -10,7 +10,7 @@ router.get('/', home)
 router.get('/buscar', search);
 
 router.get('/prueba', (req, res) => {
-    db.Estados.findAll(
+    db.Productos.findAll(
         {
             include: [{
                 all: true
