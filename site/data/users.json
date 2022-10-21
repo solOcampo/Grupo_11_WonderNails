@@ -117,22 +117,8 @@
         "id": 7,
         "name": "Micaela",
         "lastname": "Loureiro",
-<<<<<<< HEAD
-        "email": "mica_lou@hotmail.com",
-        "password": "$2a$10$LVNyJjMtSbZyRAMVzhj.PO1XS7dkKOepQs4yNKMKwiwiJy7zD4HLe",
-        "rol": "Administrador",
-        "imagen": "avatar-1664061403755.jpg"
-    },
-    {
-        "id": 12,
-        "name": "Gustavo",
-        "lastname": "Rodriguez",
-        "email": "gus_rodriguez@gmail.com",
-        "password": "$2a$10$Mvn6Ayyay/pIosR/KTM/lOZwPugBFg/pmu1ZoyjZjRe7/6pwpOjkq",
-=======
         "email": "micaela_loureiro@hotmail.com",
         "password": "$2a$10$tJOXIrR80I7QA88JbQoNFeqfI6Y2FqPnc7DAbMBb5XykPgR4LnjSC",
->>>>>>> 69ec03d5ca2b255ac310477e2df1994272263e2a
         "rol": "Administrador",
         "imagen": "avatar-1665860782216.jpg"
     }
