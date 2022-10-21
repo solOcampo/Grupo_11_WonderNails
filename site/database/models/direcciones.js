@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Direcciones.init({
-    direccion: DataTypes.STRING,
+    calle: DataTypes.STRING,
+    numero: DataTypes.INTEGER,
     barrio: DataTypes.STRING,
     ciudad: DataTypes.STRING,
     provincia: DataTypes.STRING,

@@ -22,22 +22,22 @@ module.exports = {
         type: Sequelize.STRING
       },
       telefono: {
-        type: Sequelize.STRING
+        type: Sequelize.BIGINT
       },
-      genero: {
-        type: Sequelize.STRING
+      generoId: {
+        type: Sequelize.INTEGER
       },
       dni: {
         type: Sequelize.BIGINT
       },
-      rolid: {
+      rolId: {
         type: Sequelize.INTEGER
       },
-      imagen_perfilid: {
-        type: Sequelize.INTEGER
+      imagen_perfil: {
+        type: Sequelize.STRING
       },
-      imagen_portadaid: {
-        type: Sequelize.INTEGER
+      imagen_portada: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

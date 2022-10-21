@@ -14,11 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Tarjetas.init({
-    numero_de_tarjeta: DataTypes.BIGINT,
+    numero_de_tarjeta: DataTypes.STRING,
     nombre_impreso: DataTypes.STRING,
     fecha_vencimiento: DataTypes.STRING,
-    codigo_de_seguridad: DataTypes.TINYINT,
-    direccion_facturacion: DataTypes.INTEGER,
+    codigo_de_seguridad: DataTypes.INTEGER,
     usuario_id: DataTypes.INTEGER
   }, {
     sequelize,
