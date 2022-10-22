@@ -5,6 +5,7 @@ const bcrypt = require('bcryptjs')
 let products = require('../data/productos.json')
 let users = require('../data/users.json')
 let db = require('../database/models')
+let Sequelize = require('sequelize')
 const saves = (dato) => fs.writeFileSync(path.join(__dirname, '../data/users.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
 
@@ -70,14 +71,10 @@ module.exports = {
             })
         }
     },
-    profil: (req,res) => {
+    profil: (req,res) => {  
         let session = req.session.userLogin
-        let user = users.find(user => user.id === session?.id)
+        /* let user = users.find(user => user.id === session?.id) */
         /* return res.send(user) */
-        return res.render('users/perfil',{
-            user,
-            products
-        })
     },
     changeProfilPic: (req, res) => {
         let session = req.session.userLogin

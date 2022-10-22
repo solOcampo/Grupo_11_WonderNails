@@ -53,22 +53,22 @@
         </section>
         <h2>Te puede interesar</h2>
         <section class="productos">
-            <% for( let i = 7; i < 11; i++ ) { %>
-                    <article>
-                        <div class="caja-etiquetas">
-                            <span class="etiqueta"><%= products[i].estado %></span>
-                            <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+            <% productos.forEach(producto => { %>
+                <article>
+                    <div class="caja-etiquetas">
+                        <span class="etiqueta"><%= producto.Estados.estado %></span>
+                        <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                    </div>
+                    <a href="/productos/detalle/<%= producto.id %> ">
+                        <div class="img">
+                            <img src="/img/Products/<%= producto.Productos_imagenes[0].nombre %>" alt="">
                         </div>
-                        <a href="/productos/detalle/<%= products[i].id %> ">
-                            <div class="img">
-                                <img src="/img/Products/<%= products[i].imagen[0] %>" alt="">
-                            </div>
-                            <h4><%= products[i].nombre %> </h4>
-                            <p class="precio-1">$<%= products[i].precio %></p>
-                            <button class="boton">Comprar</button>
-                        </a>
-                    </article>
-            <% } %>
+                        <h4><%= producto.nombre %> </h4>
+                        <p class="precio-1">$<%= producto.precio %></p>
+                        <button class="boton">Comprar</button>
+                    </a>
+                </article>
+            <% }) %>
         </section>
         <section class="instagram">
             <div class="fotosIG">

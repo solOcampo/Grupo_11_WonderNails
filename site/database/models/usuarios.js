@@ -9,6 +9,10 @@ module.exports = (sequelize, DataTypes) => {
       Usuarios.belongsTo(models.Generos,{
         as: 'generos',
         foreignKey: 'generoId'
+      }),
+      Usuarios.belongsTo(models.Roles,{
+        as: 'rol',
+        foreignKey: 'rolId'
       })
     }
   }
