@@ -51,11 +51,11 @@ module.exports = {
           key: 'id'
         }
       },
-      imagen_perfil: {
+      imagen_Perfil: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      imagen_portada: {
+      imagen_Portada: {
         allowNull: false,
         type: Sequelize.STRING
       },

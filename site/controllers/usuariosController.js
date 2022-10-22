@@ -5,7 +5,6 @@ const {validationResult} = require('express-validator')
 const bcrypt = require('bcryptjs')
 let products = require('../data/productos.json')
 let users = require('../data/users.json')
-let db = require('../database/models')
 let Sequelize = require('sequelize')
 const saves = (dato) => fs.writeFileSync(path.join(__dirname, '../data/users.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
@@ -27,9 +26,11 @@ module.exports = {
                 nombre: name,
                 apellido: lastname,
                 email: email,
-                password: bcrypt.hashSync(password, 10),
+                contraseña: bcrypt.hashSync(password, 10),
                 generoId: 2, // generoId y rolId se envian de forma obligatoria
-                rolId: 2     // porque la base de datos los requiere para su carga
+                rolId: 2 ,  // porque la base de datos los requiere para su carga
+                imagen_Perfil: "avatar-porDefecto.png",
+                imagen_Portada: "portada-porDefecto.png"    
             })
 
             console.log(user)
@@ -37,7 +38,7 @@ module.exports = {
 
             //-----------------------------------
 
-            let newUser = {
+           /*  let newUser = {
                 id: users[users.length - 1].id + 1,
                     name,
                     lastname,
@@ -49,7 +50,7 @@ module.exports = {
                 
                 }
                 users.push(newUser)
-                saves(users)
+                saves(users) */
                 return res.redirect('/usuarios/login')
         }else{
             return res.render('users/register', {
@@ -66,10 +67,10 @@ module.exports = {
     processLogin: async (req,res) => {
         let errors = validationResult(req)
 
-        const {email, recordarme} = req.body
         
         if (errors.isEmpty()) {
             
+            const {email, recordarme} = req.body
             const user = await db.Usuarios.findOne({
                 where: { email: email },
             })
@@ -109,6 +110,11 @@ module.exports = {
         let session = req.session.userLogin
         /* let user = users.find(user => user.id === session?.id) */
         /* return res.send(user) */
+
+        return res.render('users/perfil'/* ,{
+            user,
+            products
+        } */)
     },
     changeProfilPic: (req, res) => {
         let session = req.session.userLogin

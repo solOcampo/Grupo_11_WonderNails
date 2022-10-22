@@ -12,8 +12,8 @@ let usuarios = listado.map(usuario =>{
     generoId: usuario.genero === 'M' ? 1 : usuario.genero === "F" ? 2 : 3,
     dni: usuario.dni,
     rolId: usuario.rol === 'Administrador' ? 1 : 2,
-    imagen_perfil: usuario.imagenPerfil,
-    imagen_portada: usuario.imagenPortada,
+    imagen_Perfil: usuario.imagenPerfil,
+    imagen_Portada: usuario.imagenPortada,
     createdAt: new Date,
     updatedAt: new Date
   }
