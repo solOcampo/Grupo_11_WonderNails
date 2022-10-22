@@ -1,3 +1,4 @@
+const db = require('../database/models/index');
 const fs = require('fs')
 const path = require('path')
 const {validationResult} = require('express-validator')
@@ -13,11 +14,29 @@ module.exports = {
     register: (req,res) => {
         return res.render('users/register')
     },
-    check: (req,res) => {
+    check: async (req,res) => {
         let errors = validationResult(req)
+        
         if(errors.isEmpty()){
             /* return res.send(req.body) */
-            let {name, lastname, email, password} = req.body 
+            let {name, lastname, email, password} = req.body
+            
+            //------ BASE DE DATOS ----------
+
+            const user = await db.Usuarios.create({
+                nombre: name,
+                apellido: lastname,
+                email: email,
+                password: bcrypt.hashSync(password, 10),
+                generoId: 2, // generoId y rolId se envian de forma obligatoria
+                rolId: 2     // porque la base de datos los requiere para su carga
+            })
+
+            console.log(user)
+            if(!user) return // Redirigir o no, cuando hubo un error al registrar el usuario
+
+            //-----------------------------------
+
             let newUser = {
                 id: users[users.length - 1].id + 1,
                     name,
@@ -44,19 +63,34 @@ module.exports = {
     login: (req,res) => {
         return res.render('users/login')
     },
-    processLogin:(req,res) => {
+    processLogin: async (req,res) => {
         let errors = validationResult(req)
-        if (errors.isEmpty()) {
+
+        const {email, recordarme} = req.body
         
-            const {email, recordarme} = req.body
+        if (errors.isEmpty()) {
+            
+            const user = await db.Usuarios.findOne({
+                where: { email: email },
+            })
+    
+            if(user) console.log('USUARIO:',user.dataValues);
+
+            if(!user) return // Si no existe el usuario redigir a donde sea necesario
+
             let usuario = users.find(user => user.email === email)
             req.session.userLogin = {
-                id : usuario.id,
-                name : usuario.name,
-                lastname : usuario.lastname,
-                email: usuario.email,
-                rol : usuario.rol
-            }
+                // id : usuario.id,
+                // name : usuario.name,
+                // lastname : usuario.lastname,
+                // email: usuario.email,
+                // rol : usuario.rol
+                id : user.id,
+                name : user.nombre,
+                lastname : user.apellido,
+                email: user.email,
+                rol : 'usuario' // la base de datos trae un id, lo que crea conflicto en otros lados
+            }                   // ya que se comprueba por la descripcion y no por el id 
             if(recordarme){
                 res.cookie('rememberMe', req.session.userLogin,{
                     maxAge: 1000 * 60 * 60 * 24 * 30
