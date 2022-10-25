@@ -15,31 +15,46 @@ module.exports = [
     .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres'),
 
     body('email')
-    .custom((value, {req}) => {
-        return db.Usuarios.findOne({
-            where: {
-                 email: req.body.email
+        .custom((value, {req}) => {
+           return db.Usuarios.findOne({
+                where: {
+                    email: req.body.email,
                 }
-        })
-        .then(user => {
-            if(!bcryptjs.compareSync(value, user.dataValues.password)){
+           })
+           .then(usuario => {
+               if (!bcryptjs.compareSync(req.body.pass, usuario.dataValues.contraseña)){
                 return Promise.reject()
-            }
+               }
+           })
+           .catch(error => Promise.reject('El email o la contraseña es invalido'))
         })
-        .catch(() => {
-            return Promise.reject("Email o contraseña incorrecta")
+        /* .custom((value, {req}) => {
+           db.Usuarios.findOne({
+                where: {
+                    email: value,
+                }
+           })
+           .then(usuario => {
+               if (usuario && bcryptjs.compareSync(req.body.pass, usuario.contraseña)){
+                return true
+               }else{
+                return false
+               }
+           })
+           .catch(error => Promise.reject('Email o contraseña incorrectos'))
         })
-    })
-    /* .custom((value,{req}) =>{
-        
-        let usuario = usuarios.find(user => user.email === value && bcryptjs.compareSync(req.body.password, user.contraseña))
-
-        if (usuario) {
-            return true
-        }else{
-            return false
-        }
-    })
-    .withMessage('El email o la contraseña no coincide')
-    // .withMessage('El usuario no se encuentra registrado o las credenciales son invalidas')  */
+        .withMessage('El email o la contraseña es invalido') */
+        /* .custom((value, {req}) => {
+           return db.Usuarios.findOne({
+                where: {
+                    email: value,
+                }
+           })
+           .then(usuario => {
+               if (!usuario && !bcryptjs.compareSync(req.body.pass, usuario.contraseña)){
+                return promise.reject()
+               }
+           })
+           .catch(error => Promise.reject('El email o la contraseña iconrrecta'))
+        }) */
 ]

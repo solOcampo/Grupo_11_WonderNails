@@ -110,7 +110,10 @@ module.exports = {
         let session = req.session.userLogin
         /* let user = users.find(user => user.id === session?.id) */
         /* return res.send(user) */
-
+        /* db.Usuarios.findOne({
+            where: {
+                email: value,
+            }, */
         return res.render('users/perfil'/* ,{
             user,
             products
