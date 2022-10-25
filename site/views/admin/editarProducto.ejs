@@ -20,35 +20,46 @@
                         <div class="form-floating">
                             <label for="nombre">Nombre del producto</label>
                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" value="<%=producto.nombre%> " >
-                            <small>Obligatorio</small>
+                         
                         </div>
                         <div class="form-floating">
                             <label for="marca">Marca</label>
-                            <input type="text" class="form-control" name="marca" id="marca" placeholder="Marca" value="<%=producto.marca%>">
-                            <small>Obligatorio</small>
+                            <input type="text" class="form-control" name="marca" id="marca" placeholder="Marca" value="<%=producto.marca.nombre%>"> 
                         </div>
                         <div class="form-floating">
                             <label for="categoria">Categoría</label>
                             <select class="form-select" name="categoria" id="categoria"  aria-label="Floating label select example">
-                                <% categoria.forEach(category => { %>
-                                    <option value="<%= category %>" <%= producto.categoria.toLowerCase() === category.toLowerCase() ? 'selected' : null %> ><%= category %></option>
+                                <% categorias.forEach(category => { %>
+                                    <option value="<%= category %>" <%= producto.categorias === category ? 'selected' : null %> ><%= producto.category.nombre %></option>
                                   <% }) %>
                             </select>
-                            <small>Obligatorio</small>
                           </div>
                           <div class="form-floating">
                             <label for="estado">Estado</label>
                             <select class="form-select" name="estado" id="estado" aria-label="Floating label select example">
-                                <% estado.forEach(state => { %>
-                                    <option value="<%= state %>" <%= producto.estado.toLowerCase() === state.toLowerCase() ? 'selected' : null %> ><%= state %></option>
-                                  <% }) %>
+                                <% estados.forEach(state => { %>
+                                    <option value="<%= state %>" <%= producto.estados=== state ? 'selected' : null %> ><%= producto.estado.estado %></option>
+                                <% }) %>
                             </select>
-                            <small>Obligatorio</small>
+                         
                         </div>
                         <div class="form-floating">
                             <label for="color">Color</label>
-                            <input type="text" class="form-control" name="color" id="color" placeholder="Color" value="<%=producto.color%>">
-                            <small>Obligatorio</small>
+                            <input type="color" class="form-control" name="color" id="color" list="color" value="<%=producto.color ? 'selected' : null %>">
+                            <datalist id="colores">
+
+                                <option value="#00ffff">
+
+                                <option value="#ff00ff">
+
+                                <option value="#ffff00">
+
+                                <option value="#ffaa00">
+
+                            </datalist>
+                            <p class="form-floating">
+                                <%= locals.errors && errors.color ? errors.color.msg : null %>
+                            </p>
                         </div>
                         <div class="form-floating">
                             <label for="precio">Precio</label>
@@ -56,7 +67,7 @@
                         </div>
                         <div class="form-floating">
                             <label for="descuento">Descuento</label>
-                            <input type="number" class="form-control" name="descuento" id="descuento" value="0" placeholder="Descuento" value="<%=producto.descuento%>">
+                            <input type="number" class="form-control" name="descuento" id="descuento" placeholder="Descuento" value="<%=producto.descuento%>">
                         </div>
                         <div class="form-floating">
                             <label for="stock" value="1">Stock</label>
@@ -66,17 +77,89 @@
                             <label for="descripcion">Descripción </label>
                             <textarea class="form-control" name="descripcion" placeholder="Por favor inserte la descripción del producto"
                                 id="descripcion"><%=producto.descripcion%></textarea>
-                            <small>Obligatorio</small>
+                         
                         </div>
                         <div class="mb-3">
-                            <!-- <label for="imagen" class="form-label">Imágenes del producto</label>
-                            <input class="form-control" type="file" name="imagen" id="imagen" multiple > -->
-                            <label class="custom-file-upload">
-                                <input type="file" name="imagenes" id="imagenes" multiple/>
-                                Subir imágenes
-                              </label>
-                            <small>Obligatorio</small>
-                            
+
+                            <section class="img-product">
+
+                                <div class="container">
+                                    <div class="row">
+
+                                        <!-- Imagen 1 -->
+
+                                        <div class="col col-5">
+                                            <label class="custom-file-upload" for="product-img">
+                                                <img id="img-preview"
+                                                    class="img-fluid img-thumbnail imagen-height rounded"
+                                                    src="/img/Products/<%= producto.imagenes[0]%>"  alt="">
+                                                <div class="imgHover">
+                                                    <p class="text-center">Selecionar Imagen 1</p>
+                                                </div>
+                                            </label>
+                                            <div class="form-admin__box inactivo">
+                                                <input class="d-none" id="product-img" type="file" name="imagen1"
+                                                    placeholder="Imagen del Producto" accept="image/*" multiple>
+                                            </div>
+                                        </div>
+
+                                        <!-- Imagen 2 -->
+
+                                        <div class="col col-5">
+                                            <label class="custom-file-upload" for="product-sub-img-1">
+                                                <img id="sub-img-preview-1"
+                                                    class="img-fluid img-thumbnail  imagen-height rounded"
+                                                    src="/img/Products/<%= producto.imagenes[1] %>" alt="">
+                                                <div class="imgHover">
+                                                    <p class="text-center">Selecionar Imagen 2</p>
+                                                </div>
+                                            </label>
+                                            <div class="form_desciption__box inactivo">
+                                                <input class="d-none" id="product-sub-img-1" type="file" name="imagen2"
+                                                    placeholder="Imagen del Producto">
+                                            </div>
+                                        </div>
+
+                                        <!-- Imagen 3 -->
+
+                                        <div class="col col-5">
+                                            <label class="custom-file-upload" for="product-sub-img-2">
+                                                <img id="sub-img-preview-2"
+                                                    class="img-fluid img-thumbnail imagen-height rounded"
+                                                    src="/img/Products/<%= producto.imagenes[2]%>" height="auto" alt="">
+                                                <div class="imgHover">
+                                                    <p class="text-center">Selecionar Imagen 3</p>
+                                                </div>
+                                            </label>
+                                            <div class="form_desciption__box inactivo">
+                                                <input class="d-none " id="product-sub-img-2" type="file" name="imagen3"
+                                                    placeholder="Imagen del Producto">
+                                            </div>
+                                        </div>
+
+                                        <!-- Imagen 4 -->
+
+                                        <div class="col col-5">
+                                            <label class="custom-file-upload" for="product-sub-img-3">
+                                                <img id="sub-img-preview-3"
+                                                    class="img-fluid img-thumbnail imagen-height rounded"
+                                                    src="/img/Products/<%= producto.imagenes[3]%>" alt="">
+                                                <div class="imgHover">
+                                                    <p class="text-center">Selecionar Imagen 4</p>
+                                                </div>
+                                            </label>
+                                            <div class="form_desciption__box inactivo">
+                                                <input class="d-none" id="product-sub-img-3" type="file" name="imagen4"
+                                                    placeholder="Imagen del Producto">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="span text-danger">
+                                        <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                                    </p>
+                                </div>
+
+                            </section>
                         </div>
                         
                         <div class="box-buttons">
@@ -92,6 +175,7 @@
                 </form>
             </div>
         </main>
+        <script src="/javascript/imagenes.js"></script>
     </body>
 
 </html>

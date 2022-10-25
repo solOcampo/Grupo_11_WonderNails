@@ -14,7 +14,12 @@ router.get('/crear', create)
 router.post('/crear',upload.array('imagen'),productValidator,store);
 
 router.get('/editar/:id', edit)
-router.put('/editar/:id',upload.array('imagenes'),productValidator,update)
+router.put('/editar/:id',upload.fields([
+    {name:'imagen1',maxCount: 1},
+    {name:'imagen2',maxCount: 1},
+    {name:'imagen3',maxCount: 1},
+    {name:'imagen4',maxCount: 1}
+]),/* productValidator, */ update);
 
 
 /* Eliminando un producto */

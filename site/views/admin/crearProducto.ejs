@@ -143,7 +143,7 @@
                         </div>
                         <div class="form-floating">
                             <label for="descripcion">Descripción</label>
-                            <textarea name="descripcion" id="description" cols="300" rows="300" class="form-control"
+                            <textarea name="descripcion" id="descripcion" cols="300" rows="300" class="form-control"
                                 placeholder="Descripcion del producto"
                                 style="resize: none;"><%= locals.old && old.descripcion ? old.descripcion : null%></textarea>
                             <p class="span text-danger">
@@ -151,9 +151,9 @@
                             </p>
                         </div>
                         <div class="mb-3">
-                            <label for="imagen" class="form-label">Imágenes del producto</label>
+                            <!-- <label for="imagen" class="form-label">Imágenes del producto</label> -->
                             <!-- <input class="form-control" type="file" name="imagen" id="imagen" multiple> -->
-                            <label class="custom-file-upload">
+                            <label class="custom-file-upload2">
                                 <input type="file" name="imagen" id="imagen" multiple />
                                 Subir imágenes
                             </label>

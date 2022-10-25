@@ -45,8 +45,8 @@ module.exports = {
     search: (req, res) => {
         let elemento = req.query.search
         let estado = req.params.estado
-        let productossearch = productos.filter((product) => product.estado === estado)
-        if(estado === productos[0].estado){
+        let productossearch = productoss.filter((product) => product.estado === estado)
+        if(estado === productoss[0].estado){
             return res.render('buscar',{
                 productossearch,
                 estado
@@ -55,7 +55,7 @@ module.exports = {
         
    
 
-        let resultados = productos.filter(producto => {
+        let resultados = productoss.filter(producto => {
             return producto.marca === elemento.toLowerCase() || (producto.nombre.toLowerCase().includes(elemento.toLowerCase())) /* || (producto.descripcion.toLowerCase().includes(elemento.toLowerCase())) */
         })
         
