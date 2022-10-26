@@ -90,6 +90,8 @@ module.exports = {
                 name : user.nombre,
                 lastname : user.apellido,
                 email: user.email,
+                image_profil: user.imagen_perfil,
+                image_frontPage: user.imagen_portada,
                 rol : user.rolId // la base de datos trae un id, lo que crea conflicto en otros lados
             }                   // ya que se comprueba por la descripcion y no por el id 
             if(recordarme){
@@ -113,9 +115,9 @@ module.exports = {
         let user = db.Usuarios.findOne({
             where: { email : session.email }
         })
-        return res.send(user)
         return res.render('users/perfil',{
-            user
+            user,
+            session
         })
     },
     changeProfilPic: (req, res) => {
