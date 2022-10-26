@@ -25,8 +25,8 @@ module.exports = (sequelize, DataTypes) => {
     generoId: DataTypes.INTEGER,
     dni: DataTypes.BIGINT,
     rolId: DataTypes.INTEGER,
-    imagen_Perfil: DataTypes.STRING,
-    imagen_Portada: DataTypes.STRING
+    imagen_perfil: DataTypes.STRING,
+    imagen_portada: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Usuarios',

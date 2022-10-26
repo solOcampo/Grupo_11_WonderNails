@@ -29,8 +29,8 @@ module.exports = {
                 contraseña: bcrypt.hashSync(password, 10),
                 generoId: 2, // generoId y rolId se envian de forma obligatoria
                 rolId: 2 ,  // porque la base de datos los requiere para su carga
-                imagen_Perfil: "avatar-porDefecto.png",
-                imagen_Portada: "portada-porDefecto.png"    
+                imagen_perfil: "avatar-porDefecto.png",
+                imagen_portada: "portada-porDefecto.png"    
             })
 
             console.log(user)
@@ -90,7 +90,7 @@ module.exports = {
                 name : user.nombre,
                 lastname : user.apellido,
                 email: user.email,
-                rol : 'usuario' // la base de datos trae un id, lo que crea conflicto en otros lados
+                rol : user.rolId // la base de datos trae un id, lo que crea conflicto en otros lados
             }                   // ya que se comprueba por la descripcion y no por el id 
             if(recordarme){
                 res.cookie('rememberMe', req.session.userLogin,{
@@ -110,14 +110,13 @@ module.exports = {
         let session = req.session.userLogin
         /* let user = users.find(user => user.id === session?.id) */
         /* return res.send(user) */
-        /* db.Usuarios.findOne({
-            where: {
-                email: value,
-            }, */
-        return res.render('users/perfil'/* ,{
-            user,
-            products
-        } */)
+        let user = db.Usuarios.findOne({
+            where: { email : session.email }
+        })
+        return res.send(user)
+        return res.render('users/perfil',{
+            user
+        })
     },
     changeProfilPic: (req, res) => {
         let session = req.session.userLogin
