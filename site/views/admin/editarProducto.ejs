@@ -24,13 +24,34 @@
                         </div>
                         <div class="form-floating">
                             <label for="marca">Marca</label>
-                            <input type="text" class="form-control" name="marca" id="marca" placeholder="Marca" value="<%=producto.marca.nombre%>"> 
+                            <select class="form-select" name="marca" id="marca"
+                                aria-label="Floating label select example">
+                                <% if (locals.errors && old.marca) { %>
+                                    <option hidden value="">Selecciona una opcion</option>
+                                    <% marcas.forEach(marca => { %>
+                                        <% if (marca.id == old.marca) { %>
+                                            <option value="<%= marca.id %>" selected><%= marca.nombre %></option>
+                                        <% }else{ %>
+                                            <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                                        <% } %>
+                                        <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                                    <% }) %>
+                                <% }else{ %>
+                                    <option selected hidden value="">Selecciona una opcion</option>
+                                    <% marcas.forEach(marca => { %>
+                                        <option value="<%= marca.id %>" <%= producto.marcasid === marca.id ? "selected" : null %>><%= marca.nombre %></option>
+                                    <% }) %>
+                                <% } %> 
+                            </select>
+                            <% if (locals.errors && errors.marca) { %>
+                                <p class="span text-danger"><%= errors.marca.msg %></p>
+                            <% } %>
                         </div>
                         <div class="form-floating">
                             <label for="categoria">Categoría</label>
                             <select class="form-select" name="categoria" id="categoria"  aria-label="Floating label select example">
                                 <% categorias.forEach(category => { %>
-                                    <option value="<%= category %>" <%= producto.categorias === category ? 'selected' : null %> ><%= producto.category.nombre %></option>
+                                    <option value="<%= category.id %>" <%= producto.categoriasid === category.id ? 'selected' : null %> ><%= producto.category.nombre %></option>
                                   <% }) %>
                             </select>
                           </div>
@@ -38,7 +59,7 @@
                             <label for="estado">Estado</label>
                             <select class="form-select" name="estado" id="estado" aria-label="Floating label select example">
                                 <% estados.forEach(state => { %>
-                                    <option value="<%= state %>" <%= producto.estados=== state ? 'selected' : null %> ><%= producto.estado.estado %></option>
+                                    <option value="<%= state.id %>" <%= producto.estadosid=== state.id ? 'selected' : null %> ><%= producto.estado.estado %></option>
                                 <% }) %>
                             </select>
                          
@@ -91,8 +112,7 @@
                                         <div class="col col-5">
                                             <label class="custom-file-upload" for="product-img">
                                                 <img id="img-preview"
-                                                    class="img-fluid img-thumbnail imagen-height rounded"
-                                                    src="/img/Products/<%= producto.imagenes[0]%>"  alt="">
+                                                    class="img-fluid img-thumbnail imagen-height rounded" src="/img/Products/<%= producto.imagenes[0]%>"  alt="">
                                                 <div class="imgHover">
                                                     <p class="text-center">Selecionar Imagen 1</p>
                                                 </div>
@@ -109,7 +129,7 @@
                                             <label class="custom-file-upload" for="product-sub-img-1">
                                                 <img id="sub-img-preview-1"
                                                     class="img-fluid img-thumbnail  imagen-height rounded"
-                                                    src="/img/Products/<%= producto.imagenes[1] %>" alt="">
+                                                    src="/img/Products/<%= producto.imagenes[1]%>" alt="">
                                                 <div class="imgHover">
                                                     <p class="text-center">Selecionar Imagen 2</p>
                                                 </div>
