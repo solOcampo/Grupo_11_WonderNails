@@ -16,7 +16,31 @@ window.addEventListener('load', () => {
     let inputPass2 = $('#password2')
     let terminos = $('#terminos')
 
-    let errores = []
+    let errores = [{
+        id: 1,
+        elemento: "nombre",
+        mensaje: "Este campo es obligatorio"
+    },{
+        id: 2,
+        elemento: "apellido",
+        mensaje: "Falta el apellido"
+    },{
+        id: 3,
+        elemento:"email",
+        mensaje:  "Este campo es obligatorio"
+    },{
+        id: 4,
+        elemento:"inputPass",
+        mensaje: "Este campo es obligatorio"
+    },{
+        id: 5,
+        elemento:"inputPass2",
+        mensaje: "Debe confirmar su contraseña"
+    },{
+        id: 6,
+        elemento:"checkbox",
+        mensaje: "Debe aceptar los terminos y condiciones"
+    }]
 
     let eye = $('#eye-pass')
     let eye2 = $('#eye-pass2')
