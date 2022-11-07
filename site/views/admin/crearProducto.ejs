@@ -22,7 +22,7 @@
                             <input type="text" class="form-control" name="nombre" id="nombre"
                                 value="<%= locals.old && old.nombre ? old.nombre : null%>"
                                 placeholder="Nombre del producto">
-                            <p class="span text-danger">
+                            <p class="span text-danger" id="nombreError">
                                 <%= locals.errors && errors.nombre ? errors.nombre.msg : null %>
                             </p>
                         </div>
@@ -48,7 +48,7 @@
                                 <% } %> 
                             </select>
                             <% if (locals.errors && errors.marca) { %>
-                                <p class="span text-danger"><%= errors.marca.msg %></p>
+                                <p class="span text-danger" id="marcaError"><%= errors.marca.msg %></p>
                             <% } %>
                         </div>
                         <div class="form-floating">
@@ -168,7 +168,7 @@
                                 <button type="reset">Borrar</button>
                             </div>
                             <div class="button crear">
-                                <button class="btn btn-outline-success" type="submit">Crear</button>
+                                <button class="btn btn-outline-success" id="btn-submit" type="submit">Crear</button>
                             </div>
                         </div>
 
@@ -176,6 +176,8 @@
                 </form>
             </div>
         </main>
+        <script src="/javascript/productosValidator.js"></script>
+
     </body>
 
 </html>

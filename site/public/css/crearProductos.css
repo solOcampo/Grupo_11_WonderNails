@@ -30,6 +30,36 @@
 .crear .divForm form .form-floating select{
     width: 300px;
 }
+
+/* .crear .is-valid{
+    
+} */
+/* .is-valid::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    bottom: 25px;
+    margin: 0 10px;
+    color: green;
+  }
+
+  input[type="text"]:checked {
+    background-color: #e73f3f;
+  }
+.is-invalid::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f057";
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    bottom: 25px;
+    margin: 0 10px;
+    color: red;
+  } */
 .crear .divForm form .form-floating label, .crear .divForm form .mb-3 .form-label{
     text-transform: uppercase;
     font-weight: 600;
