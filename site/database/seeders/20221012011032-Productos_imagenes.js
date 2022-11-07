@@ -5,25 +5,25 @@ let imagenes = []
 listado.forEach(producto => {
   let imagen = {
     nombre: producto.imagen[0],
-    productosid: producto.id,
+    idproductos: producto.id,
     createdAt:new Date,
     updatedAt:new Date
   }
   let imagen2 = {
     nombre: producto.imagen[1],
-    productosid: producto.id,
+    idproductos: producto.id,
     createdAt:new Date,
     updatedAt:new Date
   }
   let imagen3 = {
     nombre: producto.imagen[2],
-    productosid: producto.id,
+    idproductos: producto.id,
     createdAt:new Date,
     updatedAt:new Date
   }
   let imagen4 = {
     nombre: producto.imagen[3],
-    productosid: producto.id,
+    idproductos: producto.id,
     createdAt:new Date,
     updatedAt:new Date
   }

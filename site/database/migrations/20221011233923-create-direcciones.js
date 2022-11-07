@@ -32,7 +32,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER
       },
-      Usuario_id:{
+      usuarioId:{
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {

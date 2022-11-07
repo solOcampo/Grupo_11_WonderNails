@@ -13,6 +13,10 @@ module.exports = (sequelize, DataTypes) => {
       Usuarios.belongsTo(models.Roles,{
         as: 'rol',
         foreignKey: 'rolId'
+      }),
+      Usuarios.belongsTo(models.Direcciones,{
+        as: 'direccion',
+        foreignKey: 'direccionId'
       })
     }
   }
