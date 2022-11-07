@@ -28,13 +28,28 @@
                         </div>
                         <div class="form-floating">
                             <label for="marca">Marca</label>
-                            <input type="text" class="form-control" name="marca" id="marca"
-                                value="<%= locals.old && old.marca ? old.marca : null%>" placeholder="Marca">
+                            <select class="form-select" name="marca" id="marca"
+                                aria-label="Floating label select example">
+                                <% if (locals.errors && old.marca) { %>
+                                    <option hidden value="">Selecciona una opcion</option>
+                                    <% marcas.forEach(marca => { %>
+                                        <% if (marca.id == old.marca) { %>
+                                            <option value="<%= marca.id %>" selected><%= marca.nombre %></option>
+                                        <% }else{ %>
+                                            <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                                        <% } %>
+                                        <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                                    <% }) %>
+                                <% }else{ %>
+                                    <option selected hidden value="">Selecciona una opcion</option>
+                                    <% marcas.forEach(marca => { %>
+                                        <option value="<%= marca.id %>"><%= marca.nombre %></option>
+                                    <% }) %>
+                                <% } %> 
+                            </select>
                             <% if (locals.errors && errors.marca) { %>
-                                <p class="span text-danger">
-                                    <%= errors.marca.msg %>
-                                </p>
-                                <% } %>
+                                <p class="span text-danger"><%= errors.marca.msg %></p>
+                            <% } %>
                         </div>
                         <div class="form-floating">
                             <label for="categoria">Categoría</label>
@@ -42,39 +57,20 @@
                                 aria-label="Floating label select example">
                                 <% if (locals.errors && old.categoria){ %>
                                     <option hidden value="">Selecciona una opcion</option>
-                                    <option <%=old.categoria==="Esmaltado" ? "selected" : null %>
-                                        value="Esmaltado">Esmaltado</option>
-                                    <option <%=old.categoria==="Esmaltado Semipermanente" ? "selected" : null %>
-                                        value="Esmaltado Semipermanente">Esmaltado Semipermanente</option>
-                                    <option <%=old.categoria==="Construcción de uñas" ? "selected" : null %>
-                                        value="Construcción de uñas">Construcción de uñas</option>
-                                    <option <%=old.categoria==="Decoración" ? "selected" : null %>
-                                        value="Decoración">Decoración</option>
-                                    <option <%=old.categoria==="Esmaltes" ? "selected" : null %>
-                                        value="Esmaltes">Esmaltes</option>
-                                    <option <%=old.categoria==="Herramientas" ? "selected" : null %>
-                                        value="Herramientas">Herramientas</option>
-                                    <option <%=old.categoria==="Accesorios" ? "selected" : null %>
-                                        value="Accesorios">Accesorios</option>
-                                    <option <%=old.categoria==="Aparatos" ? "selected" : null %>
-                                        value="Aparatos">Aparatos</option>
-                                    <option <%=old.categoria==="Cuidado de Manos y Pies" ? "selected" : null %>
-                                        value="Cuidado de Manos y Pies">Cuidado de Manos y Pies</option>
-                                    <option <%=old.categoria==="Maquillaje" ? "selected" : null %>
-                                        value="Maquillaje">Maquillaje</option>
-
+                                    <option <%= old.categoria == "1" ? "selected" : null %>  value="Esmaltado Semipermanente">Esmaltado Semipermanente</option>
+                                    <option <%= old.categoria == "2" ? "selected" : null %>  value="Construcción de uñas">Construcción de uñas</option>
+                                    <option <%= old.categoria == "3" ? "selected" : null %>  value="Decoración">Decoración</option>
+                                    <option <%= old.categoria == "4" ? "selected" : null %>  value="Esmaltes">Esmaltes</option>
+                                    <option <%= old.categoria == "5" ? "selected" : null %>  value="Herramientas">Herramientas</option>
+                                    <option <%= old.categoria == "6" ? "selected" : null %>  value="Accesorios">Accesorios</option>
+                                    <option <%= old.categoria == "7" ? "selected" : null %>  value="Aparatos">Aparatos</option>
+                                    <option <%= old.categoria == "8" ? "selected" : null %>  value="Cuidado de Manos y Pies">Cuidado de Manos y Pies</option>
+                                    <option <%= old.categoria == "9" ? "selected" : null %>  value="Maquillaje">Maquillaje</option>
                                     <% } else { %>
-                                        <option selected hidden>Selecciona una opcion</option>
-                                        <option value="Esmaltado">Esmaltado</option>
-                                        <option value="Esmaltado Semipermanente">Esmaltado Semipermanente</option>
-                                        <option value="Construcción de uñas">Construcción de uñas</option>
-                                        <option value="Decoración">Decoración</option>
-                                        <option value="Esmaltes">Esmaltes</option>
-                                        <option value="Herramientas">Herramientas</option>
-                                        <option value="Accesorios">Accesorios</option>
-                                        <option value="Aparatos">Aparatos</option>
-                                        <option value="Cuidado de Manos y Pies">Cuidado de Manos y Pies</option>
-                                        <option value="Maquillaje">Maquillaje</option>
+                                        <option selected hidden value="">Selecciona una opcion</option>
+                                        <% categorias.forEach(categoria => { %>
+                                            <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                                        <% }) %>
                                         <%}%>
                             </select>
                             <p class="form-floating">
@@ -82,22 +78,20 @@
                             </p>
                         </div>
                         <div class="form-floating">
-                            <label for="categoria">Subategoría</label>
+                            <label for="categoria">Subctegoría</label>
                             <select class="form-select" name="estado" id="estado"
                                 aria-label="Floating label select example">
                                 <% if (locals.errors && old.estado){ %>
                                     <option hidden value="">Selecciona una opcion</option>
-                                    <option <%=old.estado==="Nuevo" ? "selected" : null %>
-                                        value="Nuevo">Nuevo</option>
-                                    <option <%=old.estado==="Oferta" ? "selected" : null %>
-                                        value="Oferta">Oferta</option>
-                                    <option <%=old.estado==="Favoritos" ? "selected" : null %>
-                                        value="Favoritos">Favoritos</option>
+                                    <option <%= old.estado == "1" ? "selected" : null %>  value="Nuevo">Nuevo</option>
+                                    <option <%= old.estado == "1" ? "selected" : null %>  value="Oferta">Oferta</option>
+                                    <option <%= old.estado == "1" ? "selected" : null %>  value="Favorito">Favorito</option>
+ 
                                     <% } else { %>
-                                        <option selected hidden>Selecciona una opcion</option>
-                                        <option value="Nuevo">Nuevo</option>
-                                        <option value="Oferta">Oferta</option>
-                                        <option value="Favoritos">Favoritos</option>
+                                        <option selected hidden value="">Selecciona una opcion</option>
+                                        <% estados.forEach(estado => { %>
+                                            <option value="<%= estado.id %>"><%= estado.estado %></option>
+                                        <% }) %>
                                         <%}%>
                             </select>
                             <p class="form-floating">
@@ -149,7 +143,7 @@
                         </div>
                         <div class="form-floating">
                             <label for="descripcion">Descripción</label>
-                            <textarea name="descripcion" id="description" cols="300" rows="300" class="form-control"
+                            <textarea name="descripcion" id="descripcion" cols="300" rows="300" class="form-control"
                                 placeholder="Descripcion del producto"
                                 style="resize: none;"><%= locals.old && old.descripcion ? old.descripcion : null%></textarea>
                             <p class="span text-danger">
@@ -157,9 +151,9 @@
                             </p>
                         </div>
                         <div class="mb-3">
-                            <label for="imagen" class="form-label">Imágenes del producto</label>
+                            <!-- <label for="imagen" class="form-label">Imágenes del producto</label> -->
                             <!-- <input class="form-control" type="file" name="imagen" id="imagen" multiple> -->
-                            <label class="custom-file-upload">
+                            <label class="custom-file-upload2">
                                 <input type="file" name="imagen" id="imagen" multiple />
                                 Subir imágenes
                             </label>

@@ -25,13 +25,34 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       categoriasid: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: 'Categorias'
+          },
+          key: 'id'
+        }, 
       },
       marcasid: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: 'Marcas'
+          },
+          key: 'id'
+        }, 
       },
       estadosid: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: 'Estados'
+          },
+          key: 'id'
+        }, 
       },
       createdAt: {
         allowNull: false,

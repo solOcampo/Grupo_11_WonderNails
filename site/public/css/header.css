@@ -61,6 +61,7 @@ header .users .icons a{
     font-size: 15px;
 }
 header nav .icons a {
+    color: white;
     margin: 5px;
 }
 

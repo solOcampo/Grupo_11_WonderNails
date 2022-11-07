@@ -10,7 +10,7 @@
   <main class="register">
     <!-- Formulario de registro -->
     <div class="form_wrapper">
-      <form action="/usuarios/perfil" method="post">
+      <form action="/usuarios/perfil" method="post" id="FormRegister">
         <h1>Registrate</h1>
         <div class="text name">
           <div class="email_input">
@@ -18,6 +18,7 @@
               <i class="fas fa-user"></i>
             </div>
             <input class="input" type="text" name="name" id="name" placeholder="Nombre" value="<%= locals.old && old.name ? old.name : null%>">
+            <div id="nameContainer"></div>
             <% if (locals.errors && errors.name) { %>
               <small class="error"><%= errors.name.msg %> </small>
             <% } %>
@@ -29,6 +30,7 @@
               <i class="fas fa-user-plus"></i>
             </div>
             <input class="input" type="text" name="lastname" id="lastname" placeholder="Apellido" value="<%= locals.old && old.lastname ? old.lastname : null %>">
+            <div id="lastnameContainer"></div>
             <% if (locals.errors && errors.lastname) { %>
               <small class="error"><%= errors.lastname.msg %> </small>
             <% } %>
@@ -39,7 +41,8 @@
             <div class="icon">
               <i class="icon fas fa-envelope"></i>
             </div>
-            <input class="input" type="text" name="email" id="email" placeholder="E-mail" value="<%= locals.old && old.email ? old.email : null %>">
+            <input class="input" type="text" name="email" id="Email" placeholder="E-mail" value="<%= locals.old && old.email ? old.email : null %>">
+            <div id="emailContainer"></div>
             <% if (locals.errors && errors.email) { %>
               <small class="error"><%= errors.email.msg %> </small>
             <% } %>
@@ -51,10 +54,12 @@
               <i class="icon fas fa-lock"></i>
             </div>
             <input class="input" type="password" name="password" id="password" placeholder="Contraseña">
+            <div id="passwordContainer"></div>
             <% if (locals.errors && errors.password) { %>
               <small class="error"><%= errors.password.msg %> </small>
             <% } %>
           </div>
+          <i class="fas fa-eye-slash" id="eye-pass"></i>
         </div>
         <div class="text password">
           <div class="email_input">
@@ -62,15 +67,20 @@
               <i class="icon fas fa-lock"></i>
             </div>
             <input class="input" type="password" name="password2" id="password2" placeholder="Reingrese su contraseña">
+            <div id="passwordContainer2"></div>
             <% if (locals.errors && errors.password2) { %>
               <small class="error"><%= errors.password2.msg %> </small>
             <% } %>
+          </div>
+          <div class="icon">
+            <i class="fas fa-eye-slash" id="eye-pass2"></i>
           </div>
         </div>
         <div class="text password">
           <div class="terminos">
             <input class="input" type="checkbox" name="terminos" id="terminos">
             <label for="termino">Acepto los <a href="">términos y condiciones</a> del sitio</label>
+            <div id="terminosContainer"></div>
             <% if (locals.errors && errors.terminos) { %>
               <small class="error"><%= errors.terminos.msg %> </small>
             <% } %>
@@ -93,7 +103,7 @@
             <img src="/images/Rectangle 29.svg">
           </div>
           <div class="access_text">
-            <small>O accede con</small>
+            <small class="app">O accede con</small>
           </div>
           <div>
             <div class="Access2">
@@ -142,6 +152,8 @@
   </main>
   
   <%- include ('../partials/footer') %> 
+  <script src="/javascript/registerValidator.js"></script>
+
 
 
 </body>

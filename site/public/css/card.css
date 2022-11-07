@@ -10,6 +10,7 @@
     position: relative;
     margin-left: 10px;
 }
+
 .card .card-img .card-img-background{
     height: 250px;
     background-repeat: no-repeat;
@@ -19,6 +20,7 @@
 .card .card-name{
     text-align: center;
 }
+
 .card .card-value{
     display: flex;
     justify-content: space-evenly;
@@ -30,6 +32,7 @@
     color: var(--rosaOscuro);
 }
 .card .card-price{
+   color:var(--grisOscuro);
     font-size: 30px;
 }
 .card .card-button{

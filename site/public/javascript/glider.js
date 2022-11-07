@@ -31,7 +31,7 @@
   var Glider = (_window.Glider = function (element, settings) {
     var _ = this
 
-    if (element._glider) return element._glider
+    if (element.glider) return element.glider
 
     _.ele = element
     _.ele.classList.add('glider')

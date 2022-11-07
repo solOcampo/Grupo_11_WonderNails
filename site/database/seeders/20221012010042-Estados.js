@@ -1,6 +1,5 @@
 'use strict';
 
-/** @type {import('sequelize-cli').Migration} */
 let listado= ["Oferta", "Favoritos", "Nuevo" ]
 let estados=listado.map(estado=>{
   let elemento ={

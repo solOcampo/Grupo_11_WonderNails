@@ -112,5 +112,23 @@
         "rol": "Usuario",
         "imagenPerfil": "avatar-porDefecto.png",
         "imagenPortada": "avatar-porDefecto.png"
+    },
+    {
+        "id": 7,
+        "name": "Micaela",
+        "lastname": "Loureiro",
+        "email": "micaela_loureiro@hotmail.com",
+        "password": "$2a$10$tJOXIrR80I7QA88JbQoNFeqfI6Y2FqPnc7DAbMBb5XykPgR4LnjSC",
+        "rol": "Administrador",
+        "imagen": "avatar-1665860782216.jpg"
+    },
+    {
+        "id": 8,
+        "name": "ana",
+        "lastname": "lisame",
+        "email": "analisamelo@gmail.com",
+        "password": "$2a$10$UJATOF7nER/o76scMQja2uybof2Kegzq4iv0p8CfCxLmH6j5VaRdO",
+        "rol": "Administrador",
+        "imagen": "avatar-porDefecto.png"
     }
 ]

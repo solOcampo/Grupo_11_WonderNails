@@ -14,6 +14,7 @@ const userLogin = require("./middlewares/userLoginCheck");
 const adminCheck = require("./middlewares/adminCheck");
 
 
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -40,6 +41,8 @@ let indexRouter = require("./routes/index");
 let adminRouter = require("./routes/admin");
 let productosRouter = require("./routes/productos");
 let usuariosRouter = require("./routes/usuarios");
+// api
+let apiRouter = require('./routes/api/api')
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -48,6 +51,8 @@ app.use("/", indexRouter);
 app.use("/usuarios", usuariosRouter);
 app.use("/productos", productosRouter);
 app.use("/admin", adminCheck, adminRouter);
+// api
+app.use('/api',apiRouter);
 
 /* app.use(function(req, res, next) {
   res.status(404).render('partials/error');

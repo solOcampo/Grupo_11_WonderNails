@@ -15,9 +15,9 @@ module.exports = [
   check('categoria').trim()
     .notEmpty().withMessage('Debe seleccionar una categoria'),
 
-  // /* Estado */
-  // check('estado').trim()
-  //   .notEmpty().withMessage('Debe seleccionar un estado'),
+  /* Estado */
+  check('estado').trim()
+    .notEmpty().withMessage('Debe seleccionar un estado'),
 
   /* Color */
   check('color').trim()
