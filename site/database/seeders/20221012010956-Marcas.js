@@ -1,6 +1,5 @@
 'use strict';
 
-/** @type {import('sequelize-cli').Migration} */
 let listado=["Thuya","Meliné","Anush","Collage","Exel","WPRO","Teknikpro","Wonder Nails","Mundial","Palladio", "Pinnacle","Nailway","TeknikStyle","Mohr Inc","Sally Hansen","Note","Pink Mask"]
 let marcas=listado.map(marca=>{
 let elemento ={

@@ -12,7 +12,7 @@ module.exports = [
     .isLength({min:3}).withMessage('Debe contener al menos 3 caracteres'),
     
     /* email */
-    check('email').trim()
+    check('Email').trim()
     .notEmpty().withMessage('Debe ingresa su email')
     .isEmail().withMessage('Debe ingresar un email valido'),
     

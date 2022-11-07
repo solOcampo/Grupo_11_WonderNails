@@ -79,9 +79,10 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Marca</th>
-                        <th scope="col">Titulo</th>
+                        <th scope="col">Nombre</th>
                         <th scope="col">Descripcion</th>
                         <th scope="col">Precio</th>
+                        <th scope="col">Descuento</th>
                         <th scope="col">stock</th>
                         <th scope="col">Accion</th>
                     </tr>
@@ -93,10 +94,10 @@
                                     <%= producto.id %>
                                 </a></th>
                             <td><a href="/admin/editar/<%= producto.id %>">
-                                    <%= producto.marca %>
+                                    <%= producto.marca.nombre %>
                                 </a></td>
                             <td><a href="/admin/editar/<%= producto.id %>">
-                                    <%= producto.titulo %>
+                                    <%= producto.nombre %>
                                 </a></td>
                             <td colspan="1"><a href="/admin/editar/<%= producto.id %>">
                                     <%= producto.descripcion %>
@@ -104,9 +105,13 @@
                             <td><a href="/admin/editar/<%= producto.id %> ">
                                     <%= producto.precio %>
                                 </a></td>
+                                <td><a href="/admin/editar/<%= producto.id %> ">
+                                    <%= producto.descuento %>
+                                </a></td>
                             <td><a href="/admin/editar/<%= producto.id %> ">
                                     <%= producto.stock %>
                                 </a></td>
+                                
                             <td>
                                 <div>
                                     <a href="/admin/editar/<%= producto.id%>">

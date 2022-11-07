@@ -70,6 +70,14 @@
 }
 
 .custom-file-upload {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.custom-file-upload2:hover{
+    background-color: var(--gris);
+    color: var(--grisMedio);
+}
+.custom-file-upload2 {
     border: 1px solid var(--grisMedio);
     border-radius: 10px;
     box-shadow: 1px 0 1px var(--grisMedio);
@@ -83,6 +91,10 @@
 }
 .custom-file-upload:hover{
     background-color: var(--gris);
+    color: var(--grisMedio);
+}
+.crear .imgHover p{
+    font-size: 13px;
     color: var(--grisMedio);
 }
 .crear .divForm form .box-buttons{
@@ -110,6 +122,14 @@
 .crear .divForm form .box-buttons .borrar button:hover{
     background-color: var(--gris);
     color: var(--grisMedio);
+}
+
+.crear .row{
+display: flex;
+}
+.crear img{
+    width: 100px;
+    height: 100px;
 }
 .crear .form-floating p{
     color:var(--rojoError)
@@ -145,5 +165,8 @@
     .crear .divForm form textarea{
         width: 100%;
         height: 100px;
+    }
+    .crear .divForm form section .img-product{
+        width: 100%;
     }
 }

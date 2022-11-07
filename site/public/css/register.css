@@ -34,6 +34,7 @@
  }
 
  .register form .text .email_input {
+  display: table-caption;
    height: 50px;
    width: 100%;
    position: relative;
@@ -53,7 +54,7 @@
    border: none;
  }
 
- .register form .error {
+ .register form small {
    font-size: 10px;
    display: flex;
    margin-top: 5px;
@@ -130,14 +131,26 @@
    bottom: 27px;
  }
 
- .register .access_text {
-   bottom: 10px;
-   font-size: 11px;
-   color: var(--grisMedio);
-   font-family: var(--fuenteSubtitulos);
-   font-weight: bold;
-   position: relative;
+ .register .access_text small.app {
+  bottom: 10px;
+  color: var(--grisMedio);
+  font-family: var(--fuenteSubtitulos);
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  justify-content: center;
 
+ }
+ .register form .text  #eye-pass.fas.fa-eye-slash, #eye-pass2.fas.fa-eye-slash{
+  bottom: 2rem;
+  position: relative;
+  left: 8.8rem;
+
+ }
+ .register form .text .fa-eye:before{
+  bottom: 2rem;
+  position: relative;
+  left: 8.8rem;
  }
  .register form .terminos{
   margin-top: 15px;

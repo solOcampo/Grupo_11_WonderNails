@@ -1,6 +1,5 @@
 'use strict';
 
-/** @type {import('sequelize-cli').Migration} */
 let listado=["Aparatos","Esmaltado Semipermanente","Contrucción de Uñas","Esmaltado","Decoración","Herramientas","Accesorios", "Aparatos","Cuidado de Manos y Pies","Maquillaje","Esmaltes"]
 
 let categorias=listado.map(categoria=>{
