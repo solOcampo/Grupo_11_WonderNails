@@ -25,6 +25,8 @@ app.use(express.static(path.resolve(__dirname, "public")));
 app.use(
   session({
     secret: "Wonder Nails",
+    resave: true,
+    saveUninitialized: false
   })
 );
 

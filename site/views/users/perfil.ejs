@@ -12,7 +12,7 @@
                     <div class="sombra"> </div>
                     <div class="avatar-perfil">
                         
-                        <img src="/img/users/<%= session.image_profil %> " alt="">
+                        <img src="/img/users/<%= session.image_profil %> " alt="Imagen de perfil">
                         <a id="btn-abrir-popup">
                             <div class="cambiar-foto">
                             <i class="fas fa-camera"></i> 
@@ -76,13 +76,13 @@
                             </div>
                         </label>
                         <div class="form-admin__box inactivo">
-                            <input class="d-none" id="product-img" type="file" name="imagenPerfil" placeholder="Imagen del Producto" accept="image/*" multiple>
+                            <input class="d-none" id="product-img" type="file" name="imagenPerfil" placeholder="Imagen del Producto" accept="image/*">
                         </div>
                     </div>
                     <button class="btn-submit" type="submit">Guardar</button>
                 </form>
             </div>
-        <div class="overlay" id="overlay">
+        <!-- <div class="overlay" id="overlay">
             <div class="popup" id="popup">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                 <h3>Cambiar foto de perfil</h3>
@@ -90,7 +90,7 @@
                     <div class="col col-5">
                         <label class="selectImg"class="form-label" for="product-img">
                             <div class="box-img">
-                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/users/<%= user.imagen_perfil %>" alt="">
+                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/users/" alt="">
                             </div>
                         </label>
                         <div class="form-admin__box inactivo">
@@ -100,7 +100,7 @@
                     <button class="btn-submit" type="submit">Guardar</button>
                 </form>
             </div>
-        </div>
+        </div> -->
         <!-- <div class="content" id="content">
             <span><%= locals.errors && errors.imagenPerfil ? errors.imagenPerfil.msg : null%>  </span>
         </div> -->

@@ -121,35 +121,52 @@ module.exports = {
         })
     },
     changeProfilPic: (req, res) => {
-        let session = req.session.userLogin
-        let id = +session.id
-
         let errors = validationResult(req)
+        
+        if(errors.isEmpty){
+            let usuario = db.Usuarios.findByPk(+req.session.userLogin.id)
+            .then((usuario) => {
 
-        if(req.fileValidationError) {
-            let imagenPerfil = {
-                param : "imagenPerfil",
-                msg : req.fileValidationError
-            }
-            errors.errors.push(imagenPerfil)
-        }
-        if (errors.isEmpty()){
-            users.forEach(user => {
-                if (user.id === id) {
-                    /* return res.send(user) */
-                    let ruta = fs.existsSync(path.join(__dirname, '..', 'public', 'img', 'users', user.imagen))
-                    if(ruta && req.file.filename  !== user.imagen&& user.imagen !== "avatar-porDefecto.png"){
-                        fs.unlinkSync(path.join(__dirname, '..', 'public', 'img', 'users', user.imagen))
-                    }
-                    user.imagen = req.file ? req.file.filename : user.imagen
-                    /* funciona pero cuando borra la foto anterior, cierra la sesion */
+                let ruta = fs.existsSync(path.join(__dirname, '..', 'public', 'img', 'users', usuario.imagen_perfil))
+                if(ruta && req.files.imagenPerfil[0].filename  !== usuario.imagen_perfil && usuario.imagen_perfil !== "avatar-porDefecto.png"){
+                    fs.unlinkSync(path.join(__dirname, '..', 'public', 'img', 'users', usuario.imagen_perfil))
                 }
-            })
-            saves(users);
-            return res.redirect('/usuarios/perfil');
 
-        }else{
-            return res.send(errors.mapped())
+                let profilePicture
+                profilePicture = req.files ? req.files.imagenPerfil[0].filename : usuario.imagen_perfil
+            
+                db.Usuarios.update({
+                    imagen_perfil : profilePicture
+                },{
+                    where :{ id:+req.session.userLogin.id}
+                }) 
+                req.session.userLogin = {
+                    id : usuario.id,
+                    name : usuario.nombre,
+                    lastname : usuario.apellido,
+                    email: usuario.email,
+                    image_profil: usuario.imagen_perfil,
+                    image_frontPage: usuario.imagen_portada,
+                    rol : usuario.rolId    
+                }  
+                if(req.cookies.rememberMe){
+                    res.cookie('rememberMe','',{maxAge: -1});
+                    res.cookie('rememberMe', req.session.userLogin,{
+                        maxAge: 1000 * 60 * 60 * 24 * 30
+                    })
+                }
+                req.session.save( (err) => {
+                    req.session.reload((err) => {
+                        return res.redirect('perfil')
+
+                    });
+                });
+            })
+
+            .catch(errors => res.send(errors))
+        
+            }else{
+                return res.send(errors.mapped())
             return res.render('/usuarios/perfil',{
                 errors : errors.mapped(),
                 old : req.body
