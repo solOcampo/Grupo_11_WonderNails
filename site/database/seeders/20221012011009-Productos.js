@@ -13,21 +13,21 @@ listado.forEach(producto=>{
     let marca
     let estados
     listadoCategorias.forEach((categoriaLista,index) => {
-        if (categoriaLista===producto.categoria) {
-            return categoria=index +1
-        }else{
-            return categoria=1}
+        if ((categoriaLista.toUpperCase())===(producto.categoria.toUpperCase())) {
+             categoria = index +1
+        } else {
+            categoria = 1}
        
     });
     marcas.forEach((elemento,index) => {
         if (elemento === producto.marca) {
             return marca = index + 1
-        }else{
-            return marca=1}
+        } else {
+            return marca = 1}
        
     }),
     estado.forEach((estadoProducto,index) => {
-        if (estadoProducto === producto.estados) {
+        if (estadoProducto === producto.estado) {
             return estados = index + 1
         }else{
             return estados=1}
@@ -43,7 +43,7 @@ listado.forEach(producto=>{
         descuento:producto.descuento,
         categoriasid:categoria,
         marcasid:marca,
-        estadosid:estados,
+        estadosid:producto.estado === 'Oferta' ? 1 : producto.estado === "Favoritos" ? 2 : producto.estado === "Nuevo" ? 3 : 4,
         createdAt:new Date,
         updatedAt:new Date
     }

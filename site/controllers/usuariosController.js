@@ -95,7 +95,7 @@ module.exports = {
                 rol : user.rolId // la base de datos trae un id, lo que crea conflicto en otros lados
             }                   // ya que se comprueba por la descripcion y no por el id 
             if(recordarme){
-                res.cookie('rememberMe', req.session.userLogin,{
+                res.cookie('rememberMe', req.session.userLogin.email,{
                     maxAge: 1000 * 60 * 60 * 24 * 30
                 })
             }

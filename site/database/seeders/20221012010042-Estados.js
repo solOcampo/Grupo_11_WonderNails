@@ -1,6 +1,6 @@
 'use strict';
 
-let listado= ["Oferta", "Favoritos", "Nuevo" ]
+let listado= ["Oferta", "Favoritos", "Nuevo", "Sin estado" ]
 let estados=listado.map(estado=>{
   let elemento ={
       estado:estado,
