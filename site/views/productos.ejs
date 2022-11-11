@@ -25,7 +25,7 @@
             <% productosNuevos.forEach(producto => { %>
                 <%- include('./partials/card',{
                     id:producto.id,
-                    imagen:producto.imagen[0],
+                    imagen:producto.imagenes[0].nombre,
                     nombre:producto.nombre,
                     descuento:producto.descuento,
                     precio:producto.precio 
@@ -37,7 +37,7 @@
             <% productosFavs.forEach(producto => { %>
                 <%- include('./partials/card',{
                     id:producto.id,
-                    imagen:producto.imagen[0],
+                    imagen:producto.imagenes[0].nombre,
                     nombre:producto.nombre,
                     descuento:producto.descuento,
                     precio:producto.precio 
@@ -49,7 +49,7 @@
             <% productosOferta.forEach(producto => { %>
                 <%- include('./partials/card',{
                     id:producto.id,
-                    imagen:producto.imagen[0],
+                    imagen:producto.imagenes[0].nombre,
                     nombre:producto.nombre,
                     descuento:producto.descuento,
                     precio:producto.precio 
@@ -61,7 +61,7 @@
             <% esmaltes.forEach(producto => { %>
                 <%- include('./partials/card',{
                     id:producto.id,
-                    imagen:producto.imagen[0],
+                    imagen:producto.imagenes[0].nombre,
                     nombre:producto.nombre,
                     descuento:producto.descuento,
                     precio:producto.precio 
@@ -73,7 +73,7 @@
             <% otros.forEach(producto => { %>
                 <%- include('./partials/card',{
                     id:producto.id,
-                    imagen:producto.imagen[0],
+                    imagen:producto.imagenes[0].nombre,
                     nombre:producto.nombre,
                     descuento:producto.descuento,
                     precio:producto.precio 

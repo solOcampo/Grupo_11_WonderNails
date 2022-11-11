@@ -50,31 +50,56 @@ module.exports = {
             })
     },
     list: (req, res) => {
-            let productosNuevos = [];
-            let productosFavs = [];
-            let productosOferta = [];
-            let esmaltes = []
-            let otros = []
-            productos.forEach(producto => {
-                if (producto.estado === "Nuevo") {
-                return productosNuevos.push(producto);
-                }else if(producto.estado === "Favoritos"){
-                    return productosFavs.push(producto)
-                }else if(producto.estado === "Oferta"){
-                    return productosOferta.push(producto)
-                }else if(producto.categoria === "Esmaltes"){
-                    return esmaltes.push(producto)
-                }else if(producto.estado === ""){
-                    return otros.push(producto)
-                }
+            let productosNuevos = db.Productos.findAll({
+                where: {
+                    estadosid: 3
+                },
+                include: [{
+                    all: true
+                }]
             });
-            return res.render('productos',{
-                productos,
-                productosNuevos,
-                productosFavs,
-                productosOferta,
-                esmaltes,
-                otros
+            let productosFavs = db.Productos.findAll({
+                where: {
+                    estadosid: 2
+                },
+                include: [{
+                    all: true
+                }]
+            });
+            let productosOferta = db.Productos.findAll({
+                where: {
+                    estadosid: 1
+                },
+                include: [{
+                    all: true
+                }]
+            });
+            let esmaltes = db.Productos.findAll({
+                where: {
+                    categoriasid: 11
+                },
+                include: [{
+                    all: true
+                }]
+            })
+            let otros = db.Productos.findAll({
+                where: {
+                    estadosid: 4
+                },
+                include: [{
+                    all: true
+                }]
+            })
+            Promise.all([productosNuevos, productosFavs, productosOferta, esmaltes, otros])
+            .then(([productosNuevos, productosFavs, productosOferta, esmaltes, otros]) => {
+
+                    return res.render('productos',{
+                        productosNuevos,
+                        productosFavs,
+                        productosOferta,
+                        esmaltes,
+                        otros
+                    })
             })
         
     },
@@ -82,6 +107,7 @@ module.exports = {
         let estado = req.params.estado
         let productosE = productos.filter((product) => product.estado === estado)
         if(estado === productosE[0].estado){
+            return res.send(estado)
             return res.render('estado',{
                 productosE,
                 estado
