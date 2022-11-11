@@ -44,9 +44,9 @@
     {
         "id": 4,
         "nombre": " Cabina LED Profesional 54 Watts Nail Master Cabin ",
-        "marca": " Meliné ",
-        "categoria": " Esmaltado Semipermanente ",
-        "estado": " Oferta ",
+        "marca": "Meliné",
+        "categoria": "Esmaltado Semipermanente",
+        "estado": "Oferta",
         "precio": 19990,
         "descuento": 27,
         "descripcion": " UNA CABINA CON EFECTO ANTI AGE. 54 Watts de Potencia (24 Lámparas LED). Timer secuencial en 10; 30 y 60 segundos. Gran Poder Lumínico. Secado Parejo, Rápido y Uniforme ",
@@ -119,10 +119,7 @@
     {
         "id": 9,
         "nombre": "12 Esmalte Semipermanente x15ml Anush + Cabina LED-UV + Removedor y Limas",
-        "marca": [
-            "Mohr Inc",
-            "Thuya"
-        ],
+        "marca": "Mohr Inc",
         "categoria": "Esmaltado Semipermanente",
         "estado": "Nuevo",
         "precio": 30990,
@@ -139,10 +136,7 @@
     {
         "id": 10,
         "nombre": "3 Esmaltes x15ml Anush + Mini Cabina LED 5W Compact",
-        "marca": [
-            "Teknikpro",
-            "Anush"
-        ],
+        "marca": "Teknikpro",
         "categoria": "Esmaltado Semipermanente",
         "estado": "Oferta",
         "precio": 8360,
@@ -211,6 +205,865 @@
         "stock": 18,
         "imagen": [
             "Removedor-de-Esmalte-Semipermanente-x120ml.jpg"
+        ]
+    },
+    {
+        "id": 15,
+        "nombre": "Removedor de Esmalte Semipermanente x120ml",
+        "marca": "Anush",
+        "categoria": "Esmaltado Semipermanente",
+        "estado": "Oferta",
+        "precio": 990,
+        "descuento": 20,
+        "descripcion": "El Removedor ideal para Uñas Esculpidas o Gelificadas",
+        "stock": 18,
+        "imagen": [
+            "Removedor-de-Esmalte-Semipermanente-x120ml.jpg"
+        ]
+    },
+    {
+        "id": 16,
+        "nombre": "Alicate para Cutículas 577CL Celeste/Lila/Magenta/Amarillo Niquelado",
+        "marca": "Mundial",
+        "categoria": "Contrucción de Uñas",
+        "estado": "Nuevo",
+        "precio": 5590,
+        "descuento": 25,
+        "descripcion": "Alicate para cutículas 577CL Mundial: Esterilizable en estufa Color Exclusivo Afilado listo para usar Mango antideslizante Acero de carbono niquelado Revestimiento en barniz de alta resistencia Instrucciones de uso: el alicate mundial Color para quitar la cutícula previamente ablandada para su eliminación. Quitarla acompañando el molde de las uñas, teniendo el cuidado para no quitar en exceso la piel. Para la mejor conservación de su alicate, evite las caídas, manténgalo seco, limpio y lubricado.",
+        "stock": 7,
+        "imagen": [
+            "Alicate-para-Cutículas-577CL.jpg"
+        ]
+    },
+    {
+        "id": 17,
+        "nombre": "Moldes Capsulas Dual System para Construccion De Uñas ",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltado Semipermanente",
+        "estado": "Nuevo",
+        "precio": 569,
+        "descuento": 25,
+        "descripcion": "Repuesto de 33 unidades para encapsuladas",
+        "stock": 4,
+        "imagen": [
+            "Moldes-Capsulas-Dual-System-para-Construccion-De-Uñas.jpg"
+        ]
+    },
+    {
+        "id": 18,
+        "nombre": "Kit Acrílico Para Construcción de Uñas",
+        "marca": "Pinnacle",
+        "categoria": "Esmaltado Semipermanente",
+        "estado": "Nuevo",
+        "precio": 5990,
+        "descuento": 10,
+        "descripcion": "El Kit Incluye: - 1 Líquido Acrílico Monómero Advanced Formula x 60ml - 1 Líquido Primer x 10 ml - 2 Polvo Acrílico / Polímero x25gr - 10 Moldes Dorados Para Uñas 1 Adhere 1 Lima",
+        "stock": 25,
+        "imagen": [
+            "Kit-Acrílico-Para-Construcción-de-Uñas.jpg"
+        ]
+    },
+    {
+        "id": 19,
+        "nombre": "Limpia Pinceles Profesional Brush Cleaner x 250ml",
+        "marca": "Pinnacle",
+        "categoria": "Contrucción de Uñas",
+        "estado": "Sin Estado",
+        "precio": 769,
+        "descuento": 10,
+        "descripcion": "Para mantener tus pinceles limpios e higienizados, es importante utilizar el Limpia Pinceles de Pinnacle. Su fórmula ayuda a eliminar fácilmente todo tipo de producto.",
+        "stock": 17,
+        "imagen": [
+            "Limpia-Pinceles-Profesional-Brush-Cleaner-x250ml.jpg"
+        ]
+    },
+    {
+        "id": 20,
+        "nombre": "Lapiz Corrector de Esmalte",
+        "marca": "Nailway",
+        "categoria": "Esmaltado",
+        "estado": "Sin Estado",
+        "precio": 249,
+        "descuento": 10,
+        "descripcion": "Este lápiz corrector emprolija y elimina el excedente de esmalte para lograr un esmaltado prolijo y parejo. Su fórmula no tóxica, elimina fácilmente el esmalte sin dañar su superficie",
+        "stock": 30,
+        "imagen": [
+            "Lapiz-Corrector-de-Esmalte.jpg"
+        ]
+    },
+    {
+        "id": 21,
+        "nombre": "Fortalecedor Uñas Sally Hansen Nail Rehab",
+        "marca": "Sally Hansen",
+        "categoria": "Esmaltado",
+        "estado": "Sin Estado",
+        "precio": 1790,
+        "descuento": 10,
+        "descripcion": "¡Poné a tus uñas gravemente dañadas en tratamiento intensivo de rehabilitación! Nail Rehab™ de Sally Hansen defiende contra quiebres, roturas, y descamación. Nuestra fórmula con Jazmín, Rosas, y Vitamina E ayuda a fortalecer y proteger tus uñas. Instantáneamente rellena surcos y oculta imperfecciones. ¿Cuándo usarlo? Cuando las uñas descuidadas necesitan rescate, Nail Rehab™ de Sally Hansen te brinda uñas más fuertes y de apariencia más saludable protegidas contra el daño. ¿Cómo usarlo? Aplicá 1 o 2 capas sobre las uñas limpias o debajo del esmalte de color. Volvé a aplicar Nail Rehab™ cuantas veces sea necesario. Luego de 7 días, removelo y repetí el procedimiento. ¿Por qué usarlo? ¡Nail Rehab™ es imprescindible en cualquier set de manicura!",
+        "stock": 13,
+        "imagen": [
+            "Fortalecedor-Uñas-Sally-Hansen-Nail-Rehab.jpg"
+        ]
+    },
+    {
+        "id": 22,
+        "nombre": "Esmalte Nail Enamel x9ml Note",
+        "marca": "Note",
+        "categoria": "Esmaltado",
+        "estado": "Favoritos",
+        "precio": 890,
+        "descuento": 50,
+        "descripcion": "Más de 50 colores disponibles en esmaltes Nail Enamel x9ml Note Da brillo y uniformiza las irregularidades tan sólo en una capa. Da un aspecto impresionante a las uñas con opciones de nácar y de colores opacos. Puede aplicarse en una sola vez con su cepillo especial ancho. La diferencia del NOTE - No contiene sustancias cancerígenas y nocivas como TOLUENE, DBP, FORMALDEHYDE y CAMPHOR. - Se seca rápidamente. - Viene con opción de cepillo fino (mate blanco) para la manicura francesa. - Debe mantenerse lejos de la luz solar directa. - Debe conservarse en un sitio fresco. - Una vez abierto, caduca en 18 meses. - 9 ml",
+        "stock": 30,
+        "imagen": [
+            "Esmalte-Nail-Enamel-x9ml-Note-1.jpg",
+            "Esmalte-Nail-Enamel-x9ml-Note-2.jpg",
+            "Esmalte-Nail-Enamel-x9ml-Note-3.jpg",
+            "Esmalte-Nail-Enamel-x9ml-Note-4.jpg"
+            
+        ]
+    },
+    {
+        "id": 23,
+        "nombre": "Rollo de Cinta Autoadhesiva para Decoración de Uñas",
+        "marca": "Thuya",
+        "categoria": "Decoración",
+        "estado": "Nuevo",
+        "precio": 138,
+        "descuento": 20,
+        "descripcion": "Las cintas para decoración de uñas son autoadhesivas y se utilizan para realizar líneas rectas y prolijas en las uñas. Sirven tanto para esmaltado común como para esmalte semipermanente. Con estas cintas podrás crear miles de diseños originales y creativos.Los colores son variados. Ancho:1 mm.",
+        "stock": 16,
+        "imagen": [
+            "Rollo-de-Cinta-Autoadhesiva-para-Decoración-de-Uñas.jpg"
+        ]
+    },
+    {
+        "id": 24,
+        "nombre": "Esmalte en Gel Miss Glitter Joy By On Off",
+        "marca": "Thuya",
+        "categoria": "Decoración",
+        "estado": "Sin Estado",
+        "precio": 4990,
+        "descuento": 25,
+        "descripcion": "Con la nueva colección Miss Glitter by On-Off conseguirás ese plus increíble en todas tus manicuras. El nuevo formato de tarros de 5 gr. de glitter en diferentes colores: Joy, Rich y Destiny. Además, su brillo es súper intenso gracias a sus partículas de brillo y, como su textura es de gel, se pueden aplicar con pincel de gel fácilmente (de pelo sintético) y se secan en lámpara (secado 30 segundos en LED y 120 en UV). Son ideales para esmaltar una uña o para combinar y crear decoraciones llamativas. • El esmalte permanente gel on-off Joy es un rosa brillante y elegante para las ocasiones más especiales. • El nuevo Rich combina a la perfección con cualquier outfit para las mejores fiestas gracias a su tono dorado. • Sigue tu estrella plateada con el esmalte permanente gel on-off Destiny de la colección Miss Glitter",
+        "stock": 20,
+        "imagen": [
+            "Esmalte-en-Gel-Miss-Glitter-Joy-By-On-Off-Thuya-1.png",
+            "Esmalte-en-Gel-Miss-Glitter-Joy-By-On-Off-Thuya-2.png",
+            "Esmalte-en-Gel-Miss-Glitter-Joy-By-On-Off-Thuya-3.png"
+        ]
+    },
+    {
+        "id": 25,
+        "nombre": "Polvo Decoración Efecto Espejo",
+        "marca": "Thuya",
+        "categoria": "Decoración",
+        "estado": "Oferta",
+        "precio": 827,
+        "descuento": 20,
+        "descripcion": "Los nuevos efectos metalizados para uñas de Thuya irradian luz, brillo y color produciendo un efecto metálico que convertirá tus uñas en una auténtica joya. (COLORES A ELECCIÓN Y SUJETOS A DISPONIBILIDAD)",
+        "stock": 8,
+        "imagen": [
+            "Polvo-Decoración-Efecto-Espejo.jpg"
+        ]
+    },
+    {
+        "id": 26,
+        "nombre": "PLACA P/STAMPING ACRILICO MED THUYA",
+        "marca": "Thuya",
+        "categoria": "Decoración",
+        "estado": "Sin Estado",
+        "precio": 624,
+        "descuento": 50,
+        "descripcion": "PLACA P/STAMPING ACRILICO MED THUYA",
+        "stock": 19,
+        "imagen": [
+            "PLACA-P-STAMPING-ACRILICO-MED-THUYA.jpg"
+        ]
+    },
+    {
+        "id": 27,
+        "nombre": "Decoracion Carrousel Formas Dorado y Plateado",
+        "marca": "Nailway",
+        "categoria": "Decoración",
+        "estado": "Favoritos",
+        "precio": 630,
+        "descuento": 20,
+        "descripcion": "Decoración para uñas de diferentes formas (estrellas, corazón, Flores, mariposa) en color dorado y plateado",
+        "stock": 7,
+        "imagen": [
+            "Decoracion-Carrousel-Formas-Dorado-y-Plateado.jpg"
+        ]
+    },
+    {
+        "id": 28,
+        "nombre": "Pinza Para decoración de Uñas Curva Nailway",
+        "marca": "Nailway",
+        "categoria": "Herramientas",
+        "estado": "Nuevo",
+        "precio": 590,
+        "descuento": 15,
+        "descripcion": "Pinza Ideal para marcar la curvatura en 'c' de la uña",
+        "stock": 30,
+        "imagen": [
+            "Pinza-Para-decoración-de-Uñas-Curva-Nailway.jpg"
+        ]
+    },
+    {
+        "id": 29,
+        "nombre": "Maletín para Esmaltes Modelo 1438 T-C",
+        "marca": "Wonder Nails",
+        "categoria": "Herramientas",
+        "estado": "Favoritos",
+        "precio": 14990,
+        "descuento": 7,
+        "descripcion": "El Maletín transparente modelo 1438, es un maletín ideal para el uso de todos los profesionales especializados en manicuría o pedicuría. Posee una plataforma ideal para esmaltes y ademas una estantería que puedas transportar todo el instrumental que necesites. El Maletín viene con doble cierre de seguridad y dos llaves (original y repuesto) para proteger objetos de trabajo. Medidas del maletín cerrado: •Alto: 26cm •Largo: 15cm •Ancho: 25cm",
+        "stock": 20,
+        "imagen": [
+            "Maletín-para-Esmaltes-Modelo-1438-T-C.jpg"
+        ]
+    },
+    {
+        "id": 30,
+        "nombre": "Combo Kits de Manicuría/Pedicuría de 4 y 12 Piezas",
+        "marca": "Thuya",
+        "categoria": "Esmaltado",
+        "estado": "Nuevo",
+        "precio": 21690,
+        "descuento": 50,
+        "descripcion": "Exclusivo kit estuche completo con 12 piezas para realizar Manicuría y Pedicuría Profesional - 1 Cureta Cucharita N°0 - 1 Cureta Cucharita N° 1 - 1 Gubia N° 0 - 1 Gubia N°1 - 1 Palo de Golf n°1 - 1 Palo De Golf n° 2 - 1 Lima de arrastre - 1 Cureta de Brook - 1 Pinza Curva Algodonera - 1 Pinza Recta Algodonera/Decoración - 1 Repujador /Cortador de cutícula doble - 1 Cureta Cucharita Plana *Set de 4 alicates Thuya de acero inoxidable con estuche para almacenamiento contiene: alicate cuticulas alicate curvo Mediano alicate curvo Grande alicate Recto",
+        "stock": 11,
+        "imagen": [
+            "Combo-Kits-de-Manicuría-Pedicuría-de-4-y-12 Piezas.jpg"
+        ]
+    },
+    {
+        "id": 31,
+        "nombre": "Almohada para Manicuría",
+        "marca": "Wonder Nails",
+        "categoria": "Accesorios",
+        "estado": "Nuevo",
+        "precio": 695,
+        "descuento": 10,
+        "descripcion": "Almohada para manicuría medida: 20 x 13cm. Lográ que tus clientas se sientan cómodos y relajadas al momento de hacer la manicuría.",
+        "stock": 17,
+        "imagen": [
+            "Almohada para Manicuría.jpg"
+        ]
+    },
+    {
+        "id": 32,
+        "nombre": "Torno Inalámbrico Portable a Batería Mega Drill",
+        "marca": "Teknikpro",
+        "categoria": "Aparatos",
+        "estado": "Oferta",
+        "precio": 39990,
+        "descuento": 10,
+        "descripcion": "Nuevo torno inalámbrico para manicuría y pedicuría Mega Drill. Portable y silencioso para un trabajo mucho más comodo. - Doble sistema de carga (Inalámbrico / USB) - Display de velocidad - Selección del sentido de giro - Base inalámbrica de carga rápida de batería - Regulador de velocidad - 6 Brocas diamantadas (de pulido, de cutículas, esmeril, de modelado fino, de modelado, de pulido fino)¡Imperdibles!",
+        "stock": 10,
+        "imagen": [
+            "Torno-Inalámbrico-Portable-a-Batería-Mega-Drill-1.jpg",
+            "Torno-Inalámbrico-Portable-a-Batería-Mega-Drill-2.jpg",
+            "Torno-Inalámbrico-Portable-a-Batería-Mega-Drill-3.jpg"
+        ]
+    },
+    {
+        "id": 33,
+        "nombre": "Calentador de Cera Wax Warmer 1 kg Teknikpro Spa",
+        "marca": "Teknikpro",
+        "categoria": "Aparatos",
+        "estado": "Oferta",
+        "precio": 12990,
+        "descuento": 15,
+        "descripcion": "Calentador de Cera de uso profesional - Ideal para todo tipo de cera - Regulador de temperatura de amplio rango - Contenedor de aluminio extra resistente con filtro - Tapa de Acrílico traslúcido que permite ver el estado de la cera",
+        "stock": 19,
+        "imagen": [
+            "Calentador-de-Cera-Wax-Warmer-1kg-Teknikpro-Spa.jpg"
+        ]
+    },
+    {
+        "id": 34,
+        "nombre": "Camilla Multispa Luxury Teknikstyle",
+        "marca": "TeknikStyle",
+        "categoria": "Aparatos",
+        "estado": "Favoritos",
+        "precio": 159900,
+        "descuento": 25,
+        "descripcion": "Camilla ideal para masajes, stretching, reflexología y tratamientos estéticos. Material de base: Aglomerado Medidas Sin Armar Peso: 40kg Largo 195 Ancho 25cm Alto 75cm Medidas Armada: Largo: 195cm Alto: 66cm Ancho: 75cm ENTREGAS Y DESPACHOS PROGRAMADOS A PARTIR DE 15 DÍAS LUEGO DE HABER COORDINADO. ENVÍOS ÚNICAMENTE POR FLETE O TRANSPORTE DE CARGA SEGÚN EL DESTINO. COSTO DE DESPACHO: $200 COSTO DE EMBALAJE: $200",
+        "stock": 7,
+        "imagen": [
+            "Camilla-Multispa-Luxury-Teknikstyle-1.jpg",
+            "Camilla-Multispa-Luxury-Teknikstyle-2.jpg"
+        ]
+    },
+    {
+        "id": 35,
+        "nombre": "Módulo Ayudante para Manicuría + Torno Drill 288 + 6 Esmaltes Semipermanentes Meliné",
+        "marca": "Meliné",
+        "categoria": "Aparatos",
+        "estado": "Oferta",
+        "precio": 61320,
+        "descuento": 18,
+        "descripcion": "quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum",
+        "stock": 11,
+        "imagen": [
+            "Módulo-Ayudante-para-Manicuría-Torno-Drill-288-6-Esmaltes-Semipermanentes-Meliné-1.jpg",
+            "Módulo-Ayudante-para-Manicuría-Torno-Drill-288-6-Esmaltes-Semipermanentes-Meliné-2.jpg",
+            "Módulo-Ayudante-para-Manicuría-Torno-Drill-288-6-Esmaltes-Semipermanentes-Meliné-3.jpg",
+            "Módulo-Ayudante-para-Manicuría-Torno-Drill-288-6-Esmaltes-Semipermanentes-Meliné-4.jpg"
+        ]
+    },
+    {
+        "id": 36,
+        "nombre": "Crema Para Manos Con Siliconas Con Vitamina E x 240 gr.",
+        "marca": "Exel",
+        "categoria": "Cuidado de Manos y Pies",
+        "estado": "Favoritos",
+        "precio": 2720,
+        "descuento": 12,
+        "descripcion": "Suavizante, Emoliente y protectora de la piel de las manos. Adecuada para todo tipo de piel y , en particular, aquellas con exposición a Agentes Agresivos. FORMA DE USO: Aplicar y Masajear Suavemente Hasta Su Total Absorción",
+        "stock": 19,
+        "imagen": [
+            "Crema-Para-Manos-Con-Siliconas-Con-Vitamina-E.jpg"
+        ]
+    },
+    {
+        "id": 37,
+        "nombre": "Parafina Para Manos y Pies x 650 gr",
+        "marca": "Collage",
+        "categoria": "Cuidado de Manos y Pies",
+        "estado": "Oferta",
+        "precio": 2500,
+        "descuento": 20,
+        "descripcion": "Suavizante e Hidratante de la Piel. Al formarse una capa dura no permite que la humedad de la piel salga, lo que logra que se hidrate la piel hasta los niveles más profundos. MODO DE USO: Limpiar bien la zona a tratar Calentar la Parafina en un parafinero a temperatura deseada Sumergir las manos o pies. En lo posible intentar que los dedos estén bien separados Repetir esta operación hasta conseguir un grosor adecuado Cuando la parafina se sienta fría, retirar con cuidado.",
+        "stock": 6,
+        "imagen": [
+            "Parafina-Para-Manos-y-Pies.jpg"
+        ]
+    },
+    {
+        "id": 38,
+        "nombre": "Set Lifting de Pestañas Completo + Cepillos para Pestañas + Neceser Porta-Cosméticos",
+        "marca": "Thuya",
+        "categoria": "Maquillaje",
+        "estado": "Oferta",
+        "precio": 22000,
+        "descuento": 20,
+        "descripcion": "El Combo incluye: • Kit Lifting de Pestañas Completo Thuya Todo lo necesario para realizar el servicio de lifting de pestañas Contiene: Cola lifting 14 ml Caja de 10 Moldes de Silicona Silicone Pads (Tamaño M) Gel permanente 15 ml Neutralizante líquido 15 ml, 1 cepillo peine 1 palito de naranjo • Neceser Porta-Cosméticos Un muy práctico neceser para almacenar todos tus productos cosméticos! • Cepillo para Pestañas x10 Thuya",
+        "stock": 5,
+        "imagen": [
+            "Set-Lifting-de-Pestañas-Completo-1.jpg",
+            "Set-Lifting-de-Pestañas-Completo-2.jpg",
+            "Set-Lifting-de-Pestañas-Completo-3.jpg",
+            "Set-Lifting-de-Pestañas-Completo-4.jpg"
+        ]
+    },
+    {
+        "id": 39,
+        "nombre": "Combo Make-up: Maletín + Brochas + Kit de Maquillaje",
+        "marca": "Thuya",
+        "categoria": "Maquillaje",
+        "estado": "Favoritos",
+        "precio": 32955,
+        "descuento": 5,
+        "descripcion": "Un excelente combo para maquillaje que incluye: 1 Maletín de Tela Beauty Chico 17015 Eagle Fortress 1 Pack 5 Brochas Para Maquillaje Thuya 1 Set de Maquillaje JES-317 Makeover Espectacular maletín de excelente calidad confeccionado en tela del tamaño ideal para el transporte sin inconvenientes para el trabajo a domicilio o bien para almacenar las herramientas del salon. Provisto de dos compartimentos laterales de generosas dimensiones y un espejo de gran tamaño en el centro que lo hacen un accesorio de lo más completo. Sus medidas son (cerrado): Alto: 20 cm Largo: 5 cm Ancho: 25 cm El pack de Brochas Contiene: Brocha Para Ojos y Cejas (Delineadora) Brocha Para Rostro (Polvos y Lustre) Brocha Para Rostro (Primer, Bases y Rubor) Brocha Para Párpados y Labios (Crema y Polvo) Brocha Para Correcciones y Definir Contorno",
+        "stock": 26,
+        "imagen": [
+            "Combo-Make-up-1.jpg",
+            "Combo-Make-up-2.jpg",
+            "Combo-Make-up-3.jpg",
+            "Combo-Make-up-4.jpg"
+        ]
+    },
+    {
+        "id": 40,
+        "nombre": "Paleta de Sombras The Ultimate Pro Shadow",
+        "marca": "Palladio",
+        "categoria": "Maquillaje",
+        "estado": "Oferta",
+        "precio": 12190,
+        "descuento": 30,
+        "descripcion": "Esta paleta de sombras profesionales presenta 35 tonos mezclables de alto pigmento en texturas hermosas que incluyen acabados satinados, mate y metálicos. Diseñado por artistas de maquillaje para crear la colección perfecta de colores que le permite crear looks sutiles durante el día y pasar fácilmente a un ojo ahumado nocturno. Pops de rosas y naranjas junto con marrones chocolate profundo, sombras púrpuras y verdes aterciopeladas que nunca se han visto tan hermosas. Todos los colores versátiles y altamente saturados que necesitas se pueden encontrar en esta lujosa paleta.",
+        "stock": 22,
+        "imagen": [
+            "Paleta-de-Sombras-The-Ultimate-Pro-Shadow.jpg"
+        ]
+    },
+    {
+        "id": 41,
+        "nombre": "Lima",
+        "marca": "Thuya",
+        "categoria": "Accesorios",
+        "estado": "Nuevo",
+        "precio": "900",
+        "descuento": 12,
+        "descripcion": "Lima Thuya",
+        "stock": "10",
+        "imagen": ["limaThuya.webp"]
+    },
+    {
+        "id": 42,
+        "nombre": "Caracas",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Goldenrod",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 51,
+        "imagen": [
+            "caracas.webp"
+        ]
+    },
+    {
+        "id": 43,
+        "nombre": "Cartagena",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Turquoise",
+        "precio": 800,
+        "descuento": 27,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 35,
+        "imagen": [
+            "cartagena.webp"
+        ]
+    },
+    {
+        "id": 44,
+        "nombre": "Hongsihu",
+        "marca": "Pink Mask",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Puce",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 3,
+        "imagen": [
+            "hongsihu.webp"
+        ]
+    },
+    {
+        "id": 45,
+        "nombre": "Gel Color",
+        "marca": "Pink Mask",
+        "categoria": "Esmaltado Semipermanente",
+        "estado": "Oferta",
+        "color": "Sunday Morning",
+        "precio": 2096,
+        "descuento": 14,
+        "descripcion": "Esmalte semipermanente en gel pensado para curar en cabina UV de 48W o más. Desarrollado especialmente para uso profesional, formulado para mantener tus uñas fuertes y sanas.",
+        "stock": 5,
+        "imagen": [
+            "Pink-Mask-Sunday Morning-1.webp",
+            "Pink-Mask-Sunday Morning-2.webp",
+            "Pink-Mask-Sunday Morning-3.webp"
+        ]
+    },
+    {
+        "id": 46,
+        "nombre": "Chamomix",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Via lactea",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 65,
+        "imagen": [
+            "chamomix.webp"
+        ]
+    },
+    {
+        "id": 47,
+        "nombre": "Chicago",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Violeta",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 20,
+        "imagen": [
+            "chicago.webp"
+        ]
+    },
+    {
+        "id": 48,
+        "nombre": "Gel Color",
+        "marca": "Pink Mask",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Popsicle",
+        "precio": 2096,
+        "descuento": 14,
+        "descripcion": "Esmalte semipermanente en gel pensado para curar en cabina UV de 48W o más. Desarrollado especialmente para uso profesional, formulado para mantener tus uñas fuertes y sanas.",
+        "stock": 46,
+        "imagen": [
+            "Pink-Masl-Popsicle-1.webp",
+            "Pink-Masl-Popsicle-2.webp",
+            "Pink-Masl-Popsicle-3.webp"
+        ]
+    },
+    {
+        "id": 49,
+        "nombre": "Ciudad del Cabo",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Negro",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 97,
+        "imagen": [
+            "ciudad-del-cabo.webp"
+        ]
+    },
+    {
+        "id": 50,
+        "nombre": "Curazao",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Celeste",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 49,
+        "imagen": [
+            "curazao.webp"
+        ]
+    },
+    {
+        "id": 51,
+        "nombre": "Gel Color",
+        "marca": "Pink Mask",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Moby Dick",
+        "precio": 2096,
+        "descuento": 14,
+        "descripcion": "Esmalte semipermanente en gel pensado para curar en cabina UV de 48W o más. Desarrollado especialmente para uso profesional, formulado para mantener tus uñas fuertes y sanas.",
+        "stock": 70,
+        "imagen": [
+            "Pink-Mask-MobyDick-1.webp",
+            "Pink-Mask-MobyDick-2.webp",
+            "Pink-Mask-MobyDick-3.webp"
+        ]
+    },
+    {
+        "id": 52,
+        "nombre": "Edimburgo",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Gris",
+        "precio": 800,
+        "descuento": 9,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 35,
+        "imagen": [
+            "edimburgo.webp"
+        ]
+    },
+    {
+        "id": 53,
+        "nombre": "El Cairo",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Nude",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 41,
+        "imagen": [
+            "el-cairo.webp"
+        ]
+    },
+    {
+        "id": 54,
+        "nombre": "Estabul",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Nude",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 78,
+        "imagen": [
+            "estambul.webp"
+        ]
+    },
+    {
+        "id": 55,
+        "nombre": "Ibiza",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Rojo",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 44,
+        "imagen": [
+            "ibiza.webp"
+        ]
+    },
+    {
+        "id": 56,
+        "nombre": "Jerusalem",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Shine",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 68,
+        "imagen": [
+            "jerusalem.webp"
+        ]
+    },
+    {
+        "id": 57,
+        "nombre": "Gel Color - POPSTAR",
+        "marca": "Pink Mask",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Miley",
+        "precio": 2096,
+        "descuento": 14,
+        "descripcion": "Los tonos con glitter, a diferencia de los colores plenos, suelen tener una consistencia de mayor densidad.",
+        "stock": 32,
+        "imagen": [
+            "Pink-Mask-Miley-1.webp",
+            "Pink-Mask-Miley-2.webp",
+            "Pink-Mask-Miley-3.webp"
+        ]
+    },
+    {
+        "id": 58,
+        "nombre": "Gel Color",
+        "marca": "Pink Mask",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Cinnamon",
+        "precio": 2096,
+        "descuento": 14,
+        "descripcion": "Esmalte semipermanente en gel pensado para curar en cabina UV de 48W o más. Desarrollado especialmente para uso profesional, formulado para mantener tus uñas fuertes y sanas.",
+        "stock": 88,
+        "imagen": [
+            "Pink-Mask-Cinnamon-1.webp",
+            "Pink-Mask-Cinnamon-2.webp",
+            "Pink-Mask-Cinnamon-3.webp",
+            "Pink-Mask-Cinnamon-4.webp"
+        ]
+    },
+    {
+        "id": 59,
+        "nombre": "JLO",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Khaki",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 5,
+        "imagen": [
+            "jlo.webp"
+        ]
+    },
+    {
+        "id": 60,
+        "nombre": "Kim",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Maroon",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 69,
+        "imagen": [
+            "kim.webp"
+        ]
+    },
+    {
+        "id": 61,
+        "nombre": "Gel Color - Neon",
+        "marca": "Pink Mask",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Nicki",
+        "precio": 2096,
+        "descuento": 14,
+        "descripcion": "Esmalte semipermanente en gel pensado para curar en cabina UV de 48W o más. Desarrollado especialmente para uso profesional, formulado para mantener tus uñas fuertes y sanas.",
+        "stock": 64,
+        "imagen": [
+            "Pink-Mask-Nicki-1.jpg",
+            "Pink-Mask-Nicki-2.webp",
+            "Pink-Mask-Nicki-3.webp"
+        ]
+    },
+    {
+        "id": 62,
+        "nombre": "Kittie",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Fucsia",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 28,
+        "imagen": [
+            "kittie.webp"
+        ]
+    },
+    {
+        "id": 63,
+        "nombre": "Luanda",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Turquoise",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 27,
+        "imagen": [
+            "luanda.webp"
+        ]
+    },
+    {
+        "id": 64,
+        "nombre": "Manila",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Puce",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 43,
+        "imagen": [
+            "manila.webp"
+        ]
+    },
+    {
+        "id": 65,
+        "nombre": "Marrakesh",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Nude",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 4,
+        "imagen": [
+            "marrakesh.webp"
+        ]
+    },
+    {
+        "id": 66,
+        "nombre": "Montevideo",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Blue",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 97,
+        "imagen": [
+            "montevideo.webp"
+        ]
+    },
+    {
+        "id": 67,
+        "nombre": "Oslo",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Crimson",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 29,
+        "imagen": [
+            "oslo.webp"
+        ]
+    },
+    {
+        "id": 68,
+        "nombre": "Roma",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Goldenrod",
+        "precio": 800,
+        "descuento": 31,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 88,
+        "imagen": [
+            "roma.webp"
+        ]
+    },
+    {
+        "id": 69,
+        "nombre": "Singapur",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Khaki",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 60,
+        "imagen": [
+            "singapur.webp"
+        ]
+    },
+    {
+        "id": 70,
+        "nombre": "Gel Color - Birtday Party!",
+        "marca": "Pink Mask",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "Piñata",
+        "precio": 2096,
+        "descuento": 14,
+        "descripcion": "¡Estos colores son una fiesta! Nuestra colección Birthday Party contiene 6 tonos translúcidos con glitters gruesos, brillantes y super coloridos. ",
+        "stock": 21,
+        "imagen": [
+            "Pink-Mask-Piñata-1.webp",
+            "Pink-Mask-Piñata-2.jpg",
+            "Pink-Mask-Piñata-3.webp"
+        ]
+    },
+    {
+        "id": 71,
+        "nombre": "Tokio",
+        "marca": "Wonder Nails",
+        "categoria": "Esmaltes",
+        "estado": "Oferta",
+        "color": "White",
+        "precio": 800,
+        "descuento": 0,
+        "descripcion": "Lo mejor de los esmaltes Wonder Nails es que nuestras lacas, además de ser hipoalergénicas y veganas (porque son libres de toxicos y no las testeamos en animalitos), tienen una duración de hasta 7 días de adherencia. Y la gloria es que su fluidez permite una fácil aplicación y muy buen tiempo de secado! Están compuestos por alta concentración de pigmentos y enriquecidos con activos naturales que permiten proteger las uñas y lucir los colores más lindos. Incorporamos a nuestras fórmulas ingredientes activos como aceites, vitaminas y minerales.",
+        "stock": 33,
+        "imagen": [
+            "tokio.webp"
         ]
     }
 ]

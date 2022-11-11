@@ -12,9 +12,9 @@
             <li class="divider li"> > </li>
             <li class="crumb-active li" aria-current="page"><a href="/productos">Productos</a></li>
             <li class="divider li"> > </li>
-            <li class="crumb-active li" aria-current="page"><a href="/productos/<%- producto.categoria %>"><%- producto.categoria %></a>  </li>
+            <li class="crumb-active li" aria-current="page"><a href="/productos/<%- producto.category.nombre %>"><%- producto.category.nombre %></a>  </li>
             <li class="divider li"> > </li>
-            <li class="crumb-active li" aria-current="page"><%- producto.marca %>  </li>
+            <li class="crumb-active li" aria-current="page"><%- producto.marca.nombre %>  </li>
         </ul>
         <section class="h1-1" class="detalle-producto">
             <h1><%- producto.nombre%></h1>
@@ -28,12 +28,12 @@
                             <small class="descuento"><%-'%' +  producto.descuento + ' OFF'%></small>
                         <% } %>
                         
-                        <img id="imgMain" src="/img/Products/<%= producto.imagen[0] %>" alt="Imagen principal">
+                        <img id="imgMain" src="/img/Products/<%= producto.imagenes[0].nombre %>" alt="Imagen principal">
                     </div>
-                    <% if (producto.imagen.length > 1) { %>
+                    <% if (producto.imagenes.length > 1) { %>
                         <div class="img-secundarias">
-                            <% imagenes.forEach(img => { %>
-                                <img src="/img/Products/<%= img %>" alt="Imagen secundaria" onclick="document.getElementById('imgMain').setAttribute('/img/Products/<%= img %>')">
+                            <% producto.imagenes.forEach(img => { %>
+                                <img src="/img/Products/<%= img.nombre %>" alt="Imagen secundaria" onclick="document.getElementById('imgMain').setAttribute('/img/Products/<%= img.nombre %>')">
                             <% }) %>
                         </div>
                     <% } %>
@@ -112,9 +112,9 @@
             <% for( let i = 0; i < 4; i++ ) { %>
                 <article>
                     <% if (category[i]) { %>
-                        <a href="/productos/<%= category[i].estado %> ">
+                        <a href="/productos/<%= category[i].estado.estado %> ">
                             <div class="caja-etiquetas">
-                                <span class="etiqueta"><%= category[i].estado %>  </span>
+                                <span class="etiqueta"><%= category[i].estado.estado %>  </span>
                             </div>
                         </a>
                     <% } %>
@@ -123,7 +123,7 @@
                     </div>
                     <a href="/productos/detalle/<%= category[i].id %>">
                         <div>
-                            <img src="/img/Products/<%= category[i].imagen[0] %>" alt="Imagen ilustrativa del producto">
+                            <img src="/img/Products/<%= category[i].imagenes[0].nombre %>" alt="Imagen ilustrativa del producto">
                         </div>
                         <h4><%= category[i].nombre %></h4>
                         <p class="precio-1">$<%= category[i].descuento > 0 ? Math.trunc(category[i].precio - category[i].precio * category[i].descuento / 100) : category[i]    .precio  %></p>

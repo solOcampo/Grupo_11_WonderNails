@@ -35,7 +35,7 @@ module.exports = {
         })
         let esmaltes = db.Productos.findAll({
             where: {
-                categoriasid: 22
+                categoriasid: 11
             },
             include: [{
                 all: true
@@ -43,7 +43,7 @@ module.exports = {
         })
         Promise.all([productos, productosOferta, productosFavs, productosNuevos, esmaltes])
         .then(([productos, productosOferta, productosFavs, productosNuevos, esmaltes]) => {
-            
+            /* return res.send(esmaltes) */
             return res.render('home',{
                 productos,
                 productosOferta,
@@ -53,71 +53,6 @@ module.exports = {
             });
         })
        .catch(error=>res.send(error))
-       /* return res.render('home', {
-        productos
-    }) */
-        /* .then(producto => {
-            const esmaltes = db.Productos.findAll({
-                 where: {
-                     categoriasId: producto.categoriasId
-                 }
-             })
-            const productosNuevos = db.Estados.findOne({
-                 where: {
-                    estado: "Nuevo"
-                 },
-                 include : [
-                    {
-                        association : 'productos',
-                        include : [{
-                            all:true
-                        }]
-                    }
-                ]
-             })
-            const productosFavs = db.Estados.findOne({
-                 where: {
-                    estado: "Favoritos"
-                 },
-                 include : [
-                    {
-                        association : 'productos',
-                        include : [{
-                            all:true
-                        }]
-                    }
-                ]
-             })
-            const productosOferta = db.Estados.findOne({
-                 where: {
-                    estado: "Oferta"
-                 },
-                 include : [
-                    {
-                        association : 'productos',
-                        include : [{
-                            all:true
-                        }]
-                    }
-                ]
-             })
-            
-            .then(([productos])=>{
-                let productosTodos = db.Productos.findAll({
-                    include: [{ all : true}]
-                })
-                return res.send(productosTodos)
-             return res.render('home', {
-                 productosTodos,
-                 productosNuevos,
-                 productosFavs,
-                 productosOferta,
-                 esmaltes
-             })
-     
-            })
-       })
-       .catch(error=>res.send(error)) */
       
     },
 

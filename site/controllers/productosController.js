@@ -1,30 +1,53 @@
+const db = require('../database/models/index');
+let Sequelize = require('sequelize')
 let productos = require('../data/productos.json')
-
 module.exports = {
     detail: (req,res) => {
-        let id = +req.params.id
-        let producto = productos.find((producto) => producto.id === id)
-        let imagenes = producto.imagen
-        let category = productos.filter((product) => product.categoria === producto.categoria)
-
-        return res.render('detalle',{
-            producto,
-            imagenes,
-            category
+        let idProduct = +req.params.id
+        let producto = db.Productos.findByPk(idProduct, {
+            include: [{
+                all: true
+            }]
         })
+            .then((producto) => {
+                db.Productos.findAll({
+                    where: {
+                        categoriasid: producto.categoriasid
+                    },
+                    limit: 4,
+                    order: [[Sequelize.literal("RAND()")]],
+                    include: [{
+                        all: true
+                    }]
+                })
+                .then(category => {
+                        /* return res.send(category) */
+                        return res.render('detalle', {
+                            producto,
+                            category
+                        })
+                    })
+            })
     },
     cart: (req,res) => {
         return res.render('carrito')
     },
     nailPolish: (req,res) => {
-        let esmaltes = []
-        productos.forEach(producto =>{
-            if(producto.categoria === "Esmaltes")
-            return esmaltes.push(producto)
-        });
-        return res.render('esmaltes',{
-            esmaltes
+
+        db.Productos.findAll({
+            where: {
+                categoriasid: 11
+            },
+            include: [{
+                all: true
+            }]
         })
+            .then(esmaltes => {
+                return res.render('esmaltes',{
+                    esmaltes
+                })
+                return res.send(esmaltes)
+            })
     },
     list: (req, res) => {
             let productosNuevos = [];

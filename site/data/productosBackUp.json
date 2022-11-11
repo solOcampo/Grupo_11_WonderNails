@@ -44,9 +44,9 @@
     {
         "id": 4,
         "nombre": " Cabina LED Profesional 54 Watts Nail Master Cabin ",
-        "marca": " Meliné ",
-        "categoria": " Esmaltado Semipermanente ",
-        "estado": " Oferta ",
+        "marca": "Meliné",
+        "categoria": "Esmaltado Semipermanente",
+        "estado": "Oferta",
         "precio": 19990,
         "descuento": 27,
         "descripcion": " UNA CABINA CON EFECTO ANTI AGE. 54 Watts de Potencia (24 Lámparas LED). Timer secuencial en 10; 30 y 60 segundos. Gran Poder Lumínico. Secado Parejo, Rápido y Uniforme ",
@@ -119,10 +119,7 @@
     {
         "id": 9,
         "nombre": "12 Esmalte Semipermanente x15ml Anush + Cabina LED-UV + Removedor y Limas",
-        "marca": [
-            "Mohr Inc",
-            "Thuya"
-        ],
+        "marca": "Mohr Inc",
         "categoria": "Esmaltado Semipermanente",
         "estado": "Nuevo",
         "precio": 30990,
@@ -139,10 +136,7 @@
     {
         "id": 10,
         "nombre": "3 Esmaltes x15ml Anush + Mini Cabina LED 5W Compact",
-        "marca": [
-            "Teknikpro",
-            "Anush"
-        ],
+        "marca": "Teknikpro",
         "categoria": "Esmaltado Semipermanente",
         "estado": "Oferta",
         "precio": 8360,
@@ -232,7 +226,7 @@
         "nombre": "Moldes Capsulas Dual System para Construccion De Uñas ",
         "marca": "Wonder Nails",
         "categoria": "Esmaltado Semipermanente",
-        "estado": "",
+        "estado": "Nuevo",
         "precio": 569,
         "descuento": 25,
         "descripcion": "Repuesto de 33 unidades para encapsuladas",
@@ -260,7 +254,7 @@
         "nombre": "Limpia Pinceles Profesional Brush Cleaner x 250ml",
         "marca": "Pinnacle",
         "categoria": "Contrucción de Uñas",
-        "estado": "",
+        "estado": "Sin Estado",
         "precio": 769,
         "descuento": 10,
         "descripcion": "Para mantener tus pinceles limpios e higienizados, es importante utilizar el Limpia Pinceles de Pinnacle. Su fórmula ayuda a eliminar fácilmente todo tipo de producto.",
@@ -274,7 +268,7 @@
         "nombre": "Lapiz Corrector de Esmalte",
         "marca": "Nailway",
         "categoria": "Esmaltado",
-        "estado": "",
+        "estado": "Sin Estado",
         "precio": 249,
         "descuento": 10,
         "descripcion": "Este lápiz corrector emprolija y elimina el excedente de esmalte para lograr un esmaltado prolijo y parejo. Su fórmula no tóxica, elimina fácilmente el esmalte sin dañar su superficie",
@@ -288,7 +282,7 @@
         "nombre": "Fortalecedor Uñas Sally Hansen Nail Rehab",
         "marca": "Sally Hansen",
         "categoria": "Esmaltado",
-        "estado": "",
+        "estado": "Sin Estado",
         "precio": 1790,
         "descuento": 10,
         "descripcion": "¡Poné a tus uñas gravemente dañadas en tratamiento intensivo de rehabilitación! Nail Rehab™ de Sally Hansen defiende contra quiebres, roturas, y descamación. Nuestra fórmula con Jazmín, Rosas, y Vitamina E ayuda a fortalecer y proteger tus uñas. Instantáneamente rellena surcos y oculta imperfecciones. ¿Cuándo usarlo? Cuando las uñas descuidadas necesitan rescate, Nail Rehab™ de Sally Hansen te brinda uñas más fuertes y de apariencia más saludable protegidas contra el daño. ¿Cómo usarlo? Aplicá 1 o 2 capas sobre las uñas limpias o debajo del esmalte de color. Volvé a aplicar Nail Rehab™ cuantas veces sea necesario. Luego de 7 días, removelo y repetí el procedimiento. ¿Por qué usarlo? ¡Nail Rehab™ es imprescindible en cualquier set de manicura!",
@@ -334,7 +328,7 @@
         "nombre": "Esmalte en Gel Miss Glitter Joy By On Off",
         "marca": "Thuya",
         "categoria": "Decoración",
-        "estado": "",
+        "estado": "Sin Estado",
         "precio": 4990,
         "descuento": 25,
         "descripcion": "Con la nueva colección Miss Glitter by On-Off conseguirás ese plus increíble en todas tus manicuras. El nuevo formato de tarros de 5 gr. de glitter en diferentes colores: Joy, Rich y Destiny. Además, su brillo es súper intenso gracias a sus partículas de brillo y, como su textura es de gel, se pueden aplicar con pincel de gel fácilmente (de pelo sintético) y se secan en lámpara (secado 30 segundos en LED y 120 en UV). Son ideales para esmaltar una uña o para combinar y crear decoraciones llamativas. • El esmalte permanente gel on-off Joy es un rosa brillante y elegante para las ocasiones más especiales. • El nuevo Rich combina a la perfección con cualquier outfit para las mejores fiestas gracias a su tono dorado. • Sigue tu estrella plateada con el esmalte permanente gel on-off Destiny de la colección Miss Glitter",
@@ -364,10 +358,10 @@
         "nombre": "PLACA P/STAMPING ACRILICO MED THUYA",
         "marca": "Thuya",
         "categoria": "Decoración",
-        "estado": "",
+        "estado": "Sin Estado",
         "precio": 624,
         "descuento": 50,
-        "descripcion": "",
+        "descripcion": "PLACA P/STAMPING ACRILICO MED THUYA",
         "stock": 19,
         "imagen": [
             "PLACA-P-STAMPING-ACRILICO-MED-THUYA.jpg"
@@ -491,10 +485,7 @@
     {
         "id": 35,
         "nombre": "Módulo Ayudante para Manicuría + Torno Drill 288 + 6 Esmaltes Semipermanentes Meliné",
-        "marca": [
-            "Meliné",
-            "Teknikpro"
-        ],
+        "marca": "Meliné",
         "categoria": "Aparatos",
         "estado": "Oferta",
         "precio": 61320,
@@ -645,7 +636,7 @@
         "id": 45,
         "nombre": "Gel Color",
         "marca": "Pink Mask",
-        "categoria": "Esmaltes Semipermanentes",
+        "categoria": "Esmaltado Semipermanente",
         "estado": "Oferta",
         "color": "Sunday Morning",
         "precio": 2096,
@@ -1059,24 +1050,6 @@
         "stock": 33,
         "imagen": [
             "tokio.webp"
-        ]
-    },
-    {
-        "id": 72,
-        "nombre": "Lima",
-        "marca": "Thuya",
-        "categoria": "Esmaltado Semipermanente",
-        "estado": "Oferta",
-        "color": "#9900ff",
-        "precio": "465465",
-        "descuento": 15,
-        "stock": "54655445",
-        "descripcion": "456465465465465",
-        "imagen": [
-            "img-1664125675973.jpg",
-            "img-1664125675973.jpg",
-            "img-1664125675973.jpg",
-            "img-1664125675973.jpg"
         ]
     }
 ]
