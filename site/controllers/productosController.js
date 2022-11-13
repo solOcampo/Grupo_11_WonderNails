@@ -92,11 +92,16 @@ module.exports = {
             })
             Promise.all([productosNuevos, productosFavs, productosOferta, esmaltes, otros])
             .then(([productosNuevos, productosFavs, productosOferta, esmaltes, otros]) => {
-
+                let productosOfertaFiltrados = [];
+                productosOferta.forEach((producto) => {
+                    if (producto.categoriasid !== 11) {
+                        productosOfertaFiltrados.push(producto)
+                    }
+                })
                     return res.render('productos',{
                         productosNuevos,
                         productosFavs,
-                        productosOferta,
+                        productosOfertaFiltrados,
                         esmaltes,
                         otros
                     })
@@ -104,23 +109,76 @@ module.exports = {
         
     },
     state:(req, res) => {
-        let estado = req.params.estado
-        let productosE = productos.filter((product) => product.estado === estado)
-        if(estado === productosE[0].estado){
-            return res.send(estado)
-            return res.render('estado',{
-                productosE,
-                estado
+        let estado = req.params.state;
+        let idEstado
+        let idCategoria
+        if(req.params.state === "Oferta"){
+            idEstado = 1
+        } else if (req.params.state === "Favoritos"){
+            idEstado = 2
+        } else if (req.params.state === "Nuevo"){
+            idEstado = 3
+        } else if (req.params.state === "Otros"){
+            idEstado = 4
+            estado = "Otros"
+        }
+        if(req.params.state === "Aparatos"){
+            idCategoria = 1
+        }else if (req.params.state === "Esmaltado Semipermanente"){
+            idCategoria = 2
+        } else if (req.params.state === "Contrucción de Uñas"){
+            idCategoria = 3
+        } else if (req.params.state === "Esmaltado"){
+            idCategoria = 4
+        } else if (req.params.state === "Decoración"){
+            idCategoria = 5
+        } else if (req.params.state === "Herramientas"){
+            idCategoria = 6
+        } else if (req.params.state === "Accesorios"){
+            idCategoria = 7
+        } else if (req.params.state === "Aparatos"){
+            idCategoria = 8
+        } else if (req.params.state === "Cuidado de Manos y Pies"){
+            idCategoria = 9
+        } else if (req.params.state === "Maquillaje"){
+            idCategoria = 10
+        } else if (req.params.state === "Esmaltes"){
+            idCategoria = 11
+        }
+        if(idCategoria){
+            db.Productos.findAll({
+                where: {
+                    categoriasid: idCategoria
+                },
+                include: [{
+                    all: true
+                }]
             })
+            .then(productos => {
+
+                return res.render("estado",{
+                    productos,
+                    estado
+                })
+            })
+            .catch(errors => res.send(errors))
+        } else {
+            db.Productos.findAll({
+                where: {
+                    estadosid : idEstado
+                },
+                include: [{
+                    all: true
+                }]
+            })
+            .then(productos => {
+                return res.render("estado",{
+                    productos,
+                    estado
+                })
+            })
+            .catch(errors => res.send(errors))
         }
         
-    },
-    category:(req, res) => {
-        let categoria = req.params.categoria
-        /* let productosC = productos.filter((product) => product.categoria.toLowerCase() === categoria) */
-        /* return res.render('categoria',{
-            productosC,
-            categoria
-        }) */
     }
 }

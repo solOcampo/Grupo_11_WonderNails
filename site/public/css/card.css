@@ -12,6 +12,7 @@
 }
 
 .card .card-img .card-img-background{
+    margin: 2vh 0;
     height: 250px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -23,17 +24,20 @@
 
 .card .card-value{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: row-reverse;
     align-items: center;
 }
 .card .card-discount{
+    margin-left: 1vh;
     font-size: 25px;
     color: var(--rosaOscuro);
 }
 .card .card-price{
    color:var(--grisOscuro);
     font-size: 30px;
+    text-align: center;
+    
 }
 .card .card-button{
     position: absolute;
