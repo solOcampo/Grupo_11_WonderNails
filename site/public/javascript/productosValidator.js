@@ -9,14 +9,13 @@ window.addEventListener('load', () => {
         if (!arr.includes(false)) {
             btn.disabled = false
             btn.style.backgroundColor = '#1a78fd'
-        }else{
+        } else {
             btn.disabled = true
             btn.style.backgroundColor = 'var(--rojoError)'
         }
     }
-
     let nombres = $('#nombre')
-    let marcas = $('#marca')
+    let marcas = $('#marcas')
     let categorias = $('#categoria')
     let estados = $('#estado')
     let colores = $('#color')
@@ -26,10 +25,19 @@ window.addEventListener('load', () => {
     let descripcion = $('#descripcion')
     let imagenes = $('#imagen')
 
+    iconoExito = ('#success-icon'),
+        failureIcon = ('#failure-icon');
+
     let btn = $('#btn-submit')
 
+    let regExLetter = /^[a-zA-Z\sñáéíóúü]*$/
+    let regExNumber = /^[+]?([0-9][0-9]?|150)$/
+    const regExExt = /\.(jpg|jpeg|png|jfif|gif|webp)$/
 
-    nombres.addEventListener('blur', function() {
+
+
+
+    nombres.addEventListener('blur', function () {
         switch (true) {
             case !this.value.trim():
                 $('#nombreError').innerHTML = "Debes ingresar el nombre de tu producto"
@@ -50,37 +58,37 @@ window.addEventListener('load', () => {
         }
         funcValidate(validate)
     })
-    marcas.addEventListener('blur', function() {
+    marcas.addEventListener('blur', function () {
         switch (true) {
-            case this.value.trim():
+            case !this.value.trim():
                 $('#marcaError').innerHTML = "Debes ingresar una marca"
                 this.classList.add('is-invalid')
                 validate.marcas = false
                 break;
             default:
-                $('#marcaError').innerHTML = null
+                $('#marcaError').innerText = null
                 this.classList.remove('is-invalid')
                 this.classList.add('is-valid')
                 validate.marcas = true
-                break;
+            break;
         }
         funcValidate(validate)
     })
 
 
-  /* Validacion */
-  const validate = {
-    nombres : false,
-    marcas : false,
-    categorias : false ,
-    estados : false ,
-    colores : false ,
-    precios : false ,
-    descuentos : true ,
-    descripcion : false ,
-    imagenes : true ,
-}
+    /* Validacion */
+    const validate = {
+        nombres: false,
+        marcas: false,
+        categorias: false,
+        estados: false,
+        colores: false,
+        precios: false,
+        descuentos: true,
+        descripcion: false,
+        imagenes: true,
+    }
 
 
-funcValidate(validate)
+    funcValidate(validate)
 })

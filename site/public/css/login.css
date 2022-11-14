@@ -31,7 +31,6 @@
   align-items: center;
 }
 .login form .field{
-  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -40,6 +39,17 @@
   width: 100%;
   position: relative;
 }
+.login form .fa-eye-slash, .fa-eye:before{
+  color: var(--grisMedio);
+  bottom: 2rem;
+  position: relative;
+  left: 9.5rem;
+}
+/* .login form .fa-eye:before {
+  bottom: 2rem;
+  position: relative;
+  left: 9.5rem;} */
+
 .login form .input{
   font-family: var(--fuenteSubtitulos);
   height: 100%;
@@ -52,7 +62,7 @@
   transition: all 0.2s ease;
   border: none;
 }
-.login form .error{
+.login form small {
   font-size: 10px;
   display: flex;
   margin-top: 5px;
@@ -61,14 +71,13 @@
 }
 
 .login .field .input-area i{
-  width: 20px;
-  position: absolute;
-  top: 50%;
-  font-size: 18px;
-  pointer-events: none;
-  top: 17px;
-  left: 25px;
+  left: 42px;
+    /* width: 29px; */
+    position: relative;
+    /* top: 50%; */
+    font-size: 18px;
 }
+
 .login .input-area .icon{
   left: 15px;
   color: var(--grisMedio);
@@ -82,15 +91,19 @@
 }
 
 .login .recordarme_bottom{
-  width: 100%;
   display: flex;
+  margin-left: 70px;
   color: var(--grisMedio);
   font-weight: bold;
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
   align-items: baseline;
-  justify-content: space-evenly;
-  font-family: var(--fuenteSubtitulos);
-  align-content: center;
+  /* margin: 0 auto; */
+  justify-content: center;
+  }
+  .login .recordarme_bottom input{
+    position: relative;
+    right: 40px;
+
   }
 .login .recordarme_bottom label{
   color: var(--grisMedio);
@@ -113,6 +126,7 @@
   width: 100%;
   display: flex;
   margin: 20px 0;
+  justify-content:center ;
   } 
 .login .Access {
   position: relative;
@@ -125,15 +139,25 @@
 .login .Access .img ,.Access2 .img{
   width: 10vh;
   }
-.login .access_text{
-  font-size: 12px;
+  .login .access_text{
+    font-size: 12px;
+    color: var(--grisMedio);
+    font-family: var(--fuenteSubtitulos);
+    font-weight: bold;
+    position: relative;
+    top: 3px;
+    } 
+.login .access_text small.app {
   color: var(--grisMedio);
   font-family: var(--fuenteSubtitulos);
   font-weight: bold;
   position: relative;
+}
+.login .fa-eye-slash {
+  bottom: 2rem;
   position: relative;
-  top: 3px;
-  } 
+  left: 8.8rem;}
+
 .login .wrapper button{
   font-weight: bold;
   border-radius: 15px;
@@ -151,8 +175,7 @@
   /* Redes sociales */
 .login .social_icons{
   display: flex;
-  justify-content: space-evenly;
-  width: 50%;
+  justify-content: center;
 }
 .login .icon a :hover{
   color:var(--grisMedio);
@@ -176,6 +199,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  }
+  .login .AccesoButton{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+  .login .accederButton {
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    width: 7rem;
+    font-family: var(--fuenteSubtitulos);
+    color: white;
+    padding: 7px;
+    background-color: var(--rosaOscuro);
   }
   .login .link a{
     color: var(--grisMedio);

@@ -22,13 +22,15 @@
                             <input type="text" class="form-control" name="nombre" id="nombre"
                                 value="<%= locals.old && old.nombre ? old.nombre : null%>"
                                 placeholder="Nombre del producto">
+                                <i class="fas fa-exclamation-circle failure-icon"></i>
+                                <i class="far fa-check-circle success-icon"></i>
                             <p class="span text-danger" id="nombreError">
                                 <%= locals.errors && errors.nombre ? errors.nombre.msg : null %>
                             </p>
                         </div>
                         <div class="form-floating">
                             <label for="marca">Marca</label>
-                            <select class="form-select" name="marca" id="marca"
+                            <select class="form-select" name="marca" id="marcas"
                                 aria-label="Floating label select example">
                                 <% if (locals.errors && old.marca) { %>
                                     <option hidden value="">Selecciona una opcion</option>

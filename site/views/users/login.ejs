@@ -9,11 +9,13 @@
         <!-- Formulario de login -->
         <div class="wrapper">
           <h1>Acceder</h1>
-          <form action="" method="post">
+          <form action="" method="post" id="FormLogin">
             <div class="field email">
               <div class="input-area">
                 <i class="icon fas fa-envelope"></i>
-                <input class="input" type="email" name="email" id="email" placeholder="<%= locals.old && old.email ? old.email :"Nombre de usuario o email" %>">
+                <input class="input" type="email" name="email" id="email"
+                  placeholder="<%= locals.old && old.email ? old.email :" Nombre de usuario o email" %>">
+                <div id="emailContainer"></div>
                 <% if (locals.errors && errors.email) { %>
                   <small class="error">
                     <%= errors.email.msg %>
@@ -25,18 +27,23 @@
               <div class="input-area">
                 <i class="icon fas fa-lock"></i>
                 <input class="input" type="password" name="password" id="password" placeholder="Contraseña">
+                <div id="passwordContainer"></div>
                 <% if (locals.errors && errors.password) { %>
                   <small class="error">
                     <%= errors.password.msg %>
                   </small>
                   <% } %>
               </div>
+              <i class="fas fa-eye-slash" id="eye-pass"></i>
             </div>
             <div class="recordarme_bottom">
               <input type="checkbox" name="recordarme" id="recordarme">
               <label for="recordarme">Recordarme</label>
               <small>¿Olvidaste tu contraseña?</small>
             </div>
+            <div id="recordarmeContainer"></div>
+
+
             <div class="boxAccess">
               <div class="Access">
                 <img src="/images/Rectangle 29.svg">
@@ -71,17 +78,17 @@
                 </div>
               </div>
             </div>
-
-            <button type="submit">Acceder</button>
-          </div>
-          <div class="link">
-            <a href="/usuarios/register">No tengo una cuenta!</a>
-          </div>
-        </form>
-        </div>
+            <div class="AccesoButton">
+              <button class="accederButton" id="btn-submit" type="submit">Acceder</button>
+            </div>
+            <div class="link">
+              <a href="/usuarios/register">No tengo una cuenta!</a>
+            </div>
+          </form>
       </main>
 
       <%- include ('../partials/footer') %>
+        <script src="/javascript/loginValidator.js"></script>
 
   </body>
 
