@@ -2,9 +2,10 @@ window.addEventListener('load', () => {
     let $ = (elemento) => document.querySelector(elemento)
     console.log("Register vinculado");
 
+    let regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/;
     const regExLetter = /^[A-Z]+$/;
     const regExExt = /\.(jpg|jpeg|png|jfif|gif|webp)$/
-    const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+    const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
     const regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
     let form = $('#FormRegister')
@@ -87,7 +88,7 @@ window.addEventListener('load', () => {
                     errores.push(error)
                 }
                 break;
-            case !regExLetter.test(nombre.value):
+            case !regExAlpha.test(nombre.value):
                 $('#nameContainer').innerHTML = "<small>El nombre solo acepta letras</small>"
                 nombre.style.border = "1px solid red"
                 errores.forEach(e => {
@@ -131,7 +132,7 @@ window.addEventListener('load', () => {
                     errores.push(error)
                 }
                 break;
-            case !regExLetter.test(apellido.value):
+            case !regExAlpha.test(apellido.value):
                 $('#lastnameContainer').innerHTML = "<small>El apellido no puede contener numeros ni caracteres especiales</small>"
                 nombre.style.border = "1px solid red"
                 errores.forEach(e => {
@@ -219,11 +220,11 @@ window.addEventListener('load', () => {
                 }
                 break;
             case !regExPass.test(inputPass.value):
-                $('#passwordContainer').innerHTML = "<small>La contraseña debe tener entre 6 y 12 caracteres y debe contener una mayuscula, una minuscula y un numero</small>"
+                $('#passwordContainer').innerHTML = "<small>La contraseña debe tener entre 8 y 12 caracteres y debe contener una mayuscula, una minuscula y un numero</small>"
                 email.style.border = "1px solid red"
                 errores.forEach(e => {
                     if(e.id === 3 ){
-                        e.mensaje = "La contraseña debe tener entre 6 y 12 caracteres y debe contener una mayuscula, una minuscula y un numero"
+                        e.mensaje = "La contraseña debe tener entre 8 y 12 caracteres y debe contener una mayuscula, una minuscula y un numero"
                         variable = false
                     }
                 });

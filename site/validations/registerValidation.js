@@ -12,8 +12,8 @@ module.exports = [
     .isLength({min:3}).withMessage('Debe contener al menos 3 caracteres'),
     
     /* email */
-    check('Email').trim()
-    .notEmpty().withMessage('Debe ingresa su email')
+    check('email').trim()
+    .notEmpty().withMessage('Debe ingresa su email').bail()
     .isEmail().withMessage('Debe ingresar un email valido'),
     
     /* contraseña */
