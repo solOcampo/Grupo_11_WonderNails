@@ -22,13 +22,15 @@
                             <input type="text" class="form-control" name="nombre" id="nombre"
                                 value="<%= locals.old && old.nombre ? old.nombre : null%>"
                                 placeholder="Nombre del producto">
-                            <p class="span text-danger">
+                                <i class="fas fa-exclamation-circle failure-icon"></i>
+                                <i class="far fa-check-circle success-icon"></i>
+                            <p class="span text-danger" id="nombreError">
                                 <%= locals.errors && errors.nombre ? errors.nombre.msg : null %>
                             </p>
                         </div>
                         <div class="form-floating">
                             <label for="marca">Marca</label>
-                            <select class="form-select" name="marca" id="marca"
+                            <select class="form-select" name="marca" id="marcas"
                                 aria-label="Floating label select example">
                                 <% if (locals.errors && old.marca) { %>
                                     <option hidden value="">Selecciona una opcion</option>
@@ -48,7 +50,7 @@
                                 <% } %> 
                             </select>
                             <% if (locals.errors && errors.marca) { %>
-                                <p class="span text-danger"><%= errors.marca.msg %></p>
+                                <p class="span text-danger" id="marcaError"><%= errors.marca.msg %></p>
                             <% } %>
                         </div>
                         <div class="form-floating">
@@ -168,7 +170,7 @@
                                 <button type="reset">Borrar</button>
                             </div>
                             <div class="button crear">
-                                <button class="btn btn-outline-success" type="submit">Crear</button>
+                                <button class="btn btn-outline-success" id="btn-submit" type="submit">Crear</button>
                             </div>
                         </div>
 
@@ -176,6 +178,8 @@
                 </form>
             </div>
         </main>
+        <script src="/javascript/productosValidator.js"></script>
+
     </body>
 
 </html>
