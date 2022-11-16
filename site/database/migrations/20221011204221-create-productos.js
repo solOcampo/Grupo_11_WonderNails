@@ -1,5 +1,5 @@
 'use strict';
-/** @type {import('sequelize-cli').Migration} */
+
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Productos', {
@@ -20,6 +20,9 @@ module.exports = {
       },
       descripcion: {
         type: Sequelize.STRING(1000)
+      },
+      color: {
+        type: Sequelize.STRING
       },
       descuento: {
         type: Sequelize.INTEGER

@@ -21,11 +21,11 @@
             </ul>
         </section>
         <section>
-            <h2 id="Nuevos">Nuevos</h2>
+            <a class="link-esmaltes" href="/productos/<%- productosNuevos[0].estado.estado %> "><h2 id="Nuevos">Nuevos</h2></a>
             <% productosNuevos.forEach(producto => { %>
                 <%- include('./partials/card',{
                     id:producto.id,
-                    imagen:producto.imagen[0],
+                    imagen:producto.imagenes[0].nombre,
                     nombre:producto.nombre,
                     descuento:producto.descuento,
                     precio:producto.precio 
@@ -33,11 +33,11 @@
             <% }) %>
         </section>
         <section>
-            <h2 id="Favoritos">Favoritos</h2>
+            <a class="link-esmaltes" href="/productos/<%- productosFavs[0].estado.estado %> "><h2 id="Favoritos">Favoritos</h2></a>
             <% productosFavs.forEach(producto => { %>
                 <%- include('./partials/card',{
                     id:producto.id,
-                    imagen:producto.imagen[0],
+                    imagen:producto.imagenes[0].nombre,
                     nombre:producto.nombre,
                     descuento:producto.descuento,
                     precio:producto.precio 
@@ -45,11 +45,12 @@
             <% }) %>
         </section>
         <section>
-            <h2 id="Ofertas">Ofertas</h2>
-            <% productosOferta.forEach(producto => { %>
+            <a class="link-esmaltes" href="/productos/<%- productosOfertaFiltrados[0].estado.estado %> "><h2 id="Ofertas">Ofertas</h2></a>
+            
+            <% productosOfertaFiltrados.forEach(producto => { %>
                 <%- include('./partials/card',{
                     id:producto.id,
-                    imagen:producto.imagen[0],
+                    imagen:producto.imagenes[0].nombre,
                     nombre:producto.nombre,
                     descuento:producto.descuento,
                     precio:producto.precio 
@@ -57,11 +58,11 @@
             <% }) %>
         </section>
         <section class="lista-esmaltes">
-            <a class="link-esmaltes" href="/productos/<%- esmaltes.categoria %> "><h2 id="Esmaltes">Todos nuestros esmaltes</h2></a>
+            <a class="link-esmaltes" href="/productos/<%- esmaltes[0].category.nombre %> "><h2 id="Esmaltes">Nuestros esmaltes</h2></a>
             <% esmaltes.forEach(producto => { %>
                 <%- include('./partials/card',{
                     id:producto.id,
-                    imagen:producto.imagen[0],
+                    imagen:producto.imagenes[0].nombre,
                     nombre:producto.nombre,
                     descuento:producto.descuento,
                     precio:producto.precio 
@@ -69,11 +70,12 @@
             <% }) %>
         </section>
         <section>
-            <h2 id="Otros">Otros</h2>
+            <a class="link-esmaltes" href="/productos/<%- otros[0].estado.estado %> "><h2 id="Otros">Otros</h2></a>
+            
             <% otros.forEach(producto => { %>
                 <%- include('./partials/card',{
                     id:producto.id,
-                    imagen:producto.imagen[0],
+                    imagen:producto.imagenes[0].nombre,
                     nombre:producto.nombre,
                     descuento:producto.descuento,
                     precio:producto.precio 

@@ -12,7 +12,7 @@ testConnection()
 /* Implementamos locals dentro de nuestra aplicacion */
 const userLogin = require("./middlewares/userLoginCheck");
 const adminCheck = require("./middlewares/adminCheck");
-
+const rememberMe = require("./middlewares/cookieCheck")
 
 
 app.use(express.json());
@@ -26,6 +26,8 @@ app.use(express.static(path.resolve(__dirname, "public")));
 app.use(
   session({
     secret: "Wonder Nails",
+    resave: true,
+    saveUninitialized: false
   })
 );
 
@@ -34,6 +36,7 @@ app.use(userLogin);
 /* cookies */
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(rememberMe);
 
 let indexRouter = require("./routes/index");
 let adminRouter = require("./routes/admin");

@@ -7,9 +7,7 @@ let {cart,detail, nailPolish, list, state, category} = require('../controllers/p
 /* Todos los productos */
 router.get('/', list)
 /* Productos por estado */
-router.get('/nuevos', state)
-router.get('/favoritos', state)
-router.get('/ofertas', state)
+router.get('/:state', state)
 /* Esmaltes */
 router.get('/esmaltes', nailPolish)
 /* Carrito de compras */

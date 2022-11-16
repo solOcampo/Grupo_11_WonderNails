@@ -10,13 +10,28 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       Fecha_compra: {
+        allowNull: false,
         type: Sequelize.DATE
       },
       Carritos_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model:{
+            tableName: 'Carritos'
+          },
+          key: 'id'
+        }
       },
       Usuarios_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model:{
+            tableName: 'Usuarios'
+          },
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,

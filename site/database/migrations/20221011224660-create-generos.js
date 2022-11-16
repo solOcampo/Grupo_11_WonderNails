@@ -1,5 +1,5 @@
 'use strict';
-/** @type {import('sequelize-cli').Migration} */
+
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Generos', {
@@ -10,6 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       genero: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       createdAt: {

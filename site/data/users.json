@@ -115,20 +115,40 @@
     },
     {
         "id": 7,
-        "name": "Micaela",
-        "lastname": "Loureiro",
+        "nombre": "Micaela",
+        "apellido": "Loureiro",
         "email": "micaela_loureiro@hotmail.com",
-        "password": "$2a$10$tJOXIrR80I7QA88JbQoNFeqfI6Y2FqPnc7DAbMBb5XykPgR4LnjSC",
+        "contraseña": "$2a$10$tJOXIrR80I7QA88JbQoNFeqfI6Y2FqPnc7DAbMBb5XykPgR4LnjSC",
+        "telefono": 1364269522,
+        "dni": 37596821,
+        "genero": "F",
+        "calle": "San Martin",
+        "numero": 1596,
+        "barrio": "",
+        "ciudad": "Wuyang",
+        "provincia": "Buenos Aires",
+        "codigoPostal": 2200,
         "rol": "Administrador",
-        "imagen": "avatar-1665860782216.jpg"
+        "imagenPerfil": "avatar-porDefecto.png",
+        "imagenPortada": "avatar-porDefecto.png"
     },
     {
         "id": 8,
-        "name": "ana",
-        "lastname": "lisame",
+        "nombre": "ana",
+        "apellido": "lisame",
         "email": "analisamelo@gmail.com",
-        "password": "$2a$10$UJATOF7nER/o76scMQja2uybof2Kegzq4iv0p8CfCxLmH6j5VaRdO",
+        "contraseña": "$2a$10$UJATOF7nER/o76scMQja2uybof2Kegzq4iv0p8CfCxLmH6j5VaRdO",
+        "telefono": 1364269522,
+        "dni": 37596821,
+        "genero": "F",
+        "calle": "San Martin",
+        "numero": 1596,
+        "barrio": "",
+        "ciudad": "Wuyang",
+        "provincia": "Buenos Aires",
+        "codigoPostal": 2200,
         "rol": "Administrador",
-        "imagen": "avatar-porDefecto.png"
+        "imagenPerfil": "avatar-porDefecto.png",
+        "imagenPortada": "avatar-porDefecto.png"
     }
 ]

@@ -60,7 +60,7 @@
                                             </div>
                                             <a href="/productos/detalle/<%- producto.id %> ">
                                                 <div class="foto-prod">
-                                                    <img src="/img/products/<%- producto.imagen[0] %> " alt="Fotografía ilustrativa del producto">
+                                                    <img src="/img/products/<%- producto.imagenes[0].nombre %> " alt="Fotografía ilustrativa del producto">
                                                 </div>
                                                 <h4><%- producto.nombre %> </h4>
                                                 <span class="precio">$<%- producto.precio %> </span>
@@ -89,7 +89,7 @@
                                     </div>
                                     <a href="/productos/detalle/<%- producto.id %> ">
                                         <div class="foto-prod">
-                                            <img src="/img/products/<%- producto.imagen[0] %> " alt="Fotografía ilustrativa del producto">
+                                            <img src="/img/products/<%- producto.imagenes[0].nombre %> " alt="Fotografía ilustrativa del producto">
                                         </div>
                                         <h4><%- producto.name %> </h4>
                                         <span class="precio">$<%- producto.precio %> </span>
@@ -113,7 +113,7 @@
                                     </div>
                                     <a href="/productos/detalle/<%- producto.id %> ">
                                         <div class="foto-prod">
-                                            <img src="/img/products/<%- producto.imagen[0] %> " alt="">
+                                            <img src="/img/products/<%- /* producto.imagenes[0].nombre */ %> " alt="">
                                         </div>
                                         <h4><%- producto.nombre %> </h4>
                                         <span class="precioOferta">
@@ -146,7 +146,7 @@
                     <div class="fondo">
                         <img src="/img/Home/fondoEsmaltes.png" alt="">
                     </div>
-                    <a href="/productos/esmaltes"><button class="botonEsmalte"></button></a>
+                    <a href="/productos/Esmaltes"><button class="botonEsmalte"></button></a>
                     
                     <div class="cajaEsmaltes">
                         <div class="glider-contain">
@@ -154,7 +154,7 @@
                                     <% esmaltes.forEach(esmalte => { %>
                                     <article class="esmalte">
                                         <a href="/productos/detalle/<%- esmalte.id %> ">
-                                            <div class="imgEsmalte"><img src="/img/Products/<%- esmalte.imagen[0] %> "
+                                            <div class="imgEsmalte"><img src="/img/products/<%- esmalte.imagenes[0].nombre %> "
                                                 alt="Imagen de un esmalte"></div>
                                             <h4><%-esmalte.nombre %></h4>
                                             <span class="precioE">$<%- esmalte.precio %>  </span>

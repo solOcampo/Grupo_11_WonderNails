@@ -9,6 +9,7 @@ let direcciones = listado.map(direccion => {
     ciudad:direccion.ciudad,
     provincia:direccion.provincia,
     codigoPostal:direccion.codigoPostal,
+    usuarioId: direccion.id,
     createdAt: new Date,
     updatedAt: new Date
   }

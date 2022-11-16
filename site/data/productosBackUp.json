@@ -208,20 +208,6 @@
         ]
     },
     {
-        "id": 15,
-        "nombre": "Removedor de Esmalte Semipermanente x120ml",
-        "marca": "Anush",
-        "categoria": "Esmaltado Semipermanente",
-        "estado": "Oferta",
-        "precio": 990,
-        "descuento": 20,
-        "descripcion": "El Removedor ideal para Uñas Esculpidas o Gelificadas",
-        "stock": 18,
-        "imagen": [
-            "Removedor-de-Esmalte-Semipermanente-x120ml.jpg"
-        ]
-    },
-    {
         "id": 16,
         "nombre": "Alicate para Cutículas 577CL Celeste/Lila/Magenta/Amarillo Niquelado",
         "marca": "Mundial",
@@ -552,10 +538,10 @@
         "descripcion": "El Combo incluye: • Kit Lifting de Pestañas Completo Thuya Todo lo necesario para realizar el servicio de lifting de pestañas Contiene: Cola lifting 14 ml Caja de 10 Moldes de Silicona Silicone Pads (Tamaño M) Gel permanente 15 ml Neutralizante líquido 15 ml, 1 cepillo peine 1 palito de naranjo • Neceser Porta-Cosméticos Un muy práctico neceser para almacenar todos tus productos cosméticos! • Cepillo para Pestañas x10 Thuya",
         "stock": 5,
         "imagen": [
-            "Set-Lifting-de-Pestañas-Completo-1.jpg",
-            "Set-Lifting-de-Pestañas-Completo-2.jpg",
-            "Set-Lifting-de-Pestañas-Completo-3.jpg",
-            "Set-Lifting-de-Pestañas-Completo-4.jpg"
+            "Set-Lifting-de-Pestañas-Completo-1",
+            "Set-Lifting-de-Pestañas-Completo-2",
+            "Set-Lifting-de-Pestañas-Completo-3",
+            "Set-Lifting-de-Pestañas-Completo-4"
         ]
     },
     {
@@ -597,9 +583,9 @@
         "estado": "Nuevo",
         "precio": "900",
         "descuento": 12,
-        "descripcion": "Lima Thuya",
         "stock": "10",
-        "imagen": ["limaThuya.webp"]
+        "descripcion": "Lima Thuya",
+        "imagen": ""
     },
     {
         "id": 42,

@@ -12,7 +12,7 @@
                     <div class="sombra"> </div>
                     <div class="avatar-perfil">
                         
-                        <img src="/img/users/<%= user.imagen %> " alt="">
+                        <img src="/img/users/<%= session.image_profil %> " alt="Imagen de perfil">
                         <a id="btn-abrir-popup">
                             <div class="cambiar-foto">
                             <i class="fas fa-camera"></i> 
@@ -22,7 +22,7 @@
                     </div>
                     <div class="datos-perfil">
                         <% if (locals.userLogin) { %>
-                            <h6 class="titulo-usuario admin"><%= locals.userLogin.rol === "Administrador" ? locals.userLogin.rol : null %></h6>
+                            <h6 class="titulo-usuario admin"><%= locals.userLogin.rol == 1 ? "Administrador" : null %></h6>
                             <h6 class="titulo-usuario"><%= locals.userLogin.name %> <%= locals.userLogin.lastname %></h6>
                             <h4 class="email-usuario"><%= locals.userLogin.email %></h4>
                         <% } %>
@@ -52,24 +52,7 @@
             </div>
         </section>
         <h2>Te puede interesar</h2>
-        <section class="productos">
-            <% for( let i = 7; i < 11; i++ ) { %>
-                    <article>
-                        <div class="caja-etiquetas">
-                            <span class="etiqueta"><%= products[i].estado %></span>
-                            <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                        </div>
-                        <a href="/productos/detalle/<%= products[i].id %> ">
-                            <div class="img">
-                                <img src="/img/Products/<%= products[i].imagen[0] %>" alt="">
-                            </div>
-                            <h4><%= products[i].nombre %> </h4>
-                            <p class="precio-1">$<%= products[i].precio %></p>
-                            <button class="boton">Comprar</button>
-                        </a>
-                    </article>
-            <% } %>
-        </section>
+        
         <section class="instagram">
             <div class="fotosIG">
                 <a class="img1" href="https://www.instagram.com/p/CgVTAhQA6S4/"><img src="/images/19fac1a3846ba9f935f0dfc06581c073.jpg" alt=""></a>
@@ -89,17 +72,17 @@
                     <div class="col col-5">
                         <label class="selectImg"class="form-label" for="product-img">
                             <div class="box-img">
-                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/users/<%= user.imagen %>" alt="">
+                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/users/<%= user.imagen_perfil %>" alt="">
                             </div>
                         </label>
                         <div class="form-admin__box inactivo">
-                            <input class="d-none" id="product-img" type="file" name="imagenPerfil" placeholder="Imagen del Producto" accept="image/*" multiple>
+                            <input class="d-none" id="product-img" type="file" name="imagenPerfil" placeholder="Imagen del Producto" accept="image/*">
                         </div>
                     </div>
                     <button class="btn-submit" type="submit">Guardar</button>
                 </form>
             </div>
-        <div class="overlay" id="overlay">
+        <!-- <div class="overlay" id="overlay">
             <div class="popup" id="popup">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                 <h3>Cambiar foto de perfil</h3>
@@ -107,7 +90,7 @@
                     <div class="col col-5">
                         <label class="selectImg"class="form-label" for="product-img">
                             <div class="box-img">
-                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/users/<%= user.imagen %>" alt="">
+                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/users/" alt="">
                             </div>
                         </label>
                         <div class="form-admin__box inactivo">
@@ -117,7 +100,7 @@
                     <button class="btn-submit" type="submit">Guardar</button>
                 </form>
             </div>
-        </div>
+        </div> -->
         <!-- <div class="content" id="content">
             <span><%= locals.errors && errors.imagenPerfil ? errors.imagenPerfil.msg : null%>  </span>
         </div> -->
