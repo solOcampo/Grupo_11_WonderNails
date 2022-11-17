@@ -41,7 +41,7 @@
             <div class="icon">
               <i class="icon fas fa-envelope"></i>
             </div>
-            <input class="input" type="text" name="email" id="Email" placeholder="E-mail" value="<%= locals.old && old.email ? old.email : null %>">
+            <input class="input" type="text" name="email" id="email" placeholder="E-mail" value="<%= locals.old && old.email ? old.email : null %>">
             <div id="emailContainer"></div>
             <% if (locals.errors && errors.email) { %>
               <small class="error"><%= errors.email.msg %> </small>

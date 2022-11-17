@@ -17,7 +17,7 @@ module.exports = {
         let errors = validationResult(req)
         
         if(errors.isEmpty()){
-            /* return res.send(req.body) */
+            // return res.send(req.body) 
             let {name, lastname, email, password} = req.body
             
             //------ BASE DE DATOS ----------
@@ -65,6 +65,8 @@ module.exports = {
         return res.render('users/login')
     },
     processLogin: async (req,res) => {
+                    // return res.send(req.body) 
+
         let errors = validationResult(req)
 
         

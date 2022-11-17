@@ -1,6 +1,6 @@
 const {check,body} = require('express-validator')
-const db = require('../database/models/index');
-const usuarios = require('../data/users.json')
+const db = require('../database/models');
+// const usuarios = require('../data/users.json')
 const bcryptjs = require('bcryptjs')
 
 module.exports = [

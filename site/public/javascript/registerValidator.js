@@ -2,20 +2,22 @@ window.addEventListener('load', () => {
     let $ = (elemento) => document.querySelector(elemento)
     console.log("Register vinculado");
 
-    let regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/;
-    const regExLetter = /^[A-Z]+$/;
-    const regExExt = /\.(jpg|jpeg|png|jfif|gif|webp)$/
+    const regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/;
+    // const regExLetter = /^[A-Z]+$/;
+    // const regExExt = /\.(jpg|jpeg|png|jfif|gif|webp)$/
     const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
     const regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
+
 
     let form = $('#FormRegister')
     let nombre = $('#name')
     let apellido = $('#lastname')
-    let email = $('#Email')
+    let email = $('#email')
     // let image = $('#image')
     let inputPass = $('#password')
     let inputPass2 = $('#password2')
     let terminos = $('#terminos')
+
 
     let errores = [{
         id: 1,
@@ -66,6 +68,7 @@ window.addEventListener('load', () => {
             eye2.classList.toggle('fa-eye')
         }
     })
+    
 
     nombre.addEventListener('blur', () => {
         let error = {
@@ -89,7 +92,7 @@ window.addEventListener('load', () => {
                 }
                 break;
             case !regExAlpha.test(nombre.value):
-                $('#nameContainer').innerHTML = "<small>El nombre solo acepta letras</small>"
+                $('#nameContainer').innerHTML = "<small>El nombre solo acepta letras </small>"
                 nombre.style.border = "1px solid red"
                 errores.forEach(e => {
                     if (e.id === 1) {
@@ -302,7 +305,7 @@ window.addEventListener('load', () => {
                     return error.id !== 6
                 })
         }else{
-        $('#terminosContainer').innerHTML = "<small>Debe aceptar los terminos y condiciones</small>"
+        $('#terminos').innerHTML = "<small>Debe aceptar los terminos y condiciones</small>"
         errores.forEach(e => {
             if(e.id === 5 ){
                     error.mensaje = "Debe aceptar los terminos y condiciones"
