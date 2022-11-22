@@ -3,11 +3,19 @@
 
     <%- include ('../partials/head', {title: 'Wonder Nails' }) %>
     
-<body>
+<body class="NotFound" >
+
     <div>
-        <h1><%= message %></h1>
-        <h2><%= error.status %></h2>
-        <pre><%= error.stack %></pre>
+        <div id="clouds">
+            <div> <img class="cloud x2" src="/img/Products/402-removebg-preview.png" alt=""></div>
+            <div><img class="cloud x3" src="/images/logo-superior.png" alt=""></div>
+        </div>
+        <div class='c'>
+            <div class='_404'>404</div>
+            <div class='_1'>La página</div>
+            <div class='_2'>no fue encontrada</div>
+            <a class='btn' href='/'>Volve al inicio</a>
+        </div>
     </div>
 </body>
 </html>

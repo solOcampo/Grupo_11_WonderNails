@@ -1,5 +1,6 @@
+let db = require('../database/models')
 module.exports = (req, res, next) => {
-    if (req.cookies.rememberMe != undefined && req.session.userLogin == undefined) {
+    if (req.cookies.rememberMe = undefined && req.session.userLogin == undefined) {
         let user = db.Usuarios.findOne({
             where :{
                 email : req.cookies.rememberMe

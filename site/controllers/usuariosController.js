@@ -17,11 +17,11 @@ module.exports = {
         let errors = validationResult(req)
         
         if(errors.isEmpty()){
-            // return res.send(req.body) 
+            // return res.send(errors) 
             let {name, lastname, email, password} = req.body
             
             //------ BASE DE DATOS ----------
-
+            // let usuarios = db.Usuarios.findAll()
             const user = await db.Usuarios.create({
                 nombre: name,
                 apellido: lastname,
@@ -32,7 +32,16 @@ module.exports = {
                 imagen_perfil: "avatar-porDefecto.png",
                 imagen_portada: "portada-porDefecto.png"    
             })
-
+            /* const adress = await db.Direcciones.create({
+                calle: "falsa",
+                numero: 1234,
+                barrio: null,
+                ciudad: " ",
+                provincia: " ",
+                codigoPostal: 8407,
+                usuarioId: usuarios.length,   
+            }) */
+            
             console.log(user)
             if(!user) return // Redirigir o no, cuando hubo un error al registrar el usuario
 
@@ -62,6 +71,7 @@ module.exports = {
 
     },
     login: (req,res) => {
+
         return res.render('users/login')
     },
     processLogin: async (req,res) => {
@@ -81,7 +91,7 @@ module.exports = {
 
             if(!user) return // Si no existe el usuario redigir a donde sea necesario
 
-            let usuario = users.find(user => user.email === email)
+ 
             req.session.userLogin = {
                 // id : usuario.id,
                 // name : usuario.name,

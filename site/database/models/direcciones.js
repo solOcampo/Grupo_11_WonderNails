@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   class Direcciones extends Model {
 
       static associate(models) {
-         Direcciones.hasMany(models.Usuarios,{
+         Direcciones.belongsTo(models.Usuarios,{
           as: 'usuario',
           foreignKey: 'usuarioId'
         })

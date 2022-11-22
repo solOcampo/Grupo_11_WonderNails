@@ -43,7 +43,7 @@ let adminRouter = require("./routes/admin");
 let productosRouter = require("./routes/productos");
 let usuariosRouter = require("./routes/usuarios");
 // api
-let apiRouter = require('./routes/api/api')
+let apiRouter = require('./routes/api/apiRouter')
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -55,13 +55,15 @@ app.use("/admin", adminCheck, adminRouter);
 // api
 app.use('/api',apiRouter);
 
-/* app.use(function(req, res, next) {
-  res.status(404).render('partials/error');
-}); */
-
-/* app.use(function(req, res, next) {
-    next(createError(404));
-  }); */
+//  app.use(function(req, res, next) {
+//   res.status(404).render('views/error');
+// }); 
+app.use(function(req, res){
+  res.status(404).render("partials/error.ejs", { title: "No encontrado" });
+});
+// app.use(function(req, res, next) {
+//     next(createError(404));
+//   }); 
 
 app.listen(port, () =>
   console.log(

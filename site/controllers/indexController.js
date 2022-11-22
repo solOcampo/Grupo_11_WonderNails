@@ -92,5 +92,26 @@ module.exports = {
              
                 
             });
+    },
+    
+    cookies :(req, res) => { 
+        return res.render('aviso-cookies')
+    },
+    privacidad:(req,res)=>{
+        return res.render('politicas')
+    },
+    ventas:(req,res)=>{
+        return res.render('politicasdeVentas')
+    },
+    terminos:(req,res)=>{
+        return res.render('terminos')
+    },
+    Pcookies:(req,res)=>{
+        return res.render('politicasdeCookies')
+    },
+    nosotros:(req,res)=>{
+        return res.render('nosotros')
     }
+
+
 }

@@ -322,7 +322,7 @@ window.addEventListener('load', () => {
     form.addEventListener('submit',(e) => {
         e.preventDefault();
 
-        console.log(form.elements);
+        // console.log(form.elements);
         if(errores.length > 0){
             form.submit()
         }

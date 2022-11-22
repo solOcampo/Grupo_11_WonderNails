@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include ('./partials/head', {title: 'Wonder Nails' }) %>
-<link rel="stylesheet" type="text/css" href="glider.css">
+    <link rel="stylesheet" type="text/css" href="glider.css">
+
     <body class="home">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFQH6QX" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
 
         <%- include ('./partials/header') %>
             <main class="mainHome">
@@ -14,12 +19,12 @@
                             <div><img src="/img/Home/carrusel2.jpg" alt="banner"></div>
                             <div><img src="/img/Home/carrusel3.jpg" alt="banner"></div>
                             <div><img src="/img/Home/carrusel4.jpg" alt="banner"></div>
-                            <div><img src="/img/Home/carrusel5.jpg" alt="banner"></div>   
+                            <div><img src="/img/Home/carrusel5.jpg" alt="banner"></div>
                         </div>
                         <button aria-label="Previous" class="glider-prev">«</button>
                         <button aria-label="Next" class="glider-next">»</button>
                         <div role="tablist" class="dots"></div>
-                      </div>
+                    </div>
                 </section>
                 <section class="tienda">
                     <!-- INICIO -->
@@ -46,13 +51,13 @@
                         </ul>
                     </article>
                     <!-- CARRUSEL DE SECCIONES -->
-                    
+
                     <article class="carruselTienda">
                         <!-- novedades -->
                         <div id="nuevo" class="seccion">
                             <div class="glider-contain numero1">
                                 <div class="gliderProductos">
-                                    <% productosNuevos.forEach(producto => { %>
+                                    <% productosNuevos.forEach(producto=> { %>
                                         <div class="caja">
                                             <div class="caja-etiquetas">
                                                 <span class="etiqueta">Nuevo</span>
@@ -60,9 +65,12 @@
                                             </div>
                                             <a href="/productos/detalle/<%- producto.id %> ">
                                                 <div class="foto-prod">
-                                                    <img src="/img/products/<%- producto.imagenes[0].nombre %> " alt="Fotografía ilustrativa del producto">
+                                                    <img src="/img/products/<%- producto.imagenes[0].nombre %> "
+                                                        alt="Fotografía ilustrativa del producto">
                                                 </div>
-                                                <h4><%- producto.nombre %> </h4>
+                                                <h4>
+                                                    <%- producto.nombre %>
+                                                </h4>
                                                 <span class="precio">$<%- producto.precio %> </span>
                                             </a>
                                             <div class="input">
@@ -70,9 +78,10 @@
                                                 <input class="medio" type="number" value="1" min="1" step="1">
                                                 <input type="button" value="+">
                                             </div>
-                                            <a href="/productos/carrito/<%- producto.id %> "><button class="comprar">Comprar</button></a>
+                                            <a href="/productos/carrito/<%- producto.id %> "><button
+                                                    class="comprar">Comprar</button></a>
                                         </div>
-                                    <% }) %>
+                                        <% }) %>
                                 </div>
                                 <button aria-label="Previous" class="glider-prev">«</button>
                                 <button aria-label="Next" class="glider-next">»</button>
@@ -140,24 +149,29 @@
                             </ul>
                         </div> -->
                     </article>
-                    <a href="/productos"><h2 class="link-productos">TODOS</h2></a>
+                    <a href="/productos">
+                        <h2 class="link-productos">TODOS</h2>
+                    </a>
                 </section>
                 <section class="esmaltes">
                     <div class="fondo">
                         <img src="/img/Home/fondoEsmaltes.png" alt="">
                     </div>
                     <a href="/productos/Esmaltes"><button class="botonEsmalte"></button></a>
-                    
+
                     <div class="cajaEsmaltes">
                         <div class="glider-contain">
                             <div class="gliderEsmaltes">
-                                    <% esmaltes.forEach(esmalte => { %>
+                                <% esmaltes.forEach(esmalte=> { %>
                                     <article class="esmalte">
                                         <a href="/productos/detalle/<%- esmalte.id %> ">
-                                            <div class="imgEsmalte"><img src="/img/products/<%- esmalte.imagenes[0].nombre %> "
-                                                alt="Imagen de un esmalte"></div>
-                                            <h4><%-esmalte.nombre %></h4>
-                                            <span class="precioE">$<%- esmalte.precio %>  </span>
+                                            <div class="imgEsmalte"><img
+                                                    src="/img/products/<%- esmalte.imagenes[0].nombre %> "
+                                                    alt="Imagen de un esmalte"></div>
+                                            <h4>
+                                                <%-esmalte.nombre %>
+                                            </h4>
+                                            <span class="precioE">$<%- esmalte.precio %> </span>
                                         </a>
                                         <div class="input">
                                             <input type="button" value="-">
@@ -168,14 +182,14 @@
                                     </article>
                                     <% }) %>
                             </div>
-                                
+
                             <button aria-label="Previous" class="glider-prev">«</button>
                             <button aria-label="Next" class="glider-next">»</button>
                             <div role="tablist" class="dots"></div>
-                                
+
                         </div>
                     </div>
-                    
+
                 </section>
                 <section class="servicios">
                     <div class="cajaServicios">
@@ -184,7 +198,9 @@
                         </div>
                         <div class="textoS">
                             <h4 class="tituloServicios">Nuestros servicios</h4>
-                            <p>Te invitamos a conocer más de nuestros servicios. Contamos con cuatro salones de belleza repartidos al rededor del país. Nos especializamos en belleza y cuidado en general. Contamos con la última tecnología en nuestros tratamientos y máquinas.</p>
+                            <p>Te invitamos a conocer más de nuestros servicios. Contamos con cuatro salones de belleza
+                                repartidos al rededor del país. Nos especializamos en belleza y cuidado en general.
+                                Contamos con la última tecnología en nuestros tratamientos y máquinas.</p>
                             <div class="botonWpp">
                                 <button><img src="/img/Home/Icon.svg" alt="whatsapp"></button>
                                 <h4>Saca tu turno</h4>
@@ -200,10 +216,12 @@
                         </div>
                         <div class="textoS">
                             <h4 class="tituloServicios">Nuestros cursos</h4>
-                            <p>Estamos desarrollando una academia de cursos para que puedas emprender de esto que tanto te gusta! Sabemos que vas a estar ansiosa de saber más información. Te pedimos que nos dejes tu mail para poder recibir el newletter.</p>
+                            <p>Estamos desarrollando una academia de cursos para que puedas emprender de esto que tanto
+                                te gusta! Sabemos que vas a estar ansiosa de saber más información. Te pedimos que nos
+                                dejes tu mail para poder recibir el newletter.</p>
                             <form action="" method="post">
                                 <label for="">Subscribite al newletter</label>
-                                <input type="email" name="email" >
+                                <input type="email" name="email">
                             </form>
                         </div>
                     </div>
@@ -314,41 +332,61 @@
                                 src="/img/Home/img-instagram-7.jpg" alt=""></a>
                     </div>
                 </section>
-               
-                <div class="grid-container grid-container--fit">
-                    <div class="grid-element">
-                        <div class="icon">
-                            <i class="fas fa-truck"></i>
+
+
+                <div class="body">
+                    <div class="card">
+                        <div class="face front">
+                            <img src="/img/3(1).png" alt="">
                         </div>
-                        <div class="text">
+                        <div class="face back">
+                            <h3>Productos de alta calidad</h3>
+                            <p>Tenemos una gran cantidad de suministro de uñas de alta calidad.</p>
+                            <div class="link">
+                                <a href="#">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="face front">
+                            <img src="/img/1(1).png" alt="">
+                        </div>
+                        <div class="face back">
+                            <h3>Precios accesibles</h3>
+                            <p>Nos encanta dar a los clientes los mejores precios del mercado</p>
+                            <div class="link">
+                                <a href="#">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="face front">
+                            <img src="/img/2(1).png" alt="">
+                        </div>
+                        <div class="face back">
                             <h3>Envio</h3>
                             <p>Desde y hasta cualquier lugar del país.
                                 Asegurado por el valor declarado.</p>
-                        </div>
-
-                    </div>
-                    <div class="grid-element">
-                        <div class="icon">
-                            <i class="far fa-heart"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Precios accesibles</h3>
-                            <p>Nos encanta dar a los clientes los mejores precios del mercado</p>
-                        </div>
-                    </div>
-                    <div class="grid-element">
-                        <div class="icon">
-                            <i class="fas fa-tags"></i>
-                        </div>
-                        <div class="text">
-                            <h3>Productos de alta calidad</h3>
-                            <p>Tenemos una gran cantidad de suministro de uñas de alta calidad.</p>
+                            <div class="link">
+                                <a href="#">Ver Detalles</a>
+                            </div>
                         </div>
                     </div>
 
                 </div>
             </main>
 
+            <div class="aviso-cookies" id="aviso-cookies">
+                <img class="galleta" src="./img/Home/cookie.svg" alt="Galleta">
+                <h3 class="titulo">Cookies</h3>
+                <p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
+                <button class="boton" id="btn-aceptar-cookies">De acuerdo</button>
+                <a class="enlace" href="/cookies">Aviso de Cookies</a>
+            </div>
+            <div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
+            <script src="/javascript/avisocookies.js"></script>
             <%- include ('./partials/footer') %>
     </body>
 
