@@ -8,7 +8,7 @@
       <% if (resultados.length != 0) { %>
       <h1>Resultado de la busqueda: <%= buscar %></h1>
       <section class="resultados">
-        <% resultados.forEach(producto => { %>
+        <% elemento.forEach(producto => { %>
             <%- include('./partials/card',{
               id:producto.id,
               imagen:producto.imagen[0],
@@ -27,9 +27,9 @@
           <div class="foto-prod">
             <img src="/img/products/NotFound.svg" alt="producto no encontrado" />
           </div>
-          <!-- <div class="card-text-box">
+           <div class="card-text-box">
             <h3 class="card-name">No se entraron productos</h3>
-          </div> -->
+          </div> 
         </div>
       </section>
       <% } %>

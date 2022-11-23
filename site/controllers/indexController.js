@@ -1,4 +1,5 @@
 let db = require('../database/models')
+const { Op } = require("sequelize");
 
 module.exports = {
     home: (req, res) => {
@@ -58,40 +59,19 @@ module.exports = {
 
     search: (req, res) => {
         let elemento = req.query.search
-        let estado = req.params.estado
-        let productoss= db.Productos.findAll({
-            include: ['category','marca','estado','imagenes']
-           })
-        let productossearch = productoss.filter((product) => product.estado === estado)
-        if(estado === productoss[0].estado){
-            return res.render('buscar',{
-                productossearch,
-                estado
-            })
-        }
-        
-   
-
-        let resultados = productoss.filter(producto => {
-            return producto.marca === elemento.toLowerCase() || (producto.nombre.toLowerCase().includes(elemento.toLowerCase())) /* || (producto.descripcion.toLowerCase().includes(elemento.toLowerCase())) */
-        })
-        
-        //  let resultados = productos.filter(producto => {
-        //     return (producto.nombre.toLowerCase().indexOf(elemento.toLowerCase()) != -1)
-        // }) 
-        //  return res.send(resultados)    let id = +req.params.id
- 
-
-    
-        return res.render('buscar',
+        db.Productos.findAll(
             {
-                buscar: elemento,
-                resultados,
-                productossearch
-               
-             
-                
-            });
+                include: [{
+                    all: true
+                }]
+            }
+        )
+    
+        return res.render('buscar', 
+        {
+            busqueda: elemento,
+            resultados
+        })
     },
     
     cookies :(req, res) => { 

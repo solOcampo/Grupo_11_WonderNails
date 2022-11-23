@@ -49,8 +49,8 @@ color: white;
     font-family: var(--fuenteTitulos);
 }
 .enlaces .equipo  { 
-       padding: 20px;
-    display: grid;
+margin: 0 auto;   
+ display: grid;
 
 }
 .enlaces .equipo h2 , .rango{
