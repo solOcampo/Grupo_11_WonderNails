@@ -11,7 +11,7 @@ router.get('/listar', list)
 
 /* Creando un producto */
 router.get('/crear', create)
-router.post('/crear',upload.array('imagen'),productValidator,store);
+router.post('/crear', upload.array('imagen'), productValidator,store);
 
 router.get('/editar/:id', edit)
 router.put('/editar/:id',upload.fields([
