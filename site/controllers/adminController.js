@@ -41,13 +41,14 @@ module.exports = {
             let categorias = await db.Categorias.findAll()
             let marcas = await db.Marcas.findAll()
             let estados = await db.Estados.findAll()
+            /* return res.send(marcas) */
             return res.render('admin/crearProducto', {
                 categorias,
                 marcas,
                 estados
             })
         } catch (error) {
-            return res.send(errors)
+            return res.send(error)
         }
     },
     store:(req, res) => {
@@ -79,20 +80,20 @@ module.exports = {
                         let img = req.files.map(imagen => {
                             let nuevo = {
                                 nombre: imagen.filename,
-                                Productos_id: nuevoProd.id
+                                idProductos: nuevoProd.id
                             }
                             return nuevo
 
                         })
-                        db.Productos_imagenes.bulkCreate(img)
+                        db.Imagenes.bulkCreate(img)
                             .then(imagenes => {
                                 return res.redirect('/admin/listar')
                             })
 
                     } else {
-                        db.Productos_imagenes.create({
+                        db.Imagenes.create({
                             nombre: 'default-image.png',
-                            productosid: nuevoProd.id
+                            idProductos: nuevoProd.id
                         })
                         .then(imagenes =>{
                             return res.redirect('/admin/listar')
@@ -194,8 +195,7 @@ module.exports = {
                     id: idParams
                 }
             })
-         
-
+            
             Promise.all([producto, actualizacion])
                 .then(([producto, actualizacion]) => {
                     // return res.send(producto)//Comprobar que esta llegando bien el producto
@@ -212,114 +212,139 @@ module.exports = {
                         if(!!req.files.imagen1){
                             imagen1 = producto.imagenes[0].nombre
                             promesas.push(
-                            db.Productos_imagenes.update({
+                            db.Imagenes.update({
                                 nombre:req.files.imagen1[0].filename
                             },{
                                 where: {
                                     id : producto.imagenes[0].id
                                 }
                             }))
-                            if (fs.existsSync(path.join(__dirname, '../../public/img/Products', imagen1))) {
-                                fs.unlinkSync(path.join(__dirname, '../../public/img/Products', imagen1))
+                            if (fs.existsSync(path.join(__dirname, '../public/img/Products', imagen1))) {
+                                fs.unlinkSync(path.join(__dirname, '../public/img/Products', imagen1))
                             }
                         }
                     }else{
                         if(!!req.files.imagen1){
                             promesas.push(
-                            db.Productos_imagenes.create({
+                            db.Imagenes.create({
                                 nombre: req.files.imagen1[0].filename,
-                                Productos_id: producto.id
+                                idProductos: producto.id
                             }))
                         }
                     }
                        /* Imagen 2 */
-                       if (producto.imagenes[1].length !== 0) {
+                       if (producto.imagenes[1]) {
                         if(!!req.files.imagen2){
                             imagen2 = producto.imagenes[1].nombre
                             promesas.push(
-                            db.Productos_imagenes.update({
+                            db.Imagenes.update({
                                 nombre:req.files.imagen2[0].filename
                             },{
                                 where: {
                                     id : producto.imagenes[1].id
                                 }
                             }))
-                            if (fs.existsSync(path.join(__dirname, '../../public/img/Products', imagen2))) {
-                                fs.unlinkSync(path.join(__dirname, '../../public/img/Products', imagen2))
+                            if (fs.existsSync(path.join(__dirname, '../public/img/Products', imagen2))) {
+                                fs.unlinkSync(path.join(__dirname, '../public/img/Products', imagen2))
                             }
                         }
                     }else{
                         if(!!req.files.imagen2){
                             promesas.push(
-                            db.Productos_imagenes.create({
+                            db.Imagenes.create({
                                 nombre: req.files.imagen2[0].filename,
-                                Productos_id: producto.id
+                                idProductos: producto.id
                             }))
                         }
                     }
                        /* Imagen 3 */
-                       if (producto.imagenes[2].length !== 0) {
+                       if (producto.imagenes[2]) {
                         if(!!req.files.imagen3){
                             imagen3 = producto.imagenes[2].nombre
                             promesas.push(
-                            db.Productos_imagenes.update({
+                            db.Imagenes.update({
                                 nombre:req.files.imagen3[0].filename
                             },{
                                 where: {
                                     id : producto.imagenes[2].id
                                 }
                             }))
-                            if (fs.existsSync(path.join(__dirname, '../../public/img/Products', imagen3))) {
-                                fs.unlinkSync(path.join(__dirname, '../../public/img/Products', imagen3))
+                            if (fs.existsSync(path.join(__dirname, '../public/img/Products', imagen3))) {
+                                fs.unlinkSync(path.join(__dirname, '../public/img/Products', imagen3))
                             }
                         }
                     }else{
                         if(!!req.files.imagen3){
                             promesas.push(
-                            db.Productos_imagenes.create({
+                            db.Imagenes.create({
                                 nombre: req.files.imagen3[0].filename,
-                                Productos_id: producto.id
+                                idProductos: producto.id
                             }))
                         }
                     }
                        /* Imagen 4 */
-                       if (producto.imagenes[3].length !== 0) {
+                       if (producto.imagenes[3]) {
                         if(!!req.files.imagen4){
                             imagen4 = producto.imagenes[3].nombre
                             promesas.push(
-                            db.Productos_imagenes.update({
+                            db.Imagenes.update({
                                 nombre:req.files.imagen4[0].filename
                             },{
                                 where: {
                                     id : producto.imagenes[3].id
                                 }
                             }))
-                            if (fs.existsSync(path.join(__dirname, '../../public/img/Products', imagen4))) {
-                                fs.unlinkSync(path.join(__dirname, '../../public/img/Products', imagen4))
+                            if (fs.existsSync(path.join(__dirname, '../public/img/Products', imagen4))) {
+                                fs.unlinkSync(path.join(__dirname, '../public/img/Products', imagen4))
                             }
                         }
                     }else{
                         if(!!req.files.imagen4){
                             promesas.push(
-                            db.Productos_imagenes.create({
+                            db.Imagenes.create({
                                 nombre: req.files.imagen4[0].filename,
-                                Productos_id: producto.id
+                                idProductos: producto.id
                             }))
                         }
                     }
                    
                     Promise.all(promesas)
                     .then(promesas => {
+                        /* return res.send(producto) */
                         return res.redirect('/admin/listar')
                     })
                 })
                 .catch(error => res.send(error))
             } else {
             //    return res.send(errors.mapped)
-                return res.render('admin/crearProducto', {
+                /* return res.render('admin/crearProducto', {
                     errors: errors.mapped(),
-                    old: req.body
+                    old: req.body 
+                })*/
+                    let idParams = +req.params.id
+            let categorias = db.Categorias.findAll()
+            let marcas = db.Marcas.findAll()
+            let estados =db.Estados.findAll()
+            let producto = db.Productos.findOne({
+            where: {
+                id: idParams
+            },
+            include: [{
+                all: true
+            }]
+        })
+        Promise.all([categorias, marcas, estados, producto])
+            .then(([categorias, marcas, estados, producto]) => {
+                // return res.send(producto) //Comprobar que esta llegando bien el elemento
+                return res.render('admin/listarProductos', {
+                    producto,
+                    categorias,
+                    marcas,
+                    estados,
+                    errors: errors.mapped()
                 })
+            })
+            .catch(error => res.send(error))
             } 
         },
  
@@ -329,15 +354,16 @@ module.exports = {
             where : {
                 id : idParams
             },
-            include : [{
-                all:true
+            include: [{
+                all: true
             }]
-        })
 
         .then(producto => {
             return res.redirect('/admin/listar')
 
 
         }).catch(error => res.send(error))
-    }
+    })
+}
+
 }

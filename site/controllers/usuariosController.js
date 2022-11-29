@@ -106,7 +106,7 @@ module.exports = {
                 image_frontPage: user.imagen_portada,
                 rol : user.rolId // la base de datos trae un id, lo que crea conflicto en otros lados
             }                   // ya que se comprueba por la descripcion y no por el id 
-            if(recordarme){
+            if(recordarme != undefined){
                 res.cookie('rememberMe', req.session.userLogin.email,{
                     maxAge: 1000 * 60 * 60 * 24 * 30
                 })
@@ -161,12 +161,12 @@ module.exports = {
                     image_frontPage: usuario.imagen_portada,
                     rol : usuario.rolId    
                 }  
-                if(req.cookies.rememberMe){
+                /* if(req.cookies.rememberMe){
                     res.cookie('rememberMe','',{maxAge: -1});
                     res.cookie('rememberMe', req.session.userLogin,{
                         maxAge: 1000 * 60 * 60 * 24 * 30
                     })
-                }
+                } */
                 req.session.save( (err) => {
                     req.session.reload((err) => {
                         return res.redirect('perfil')

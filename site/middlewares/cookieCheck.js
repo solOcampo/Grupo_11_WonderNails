@@ -1,4 +1,5 @@
-let db = require('../database/models')
+/* const db = require('../database/models/index');
+
 module.exports = (req, res, next) => {
     if (req.cookies.rememberMe = undefined && req.session.userLogin == undefined) {
         let user = db.Usuarios.findOne({
@@ -9,4 +10,4 @@ module.exports = (req, res, next) => {
         req.session.userLogin = user
     }
     next()
-}
+} */
