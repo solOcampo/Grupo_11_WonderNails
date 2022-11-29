@@ -4,25 +4,14 @@ window.addEventListener('load', () => {
 
     const regExLetter = /^[A-Z]+$/;
     const regExExt = /\.(jpg|jpeg|png|jfif|gif|webp)$/
-    const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+    const regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
     const regExEmail = /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
-    const funcValidate = (obj) => {
-        let arr = Object.values(obj)
-        console.log(arr);
-        if (!arr.includes(false)) {
-            btn.disabled = false
-            btn.style.backgroundColor = '#1a78fd'
-        }else{
-            btn.disabled = true
-            btn.style.backgroundColor = 'var(--grisOscuro)'
-        }
-    }
+  
     let form = $('#FormLogin')
     let email = $('#email')
     let password = $('#password')
     let recordarme = $('#recordarme')
-    let btn=$('btn-submit' )
 
 
     let errores = [{
@@ -59,7 +48,7 @@ window.addEventListener('load', () => {
         }
         let variable = true
         switch (true) {
-            case !email.value:
+            case email.value:
                 $('#emailContainer').innerHTML = "<small>Este campo es obligatorio</small>"
                 email.style.border = "1px solid red"
                 errores.forEach(e => {
@@ -117,11 +106,11 @@ window.addEventListener('load', () => {
                     }
                     break;
                 case !regExPass.test(password.value):
-                    $('#passwordContainer').innerHTML = "<small>La contraseña debe tener entre 6 y 12 caracteres y debe contener una mayuscula, una minuscula y un numero</small>"
+                    $('#passwordContainer').innerHTML = "<small>La contraseña debe tener entre 8 y 12 caracteres y debe contener una mayuscula, una minuscula y un numero</small>"
                     password.style.border = "1px solid red"
                     errores.forEach(e => {
                         if(e.id === 2 ){
-                            e.mensaje = "La contraseña debe tener entre 6 y 12 caracteres y debe contener una mayuscula, una minuscula y un numero"
+                            e.mensaje = "La contraseña debe tener entre 8 y 12 caracteres y debe contener una mayuscula, una minuscula y un numero"
                             variable = false
                         }
                     });
@@ -151,7 +140,7 @@ window.addEventListener('load', () => {
                         return error.id !== 6
                     })
             }else{
-            $('#recordarmeContainer').innerHTML = "<small>Debe aceptar los terminos y condiciones</small>"
+            $('#recordarme').innerHTML = "<small>Debe aceptar los terminos y condiciones</small>"
             errores.forEach(e => {
                 if(e.id === 5 ){
                         error.mensaje = "Debe aceptar los terminos y condiciones"

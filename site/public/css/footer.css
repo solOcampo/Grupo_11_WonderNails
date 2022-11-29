@@ -151,7 +151,7 @@ footer {
 .goTop {
     display: block;
     position: fixed;
-    bottom: 230px;
+    top: 30rem;
     right: 30px;
     color: var(--rosaOscuro);
     width: 40px;

@@ -1,4 +1,4 @@
-.card{
+.caja{
     width: 250px;
     flex: 0 0 auto;
     width: 240px;
@@ -10,53 +10,77 @@
     position: relative;
     margin-left: 10px;
 }
+.caja .foto-prod {
+    display: flex;
+    justify-content: center;
+}
 
-.card .card-img .card-img-background{
+.caja .foto-prod img{
     margin: 2vh 0;
-    height: 250px;
+    height: 220px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
-.card .card-name{
+.caja a.etiquetaC {
+    font-size: 13px;
+    color: white;
+    background-color: var(--rosaOscuro);
+    padding: 2px 4px;
+    border-radius: 3px;
+    position: absolute;
+    right: 0;
+    margin: 1px;
+}
+.caja span.etiqueta {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--rosaOscuro);
+    padding: 3px 5px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: -3pxpx;
+    left: 0px;
+    margin-right: 3px;
+}
+.caja .comprar {
+    background-color: var(--rosaOscuro);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 12px;
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 23px;
+}
+.caja .card-name{
+    color: var(--grisOscuro);
     text-align: center;
+    margin: 15px;
+    font-size: 17px;
+
 }
 
-.card .card-value{
+.caja .card-value{
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
     align-items: center;
 }
-.card .card-discount{
-    margin-left: 1vh;
-    font-size: 25px;
+.caja .card-discount{
+    font-size: 18px;
     color: var(--rosaOscuro);
+    margin: 10px;
 }
-.card .card-price{
+.caja .card-price{
    color:var(--grisOscuro);
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     
-}
-.card .card-button{
-    position: absolute;
-    left: 27px;
-    right: 27px;
-    bottom: 14px;
-    text-align: center;
-}
-.card .card-button button{
-    display: block;
-    margin: 0 auto;
-    border: none;
-    border-radius: 20px;
-    color: white;
-    text-shadow: 1px 1px 2px rgb(37 37 37);
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    background-color: var(--grisMedio);
-    padding: 10px;
-    box-shadow: 0px 1px 2px var(--gris);
 }

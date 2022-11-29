@@ -17,11 +17,11 @@ module.exports = {
         let errors = validationResult(req)
         
         if(errors.isEmpty()){
-            /* return res.send(req.body) */
+            // return res.send(errors) 
             let {name, lastname, email, password} = req.body
             
             //------ BASE DE DATOS ----------
-            let usuarios = db.Usuarios.findAll()
+            // let usuarios = db.Usuarios.findAll()
             const user = await db.Usuarios.create({
                 nombre: name,
                 apellido: lastname,
@@ -75,6 +75,8 @@ module.exports = {
         return res.render('users/login')
     },
     processLogin: async (req,res) => {
+                    // return res.send(req.body) 
+
         let errors = validationResult(req)
 
         

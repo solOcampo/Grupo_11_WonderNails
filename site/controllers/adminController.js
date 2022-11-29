@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 // let productos = require('../data/productos.json')
 const { validationResult } = require('express-validator')
-let db = require('../database/models')
+let db = require('../database/models/index')
 
 module.exports = {
     list: (req, res) => {
@@ -18,6 +18,23 @@ module.exports = {
                 })
 
             })
+    },
+    listv2: (req, res) => {
+
+        let categorias = db.Categorias.findAll()
+        let marcas = db.Marcas.findAll()
+        Promise.all([categorias,marcas])
+        .then(([categorias,marcas]) => {
+                // return res.send(productos)
+                return res.render('admin/listarProductosv2', {
+                    categorias,
+                    marcas,
+                    
+                })
+
+            })
+            .catch(error => res.send(error))
+
     },
     create: async (req, res) => {
         try {
@@ -332,19 +349,21 @@ module.exports = {
         },
  
     destroy: (req, res) => {
-        let id = +req.params.id
-        db.Productos.destroy({
-            where: {
-                id: id
+        let idParams = +req.params.id
+        db.Productos.findOne({
+            where : {
+                id : idParams
             },
             include: [{
                 all: true
             }]
 
-        }).then(producto => {
+        .then(producto => {
             return res.redirect('/admin/listar')
 
 
         }).catch(error => res.send(error))
-    }
+    })
+}
+
 }

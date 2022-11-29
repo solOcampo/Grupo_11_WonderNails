@@ -1,4 +1,5 @@
 let db = require('../database/models')
+const { Op } = require("sequelize");
 
 module.exports = {
     home: (req, res) => {
@@ -57,40 +58,47 @@ module.exports = {
     },
 
     search: (req, res) => {
-        let elemento = req.query.search
-        let estado = req.params.estado
-        let productoss= db.Productos.findAll({
-            include: ['category','marca','estado','imagenes']
-           })
-        let productossearch = productoss.filter((product) => product.estado === estado)
-        if(estado === productoss[0].estado){
-            return res.render('buscar',{
-                productossearch,
-                estado
-            })
-        }
-        
-   
-
-        let resultados = productoss.filter(producto => {
-            return producto.marca === elemento.toLowerCase() || (producto.nombre.toLowerCase().includes(elemento.toLowerCase())) /* || (producto.descripcion.toLowerCase().includes(elemento.toLowerCase())) */
+       let elemento = req.query.search
+       
+       db.Productos.findAll({
+        where : {
+            [Op.or] : [
+                {nombre : {[Op.substring] : elemento}},
+                {descripcion : {[Op.substring] : elemento}}
+            ]
+        },
+        include:[
+          {all:true}
+        ]
+    })
+    .then((resultados) => {
+          return res.render('buscar', 
+        {
+            buscar: elemento,
+            resultados
         })
-        
-        //  let resultados = productos.filter(producto => {
-        //     return (producto.nombre.toLowerCase().indexOf(elemento.toLowerCase()) != -1)
-        // }) 
-        //  return res.send(resultados)    let id = +req.params.id
- 
-
+    })
+    .catch(error => res.send(error))
+},
     
-        return res.render('buscar',
-            {
-                buscar: elemento,
-                resultados,
-                productossearch
-               
-             
-                
-            });
+    cookies :(req, res) => { 
+        return res.render('aviso-cookies')
+    },
+    privacidad:(req,res)=>{
+        return res.render('politicas')
+    },
+    ventas:(req,res)=>{
+        return res.render('politicasdeVentas')
+    },
+    terminos:(req,res)=>{
+        return res.render('terminos')
+    },
+    Pcookies:(req,res)=>{
+        return res.render('politicasdeCookies')
+    },
+    nosotros:(req,res)=>{
+        return res.render('nosotros')
     }
+
+
 }

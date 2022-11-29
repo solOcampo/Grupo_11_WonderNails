@@ -11,7 +11,7 @@
         <% resultados.forEach(producto => { %>
             <%- include('./partials/card',{
               id:producto.id,
-              imagen:producto.imagen[0],
+              imagen:producto.imagenes[0].nombre,
               nombre:producto.nombre,
               descuento:producto.descuento,
               precio:producto.precio 
@@ -27,9 +27,9 @@
           <div class="foto-prod">
             <img src="/img/products/NotFound.svg" alt="producto no encontrado" />
           </div>
-          <!-- <div class="card-text-box">
+           <div class="card-text-box">
             <h3 class="card-name">No se entraron productos</h3>
-          </div> -->
+          </div> 
         </div>
       </section>
       <% } %>

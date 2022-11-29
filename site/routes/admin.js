@@ -1,4 +1,4 @@
-let {create,edit,list,store,update, destroy} = require('../controllers/adminController')
+let {create,edit,list,store,update, destroy, listv2} = require('../controllers/adminController')
 const express = require('express')
 const router = express.Router()
 const upload = require('../middlewares/multerProducts')
@@ -7,7 +7,7 @@ const productValidator = require('../validations/productsValidation')
 
 
 /* GET home page. */
-router.get('/listar', list)
+router.get('/listar', listv2)
 
 /* Creando un producto */
 router.get('/crear', create)
