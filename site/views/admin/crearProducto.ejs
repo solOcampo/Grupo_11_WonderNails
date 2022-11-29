@@ -174,12 +174,10 @@
                                             </label>
                                             <div class="form-admin__box inactivo">
                                                 <input class="d-none" id="product-img" type="file" name="imagen"
-                                                    placeholder="Imagen del Producto" accept="image/*" multiple>
+                                                    placeholder="Imagen del Producto" accept="image/*">
                                             </div>
                                         </div>
-                                        <p class="span text-danger" id="imgError">
-                                            <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
-                                        </p>
+                                        
 
                                         <!-- Imagen 2 -->
 
@@ -242,6 +240,9 @@
                                         <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
                                     </p>
                                 </div>
+                                <p class="span text-danger" id="imgError">
+                                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                                </p>
 
                             </section>
                         </div>
@@ -260,7 +261,7 @@
             </div>
         </main>
         <script src="/javascript/productosValidator.js"></script>
-
+        <script src="/javascript/imagenes.js"></script>
     </body>
 
 </html>

@@ -20,7 +20,9 @@
                         <div class="form-floating">
                             <label for="nombre">Nombre del producto</label>
                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" value="<%=producto.nombre%> " >
-                         
+                            <p class="span text-danger" id="nombreError">
+                                <%= locals.errors && errors.nombre ? errors.nombre.msg : null %>
+                            </p> 
                         </div>
                         <div class="form-floating">
                             <label for="marca">Marca</label>
@@ -67,9 +69,12 @@
                                     <% }) %>
                                 <% } %> 
                             </select>
+                            <p class="form-floating" id="categoriaError">
+                                <%= locals.errors && errors.categoria ? errors.categoria.msg : null %>
+                            </p>
                           </div>
                           <div class="form-floating">
-                            <label for="estado">Estado</label>
+                            <label for="estado">Subcategoria</label>
                             <select class="form-select" name="estado" id="estado" aria-label="Floating label select example">
                                 <% if (locals.errors && old.estado) { %>
                                     <option hidden value="">Selecciona una opcion</option>
@@ -88,7 +93,9 @@
                                     <% }) %>
                                 <% } %> 
                             </select>
-                         
+                            <p class="form-floating" id="subcategoriaError">
+                                <%= locals.errors && errors.categoria ? errors.categoria.msg : null %>
+                            </p>
                         </div>
                         <div class="form-floating">
                             <label for="color">Color</label>
@@ -111,20 +118,31 @@
                         <div class="form-floating">
                             <label for="precio">Precio</label>
                             <input type="number" class="form-control" name="precio" id="precio" placeholder="Precio" value="<%=producto.precio%>">
+                            <p class="form-floating" id="precioError">
+                                <%= locals.errors && errors.precio ? errors.precio.msg : null %>
+                            </p>
                         </div>
                         <div class="form-floating">
                             <label for="descuento">Descuento</label>
                             <input type="number" class="form-control" name="descuento" id="descuento" placeholder="Descuento" value="<%=producto.descuento%>">
+                            <p class="form-floating" id="descuentoError">
+                                <%= locals.errors && errors.descuento ? errors.descuento.msg : null %>
+                            </p>
                         </div>
                         <div class="form-floating">
                             <label for="stock" value="1">Stock</label>
                             <input type="number" class="form-control" name="stock" id="stock" placeholder="Stock" value="<%=producto.stock%>">
+                            <p class="form-floating" id="stockError">
+                                <%= locals.errors && errors.stock ? errors.stock.msg : null %>
+                            </p>
                         </div>
                         <div class="form-floating">
                             <label for="descripcion">Descripción </label>
                             <textarea class="form-control" name="descripcion" placeholder="Por favor inserte la descripción del producto"
                                 id="descripcion"><%=producto.descripcion%></textarea>
-                         
+                                <p class="span text-danger" id="descripcionError">
+                                    <%= locals.errors && errors.descripcion ? errors.descripcion.msg : null %>
+                                </p> 
                         </div>
                         <div class="mb-3">
 
@@ -204,7 +222,9 @@
                                         <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
                                     </p>
                                 </div>
-
+                                <p class="span text-danger" id="imgError">
+                                    <%= locals.errors && errors.imagen ? errors.imagen.msg : null %>
+                                </p>
                             </section>
                         </div>
                         
@@ -221,6 +241,7 @@
                 </form>
             </div>
         </main>
+        <script src="/javascript/productosValidator.js"></script>
         <script src="/javascript/imagenes.js"></script>
     </body>
 

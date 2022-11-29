@@ -91,11 +91,6 @@ module.exports = {
 
  
             req.session.userLogin = {
-                // id : usuario.id,
-                // name : usuario.name,
-                // lastname : usuario.lastname,
-                // email: usuario.email,
-                // rol : usuario.rol
                 id : user.id,
                 name : user.nombre,
                 lastname : user.apellido,
@@ -104,8 +99,8 @@ module.exports = {
                 image_frontPage: user.imagen_portada,
                 rol : user.rolId // la base de datos trae un id, lo que crea conflicto en otros lados
             }                   // ya que se comprueba por la descripcion y no por el id 
-            if(recordarme != undefined){
-                res.cookie('rememberMe', req.session.userLogin.email,{
+            if(recordarme){
+                res.cookie('rememberMe', req.session.userLogin,{
                     maxAge: 1000 * 60 * 60 * 24 * 30
                 })
             }
@@ -131,7 +126,73 @@ module.exports = {
         })
     },
     changeProfilPic: (req, res) => {
-        let errors = validationResult(req)
+        let session = req.session.userLogin
+        if (req.fileValidationError) {
+            let imagen = {
+                param: 'imagenPerfil',
+                msg: req.fileValidationError,
+            }
+            errors.errors.push(imagen)
+        }
+      
+          let errors = validationResult(req)
+      
+          if (errors.isEmpty()) {
+      
+              const {nombre, apellido, direccion} = req.body
+      
+              db.Usuarios.findOne({
+                where: { 
+                    id : session.id 
+                }
+              })
+              .then(usuario => {
+                  db.Usuarios.update({
+                    imagen_perfil: req.files ? req.files.imagenPerfil[0].filename : usuario.imagen_perfil
+                  },{
+                    where: {
+                        id : session.id 
+                    }
+                  })
+                  .then(data=> {
+                    db.Usuarios.findOne({
+                        where: {
+                            id : session.id 
+                        }
+                  })
+                      .then(usuario => { 
+                        
+                        req.session.userLogin = {
+                            id : usuario.id,
+                            name : usuario.nombre,
+                            lastname : usuario.apellido,
+                            email: usuario.email,
+                            image_profil: usuario.imagen_perfil,
+                            image_frontPage: usuario.imagen_portada,
+                            rol : usuario.rolId 
+                        }
+                          if(req.cookies.rememberMe){
+                              res.cookie('rememberMe','',{maxAge: -1});
+                              res.cookie('rememberMe', req.session.userLogin, {maxAge: 1000 * 60 * 60 * 24})
+                          }
+                          req.session.save( (err) => {
+                              req.session.reload((err) => {
+                                /* return res.send(req.files.imagenPerfil) */
+                                  return res.redirect('/usuarios/perfil')
+              
+                              });
+                           });
+                           /* return res.send(req.files[0])
+                           return res.redirect('/usuarios/perfil') */
+                      })
+                      
+                  }).catch(err => res.send(err))
+      
+              })
+              .catch(err => res.send(err))
+      
+          }
+       /*  let errors = validationResult(req)
         
         if(errors.isEmpty){
             let usuario = db.Usuarios.findByPk(+req.session.userLogin.id)
@@ -159,29 +220,28 @@ module.exports = {
                     image_frontPage: usuario.imagen_portada,
                     rol : usuario.rolId    
                 }  
-                /* if(req.cookies.rememberMe){
+                if(recordarme){
                     res.cookie('rememberMe','',{maxAge: -1});
-                    res.cookie('rememberMe', req.session.userLogin,{
-                        maxAge: 1000 * 60 * 60 * 24 * 30
-                    })
-                } */
+                    res.cookie('rememberMe', req.session.userLogin, {maxAge: 1000 * 60 * 60 * 24})
+                }
                 req.session.save( (err) => {
                     req.session.reload((err) => {
-                        return res.redirect('perfil')
-
+                        return res.redirect('/usuarios/perfil')
+    
                     });
-                });
-            })
+                 });
+                 return res.redirect('/usuarios/perfil')
+                })
 
             .catch(errors => res.send(errors))
         
             }else{
-                return res.send(errors.mapped())
-            return res.render('/usuarios/perfil',{
+                /* return res.send(errors.mapped()) */
+            /* return res.render('/usuarios/perfil',{
                 errors : errors.mapped(),
                 old : req.body
             })
-        }
+        } */
     },
     logout: (req, res) => {
         req.session.destroy();

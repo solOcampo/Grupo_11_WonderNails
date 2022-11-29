@@ -13,7 +13,7 @@
             <div class="field email">
               <div class="input-area">
                 <i class="icon fas fa-envelope"></i>
-                <input class="input" type="email" name="email" id="email"
+                <input class="input" type="email" name="email" id="emailLogin"
                   placeholder="<%= locals.old && old.email ? old.email :" Nombre de usuario o email" %>">
                 <div id="emailContainer"></div>
                 <% if (locals.errors && errors.email) { %>
@@ -89,6 +89,7 @@
       
       <%- include ('../partials/footer') %>
         <script src="/javascript/loginValidator.js"></script>
+        
 
   </body>
 
