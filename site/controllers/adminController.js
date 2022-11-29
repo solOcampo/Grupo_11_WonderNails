@@ -351,19 +351,38 @@ module.exports = {
     destroy: (req, res) => {
         let idParams = +req.params.id
         db.Productos.findOne({
-            where : {
+            where: {
                 id : idParams
             },
             include: [{
-                all: true
+                all:true
             }]
+        }).then(producto => {
+            
+            let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', 'public', 'images', 'productos', dato))
+            producto.imagenes.forEach(imagen => {
+                if (ruta(imagen.nombre) && (imagen.nombre !== "default-image.png")) {
+                    fs.unlinkSync(path.join(__dirname, '..', 'public', 'images', 'productos', imagen.nombre))
+                }
+            })
 
-        .then(producto => {
-            return res.redirect('/admin/listar')
-
-
-        }).catch(error => res.send(error))
-    })
-}
-
+            db.Imagenes.destroy({
+                where : {
+                    idProductos : idParams
+                }
+            })
+            db.Productos.destroy({
+                where: {
+                    id: idParams
+                },
+                include: [{
+                    all: true
+                }]
+            })
+            .then(eliminar => {
+                return res.redirect('/admin/listar')
+            })
+        })
+        .catch(errores => res.send(errores))
+    }
 }

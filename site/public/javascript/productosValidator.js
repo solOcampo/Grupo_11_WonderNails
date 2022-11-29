@@ -27,6 +27,7 @@ window.addEventListener('load', () => {
     let img2 = $('#product-sub-img-1')
     let img3 = $('#product-sub-img-2')
     let img4 = $('#product-sub-img-3')
+    let imgErr = $('#imgError')
 
     iconoExito = ('#success-icon'),
     failureIcon = ('#failure-icon');
@@ -48,8 +49,14 @@ window.addEventListener('load', () => {
                 /* $('#failure').innerHTML = '<i class="fa-solid fa-circle-xmark"></i>' */
                 validate.nombres = false
                 break;
-            case !(this.value.trim().length > 2 && this.value.trim().length < 100):
-                $('#nombreError').innerHTML = "El nombre del producto debe 2 letras y maximo 10"
+            case !(this.value.trim().length > 2):
+                $('#nombreError').innerHTML = "El nombre del producto debe 2 letras"
+                this.classList.add('is-invalid')
+                /* $('#failure').innerHTML = '<i class="fa-solid fa-circle-xmark"></i>' */
+                validate.nombres = false
+                break;
+            case !(this.value.trim().length < 100):
+                $('#nombreError').innerHTML = "El nombre del producto no puede ser tan largo"
                 this.classList.add('is-invalid')
                 /* $('#failure').innerHTML = '<i class="fa-solid fa-circle-xmark"></i>' */
                 validate.nombres = false
@@ -173,6 +180,11 @@ window.addEventListener('load', () => {
                 this.classList.add('is-invalid')
                 validate.stocks = false
                 break;
+            case !(this.value.trim() >= 0):
+                $('#stockError').innerHTML = "Debe ser mayor o igual que 0"
+                this.classList.add('is-invalid')
+                validate.descuentos = false
+                break;
             default:
                 $('#stockError').innerHTML = null
                 this.classList.remove('is-invalid')
@@ -208,15 +220,58 @@ window.addEventListener('load', () => {
         }
         funcValidate(validate)
     })
-    img.addEventListener('blur', function () {
+    img.addEventListener('change', function () {
         switch (true) {
             case !regExExt.exec(img.value):
-                $('#descripcionError').innerHTML = "La imagen solo puede tener uno de los siguientes formatos: <br> jpg | jpeg | png | jfif | gif | webp"
+                $('#imgError').innerHTML = "La imagen solo puede tener uno de los siguientes formatos: <br> jpg | jpeg | png | jfif | gif | webp"
+                imgErr.style.color='red'
                 validate.img = false
                 break;
             default:
                 $('#imgError').innerHTML = null
                 validate.img = true
+                break;
+        }
+        funcValidate(validate)
+    })
+    img2.addEventListener('change', function () {
+        switch (true) {
+            case !regExExt.exec(img2.value):
+                $('#imgError').innerHTML = "La imagen solo puede tener uno de los siguientes formatos: <br> jpg | jpeg | png | jfif | gif | webp"
+                imgErr.style.color='red'
+                validate.img2 = false
+                break;
+            default:
+                $('#imgError').innerHTML = null
+                validate.img2 = true
+                break;
+        }
+        funcValidate(validate)
+    })
+    img3.addEventListener('change', function () {
+        switch (true) {
+            case !regExExt.exec(img3.value):
+                $('#imgError').innerHTML = "La imagen solo puede tener uno de los siguientes formatos: <br> jpg | jpeg | png | jfif | gif | webp"
+                imgErr.style.color='red'
+                validate.img3 = false
+                break;
+            default:
+                $('#imgError').innerHTML = null
+                validate.img3 = true
+                break;
+        }
+        funcValidate(validate)
+    })
+    img4.addEventListener('change', function () {
+        switch (true) {
+            case !regExExt.exec(img4.value):
+                $('#imgError').innerHTML = "La imagen solo puede tener uno de los siguientes formatos: <br> jpg | jpeg | png | jfif | gif | webp"
+                imgErr.style.color='red'
+                validate.img4 = false
+                break;
+            default:
+                $('#imgError').innerHTML = null
+                validate.img4 = true
                 break;
         }
         funcValidate(validate)

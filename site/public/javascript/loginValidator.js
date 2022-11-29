@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
 
   
     let form = $('#FormLogin')
-    let email = $('#email')
+    let email = $('#emailLogin')
     let password = $('#password')
     let recordarme = $('#recordarme')
 

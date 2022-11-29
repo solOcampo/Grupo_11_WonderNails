@@ -126,10 +126,8 @@
     right: 2rem;
     top: 1rem;
 }
-.perfil-usuario .opcciones-perfil .portada  input{
-    display: none;
-}
-.perfil-usuario .opcciones-perfil .portada, .perfil-usuario .opcciones-perfil a {
+
+.perfil-usuario .opcciones-perfil .portada, .perfil-usuario .opcciones-perfil .editar {
     border: 0;
     padding: 8px 20px;
     border-radius: 8px;
@@ -344,6 +342,22 @@
 }
 .perfil .overlay .popup form .box-img img{
     height: 100%;
+}
+.perfil .overlay .popup form .box-imgPortada{
+    height: 10rem;
+    width: 20rem;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    margin: 20px auto;
+    border: 8px solid var(--grisMedio);
+    box-shadow: 0px 0px 10px 0px rgba( 0, 0, 0, .3);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.perfil .overlay .popup form .box-imgPortada img{
+    height: 100%;
+    position: absolute;
 }
 .perfil .overlay .popup form input{
     display: none;
