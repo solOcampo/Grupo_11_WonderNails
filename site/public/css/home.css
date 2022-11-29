@@ -3,6 +3,72 @@
     margin: 0 auto;
     width: 100%;
 }
+
+/* --- --- CAROUSEL --- --- */
+.mainHome .carousel__contenedor {
+	position: relative;
+}
+
+.mainHome .carousel__lista {
+	overflow: hidden;
+}
+
+.mainHome .carousel__elemento {
+	text-align: center;
+}
+.mainHome .carousel__anterior,
+.carousel__siguiente {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 35px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: #fff;
+	opacity: 20%;
+}
+
+.mainHome .carousel__anterior:hover,
+.carousel__siguiente:hover {
+	opacity: 100%;
+}
+
+.mainHome .carousel__anterior {
+	left: 0px;
+}
+
+.mainHome .carousel__siguiente {
+	right: 0px;
+}
+
+.mainHome .carousel__indicadores .glider-dot {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: rgb(42, 41, 41);
+	opacity: .2;
+	border-radius: 0;
+}
+
+.mainHome .carousel__indicadores .glider-dot:hover {
+	opacity: .5;
+}
+
+.mainHome .carousel__indicadores .glider-dot.active {
+	opacity: 1;
+}
+.mainHome .carrusel{
+    padding: 0px;
+}
+.mainHome .carousel__indicadores{
+    position: relative;
+}
+
+
 .mainHome .carrusel{
     position: relative;
     width: 100%;
@@ -105,6 +171,7 @@
     position: relative;
     bottom: 56px;
 }
+
 .mainHome .tienda article .secciones{
     display: flex;
     align-content: center;
@@ -751,7 +818,7 @@
 
 /* Servicios */
 .mainHome .body {
-    margin-top: 47px;
+    margin-top: 45px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -887,6 +954,9 @@
     .mainHome .instagram .fotosIG{
         grid-template-columns: 25% 25% 25% 25%;
     }
+    .mainHome .body {
+        margin-top: 150px;
+    }
 }
 @media (min-width: 600px){
     .mainHome .ubicacion .cajaEtiquetas{
@@ -906,6 +976,9 @@
     .mainHome .instagram {
         top: 126px;
     }
+    
+.mainHome .body {
+    margin-top: 150px;
 }
 /* LAPTOP */
 @media (min-width:769px){
@@ -1034,6 +1107,212 @@
         right: 45px;
         bottom: 22px;
     }
+    /* .mainHome img {
+        width: 100%;
+        height: 100%;
+    } */
+
+
+
+
+
+    .carrusel .glider-contain .glider div{
+        width: 100vh;
+        height: 300px;
+      }
+      /* .seccion .glider-contain .glider div{
+        width: 100vh;
+        height: 420px;
+      } */
+      .seccion .glider-contain{
+        width: 90%;
+      }
+      .glider-contain {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+      }
+      .glider, .gliderProductos {
+        margin: 0 auto;
+        position: relative;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        transform: translateZ(0);
+      }
+      .glider-track {
+        transform: translateZ(0);
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        z-index: 1;
+      }
+      .gliderProductos .glider-track{
+        height: 460px;
+      }
+      .gliderEsmaltes .glider-track{
+        height: 350px;
+      }
+      .draggable{
+        height: 500px;
+      }
+      .carrusel .draggable{
+        height: 300px;
+      }
+      .gliderProductos.draggable {
+        user-select: none;
+        cursor: -webkit-grab;
+        cursor: grab;
+      }
+      .gliderProductos .draggable .glider-slide img {
+        user-select: none;
+        pointer-events: none;
+        object-fit: cover;
+      }
+      .gliderProductos .drag {
+        cursor: -webkit-grabbing;
+        cursor: grabbing;
+      }
+      .glider-slide {
+        user-select: none;
+        justify-content: center;
+        align-content: center;
+      }
+      .glider-slide img {
+        max-width: 100%;
+      }
+      .glider::-webkit-scrollbar {
+        opacity: 0;
+        height: 0;
+      }
+      .glider-prev,.glider-next {
+        user-select: none;
+        position: absolute;
+        outline: none;
+        background: none;
+        padding: 0;
+        z-index: 2;
+        font-size: 40px;
+        text-decoration: none;
+        left: 10px;
+        border: 0;
+        top: 40%;
+        cursor: pointer;
+        color: var(--rosaOscuro);
+        opacity: 1;
+        line-height: 1;
+        transition: opacity .5s cubic-bezier(.17,.67,.83,.67),
+                    color .5s cubic-bezier(.17,.67,.83,.67);
+      }
+      .glider-prev:hover,
+      .glider-next:hover,
+      .glider-prev:focus,
+      .glider-next:focus {
+        color: #a89cc8;
+      }
+      .glider-next {
+        right: 10px;
+        left: auto;
+      }
+      .seccion .glider-prev{
+        left: 0px;
+      }
+      .seccion .glider-next {
+        right: 0px;
+        left: auto;
+      }
+      .glider-next.disabled,
+      .glider-prev.disabled {
+        opacity: .25;
+        color: var(--rosaClaro);
+        cursor: default;
+      }
+      .glider-slide {
+        min-width: 240px;
+      }
+      .gliderEsmaltes .glider-slide, .gliderProductos .glider-slide {
+        margin-right: 10px;
+      }
+      .glider-hide {
+        opacity: 0;
+      }
+      .glider-dots {
+        user-select: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .glider-dot {
+        border: 0;
+        padding: 0;
+        user-select: none;
+        outline: none;
+        display: block;
+        cursor: pointer;
+        color: #ccc;
+        border-radius: 999px;
+        background: #ccc;
+        width: 12px;
+        height: 12px;
+        margin: 7px;
+      }
+      .glider-dot:hover,
+      .glider-dot:focus,
+      .glider-dot.active {
+        background: #a89cc8;
+      }
+      @media(max-width: 769px){
+        .gliderEsmaltes .glider-track{
+          height: 350px;
+        }
+        .gliderProductos .glider-track{
+          height: 300px;
+        }
+        .gliderEsmaltes .draggable{
+          height: 400px;
+        }
+        .gliderProductos .draggable{
+          height: 500px;
+        }
+        .seccion .glider-prev{
+          left: -40px;
+        }
+        .seccion .glider-next {
+          right: -40px;
+        }
+        .gliderProductos::-webkit-scrollbar {
+          opacity: 1;
+          /* -webkit-appearance: none; */
+          width: 7px;
+          height: 3px;
+        }
+        .gliderProductos::-webkit-scrollbar-thumb {
+          opacity: 1;
+          border-radius: 99px;
+          background-color: rgba(156, 156, 156, 0.25);
+          box-shadow: 0 0 1px rgba(255,255,255,.25);
+        }
+      }
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     .mainHome .carruselTienda .seccion .caja .etiqueta, .mainHome .carruselTienda .seccion .caja .oferta {
         font-size: 20px;
         bottom: 15px;
@@ -1147,4 +1426,4 @@
         font-size: 10px;
      
     }
-}
+}}

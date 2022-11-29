@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <%- include ('./partials/head', {title: 'Wonder Nails' }) %>
-    <link rel="stylesheet" type="text/css" href="glider.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
 
     <body class="home">
         <!-- Google Tag Manager (noscript) -->
@@ -11,12 +11,12 @@
 
         <%- include ('./partials/header') %>
             <main class="mainHome">
-                <!-- <div class="carousel">
-                    <div class="carousel__contenedor">    
-                        
+                <div class="carousell">
+                    <div class="carousel__contenedor">
+
                         <button aria-label="Anterior" class="carousel__anterior">
                             <i class="fas fa-chevron-left"></i>
-                        </button>    
+                        </button>
                         <div class="carousel__lista">
                             <div class="carousel__elemento">
                                 <img src="/img/Home/carrusel2.jpg" alt="Rock and Roll Hall of Fame">
@@ -30,7 +30,7 @@
                             <div class="carousel__elemento">
                                 <img src="/img/Home/carrusel2.jpg" alt="Harmony Tower">
                             </div>
-            
+
                             <div class="carousel__elemento">
                                 <img src="/img/Home/carrusel2.jpg" alt="Empire State Building">
                             </div>
@@ -44,30 +44,26 @@
                                 <img src="/img/Home/carrusel2.jpg" alt="Harmony Tower">
                             </div>
                         </div>
-                        
+
                         <button aria-label="Siguiente" class="carousel__siguiente">
                             <i class="fas fa-chevron-right"></i>
                         </button>
                     </div>
-        
+
                     <div role="tablist" class="carousel__indicadores"></div>
                 </div>
-            </div> -->
+                </div>
                 <!-- CARRUSEL -->
-                <section class="carrusel">
+                <!-- <section class="carrusel">
                     <div class="glider-contain numero1">
                         <div class="glider">
-                            <div><img src="/img/Home/carrusel1.jpg" alt="banner"></div>
-                            <div><img src="/img/Home/carrusel2.jpg" alt="banner"></div>
-                            <div><img src="/img/Home/carrusel4.jpg" alt="banner"></div>
-                            <div><img src="/img/Home/carrusel1.jpg" alt="banner"></div>
-                            <div><img src="/img/Home/carrusel2.jpg" alt="banner"></div>
+                            <div><img src="/img/Home/banner-cesta-navidad-desktop.gif" alt="banner"></div>
                         </div>
                         <button aria-label="Previous" class="glider-prev">«</button>
                         <button aria-label="Next" class="glider-next">»</button>
                         <div role="tablist" class="dots"></div>
                     </div>
-                </section>
+                </section> -->
                 <section class="tienda">
                     <!-- INICIO -->
                     <article class="titulo">
@@ -95,19 +91,23 @@
                     <!-- CARRUSEL DE SECCIONES -->
 
                     <article class="carruselTienda">
-                        <!-- novedades -->
-                        <div id="nuevo" class="seccion">
-                            <div class="glider-contain numero1">
-                                <div class="gliderProductos">
+                        <div class="carousell">
+                            <div class="carousel__contenedor">
+        
+                                <button aria-label="Anterior" class="carousel__anterior">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <div class="carousel__lista">
                                     <% productosNuevos.forEach(producto=> { %>
                                         <div class="caja">
                                             <div class="caja-etiquetas">
                                                 <span class="etiqueta">Nuevo</span>
-                                                <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                                                <a class="etiquetaC" href=""><i
+                                                        class="far fa-heart"></i></a>
                                             </div>
                                             <a href="/productos/detalle/<%- producto.id %> ">
                                                 <div class="foto-prod">
-                                                    <img src="/img/products/<%- producto.imagenes[0].nombre %> "
+                                                    <img class="prodImg" src="/img/products/<%- producto.imagenes[0].nombre %> "
                                                         alt="Fotografía ilustrativa del producto">
                                                 </div>
                                                 <h4>
@@ -117,18 +117,24 @@
                                             </a>
                                             <div class="input">
                                                 <input type="button" value="-">
-                                                <input class="medio" type="number" value="1" min="1" step="1">
+                                                <input class="medio" type="number" value="1" min="1"
+                                                    step="1">
                                                 <input type="button" value="+">
                                             </div>
                                             <a href="/productos/carrito/<%- producto.id %> "><button
                                                     class="comprar">Comprar</button></a>
                                         </div>
                                         <% }) %>
+                                    
                                 </div>
-                                <button aria-label="Previous" class="glider-prev">«</button>
-                                <button aria-label="Next" class="glider-next">»</button>
-                                <div role="tablist" class="dots"></div>
+        
+                                <button aria-label="Siguiente" class="carousel__siguiente">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
                             </div>
+        
+                            <div role="tablist" class="carousel__indicadores"></div>
+                        </div>
                         </div>
                         <!-- favoritos -->
                         <!-- <div id="favoritos" class="seccion">
