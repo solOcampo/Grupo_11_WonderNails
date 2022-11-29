@@ -8,10 +8,10 @@
       <% if (resultados.length != 0) { %>
       <h1>Resultado de la busqueda: <%= buscar %></h1>
       <section class="resultados">
-        <% elemento.forEach(producto => { %>
+        <% resultados.forEach(producto => { %>
             <%- include('./partials/card',{
               id:producto.id,
-              imagen:producto.imagen[0],
+              imagen:producto.imagenes[0].nombre,
               nombre:producto.nombre,
               descuento:producto.descuento,
               precio:producto.precio 

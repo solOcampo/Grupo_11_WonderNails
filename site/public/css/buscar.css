@@ -7,12 +7,12 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-}
+    flex-wrap: wrap;}
+/* }
 .buscar .foto-prod{
     display: flex;
     justify-content: center;
 }
 .buscar .foto-prod img{
     width: 100%;
-}
+} */

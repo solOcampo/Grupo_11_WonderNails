@@ -303,18 +303,19 @@ body{
     padding: 0 0 100px 0;
 }
 .detail main section.productos-relacionados .comprar-boton {
-    background-color: var(--rosaOscuro);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0 12px;
-    position: absolute;
-    left: 30px;
-    right: 30px;
-    bottom: 23px;
+      background-color: var(--rosaOscuro);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 12px;
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        bottom: 23px;
+    
 }
 .detail footer .container__footer{
     margin-top: 0;

@@ -58,21 +58,28 @@ module.exports = {
     },
 
     search: (req, res) => {
-        let elemento = req.query.search
-        db.Productos.findAll(
-            {
-                include: [{
-                    all: true
-                }]
-            }
-        )
-    
-        return res.render('buscar', 
+       let elemento = req.query.search
+       
+       db.Productos.findAll({
+        where : {
+            [Op.or] : [
+                {nombre : {[Op.substring] : elemento}},
+                {descripcion : {[Op.substring] : elemento}}
+            ]
+        },
+        include:[
+          {all:true}
+        ]
+    })
+    .then((resultados) => {
+          return res.render('buscar', 
         {
-            busqueda: elemento,
+            buscar: elemento,
             resultados
         })
-    },
+    })
+    .catch(error => res.send(error))
+},
     
     cookies :(req, res) => { 
         return res.render('aviso-cookies')
