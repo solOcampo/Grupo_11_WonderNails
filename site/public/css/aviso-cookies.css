@@ -3,12 +3,12 @@
     background-repeat: no-repeat;
 }
 .cookies-aviso p{
- background: rgba(255, 255, 255, 0.551);
+ background: rgba(255, 255, 255, 0.900);
 
 color: var(--grisOscuro);
 }
 .cookies-aviso h3{
-    background: rgba(255, 255, 255, 0.758);
+    background: rgba(255, 255, 255, 0.900);
 
     padding: 10px;
 text-align: center;
@@ -16,8 +16,10 @@ color: var(--grisMedio);
 
 }
 .cookies-aviso h1{
+    padding: 7px;
+    background-color: var(--rosaOscuro);
     text-align: center;
-    color: var(--grisMedio);
+    color: white;
 }
 .cookies-aviso a{
     color: var(--grisOscuro);
