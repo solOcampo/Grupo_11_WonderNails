@@ -13,15 +13,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      Carritos_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model:{
-            tableName: 'Carritos'
-          },
-          key: 'id'
-        }
+      status: {
+        type: Sequelize.STRING,
+     
       },
       Usuarios_id: {
         type: Sequelize.INTEGER,

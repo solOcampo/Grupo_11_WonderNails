@@ -22,19 +22,31 @@ router.get('/nosotros', nosotros);
 
 
 router.get('/prueba', (req, res) => {
-    db.Productos.findAll(
-        {
-            include: [{
-                all: true
-            }]
-        }
-
-
-    ).then(
-        productos => {
-            res.send(productos)
-        }
-    ).catch(errors=> res.send(errors))
+    db.Ordenes.findAll({
+        Usuarios_id: req.session.userLogin.id,
+        status: 'pending',
+        include: [
+            {
+                association : 'carrito',
+                attributes: ['Productos_id', 'Total_compra'],
+                include: [
+                    {
+                        association : 'producto',
+                        attributes: ['id', 'nombre', 'precio', 'descuento', 'stock'],
+                        include: [
+                            {
+                                association : 'imagenes',
+                                attributes: ['nombre']
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }).then( data => {
+            res.status(200).json(data)
+        })
+        .catch(errors=> res.send(errors))
 });
 
 module.exports = router

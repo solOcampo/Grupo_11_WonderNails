@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     nombre_impreso: DataTypes.STRING,
     fecha_vencimiento: DataTypes.STRING,
     codigo_de_seguridad: DataTypes.INTEGER,
-    usuario_id: DataTypes.INTEGER
+    Usuarios_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Tarjetas',
