@@ -16,6 +16,7 @@
 }
 
 .caja .foto-prod img{
+    width: 100%;
     margin: 2vh 0;
     height: 220px;
     background-repeat: no-repeat;

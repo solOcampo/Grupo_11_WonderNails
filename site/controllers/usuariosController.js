@@ -60,6 +60,7 @@ module.exports = {
                 }
                 users.push(newUser)
                 saves(users) */
+                req.session.carrito = []
                 return res.redirect('/usuarios/login')
         }else{
             return res.render('users/register', {
@@ -106,7 +107,59 @@ module.exports = {
                     maxAge: 1000 * 60 * 60 * 24 * 30
                 })
             }
-            return res.redirect('/usuarios/perfil')
+                req.session.carrito = []
+                    db.Ordenes.findOne({
+                        where: {
+                            Usuarios_id: req.session.userLogin.id,
+                            status: 'pending'
+                        },
+                            include: [
+                                {
+                                    association : 'carrito',
+                                    attributes: ['Productos_id', 'Total_compra'],
+                                    include: [
+                                        {
+                                            association : 'producto',
+                                            attributes: ['id', 'nombre', 'precio', 'descuento', 'stock'],
+                                            include: [
+                                                {
+                                                    association : 'imagenes',
+                                                    attributes: ['nombre']
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        
+                    })
+                    .then(orden => {
+                        if(!orden) {
+                            console.log("El usuario logueado no tiene una orden pendiente")
+                            return res.redirect('/usuarios/perfil')
+                        } else {
+                            console.log("El usuario logueado tiene una orden pendiente")
+                            orden.carrito.forEach(item => {
+                                let producto = {
+                                    id: item.producto.id,
+                                    nombre: item.producto.nombre,
+                                    precio: item.producto.precio,
+                                    descuento: item.producto.descuento,
+                                    imagen: item.producto.imagenes[0].nombre,
+                                    stock: item.producto.stock,
+                                    Total_compra: +item.Total_compra,
+                                    subtotal: ( +item.producto.precio - ( +item.producto.precio * +item.producto.descuento / 100 )) * item.cantidad,
+                                    // Ordenes_id: orden.id ,
+                                }
+                                req.session.carrito.push(producto)
+                                
+                            })
+                            console.log(req.session.carrito)
+                            return res.redirect('/usuarios/perfil')
+                        }
+                    }) .catch(errores => res.send(errores))
+
+
         } else {
             // return res.send(errors.mapped())
             return res.render('users/login', {

@@ -30,7 +30,7 @@ module.exports = {
             })
     },
     cart: (req,res) => {
-        return res.render('carrito')
+       res.render('carrito')
     },
     nailPolish: (req,res) => {
 

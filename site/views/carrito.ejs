@@ -3,10 +3,83 @@
 
     <%- include ('./partials/head', {title: 'Wonder Nails'}) %> 
 
-<body class="carrito">
+<body class="cart">
     <%- include ('./partials/header') %> 
 
-    <main class="carritoMain">
+    <main >
+        <h1>Carrito de compras</h1>
+        <section id="carrito">
+            
+        </section>
+        <section class="Numeros" id="Numeros">
+           <!-- <form action="" method="post">
+                <h3>Subtotal</h3>
+                <div class="valor-productos">
+                    <p>$190000</p>
+                    <p>$190000</p>
+                    <p>$190000</p>
+                    <div class="suma"><i class="fas fa-plus"></i></div>
+                </div>
+                <span>$570000</span>
+                <p class="precio-principal">$285000</p>
+                <div class="precios">
+                    <div class="precios-categorias">
+                        <h3>¡Ahorro Total!</h3>
+                        <p class="precio-ahorro">-$285000</p>
+                    </div>
+                    <div class="precios-categorias">
+                        <h3>Precio Final</h3>
+                        <p class="Precio-final">$286000</p>
+                    </div>
+                </div>
+                <h3>Calcula tu envio</h3>
+                <div class="postal">
+                    <label for="envio">Codigo postal</label>
+                    <input type="number" name="envio" id="envio" placeholder="5501">
+                </div>
+                
+                <div class="input" >
+                    <input type="number" name="precio" id="precio" value="286000">
+                </div>
+                <div class="ofertas">
+                    <input type="checkbox" name="ofertas" id="ofertas">
+                    <label for="ofertas">Desea recibir nuestras proximas ofertas?</label>
+                </div>
+                <div class="botones">
+                    <button type="submit">Comprar Productos</button>
+                </div>
+            </form>-->
+            <form action="" method="post">
+                <div class="subtotal">
+                    <h3>Subtotal</h3>
+                    <span id="subtotal"></span>
+                </div>
+
+                <div class="total">
+                    <h3>Total</h3>
+                    <span id="total"></span>
+                </div>
+                
+                <div class="ofertas">
+                    <input type="checkbox" name="ofertas" id="ofertas">
+                    <label for="ofertas">Desea recibir nuestras proximas ofertas?</label>
+                </div>
+                <div class="botones">
+                    <button type="submit">Finalizar Compra</button>
+                    <a href="">Continuar comprando</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="/javascripts/carrito.js"></script>
+</body>
+</html>
+
+
+
+
+
+    <!-- <main class="carritoMain">
         <section class="carritoDeCompras">
             <h1>Carrito de Compras</h1>
             <div class="productosCarrito">
@@ -30,7 +103,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="divSub">
+                     <div class="divSub">
                         <h5 class="subtotal">Subtotal</h5>
                         <p class="precioSubtotal">$11992</p>
                     </div> -->
@@ -140,55 +213,10 @@
                     </div>
                 </div>
             </article>
-            <article class="totalCompra">
-                <h3 class="total">Total del carrito</h3>
-                <hr></hr>
-                <div class="items">
-                    <div class="sub">
-                        <h4>Subtotal Torno DRILL 288 Professional:</h4>
-                        <span>$37970</span>
-                    </div>
-                    <div class="sub">
-                        <h4>Subtotal Cavina UV LED Professional:</h4>
-                        <span>$37970</span>
-                    </div><div class="sub">
-                        <h4>Subtotal 12 Esmaltes Semipermanentes:</h4>
-                        <span>$37970</span>
-                    </div><div class="sub">
-                        <h4>Subtotal (sin envío):</h4>
-                        <span>$37970</span>
-                        <hr></hr>
-                    </div>
-                    <div class="nosotros">
-                        <ul>
-                          <a href=""><img src="/img/WonderNails-Logotipo-removebg-preview.png" alt="">Donde estamos</a>
-                          <!-- <li>Donde estamos</li> -->
-                          <li><i class="far fa-heart"></i>Alto avellaneda shopping Buenos Aires</li>
-                          <li><i class="far fa-heart"></i>Alto Palermo Shopping Buenos Aires</li>
-                          <li><i class="far fa-heart"></i>El Mercado Neuquèn</li>
-                          <li><i class="far fa-heart"></i>Alto Comahuè shopping Neuquèn</li>
-                        </ul>
-                    </div>
-                    <hr></hr>
-                    <div class="sub">
-                        <h4>Descuentos:</h4>
-                        <span>$</span>
-                    </div>
-                    <div class="sub">
-                        <h4>Envío:</h4>
-                        <span>$599</span>
-                    </div>
-                    <div>
-                        <h3>Total</h3>
-                        <p></p>
-                    </div>
-                </div>
-                <button>Iniciar compra</button>
-                <a href="javascript:history.back()"><i class="fas fa-angle-left"></i>Seguir comprando</a>
-            </article>
         </section>
     </main>
     <%- include ('./partials/footer') %> 
+    <script src="/javascript/carrito.js"></script>
 
 </body>
-</html>
+</html> 

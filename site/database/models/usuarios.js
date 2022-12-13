@@ -16,7 +16,11 @@ module.exports = (sequelize, DataTypes) => {
       }),
       Usuarios.hasMany(models.Direcciones,{
         as: 'direccion',
-        foreignKey: 'usuarioId'
+        foreignKey: 'Usuarios_id'
+      }),
+      Usuarios.hasMany(models.Carritos,{
+        as: 'carrito',
+        foreignKey: 'Usuarios_id'
       })
     }
   }

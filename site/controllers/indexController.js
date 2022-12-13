@@ -1,6 +1,7 @@
 let db = require('../database/models')
 const { Op } = require("sequelize");
 
+
 module.exports = {
     home: (req, res) => {
        
@@ -59,12 +60,12 @@ module.exports = {
 
     search: (req, res) => {
        let elemento = req.query.search
-       
+
        db.Productos.findAll({
         where : {
             [Op.or] : [
                 {nombre : {[Op.substring] : elemento}},
-                {descripcion : {[Op.substring] : elemento}}
+                {descripcion : {[Op.substring] : elemento}},
             ]
         },
         include:[
@@ -75,7 +76,7 @@ module.exports = {
           return res.render('buscar', 
         {
             buscar: elemento,
-            resultados
+            resultados,
         })
     })
     .catch(error => res.send(error))

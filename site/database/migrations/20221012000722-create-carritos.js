@@ -17,6 +17,16 @@ module.exports = {
         allowNull: false,
         type: Sequelize.INTEGER
       },
+      Ordenes_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model:{
+            tableName: 'Ordenes'
+          },
+          key: 'id'
+        }
+      },
       Productos_id: {
         type: Sequelize.INTEGER,
         allowNull: false,

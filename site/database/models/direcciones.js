@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
       static associate(models) {
          Direcciones.belongsTo(models.Usuarios,{
           as: 'usuario',
-          foreignKey: 'usuarioId'
+          foreignKey: 'Usuarios_id'
         })
       }
   }
@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     ciudad: DataTypes.STRING,
     provincia: DataTypes.STRING,
     codigoPostal: DataTypes.INTEGER,
-    usuarioId: DataTypes.INTEGER
+    Usuarios_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Direcciones',

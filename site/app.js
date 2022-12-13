@@ -44,6 +44,8 @@ let productosRouter = require("./routes/productos");
 let usuariosRouter = require("./routes/usuarios");
 // api
 let apiRouter = require('./routes/api/apiRouter')
+let apiCarrito = require('./routes/api/apiCarrito')
+
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -54,6 +56,8 @@ app.use("/productos", productosRouter);
 app.use("/admin", adminCheck, adminRouter);
 // api
 app.use('/api',apiRouter);
+app.use('/api/Carrito',apiCarrito);
+
 
 //  app.use(function(req, res, next) {
 //   res.status(404).render('views/error');
