@@ -11,8 +11,8 @@ router.get('/:state', state)
 /* Esmaltes */
 router.get('/esmaltes', nailPolish)
 /* Carrito de compras */
-router.get('/carrito/', userCheckCart,cart)
-router.get('/carrito/:id', userCheckCart, cart)
+router.get('/carrito', userCheckCart,cart)
+/* router.get('/carrito', userCheckCart, cart) */
 /* Detalle de productos */
 router.get('/detalle/:id', detail)
 

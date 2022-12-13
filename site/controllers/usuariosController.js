@@ -143,27 +143,70 @@ module.exports = {
       
               const {nombre, apellido, direccion} = req.body
       
-              db.Usuarios.findOne({
+              let usuario = db.Usuarios.findOne({
                 where: { 
                     id : session.id 
                 }
               })
+              let promesas = []
+
+              Promise.all([usuario])
               .then(usuario => {
-                  db.Usuarios.update({
-                    imagen_perfil: req.files ? req.files.imagenPerfil[0].filename : usuario.imagen_perfil
-                  },{
-                    where: {
-                        id : session.id 
-                    }
-                  })
-                  .then(data=> {
-                    db.Usuarios.findOne({
-                        where: {
-                            id : session.id 
-                        }
-                  })
-                      .then(usuario => { 
+
+                let imagenPerfil
+                let imagenPortada
+                
+                /* Imagen Perfil */
+
+                if (usuario[0].imagen_perfil) {
+                    
+                    if(!!req.files.imagenPerfil){
                         
+                        imagenPerfil = usuario[0].imagen_perfil
+
+                        promesas.push(
+                            db.Usuarios.update({
+                            imagen_perfil:req.files.imagenPerfil[0].filename
+                        },{
+                            where: {
+                                id : usuario[0].id
+                            }
+                        }))
+                        /* Borramos la imagen anterior */
+                        if(fs.existsSync(path.join(__dirname,'../public/img/users',imagenPerfil))){
+                            fs.unlinkSync(path.join(__dirname, '../public/img/users', imagenPerfil))
+                        }
+                    }
+                }
+
+                /* Imagen portada */
+                if (usuario[0].imagen_portada) {
+                    
+                    if(!!req.files.imagenPortada){
+                        
+                        imagenPortada = usuario[0].imagen_portada
+                        
+                        promesas.push(
+                            db.Usuarios.update({
+                            imagen_portada:req.files.imagenPortada[0].filename
+                        },{
+                            where: {
+                                id : usuario[0].id
+                            }
+                        }))
+                        /* Borramos la imagen anterior */
+                        if(fs.existsSync(path.join(__dirname,'../public/img/users',imagenPortada))){
+                            fs.unlinkSync(path.join(__dirname, '../public/img/users', imagenPortada))
+                        }
+                    }
+                }
+              })
+              .catch(err => res.send(err))
+
+              
+              Promise.all([usuario, promesas])
+                    .then(([usuario, promesas]) => { 
+                        /* return res.send(usuario) */
                         req.session.userLogin = {
                             id : usuario.id,
                             name : usuario.nombre,
@@ -173,25 +216,21 @@ module.exports = {
                             image_frontPage: usuario.imagen_portada,
                             rol : usuario.rolId 
                         }
+                        
                           if(req.cookies.rememberMe){
                               res.cookie('rememberMe','',{maxAge: -1});
                               res.cookie('rememberMe', req.session.userLogin, {maxAge: 1000 * 60 * 60 * 24})
                           }
                           req.session.save( (err) => {
                               req.session.reload((err) => {
-                                /* return res.send(req.files.imagenPerfil) */
+                                  /* return res.send(req.session.userLogin) */
                                   return res.redirect('/usuarios/perfil')
               
                               });
                            });
                            /* return res.send(req.files[0])
                            return res.redirect('/usuarios/perfil') */
-                      })
-                      
-                  }).catch(err => res.send(err))
-      
-              })
-              .catch(err => res.send(err))
+                      }).catch(err => res.send(err))
       
           }
        /*  let errors = validationResult(req)

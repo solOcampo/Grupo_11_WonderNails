@@ -1,12 +1,17 @@
 const path = require('path')
 const multer = require('multer')
-
 const storage = multer.diskStorage({
     destination: (req,file,callback) => {
         callback(null,'./public/img/users')
     },
     filename:(req,file,callback) => {
-        callback(null,'avatar-' + Date.now() + path.extname(file.originalname))
+        console.log(file);
+        if (file.fieldname == 'imagenPerfil') {
+            callback(null,'avatar-' + Date.now() + path.extname(file.originalname))
+            
+        } else {
+            callback(null,'portada-' + Date.now() + path.extname(file.originalname)) 
+        }
     }
 })
 
