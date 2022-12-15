@@ -201,18 +201,19 @@ module.exports = {
                     id : session.id 
                 }
               })
-              let promesas = []
 
+              
+              let promesas = []
               Promise.all([usuario])
               .then(usuario => {
-
-                let imagenPerfil
-                let imagenPortada
+                  
+                  let imagenPerfil
+                  let imagenPortada
                 
-                /* Imagen Perfil */
+                  /* Imagen Perfil */
 
-                if (usuario[0].imagen_perfil) {
-                    
+                  if (usuario[0].imagen_perfil) {
+                      
                     if(!!req.files.imagenPerfil){
                         
                         imagenPerfil = usuario[0].imagen_perfil
@@ -254,36 +255,39 @@ module.exports = {
                     }
                 }
               })
-              .catch(err => res.send(err))
-
-              
-              Promise.all([usuario, promesas])
-                    .then(([usuario, promesas]) => { 
+                    .then((promesas) => { 
                         /* return res.send(usuario) */
-                        req.session.userLogin = {
-                            id : usuario.id,
-                            name : usuario.nombre,
-                            lastname : usuario.apellido,
-                            email: usuario.email,
-                            image_profil: usuario.imagen_perfil,
-                            image_frontPage: usuario.imagen_portada,
-                            rol : usuario.rolId 
-                        }
-                        
-                          if(req.cookies.rememberMe){
-                              res.cookie('rememberMe','',{maxAge: -1});
-                              res.cookie('rememberMe', req.session.userLogin, {maxAge: 1000 * 60 * 60 * 24})
-                          }
-                          req.session.save( (err) => {
-                              req.session.reload((err) => {
-                                  /* return res.send(req.session.userLogin) */
-                                  return res.redirect('/usuarios/perfil')
-              
-                              });
-                           });
-                           /* return res.send(req.files[0])
-                           return res.redirect('/usuarios/perfil') */
-                      }).catch(err => res.send(err))
+                        db.Usuarios.findOne({
+                            where: { 
+                                id : session.id 
+                            }
+                          })
+                        .then(user => {
+                            req.session.userLogin = {
+                                id : user.id,
+                                name : user.nombre,
+                                lastname : user.apellido,
+                                email: user.email,
+                                image_profil: user.imagen_perfil,
+                                image_frontPage: user.imagen_portada,
+                                rol : user.rolId 
+                            }
+                            
+                              if(req.cookies.rememberMe){
+                                  res.cookie('rememberMe','',{maxAge: -1});
+                                  res.cookie('rememberMe', req.session.userLogin, {maxAge: 1000 * 60 * 60 * 24})
+                              }
+                              req.session.save( (err) => {
+                                  req.session.reload((err) => {
+                                      /* return res.send(req.session.userLogin) */
+                                      return res.render('users/perfil')
+                                  });
+                               });
+                               /* return res.send(req.files[0])
+                               return res.redirect('/usuarios/perfil') */
+                          })
+                        })
+                        .catch(err => res.send(err))
       
           }
        /*  let errors = validationResult(req)

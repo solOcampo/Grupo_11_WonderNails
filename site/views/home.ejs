@@ -61,46 +61,52 @@
                     <article class="carruselTienda">
                         <div class="carousell">
                             <div class="carousel__contenedor">
-
-                                <button aria-label="Anterior" class="carousel__anterior">
+                                <div class="glider-contain">
+                                    <div class="glider">
+                                        <% productosNuevos.forEach(producto=> { %>
+                                            <div class="caja">
+                                                <div class="caja-etiquetas">
+                                                    <span class="etiqueta">Nuevo</span>
+                                                    <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
+                                                </div>
+                                                <a href="/productos/detalle/<%- producto.id %> ">
+                                                    <div class="foto-prod">
+                                                        <img class="prodImg"
+                                                            src="/img/products/<%- producto.imagenes[0].nombre %> "
+                                                            alt="Fotografía ilustrativa del producto">
+                                                    </div>
+                                                    <h4>
+                                                        <%- producto.nombre %>
+                                                    </h4>
+                                                    <span class="precio">$<%- producto.precio %> </span>
+                                                </a>
+                                                <div class="input">
+                                                    <input type="button" value="-">
+                                                    <input class="medio" type="number" value="1" min="1" step="1">
+                                                    <input type="button" value="+">
+                                                </div>
+                                                <a href="/productos/carrito/<%- producto.id %> "><button
+                                                        class="comprar">Comprar</button></a>
+                                            </div>
+                                            <% }) %>
+                                    </div>
+                                  
+                                    <button aria-label="Previous" class="glider-prev">«</button>
+                                    <button aria-label="Next" class="glider-next">»</button>
+                                    <div role="tablist" class="dots"></div>
+                                  </div>
+                                <!-- <button aria-label="Anterior" class="carousel__anterior">
                                     <i class="fas fa-chevron-left"></i>
                                 </button>
                                 <div class="carousel__lista">
-                                    <% productosNuevos.forEach(producto=> { %>
-                                        <div class="caja">
-                                            <div class="caja-etiquetas">
-                                                <span class="etiqueta">Nuevo</span>
-                                                <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
-                                            </div>
-                                            <a href="/productos/detalle/<%- producto.id %> ">
-                                                <div class="foto-prod">
-                                                    <img class="prodImg"
-                                                        src="/img/products/<%- producto.imagenes[0].nombre %> "
-                                                        alt="Fotografía ilustrativa del producto">
-                                                </div>
-                                                <h4>
-                                                    <%- producto.nombre %>
-                                                </h4>
-                                                <span class="precio">$<%- producto.precio %> </span>
-                                            </a>
-                                            <div class="input">
-                                                <input type="button" value="-">
-                                                <input class="medio" type="number" value="1" min="1" step="1">
-                                                <input type="button" value="+">
-                                            </div>
-                                            <a href="/productos/carrito/<%- producto.id %> "><button
-                                                    class="comprar">Comprar</button></a>
-                                        </div>
-                                        <% }) %>
+                                    
 
                                 </div>
 
                                 <button aria-label="Siguiente" class="carousel__siguiente">
                                     <i class="fas fa-chevron-right"></i>
-                                </button>
+                                </button> -->
                             </div>
-
-                            <div role="tablist" class="carousel__indicadores"></div>
                         </div>
                         </div>
                         <!-- favoritos -->
@@ -197,12 +203,7 @@
                                     </article>
                                     <% }) %>
                             </div>
-
-                            <button aria-label="Previous" class="glider-prev">«</button>
-                            <button aria-label="Next" class="glider-next">»</button>
-                            <div role="tablist" class="dots"></div>
-
-                        </div>
+                          </div>
                     </div>
 
                 </section>
@@ -402,6 +403,8 @@
             </div>
             <div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
             <script src="/javascript/avisocookies.js"></script>
+            <script src="/javascript/glider.js"></script>
+            <script src="/javascript/carruselProductos.js"></script>
 
             <%- include ('./partials/footer') %>
     </body>
