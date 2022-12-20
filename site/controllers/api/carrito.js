@@ -1,5 +1,7 @@
 let db = require('../../database/models')
 const { Op } = require("sequelize");
+
+
 const productVerify = (carrito, id) => {
     let index = -1;
     for (let i = 0; i < carrito.length; i++) {
@@ -28,20 +30,6 @@ module.exports = {
         }
     },
     addItem: async (req, res) => {
-        // recibimos un id producto
-        // 1. buscar el producto, traer datos
-        // 2. verificar si el usuario tiene o no una orden pendiente
-        // ------------- si tiene una orden
-        //    - verificar si el producto que esta agregando existe
-        //      - si existe, unicamente modificamos la cantidad
-        //      - si no existe, agregamos el producto al carrito(crear el registro)
-        //      - modificar la session, con la info actualizada
-        // ------------- si no tiene una orden pendiente
-        //     - creamos un registro/orden de compra asociado al usuario
-        //     - creamos un carrito asociado al usurio
-        //     - agregamos el producto al carrito
-        //     - agregarlo a la session
-        //buscamos los datos del producto
         let producto = await db.Productos.findOne({
             where: {
                 id: +req.params.id
@@ -61,7 +49,7 @@ module.exports = {
             descuento: producto.descuento,
             imagen: producto.imagenes[0].nombre,
             stock: producto.stock,
-            cantidad: 1,
+            Total_compra: 1,
             subtotal: +producto.precio - (+producto.precio * +producto.descuento / 100),
             // Ordenes_id: orden.id ,
         }
@@ -75,7 +63,7 @@ module.exports = {
                 },
                 include: [
                     {
-                        association: 'carrito',
+                        association: 'carritos',
                         attributes: ['Productos_id', 'Total_compra'],
                     }
                 ]
@@ -227,7 +215,7 @@ module.exports = {
 
         let producto = req.session.carrito[index];
 
-        if(producto.cantidad > 1) {
+        if(producto.Total_compra > 1) {
             //tenemos que actualizar la cantidad
 
             // actulizamos en la sessión

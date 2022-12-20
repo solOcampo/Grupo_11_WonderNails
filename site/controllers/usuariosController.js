@@ -148,7 +148,7 @@ module.exports = {
                                     imagen: item.producto.imagenes[0].nombre,
                                     stock: item.producto.stock,
                                     Total_compra: +item.Total_compra,
-                                    subtotal: ( +item.producto.precio - ( +item.producto.precio * +item.producto.descuento / 100 )) * item.cantidad,
+                                    subtotal: ( +item.producto.precio - ( +item.producto.precio * +item.producto.descuento / 100 )) * item.Total_compra,
                                     // Ordenes_id: orden.id ,
                                 }
                                 req.session.carrito.push(producto)

@@ -13,7 +13,7 @@ const getVentanaCarrito = async () => {
     try {
         const response = await fetch('/api/carrito')
         const result = await response.json()
-
+         console.log(result);
         if (result.status === 200) {
             cargarVentanaCarrito(result.data)
         }
@@ -76,7 +76,7 @@ const removeItem = async (id) => {
     }
 }
 
-// Petición para modificar/disminuir la cantidad de un producto -> al endpoint -> /api/carrito/item/id -> DELETE
+// Petición para modificar/disminuir la Total_compra de un producto -> al endpoint -> /api/carrito/item/id -> DELETE
 const modifyItem = async (id) => {
     try {
         const response = await fetch(`/api/carrito/item/${id}`, {
@@ -119,13 +119,13 @@ const cargarCarrito = (data) => {
             let item = `
             <article>
                 <div class="imagenes">
-                    <img id="img" src="/images/productos/${producto.imagen}" alt="${producto.nombre}">
+                    <img id="img" src="/img/Products/${producto.imagen}" alt="${producto.nombre}">
                 </div>
                 <div class="detail">
-                    <h4><a id="nombre" href="/products/detail/${producto.id}">${producto.nombre}</a></h4>
+                    <h4><a id="nombre" href="/productos/detalle/${producto.id}">${producto.nombre}</a></h4>
                     <div class="añadir-elementos">
                         <button class="restar" onClick="modifyItem('${producto.id}')">-</button>
-                        <span ">${producto.cantidad}</span>
+                        <span ">${producto.Total_compra}</span>
                         <button class="agregar" onClick="addItem('${producto.id}')">+</button>
                     </div>
                     <div class="precio-descuento">
@@ -173,13 +173,13 @@ const cargarVentanaCarrito = (data) => {
             let item = `
             <div class="cart-item">
                 <span class="fas fa-times" onClick="removeItem('${producto.id}')"></span>
-                <img src="/images/productos/${producto.imagen}"  alt="">
+                <img src="/img/Products/${producto.imagen}"  alt="">
                 <div class="content">
                     <h3>${producto.nombre}</h3>
                     <div class="price">$ ${toThousand(Math.round(producto.precio - (producto.precio * producto.descuento / 100)))}</div>
                     <div class="añadir-elementos">
                         <button class="restar" onClick="modifyItem('${producto.id}')">-</button>
-                        <span ">${producto.cantidad}</span>
+                        <span ">${producto.Total_compra}</span>
                         <button class="agregar" onClick="addItem('${producto.id}')">+</button>
                     </div>
                 </div>
@@ -192,7 +192,7 @@ const cargarVentanaCarrito = (data) => {
         <div class="cart-puy">
             <span>Subtotal:</span>
             <span>$ ${toThousand(Math.round(totalCarrito))}</span>
-            <a class="" href="/products/cart">Ir a mi carrito</a>
+            <a class="" href="/productos/cart">Ir a mi carrito</a>
         </div>
         `
     } else {
