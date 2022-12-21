@@ -14,6 +14,9 @@
                 <ul class="icons">
                     <a href="">Hola <%= locals.userLogin.name %>! </a>
                     <a href="/usuarios/perfil">Accede a tu perfil</a>
+                    <form action="/usuarios/logout?_method=DELETE" method="POST">
+                        <button type="submit"><i class="fas fa-sign-out-alt"></i> Salir</button>
+                    </form>
                 </ul> 
                 <% } else { %>
                     <ul class="icons">
