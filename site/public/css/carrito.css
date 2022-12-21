@@ -82,6 +82,9 @@
     color: var(--rosaOscuro);
     font-weight: 700;
 }
+.cart img{
+    width: 100%;
+}
 /*
 .cart section article h3{
     width: 100%;

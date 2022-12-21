@@ -88,8 +88,8 @@
                                                 <input class="medio" type="number" value="1" min="1" step="1">
                                                 <input type="button" value="+">
                                             </div>
-                                            <a href="/productos/carrito/<%- producto.id %> "><button
-                                                    class="comprar">Comprar</button></a>
+                                            <button class="comprar" onclick="addItem('<%= producto.id %>')">añadir al Carrito</button>
+
                                         </div>
                                         <% }) %>
 
@@ -193,7 +193,7 @@
                                             <input class="medio" type="number" value="1" min="1" step="1">
                                             <input type="button" value="+">
                                         </div>
-                                        <a href="/productos/carrito"><button class="comprar">Comprar</button></a>
+                                        <button class="comprar" onclick="addItem('<%= esmalte.id %>')">añadir al Carrito</button>
                                     </article>
                                     <% }) %>
                             </div>
