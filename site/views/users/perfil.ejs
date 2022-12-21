@@ -8,11 +8,11 @@
     <main>
         <section class="perfil-usuario">
             <div class="contenedor-perfil">
-                <div  class =" portada-perfil " style =" background-image: url('/img/users/<%= session.image_frontPage %>')">
+                <div  class =" portada-perfil " style =" background-image: url('/img/users/<%= locals.userLogin.image_frontPage %>')">
                     <div class="sombra"> </div>
                     <div class="avatar-perfil">
                         
-                        <img src="/img/users/<%= session.image_profil %> " alt="Imagen de perfil">
+                        <img src="/img/users/<%= locals.userLogin.image_profil %> " alt="Imagen de perfil">
                         <a id="btn-abrir-popup">
                             <div class="cambiar-foto">
                             <i class="fas fa-camera"></i> 
@@ -71,7 +71,7 @@
                     <div class="col col-5">
                         <label class="selectImg"class="form-label" for="product-img">
                             <div class="box-img">
-                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/users/<%= session.image_profil %> %>" alt="">
+                                <img id="img-preview" class="img-fluid img-thumbnail imagen-height rounded" src="/img/users/<%= locals.userLogin.image_profil %> %>" alt="">
                             </div>
                         </label>
                         <div class="form-admin__box inactivo">
@@ -89,7 +89,7 @@
                     <div class="col col-5">
                         <label class="selectImg" class="form-label" for="product-sub-img-1">
                             <div class="box-imgPortada">
-                                <img id="sub-img-preview-1" class="img-fluid img-thumbnail imagen-height rounded" src="/img/users/<%= session.image_frontPage %>" alt="">
+                                <img id="sub-img-preview-1" class="img-fluid img-thumbnail imagen-height rounded" src="/img/users/<%= locals.userLogin.image_frontPage %>" alt="">
                             </div>
                         </label>
                         <div class="form-admin__box inactivo">

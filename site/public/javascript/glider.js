@@ -31,7 +31,7 @@
   var Glider = (_window.Glider = function (element, settings) {
     var _ = this
 
-    if (element.glider) return element.glider
+    if (element._glider) return element._glider
 
     _.ele = element
     _.ele.classList.add('glider')
@@ -129,18 +129,17 @@
       : _.containerWidth / _.opt.slidesToShow;
 
     // set slide dimensions
-    [].forEach.call(_.slides, function (__) {
+    /* [].forEach.call(_.slides, function (__) {
       __.style.height = 'auto'
       __.style.width = _.itemWidth + 'px'
       width += _.itemWidth
       height = Math.max(__.offsetHeight, height)
-    })
+    }) */
 
     _.track.style.width = width + 'px'
     _.trackWidth = width
     _.isDrag = false
     _.preventClick = false
-    _.move = false
 
     _.opt.resizeLock && _.scrollTo(_.slide * _.itemWidth, 0)
 
@@ -168,10 +167,6 @@
       _.isDrag = false
     }
 
-    const move = function () {
-      _.move = true
-    }
-
     var events = {
       mouseup: mouseup,
       mouseleave: mouseup,
@@ -180,22 +175,14 @@
         e.stopPropagation()
         _.mouseDown = e.clientX
         _.ele.classList.add('drag')
-        _.move = false
-        setTimeout(move, 300)
-      },
-      touchstart: function (e) {
-        _.ele.classList.add('drag')
-        _.move = false
-        setTimeout(move, 300)
       },
       mousemove: _.mouse,
       click: function (e) {
-        if (_.preventClick && _.move) {
+        if (_.preventClick) {
           e.preventDefault()
           e.stopPropagation()
         }
         _.preventClick = false
-        _.move = false
       }
     }
 
@@ -218,7 +205,6 @@
     if (!_.dots) return
 
     _.dots.innerHTML = ''
-    _.dots.setAttribute('role', 'tablist')
     _.dots.classList.add('glider-dots')
 
     for (var i = 0; i < Math.ceil(_.slides.length / _.opt.slidesToShow); ++i) {
@@ -276,11 +262,9 @@
           'disabled',
           _.ele.scrollLeft <= 0 || disableArrows
         )
-
-        _.arrows.prev.setAttribute(
-          'aria-disabled',
-          _.arrows.prev.classList.contains('disabled')
-        )
+        _.arrows.prev.classList.contains('disabled')
+          ? _.arrows.prev.setAttribute('aria-disabled', true)
+          : _.arrows.prev.setAttribute('aria-disabled', false)
       }
       if (_.arrows.next) {
         _.arrows.next.classList.toggle(
@@ -288,11 +272,9 @@
           Math.ceil(_.ele.scrollLeft + _.containerWidth) >=
             Math.floor(_.trackWidth) || disableArrows
         )
-
-        _.arrows.next.setAttribute(
-          'aria-disabled',
-          _.arrows.next.classList.contains('disabled')
-        )
+        _.arrows.next.classList.contains('disabled')
+          ? _.arrows.next.setAttribute('aria-disabled', true)
+          : _.arrows.next.setAttribute('aria-disabled', false)
       }
     }
 
@@ -387,12 +369,9 @@
     var originalSlide = slide
     ++_.animate_id
 
-    var prevSlide = _.slide
-    var position
-
     if (dot === true) {
-      slide = Math.round((slide * _.containerWidth) / _.itemWidth)
-      position = slide * _.itemWidth
+      slide = slide * _.containerWidth
+      slide = Math.round(slide / _.itemWidth) * _.itemWidth
     } else {
       if (typeof slide === 'string') {
         var backwards = slide === 'prev'
@@ -422,14 +401,12 @@
       slide = Math.max(Math.min(slide, _.slides.length), 0)
 
       _.slide = slide
-      position = _.itemWidth * slide
+      slide = _.itemWidth * slide
     }
 
-    _.emit('scroll-item', { prevSlide, slide })
-
     _.scrollTo(
-      position,
-      _.opt.duration * Math.abs(_.ele.scrollLeft - position),
+      slide,
+      _.opt.duration * Math.abs(_.ele.scrollLeft - slide),
       function () {
         _.updateControls()
         _.emit('animated', {
