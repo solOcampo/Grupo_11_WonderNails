@@ -5,7 +5,6 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const iconCart = $('#cart-btn');
 const cart = $('.cart-container');
 
-// captura el elemento con id carrito
 const carrito = $("#carrito");
 
 const getVentanaCarrito = async () => {
@@ -179,7 +178,7 @@ const cargarVentanaCarrito = (data) => {
                     <div class="price">$ ${toThousand(Math.round(producto.precio - (producto.precio * producto.descuento / 100)))}</div>
                     <div class="añadir-elementos">
                         <button class="restar" onClick="modifyItem('${producto.id}')">-</button>
-                        <span ">${producto.Total_compra}</span>
+                        <span ">${producto.cantidad}</span>
                         <button class="agregar" onClick="addItem('${producto.id}')">+</button>
                     </div>
                 </div>

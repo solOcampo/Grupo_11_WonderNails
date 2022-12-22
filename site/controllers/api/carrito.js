@@ -30,6 +30,7 @@ module.exports = {
         }
     },
     addItem: async (req, res) => {
+        console.log("ingreso a additem");
         let producto = await db.Productos.findOne({
             where: {
                 id: +req.params.id
@@ -49,7 +50,8 @@ module.exports = {
             descuento: producto.descuento,
             imagen: producto.imagenes[0].nombre,
             stock: producto.stock,
-            Total_compra: 1,
+            cantidad:1,
+            Total_compra: producto.precio,
             subtotal: +producto.precio - (+producto.precio * +producto.descuento / 100),
             // Ordenes_id: orden.id ,
         }
@@ -88,7 +90,8 @@ module.exports = {
                     Usuarios_id: req.session.userLogin.id,
                     Productos_id: item.id,
                     Ordenes_id: newOrden.id,
-                    Total_compra: 1,
+                    Total_items:1,
+                    Total_compra: item.precio,
                 })
                 
             } else {
@@ -104,7 +107,8 @@ module.exports = {
                     Usuarios_id: req.session.userLogin.id,
                     Productos_id: item.id,
                     Ordenes_id: orden.id,
-                    Total_compra: 1,
+                    Total_items:1,
+                    Total_compra: item.precio,
                 })
             }
         } else {
@@ -132,7 +136,8 @@ module.exports = {
                     Ordenes_id: orden.id,
                     Productos_id: item.id,
                     Usuarios_id: req.session.userLogin.id,
-                    Total_compra: 1
+                    Total_items: 1,
+                    Total_compra:item.precio
                 })
                 console.log("Aca muestro el carrito")
                 console.log(req.session.carrito)
@@ -140,14 +145,18 @@ module.exports = {
             } else {
                 // el producto existe en el carrito
                 let producto = req.session.carrito[index]
+                console.log(req.session.carrito)
+                console.log("El producto si existe");
 
-                producto.Total_compra++;
-                producto.subtotal = (+producto.precio - (+producto.precio * +producto.descuento / 100)) * producto.Total_compra,
+                producto.cantidad= +producto.cantidad+1;
+                producto.subtotal = (+producto.precio - (+producto.precio * +producto.descuento / 100)) * +producto.cantidad,
+                producto.Total_compra=(+producto.precio * +producto.cantidad)
 
                 req.session.carrito[index] = producto;
                 console.log(req.session.carrito)
                 await db.Carritos.update(
                     {
+                        Total_items: producto.cantidad,
                         Total_compra: producto.Total_compra
                     },
                     {
