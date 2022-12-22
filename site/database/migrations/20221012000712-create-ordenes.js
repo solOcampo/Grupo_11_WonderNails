@@ -10,7 +10,6 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       Fecha_compra: {
-        allowNull: false,
         type: Sequelize.DATE
       },
       status: {

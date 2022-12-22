@@ -116,7 +116,7 @@ module.exports = {
                             include: [
                                 {
                                     association : 'carrito',
-                                    attributes: ['Productos_id', 'Total_compra'],
+                                    attributes: ['Productos_id', 'Total_compra', 'Total_items'],
                                     include: [
                                         {
                                             association : 'producto',
@@ -139,6 +139,7 @@ module.exports = {
                             return res.redirect('/usuarios/perfil')
                         } else {
                             console.log("El usuario logueado tiene una orden pendiente")
+                            console.log(orden.carrito)
                             orden.carrito.forEach(item => {
                                 let producto = {
                                     id: item.producto.id,
@@ -147,9 +148,9 @@ module.exports = {
                                     descuento: item.producto.descuento,
                                     imagen: item.producto.imagenes[0].nombre,
                                     stock: item.producto.stock,
-                                    cantidad:item.Total_items,
+                                    cantidad: +item.Total_items,
                                     Total_compra: +item.Total_compra,
-                                    subtotal: ( +item.producto.precio - ( +item.producto.precio * +item.producto.descuento / 100 )) * item.Total_compra,
+                                    subtotal:  ( +item.producto.precio - ( +item.producto.precio * +item.producto.descuento / 100 )) * item.Total_items,
                                     ordenId: orden.id ,
                                 }
                                 req.session.carrito.push(producto)

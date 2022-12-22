@@ -52,7 +52,7 @@ module.exports = {
             stock: producto.stock,
             cantidad:1,
             Total_compra: producto.precio,
-            subtotal: +producto.precio - (+producto.precio * +producto.descuento / 100),
+            subtotal: +producto.precio - (+producto.precio * +producto.descuento / 100)
             // Ordenes_id: orden.id ,
         }
 
@@ -149,7 +149,7 @@ module.exports = {
                 console.log("El producto si existe");
 
                 producto.cantidad= +producto.cantidad+1;
-                producto.subtotal = (+producto.precio - (+producto.precio * +producto.descuento / 100)) * +producto.cantidad,
+                producto.subtotal =  (+producto.precio - (+producto.precio * +producto.descuento / 100)) * producto.cantidad,
                 producto.Total_compra=(+producto.precio * +producto.cantidad)
 
                 req.session.carrito[index] = producto;
@@ -228,13 +228,15 @@ module.exports = {
             //tenemos que actualizar la cantidad
 
             // actulizamos en la sessión
-            producto.Total_compra--;
-            producto.subtotal = (+producto.precio - (+producto.precio * +producto.descuento / 100)) * producto.Total_compra;
+            producto.cantidad--;
+            producto.subtotal =  (+producto.precio - (+producto.precio * +producto.descuento / 100)) * producto.cantidad;
+            producto.Total_compra=(+producto.precio * +producto.cantidad)
 
             req.session.carrito[index] = producto;
 
             // actualizamos en la base de datos
             await db.Carritos.update({
+                Total_items: producto.cantidad,
                 Total_compra: producto.Total_compra
             }, {
                 where : {

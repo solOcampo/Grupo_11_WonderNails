@@ -27,7 +27,8 @@ const getCarrito = async () => {
     try {
         const response = await fetch('/api/carrito')
         const result = await response.json()
-
+        
+        console.log(result)
         if (result.status === 200) {
             cargarCarrito(result.data)
         }
@@ -47,7 +48,7 @@ const addItem = async (id) => {
         const result = await response.json()
 
         if (result.status === 200) {
-            cargarVentanaCarrito(result.data)
+            //cargarVentanaCarrito(result.data)
             cargarCarrito(result.data)
         }
 
@@ -66,7 +67,7 @@ const removeItem = async (id) => {
         const result = await response.json()
 
         if (result.status === 200) {
-            cargarVentanaCarrito(result.data)
+            //cargarVentanaCarrito(result.data)
             cargarCarrito(result.data)
         }
 
@@ -84,7 +85,7 @@ const modifyItem = async (id) => {
         const result = await response.json()
 
         if (result.status === 200) {
-            cargarVentanaCarrito(result.data)
+            //cargarVentanaCarrito(result.data)
             cargarCarrito(result.data)
         }
 
@@ -124,7 +125,7 @@ const cargarCarrito = (data) => {
                     <h4><a id="nombre" href="/productos/detalle/${producto.id}">${producto.nombre}</a></h4>
                     <div class="añadir-elementos">
                         <button class="restar" onClick="modifyItem('${producto.id}')">-</button>
-                        <span ">${producto.Total_compra}</span>
+                        <span ">${producto.cantidad}</span>
                         <button class="agregar" onClick="addItem('${producto.id}')">+</button>
                     </div>
                     <div class="precio-descuento">

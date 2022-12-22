@@ -15,7 +15,7 @@ module.exports = {
       },
       Total_items: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.BIGINT
       },
       Ordenes_id: {
         type: Sequelize.INTEGER,
