@@ -28,8 +28,8 @@ header .logo {
 }
 
 header .logo img {
-    width: 150px;
-
+    width: 100px;
+    margin-left: 20px;
     animation: aumentar 1s ease-in infinite alternate;
 
 }
@@ -56,10 +56,24 @@ header nav .icons {
 header .users .icons{
     display: flex;
     justify-content: flex-end;
+    align-items: flex-end;
 }
-header .users .icons a, header .users .icons form{
+header .users .icons a{
     color: var(--grisMedio);
     font-size: 15px;
+}
+header .users .boxSession{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+header .users .logout{
+    margin-left: 15px;
+    color: var(--grisMedio);
+    font-size: 15px;
+    border: 0;
+    background-color: white;
 }
 header nav .icons a {
     color: white;
@@ -70,13 +84,67 @@ header .buscar {
     display: none;
 
 }
-
-header .bars {
-    position: absolute;
+header .burgerMenu{
+    width: 100%;
+    height: 0vh;
+    /* top: 100px; */
+    background-color: rgba(219, 219, 219, 0.938);
+    text-align: center;
+    transition: all .5s;
+    position: relative;
+    bottom: 19px;
+    z-index: 20;
 }
+header .burgerMenu li{
+    display: none;
+    line-height: 30px;
+    margin: 30px 0;
+    transition: all .5s;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+header .burgerMenu li:first-child{
+    padding-top: 50px;
+    margin-top: 0;
+}
+header .burgerMenu a{
+    color: rgb(245, 57, 104);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+header .burgerMenu li.active{
+    color: var(--grisMedio);
+    font-size: 20px;
+}
+header .burgerMenu ul li :hover{
+    color: white;
+    transition: .3s;
+}
+header .burgerMenu ul li form button{
+    border: none;
+    width: 100%;
+    background-color: rgb(245, 57, 104);
+    padding: 30px 0px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#check {
+    display: none;
+}
+#check:checked ~ .burgerMenu {
+    height: max-content;
+}
+#check:checked ~ .burgerMenu li{
+    display: block;
+}
+/* header .bars {
+    position: absolute;
+} */
 
-header .bars button {
+header .button {
     margin: 15px;
+    margin-top: 30px;
+    padding: 10px;
     color: var(--rosaOscuro);
     width: 40px;
     height: 40px;
@@ -85,6 +153,8 @@ header .bars button {
     border-radius: 100%;
     box-shadow: 0px 4px 0px 0px #e4e4e4;
     border: none;
+    position: relative;
+    bottom: 45px;
 }
 
 header .shopping {
@@ -134,7 +204,7 @@ header .shopping button a{
         box-shadow: 0px 2px 0px 0px #e4e4e4;
         border-radius: 40px;
         display: block;
-        width: 50%;
+        width: 70%;
         padding: 7px 35px 7px 7px;
         font-size: 11px;
         border: none;
@@ -153,8 +223,27 @@ header .shopping button a{
     header .buscar button i {
         color: white;
     }
+    header .burgerMenu{
+        width: 50%;
+    }
+    header .center{
+        display: flex;
+        justify-content: flex-start;
+            align-items: center;
+    }
+    header .center form{
+        width: 80%;
+        margin: 0 auto;
+    }
 
 }
 
 /* Desktop */
-@media (max-width:1024px) {}
+@media (min-width:769px) {
+    header .burgerMenu{
+        width: 30%;
+    }
+    header .buscar input {
+        width: 60%;
+    }
+}

@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
     let form = $('#FormRegister')
     let nombre = $('#name')
     let apellido = $('#lastname')
-    let email = $('#email')
+    let email = $('#emailRegister')
     // let image = $('#image')
     let inputPass = $('#password')
     let inputPass2 = $('#password2')
@@ -318,7 +318,7 @@ window.addEventListener('load', () => {
         }
         console.log(terminos.checked);
     })
-
+    
     form.addEventListener('submit',(e) => {
         e.preventDefault();
 

@@ -14,9 +14,6 @@
                 <ul class="icons">
                     <a href="">Hola <%= locals.userLogin.name %>! </a>
                     <a href="/usuarios/perfil">Accede a tu perfil</a>
-                    <form action="/usuarios/logout?_method=DELETE" method="POST">
-                        <button type="submit"><i class="fas fa-sign-out-alt"></i> Salir</button>
-                    </form>
                 </ul> 
                 <% } else { %>
                     <ul class="icons">
@@ -25,20 +22,19 @@
                     </ul> 
             <% } %>
         </nav>
+    </div>
+    <div class="center">
         <div class="logo">
             <a href="/">
                 <img src="/img/WonderNails-Logotipo.png" alt="logo de su pagina">
             </a>
         </div>
-    </div>
-    <form action="/buscar" method="get">
-        <div class="buscar">
-            <input type="text" name="search" id="search" class="buscar_texto" placeholder="Buscar">
-            <button type="submit"><i class="fas fa-search"></i></button>
-        </div>
-    </form>
-    <div class="bars">
-        <button class="button"><i class="fas fa-bars"></i></button>
+        <form action="/buscar" method="get">
+            <div class="buscar">
+                <input type="text" name="search" id="search" class="buscar_texto" placeholder="Buscar">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
     </div>
     <div class="shopping">
         <% if (locals.userLogin) { %>
@@ -49,6 +45,40 @@
 
         <button class="cart-btn" id="cart-btn" ><a href="/productos/carrito"><i class="fas fa-shopping-bag"></i></a></button>
     </div>
-    <div class="cart-container"></div>
+    <div class="cart-container"></div>  
+
+    <input type="checkbox" id="check">
+    <label for="check" class="button"><i class="fas fa-bars"></i></label>
+
+    <div class="burgerMenu">
+        <ul>
+            <% if (locals.userLogin) { %>
+                <li class="active">Hola <%= locals.userLogin.name %>!</li>
+                <li class="hover"><a href="/usuarios/perfil">Accede a tu perfil</a></li>
+            <% } %>
+            <li>Productos</li>
+            <li class="hover"><a href="/productos">Todos los productos</a></li>
+            <li class="hover"><a href="/productos/Nuevo">Nuevos</a></li>
+            <li class="hover"><a href="/productos/Favoritos">Favoritos</a></li>
+            <li class="hover"><a href="/productos/Oferta">Ofertas</a></li>
+            <% if (locals.userLogin) { %>
+             <% if ((+locals.userLogin.rol) === 1) { %>
+                <li>Administrador</li>
+                <li class="hover"><a href="/admin/listar">Listado de productos</a></li>
+                <li class="hover"><a href="/admin/crear">Crear un nuevo producto</a></li>
+                <% } %>
+            <% } %>
+            <li class="hover"><span>Ubicación</span></li>
+            <li class="hover"><span>Nosotros</span></li>
+            <% if (locals.userLogin) { %>
+                <li>
+                    <form action="/usuarios/logout?_method=DELETE" method="POST">
+                        <button class="logout hover" type="submit"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</button>
+                    </form>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+    
 
 </header>

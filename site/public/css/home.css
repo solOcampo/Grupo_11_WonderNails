@@ -289,10 +289,10 @@
     display: flex;
     justify-content: space-evenly;
 }
-.mainHome .carruselTienda .seccion .caja{
+.mainHome .carruselTienda .cajaHome{
     flex: 0 0 auto;
     width: 240px;
-    height: 420px;
+    /* height: 420px; */
     border-radius: 18px;
     margin-top: 20px;
     background-color: white;
@@ -300,13 +300,13 @@
     position: relative;
     margin-left: 10px;
 }
-.mainHome .carruselTienda .seccion .caja .caja-etiquetas{
+.mainHome .carruselTienda .cajaHome .caja-etiquetas{
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.mainHome .carruselTienda .seccion .caja .etiqueta{
+.mainHome .carruselTienda .cajaHome .etiqueta{
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -319,7 +319,7 @@
     left: 0px;
     margin-right: 2px;
 }
-.mainHome .carruselTienda .seccion .caja .oferta{
+.mainHome .carruselTienda .cajaHome .oferta{
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -332,7 +332,7 @@
     left: 0px;
 
 }
-.mainHome .carruselTienda .seccion .caja .etiquetaC{
+.mainHome .carruselTienda .cajaHome .etiquetaC{
     font-size: 14px;
     color: white;
     background-color: var(--rosaOscuro);
@@ -344,7 +344,7 @@
     cursor: pointer;
     opacity: 1;
 }
-.mainHome .carruselTienda .seccion .caja h4, .esmalte h4{
+.mainHome .carruselTienda .cajaHome h4, .esmalte h4{
     font-size: 10px;
     text-align: center;
     display: flex;
@@ -357,10 +357,10 @@
     height: 30px;
     margin: auto;
 }
-.mainHome .carruselTienda .seccion .caja a{
+.mainHome .carruselTienda .cajaHome a{
     color: black;
 }
-.mainHome .carruselTienda .seccion .caja .precio, .precioOferta, .esmaltes .esmalte .precioE{
+.mainHome .carruselTienda .cajaHome .precio, .precioOferta, .esmaltes .esmalte .precioE{
     color: var(--grisMedio);
     text-align: center;
     font-weight: 700;
@@ -373,13 +373,13 @@
     bottom: 72px;
     margin: auto;
 }
-.mainHome .carruselTienda .seccion .caja .precioViejo{
+.mainHome .carruselTienda .cajaHome .precioViejo{
     color: var(--grisClaro);
     font-weight: 300;
     text-decoration: line-through;
     margin-right: 3px;
 }
-.mainHome .carruselTienda .seccion .caja input, .esmaltes .esmalte input{
+.mainHome .carruselTienda .cajaHome input, .esmaltes .esmalte input{
     height: 15px;
     width: 15px;
     font-size: 10px;
@@ -390,7 +390,7 @@
     border: none;
     background-color: var(--grisClaro);
 }
-.mainHome .carruselTienda .seccion .caja .input,  .esmaltes .esmalte .input{
+.mainHome .carruselTienda .cajaHome .input,  .esmaltes .esmalte .input{
     display: flex;
     justify-content: center;
     margin: 5px 0;
@@ -400,22 +400,22 @@
     bottom: 56px;
     margin: auto;
 }
-.mainHome .carruselTienda .seccion .caja input:active, .esmaltes .esmalte input:active{
+.mainHome .carruselTienda .cajaHome input:active, .esmaltes .esmalte input:active{
     background-color: var(--rosaOscuro);
 }
-.mainHome .carruselTienda .seccion .caja .medio, .esmaltes .esmalte .medio{
+.mainHome .carruselTienda .cajaHome .medio, .esmaltes .esmalte .medio{
     width: 20px;
     background-color: white;
     border: 1px solid var(--grisClaro);
     text-align: center;
 }
-.mainHome .carruselTienda .seccion .caja .foto-prod{
+.mainHome .carruselTienda .cajaHome .foto-prod{
     height: 13  0px;
     width: 110px;
     margin: 0 auto;
     padding-bottom: 87px;
 }
-.mainHome .carruselTienda .seccion .caja .comprar, .esmaltes .esmalte .comprar{
+.mainHome .carruselTienda .cajaHome .comprar, .esmaltes .esmalte .comprar{
     position: absolute;
     left: 27px;
     right: 27px;
@@ -434,7 +434,7 @@
     padding: 10px;
     box-shadow: 0px 1px  2px var(--gris);
 }
-.mainHome .carruselTienda .seccion .caja .comprar:active{
+.mainHome .carruselTienda .cajaHome .comprar:active{
     background-color: var(--rosaOscuro);
     text-shadow: 1px 1px 2px var(--grisMedio);
 }
@@ -860,31 +860,13 @@
     transition: opacity .3s ease;
 } */ /* AUN NO TERMINADO */
 
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Servicios */
 .mainHome .body {
     margin-top: 45px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 65vh;
     align-items: flex-end;
 }
 
@@ -1044,21 +1026,21 @@
 }
 /* LAPTOP */
 @media (min-width:769px){
-    .mainHome .carruselTienda .seccion .caja .etiquetaC{
+    .mainHome .carruselTienda .cajaHome .etiquetaC{
         opacity: 0;
     }
-    .mainHome .carruselTienda .seccion .caja .etiquetaC:hover{
+    .mainHome .carruselTienda .cajaHome .etiquetaC:hover{
         opacity: 1;
         transition: .5s;
     }
-    .mainHome .carruselTienda .seccion .caja .comprar{
+    .mainHome .carruselTienda .cajaHome .comprar{
         background-color: var(--grisMedio);
     }
-    .mainHome .carruselTienda .seccion .caja .comprar:hover{
+    .mainHome .carruselTienda .caja .comprar:hover{
         background-color: var(--rosaOscuro);
         transition: 0.5s;
     }
-    .mainHome .carruselTienda .seccion .caja .comprar:active{
+    .mainHome .carruselTienda .caja .comprar:active{
         background-color: var(--gris);
     }
     .mainHome .tienda .link-productos{
@@ -1077,7 +1059,7 @@
     }
     .mainHome .esmaltes .esmalte{
         width: 300px;
-        height: 400px;
+        height: 333px;
         border: solid 5px var(--gris);
         bottom: 20px;
     }
@@ -1102,7 +1084,7 @@
         font-size: 30px;
     }
     .mainHome .esmaltes .esmalte .comprar{
-        font-size: 30px;
+        font-size: 28px;
     }
     .mainHome .esmaltes .botonEsmalte:before {
         content: "ESMALTES";
@@ -1136,34 +1118,31 @@
     .mainHome .tienda .carruselTienda{
         height: 500px;
     }
-    .mainHome .tienda .carruselTienda .seccion {
-        height: 480px;
-    }
-    .mainHome .carruselTienda .seccion .caja.glider-slide {
+    .mainHome .carruselTienda .cajaHome.glider-slide {
         width: 240px;
         height: 420px;
         margin-top: 30px;
-        border-radius: 40px;
+        border-radius: 20px;
     }
-    .mainHome .carruselTienda .seccion .caja h4{
-        font-size: 18px;
+    .mainHome .carruselTienda .cajaHome h4{
+        font-size: 16px;
     }
-    .mainHome .carruselTienda .seccion .caja .precio, .precioOferta{
+    .mainHome .carruselTienda .cajaHome .precio, .precioOferta{
         font-size: 25px;
         bottom: 120px;
     }
-    .mainHome .carruselTienda .seccion .caja input {
+    .mainHome .carruselTienda .cajaHome input {
         height: 30px;
         width: 30px;
         font-size: 20px;
     }
-    .mainHome .carruselTienda .seccion .caja .input {
+    .mainHome .carruselTienda .cajaHome .input {
         bottom: 83px;
     }
-    .mainHome .carruselTienda .seccion .caja .medio {
+    .mainHome .carruselTienda .cajaHome .medio {
         width: 30px;
     }
-    .mainHome .carruselTienda .seccion .caja .comprar{
+    .mainHome .carruselTienda .cajaHome .comprar{
         font-size: 20px;
         left: 45px;
         right: 45px;
@@ -1375,11 +1354,11 @@
 
 
         
-    .mainHome .carruselTienda .seccion .caja .etiqueta, .mainHome .carruselTienda .seccion .caja .oferta {
+    .mainHome .carruselTienda .cajaHome .etiqueta, .mainHome .carruselTienda .cajaHome .oferta {
         font-size: 20px;
         bottom: 15px;
     }
-    .mainHome .carruselTienda .seccion .caja .foto-prod{
+    .mainHome .carruselTienda .cajaHome .foto-prod{
         width: 186px;
     }
    

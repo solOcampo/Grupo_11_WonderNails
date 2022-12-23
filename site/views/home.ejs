@@ -64,7 +64,7 @@
                                 <div class="glider-contain">
                                     <div class="glider">
                                         <% productosNuevos.forEach(producto=> { %>
-                                            <div class="caja">
+                                            <div class="cajaHome">
                                                 <div class="caja-etiquetas">
                                                     <span class="etiqueta">Nuevo</span>
                                                     <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
@@ -100,7 +100,7 @@
                                 </button>
                                 <div class="carousel__lista">
                                     <% productosNuevos.forEach(producto=> { %>
-                                        <div class="caja">
+                                        <div class="cajaHome">
                                             <div class="caja-etiquetas">
                                                 <span class="etiqueta">Nuevo</span>
                                                 <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
@@ -137,7 +137,7 @@
                         <!-- favoritos -->
                         <!-- <div id="favoritos" class="seccion">
                             <% productosFavs.forEach(producto => { %>
-                                <div class="caja">
+                                <div class="cajaHome">
                                     <div class="caja-etiquetas">
                                         <span class="etiqueta">Nuevo</span>
                                         <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
@@ -161,7 +161,7 @@
                         <!-- ofertas -->
                         <!-- <div id="oferta" class="seccion">
                             <% productosOferta.forEach(producto => { %>
-                                <div class="caja">
+                                <div class="cajaHome">
                                     <div class="caja-etiquetas">
                                         <span class="oferta" class="etiqueta">-<%- producto.descuento %> %</span>
                                         <a class="etiquetaC" href=""><i class="far fa-heart"></i></a>
@@ -224,7 +224,7 @@
                                             <input class="medio" type="number" value="1" min="1" step="1">
                                             <input type="button" value="+">
                                         </div>
-                                        <button class="comprar" onclick="addItem('<%= esmalte.id %>')">añadir al Carrito</button>
+                                        <button class="comprar" onclick="addItem('<%= esmalte.id %>')">Comprar</button>
                                     </article>
                                     <% }) %>
                             </div>

@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
     let forms = document.querySelectorAll('form')
 
     for (let i = 0; i < forms.length; i++) {
-        forms[i].addEventListener('submit', event => {
+        forms[i].addEventListener('submit', (event) => {
             event.preventDefault();
             Swal.fire({
             customClass: {
