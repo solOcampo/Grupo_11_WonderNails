@@ -2,7 +2,7 @@ require('dotenv').config()
 const createError = require("http-errors");
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 3030;
 const path = require("path");
 const methodOverride = require("method-override");
 const session = require("express-session");
@@ -36,6 +36,7 @@ app.use(userLogin);
 /* cookies */
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(rememberMe)
 /* app.use(rememberMe); */
 
 let indexRouter = require("./routes/index");
