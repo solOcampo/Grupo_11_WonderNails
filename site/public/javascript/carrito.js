@@ -171,35 +171,18 @@ const cargarVentanaCarrito = (data) => {
         data.forEach(producto => {
            
             let item = `
-            <div class="cart-item">
-                <span class="fas fa-times" onClick="removeItem('${producto.id}')"></span>
-                <img src="/img/Products/${producto.imagen}"  alt="">
-                <div class="content">
-                    <h3>${producto.nombre}</h3>
-                    <div class="price">$ ${toThousand(Math.round(producto.precio - (producto.precio * producto.descuento / 100)))}</div>
-                    <div class="añadir-elementos">
-                        <button class="restar" onClick="modifyItem('${producto.id}')">-</button>
-                        <span ">${producto.cantidad}</span>
-                        <button class="agregar" onClick="addItem('${producto.id}')">+</button>
-                    </div>
-                </div>
-            </div>
+           
             `
             cart.innerHTML += item
             totalCarrito += producto.subtotal
         })
         cart.innerHTML += `
-        <div class="cart-puy">
-            <span>Subtotal:</span>
-            <span>$ ${toThousand(Math.round(totalCarrito))}</span>
-            <a class="" href="/productos/cart">Ir a mi carrito</a>
-        </div>
         `
     } else {
         
         cart.innerHTML = `
             <h3 class="title">Mi carrito</h3>
-            <p>Mensaje bonito para el usuario, con link para ver producto</p>
+            <p></p>
         `
 
     }
